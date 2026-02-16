@@ -1,0 +1,11 @@
+{
+  "project_name": "video-knowledge-pages",
+  "description": "動画ナレッジ化システムの出力先（生成済みHTMLページ）",
+  "runtime_requirements": {
+    "external_directories": [],
+    "config_files": [],
+    "credentials": [],
+    "env_files": [],
+    "post_clone_commands": []
+  }
+}
