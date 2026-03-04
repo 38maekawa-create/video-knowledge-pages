@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>playwright_video</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; color: #1a1a1a; background: #f8f9fa; line-height: 1.8; }
+  .container { max-width: 820px; margin: 0 auto; padding: 24px 20px 60px; }
+  header { margin-bottom: 32px; }
+  h1 { font-size: 1.6em; font-weight: 700; margin-bottom: 12px; line-height: 1.4; }
+  .thumbnail { width: 100%; max-width: 480px; border-radius: 8px; margin-bottom: 16px; }
+  .video-link { display: inline-block; background: #ff0000; color: #fff; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-size: 0.9em; font-weight: 600; margin-bottom: 16px; }
+  .video-link:hover { background: #cc0000; }
+  .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; margin-bottom: 16px; padding: 16px; background: #fff; border-radius: 8px; border: 1px solid #e8e8e8; }
+  .meta-item { display: flex; gap: 8px; font-size: 0.88em; }
+  .meta-label { color: #666; white-space: nowrap; }
+  .meta-label::after { content: ":"; }
+  .meta-value { color: #1a1a1a; font-weight: 500; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+  .tag { background: #e8f0fe; color: #1a73e8; padding: 2px 10px; border-radius: 12px; font-size: 0.8em; }
+  h2 { font-size: 1.15em; font-weight: 700; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid #1a73e8; color: #1a73e8; }
+  section { background: #fff; border-radius: 8px; border: 1px solid #e8e8e8; padding: 20px 24px; margin-bottom: 20px; }
+  .summary-list { padding-left: 20px; }
+  .summary-list li { margin-bottom: 8px; font-size: 0.95em; }
+  .content-block { font-size: 0.92em; }
+  .content-block p { margin-bottom: 12px; }
+  .content-block .section-heading { font-weight: 700; color: #333; margin-top: 16px; margin-bottom: 4px; }
+  .keypoints p { padding-left: 8px; border-left: 3px solid #fbbc04; margin-bottom: 8px; }
+  .swipe { background: #fef7ff; border-radius: 4px; }
+  .transcript { font-size: 0.88em; line-height: 2; color: #333; }
+  .transcript p { margin-bottom: 12px; }
+  details { cursor: pointer; }
+  details summary { font-size: 0.9em; color: #1a73e8; padding: 8px 0; font-weight: 500; }
+  details[open] summary { margin-bottom: 16px; }
+  .back-link { display: inline-block; margin-bottom: 16px; color: #1a73e8; text-decoration: none; font-size: 0.9em; }
+  .back-link:hover { text-decoration: underline; }
+  footer { text-align: center; color: #999; font-size: 0.8em; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="index.html" class="back-link">← 一覧に戻る</a>
+  <header>
+    
+    <h1>playwright_video</h1>
+    
+    <div class="meta-grid"><div class="meta-item"><span class="meta-label">種別</span><span class="meta-value">YouTube</span></div>
+<div class="meta-item"><span class="meta-label">カテゴリ</span><span class="meta-value">external_knowledge</span></div>
+<div class="meta-item"><span class="meta-label">ジャンル</span><span class="meta-value">ビジネス</span></div>
+<div class="meta-item"><span class="meta-label">動画時間</span><span class="meta-value">4秒</span></div>
+<div class="meta-item"><span class="meta-label">文字起こし方式</span><span class="meta-value">GPT-4o Transcribe（話者分離あり）</span></div>
+<div class="meta-item"><span class="meta-label">話者</span><span class="meta-value">A</span></div></div>
+    <div class="tags"><span class="tag">#YouTube広告</span> <span class="tag">#断片的コンテンツ</span> <span class="tag">#分析対象外</span></div>
+  </header>
+  
+<section>
+  <h2>3行要約</h2>
+  <ul class="summary-list"><li>YouTube広告に関する説明が開始された動画</li>
+<li>トランスクリプトが冒頭の一言のみで途切れており、内容の全体像が不明</li>
+<li>分析に必要な情報が極めて限定的なため、詳細な判定が困難</li></ul>
+</section>
+<section>
+  <h2>内容整理</h2>
+  <div class="content-block"><p class="section-heading">動画冒頭</p>
+<p>話者Aが「それではYouTube広告の」と発言し、YouTube広告に関する説明を始めようとしている。しかし、トランスクリプトはここで終了しており、具体的な内容、説明の方向性、目的などは一切不明。動画時間が0分と記載されていることから、テスト撮影や録画開始直後の断片的な音声である可能性が高い。</p></div>
+</section>
+<section>
+  <h2>キーポイント</h2>
+  <div class="content-block keypoints"><p>[00:00] 話者A: 「それではYouTube広告の」</p></div>
+</section>
+<section>
+  <h2>スワイプファイル分析</h2>
+  <div class="content-block swipe"><p class="section-heading">コンテンツ構成</p>
+<p>冒頭の一言「それではYouTube広告の」という導入フレーズのみが確認できる。『それでは』という接続詞を使用することで、前段の文脈（おそらく挨拶や前置き）から本題への転換を示している。この種の明確な区切りフレーズは視聴者に「ここから本題」という心理的な準備をさせる効果がある。ただし、トランスクリプトが途切れているため、その後の展開（問題提起型か、ノウハウ提示型か、事例紹介型か等）は不明。</p>
+<p class="section-heading">参考ポイント</p>
+<p>[&#x27;「それでは〜」という明示的な転換フレーズによる本題導入手法は、視聴者の注意を引き締める効果がある&#x27;, &#x27;トランスクリプトが極めて短いため、スワイプファイルとしての参考価値は限定的&#x27;, &#x27;完全なコンテンツ構成を分析するには、全体のトランスクリプトが必要&#x27;, &#x27;本動画は録画テストや撮影準備段階の可能性が高く、完成コンテンツではないと推測される&#x27;]</p></div>
+</section>
+<section>
+  <h2>整形済み文字起こし（全文）</h2>
+  <details>
+    <summary>展開して表示（121文字）</summary>
+    <div class="transcript"><p># 整形済みトランスクリプト</p>
+<p>[00:00] **話者A:** それではYouTube広告の</p>
+<p>---</p>
+<p>**注記:** 文字起こしテキストが途中で終了しているため、この部分のみを整形しました。続きのテキストがあれば、追加で整形いたします。</p></div>
+  </details>
+</section>
+  <footer>動画ナレッジ化システム — 自動生成</footer>
+</div>
+</body>
+</html>
