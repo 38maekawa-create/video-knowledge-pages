@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIコーディングツール勉強会：CursorとClaude Codeの使い分け・活用法</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; color: #1a1a1a; background: #f8f9fa; line-height: 1.8; }
+  .container { max-width: 820px; margin: 0 auto; padding: 24px 20px 60px; }
+  header { margin-bottom: 32px; }
+  h1 { font-size: 1.6em; font-weight: 700; margin-bottom: 12px; line-height: 1.4; }
+  .thumbnail { width: 100%; max-width: 480px; border-radius: 8px; margin-bottom: 16px; }
+  .video-link { display: inline-block; background: #ff0000; color: #fff; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-size: 0.9em; font-weight: 600; margin-bottom: 16px; }
+  .video-link:hover { background: #cc0000; }
+  .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; margin-bottom: 16px; padding: 16px; background: #fff; border-radius: 8px; border: 1px solid #e8e8e8; }
+  .meta-item { display: flex; gap: 8px; font-size: 0.88em; }
+  .meta-label { color: #666; white-space: nowrap; }
+  .meta-label::after { content: ":"; }
+  .meta-value { color: #1a1a1a; font-weight: 500; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+  .tag { background: #e8f0fe; color: #1a73e8; padding: 2px 10px; border-radius: 12px; font-size: 0.8em; }
+  h2 { font-size: 1.15em; font-weight: 700; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid #1a73e8; color: #1a73e8; }
+  section { background: #fff; border-radius: 8px; border: 1px solid #e8e8e8; padding: 20px 24px; margin-bottom: 20px; }
+  .summary-list { padding-left: 20px; }
+  .summary-list li { margin-bottom: 8px; font-size: 0.95em; }
+  .content-block { font-size: 0.92em; }
+  .content-block p { margin-bottom: 12px; }
+  .content-block .section-heading { font-weight: 700; color: #333; margin-top: 16px; margin-bottom: 4px; }
+  .keypoints p { padding-left: 8px; border-left: 3px solid #fbbc04; margin-bottom: 8px; }
+  .swipe { background: #fef7ff; border-radius: 4px; }
+  .transcript { font-size: 0.88em; line-height: 2; color: #333; }
+  .transcript p { margin-bottom: 12px; }
+  details { cursor: pointer; }
+  details summary { font-size: 0.9em; color: #1a73e8; padding: 8px 0; font-weight: 500; }
+  details[open] summary { margin-bottom: 16px; }
+  .back-link { display: inline-block; margin-bottom: 16px; color: #1a73e8; text-decoration: none; font-size: 0.9em; }
+  .back-link:hover { text-decoration: underline; }
+  footer { text-align: center; color: #999; font-size: 0.8em; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="index.html" class="back-link">← 一覧に戻る</a>
+  <header>
+    
+    <h1>AIコーディングツール勉強会：CursorとClaude Codeの使い分け・活用法</h1>
+    
+    <div class="meta-grid"><div class="meta-item"><span class="meta-label">種別</span><span class="meta-value">講義・セミナー</span></div>
+<div class="meta-item"><span class="meta-label">カテゴリ</span><span class="meta-value">external</span></div>
+<div class="meta-item"><span class="meta-label">動画時間</span><span class="meta-value">不明</span></div>
+<div class="meta-item"><span class="meta-label">文字起こし方式</span><span class="meta-value">Whisper / AI文字起こし</span></div>
+<div class="meta-item"><span class="meta-label">話者</span><span class="meta-value">青木, Speaker S</span></div></div>
+    <div class="tags"><span class="tag">AIコーディング</span> <span class="tag">Cursor</span> <span class="tag">ClaudeCode</span> <span class="tag">非エンジニア向け</span> <span class="tag">開発ツール</span> <span class="tag">ターミナル</span> <span class="tag">GitHub</span> <span class="tag">APIコスト</span> <span class="tag">自律開発</span> <span class="tag">勉強会</span> <span class="tag">ハンズオン</span></div>
+  </header>
+  
+<section>
+  <h2>3行要約</h2>
+  <ul class="summary-list"><li>青木がAIコーディングツール「Cursor」と「Claude Code」の違い・使い分けについて参加者に向けて解説するセミナー形式の勉強会録音。</li>
+<li>Claude CodeはCursorより安価だがUIが初心者向けでなく、非エンジニアにはCursorの方が扱いやすいという推奨が示された。</li>
+<li>勉強会の後半では本番環境へのデプロイ・成果発表会・懇親会・二次会の段取りなど、イベント運営に関する案内が行われた。</li></ul>
+</section>
+<section>
+  <h2>内容整理</h2>
+  <div class="content-block"><p>### Claude CodeとCursorの比較・違い</p>
+<p>青木は、AIコーディングツールとして現在広く使われている「Cursor」と「Claude Code」の違いについて体系的に解説した。</p>
+<p>まず課金体系について：Cursorは月200ドルのプランが主流で、月10個程度のツール制作であればプラン上限に達することはないが、それ以上の開発をしたい場合はClaude Codeへの移行が起きる、と青木は説明した。Claude CodeはCursorより「安い」が正確には変動型で、最低30ドル程度から、最大でも大体200ドル程度に収まる上限が設けられている。つまり大量に使う場合はClaude Codeの方がコスト効率が高くなる。</p>
+<p>UI・使いやすさの観点では、CursorはGUIのチャット画面で操作でき、スクリーンショットを撮って「これを見て直して」と指示できるため、非エンジニアにも直感的に使いやすい。一方Claude CodeはターミナルベースのCLI（コマンドラインインターフェース）で操作するため、UIが初心者には分かりづらく、エラー対応もスクリーンショットではなくエラーログを読んで対処する必要がある。青木は「エンジニア経験がある人にとっては普通だが、非エンジニアには最初ハードルを感じる」と述べ、個人的にはCursorの方が非エンジニアフレンドリーと評価した。</p>
+<p>機能面では「ほぼ一緒」と繰り返し強調されており、どちらを使っても最終的に同等の開発ができる。CursorとClaude Codeは連携も可能で、Cursor上からClaude Codeを起動・操作することが推奨されている。</p>
+<p>### CursorからClaude Codeを動かす方法（具体的な操作手順）</p>
+<p>青木は実演を交えながら、Cursor上でClaude Codeを動かす具体的な手順を説明した。</p>
+<p>1. まずCursorのチャット画面で「このスペースにClaude Codeをインストールしたい」と自然言語で指示する。Cursorが自動でインストール作業を実行する。</p>
+<p>2. Cursorのメニューバーにある「ターミナル」ボタン（英語表記の場合は「Terminal」）を押し、「新しいターミナル」を開く。</p>
+<p>3. そのターミナル内でClaude Codeが起動し、チャット形式で開発指示が出せるようになる。</p>
+<p>4. この状態でClaudeCodeに指示を出すと、課金はCursorではなくClaude Code側に発生する。Cursorのチャット画面で指示を出した場合はCursorに課金が入る。</p>
+<p>また、日本語化についても触れており、Cursorのインターフェースが英語で使いにくいと感じる参加者向けに「日本語にするCursorのプラグインを入れて、と言えば日本語になる」と案内した。</p>
+<p>### Claude CodeのRun Everything設定・GitHub連携</p>
+<p>Claude Codeには「run everything」という設定があり、これを有効にするとライブラリのインストールや各種システム操作を全て自動で実行してくれる。これにより開発者が逐一確認・承認しなくても開発が進む。</p>
+<p>また、GitHubとの連携についても説明された。Claude Codeが起動しているターミナル環境でGitHubと連携することで、バージョン管理をしながら開発を進めることができる。さらに、途中までCursorで開発したプロジェクトをClaude Codeで引き継いで続きを開発することも可能。ルールやスキル設定も「CursorのルールをClaude Codeに適用したい」と言うだけで移行できる。</p>
+<p>### Claude Code Webとリモート操作・自律開発の潮流</p>
+<p>青木は「Claude Code Web」という機能についても紹介した。これはパソコン上でClaude Codeをローカル操作するのではなく、GitHubにコードを置いておくことでスマートフォンやタブレットなどオンラインから遠隔で開発指示を出せる機能。</p>
+<p>さらに、この文脈でClaudeCodeを「遠隔操作して自律的に開発させる」トレンドについても言及した。具体的には「オープンクローズ」（Open Clineと思われる）と呼ばれる手法で、LINEの公式アカウントなどと連携しておくと、LINEでメッセージを送るだけでパソコンが反応して自動で開発を開始する、という自律エージェント的な活用が可能になる。青木はこれがX（旧Twitter）で非常に話題になっていると述べ、「ただし、そこまでやりたくない人は無理にやらなくていい。まずはCursorを使いこなすことを優先してほしい」と補足した。話題になっているので「Claude Codeというものを知っておいた方がいい」とは強調した。</p>
+<p>### APIコストとモデル選択に関するトラブルシューティング</p>
+<p>後半の断片的な会話の中で、APIコストについての言及があった。O3以上のモデルを使うとAPIコストが非常に高くなるという課題が共有された。また、最新モデルに固執するとコストが膨らむ一方、古いモデルに戻すと精度が落ちてうまくいかないケースもある。対策として、GeminiのGemini 2.5モデルへの切り替えがコスト削減の一手として提案された。Speaker Sは「最新モデルを試しながら進めるのがいい」と述べた。</p>
+<p>「30万3000円を捨ててもらえる」という発言も断片的に登場しており、開発コストや投資判断に関連する文脈と思われるが、詳細は不明。モデル名については「クロードでいいんじゃないか、精度は高い」という意見も青木から出た。</p>
+<p>### 勉強会のスケジュール・発表会・懇親会の案内</p>
+<p>青木は勉強会のタイムラインと今後の流れを参加者に案内した。</p>
+<p>・現時点（5時半過ぎ）から約2時間以内（7時半頃まで）に、少なくとも1つのツールを本番環境（デプロイ）まで完成させることを目標として設定。「自分一人で本番環境まで上げられた、という体感値を持って帰ってほしい」とその理由を説明した。この時点で既に5名がデプロイ完了済み。</p>
+<p>・7時半過ぎに成果発表会を開催し、参加者同士がどんなツールを作ったかをシェアし合う。「それいいな」「応用できるな」という発想の広がりを促すための時間と位置づけている。</p>
+<p>・発表会の後は懇親会に移動（会場名は不明瞭）。</p>
+<p>・懇親会は23時過ぎ終了予定。</p>
+<p>・希望者向けに二次会も予定（会場：「フィクション」と思われる施設名）。人数が多い場合は席の確保が必要なため、参加希望者はオープンチャットに「二次会もいこうかな」と事前に書き込むよう依頼した。</p></div>
+</section>
+<section>
+  <h2>キーポイント</h2>
+  <div class="content-block keypoints"><p>・[不明] 青木: 「Claude CodeはCursorと機能はほぼ同じだが、UIがターミナルベースで初心者には分かりづらい。非エンジニアにはCursorの方が優しい。」</p>
+<p>・[不明] 青木: 「CursorからClaude Codeを動かすことができ、その場合はClaude Code側に課金が入る。インストールは「このスペースにClaude Codeをインストールしたい」と言うだけでよい。」</p>
+<p>・[不明] 青木: 「Claude CodeはAPIコスト最低30ドル〜上限大体200ドル程度に収まる。O3以上のモデルはAPIコストが非常に高くなる。」</p>
+<p>・[不明] 青木: 「run everythingの設定を入れると、ライブラリのインストールやシステム操作を全て自動実行してくれる。」</p>
+<p>・[不明] 青木: 「Claude Code Webを使えばGitHubと連携してスマートフォン・タブレットからも開発指示が出せる。LINEと連携してメッセージを送るだけで自動開発開始させることも可能。」</p>
+<p>・[不明] 青木: 「7時半頃から成果発表会を開催し、参加者同士がどんなツールを作ったかシェアする。懇親会は23時過ぎ終了、二次会は希望者のみでオープンチャットに書き込みを依頼。」</p>
+<p>・[不明] 青木: 「APIコストが高い場合はGemini 2.5モデルへの切り替えがコスト削減の選択肢になる。」</p></div>
+</section>
+<section>
+  <h2>整形済み文字起こし（全文）</h2>
+  <details>
+    <summary>展開して表示（3,714文字）</summary>
+    <div class="transcript"><p>**青木**: カーソル、地味にかかるな、みたいな。カーソルの課金が地味にかかるな、みたいなものに結構ぶつかるんですけど。でも、200ドルのプランだったら普通に月10個ぐらいツールを作っても、別にマックスいかないはずなんですけど、それ以上さらに開発したい、書いてみたい、みたいな人はみんなもう最終的にClaudeコードに移動します。</p>
+<p>**青木**: Claudeコードって、多分今Xでめちゃくちゃ話題になっていて、めちゃくちゃインプが出てくるんですけどね。</p>
+<p>Claudeコードって結局じゃあ何なんだっていうと、ほぼ一緒です、カーソルと。ただ、Claudeコードの方はちょっと使いづらくて、安い。</p>
+<p>**Speaker B**: （相槌）</p>
+<p>**青木**: で、機能はマジで全然ほぼ一緒なんですけど、UIがちょっと初心者にはちょっと伝わりづらくて。ちょっとそれでも見せようと思います。</p>
+<p>ちなみに、カーソルからClaudeコードは動かせます。</p>
+<p>**Speaker C**: （相槌）</p>
+<p>**青木**: で、僕のおすすめはカーソルからClaudeコードを動かす方が皆さんデバッグしやすいと思います。カーソルからやるときに、例えば皆さんだったら最初に、このスペースにClaudeコードをインストールしたい、ってまず言ってください。そしたらインストールしてくれます。難しいことは言いません。「Claudeコードをインストールしろ」と。以上。</p>
+<p>で、そしたらClaudeコードをインストールしたらどうなるかっていうと、使い方なんですけど、まずここの上に「ターミナル」っていうボタンがあるんですね。これ、カーソルです。カーソルって上に「ファイル」「編集」「選択」とかあって、この「ターミナル」っていうボタンがあります。</p>
+<p>ちなみに日本語になってなくて英語で使いづらいよって思う人は、日本語にするカーソルのプラグイン入れて、って言えば多分日本語になります。で、「ターミナル」ってとこ押すと「新しいターミナル」っていうのがあって、このターミナルっていうところで直接開発を行えるのがClaudeコードなんですね。Claudeコードをインストールするとそこで動かせます。</p>
+<p>**Speaker D**: （相槌）</p>
+<p>**青木**: さっきまでこっちのチャット画面で進めてたと思うんですけど、こっちを動かそうとなりますんで、こっちで動かすときはカーソルに課金が入らなくて、Claudeコードの方に課金が入ります。こっちを動かすとカーソルに課金が入ります。</p>
+<p>で、ここで例えばClaudeコードを入れると、ターミナルでClaudeコードが起動します。こんな感じで、チャットが動き出します。同様に、例えばGitHubと連携して開発を進めることもできます。</p>
+<p>**Speaker E**: （相槌）</p>
+<p>**青木**: だからさっきのカーソルでやってるような動きですよね。まあこっちでも動きます。</p>
+<p>で、「run everything」の設定についてですが、Claudeコードにその設定を入れると、ライブラリのインストールとかシステム操作なども全部自動でやってくれます。</p>
+<p>**Speaker G**: （相槌）</p>
+<p>**青木**: で、Claudeコードって皆さんクロードって呼んでますけど、Claudeコードはちょっと安いんですが、ベースの料金はほぼ固定で、大体200ドルぐらいが上限です。どれだけ使っても大体200ドルぐらいに収まります。最低でも30ドルぐらいからという感じです。</p>
+<p>で、カーソルでやるときはスクリーンショットを撮って「これ見て直して」みたいなことができるんですけど、</p>
+<p>**Speaker I**: （相槌）</p>
+<p>**青木**: こっち（Claudeコード）はそれができない。エラーのログを見て修正するという感じになります。エンジニア経験がある人なら普通に「ここのログ見ればエラー見つけられるよね」みたいなことが普通にできるんですけど、ちょっと非エンジニアにとっては最初ハードルを感じるみたいなところがあって。Claudeコード、みんな言ってるんですけど、個人的にはカーソルの方が非エンジニアに優しいなって思うんで、カーソルからやってるって感じですね。ただ、使い方の感覚は最終的に一緒です。</p>
+<p>で、たとえばカーソルで作ったルール等はClaudeコードにも適用したいって言えばClaudeコードに適用できるし、カーソルに作ったスキルみたいなのがあればこれClaudeコードでも使いたいって言えば「じゃあClaudeコードに持ってきます」ってやってくれるし、もう全然一気にできます。途中までカーソルで開発してたものをClaudeコードで続きを開発することもできます。</p>
+<p>**Speaker K**: （相槌）</p>
+<p>**青木**: あとClaudeコードのいいところはこれ以外でいうと、もう一個、Claudeコードウェブっていうのを出してるんですけど、これ今パソコンで操作してるじゃないですか。Claudeコードウェブっていう機能があって、それだったら例えばGitHubに全部データが残っていれば、GitHubと連携してオンラインで開発の指示が出せます。スマートフォンやタブレットからでも操作できるような感じです。</p>
+<p>**Speaker L**: （相槌）</p>
+<p>**青木**: なんていうんですかね。今こうClaudeコードを遠隔で操作するみたいなのがすごい流行っていて、今直接パソコンでこうやって操作してますけど、そうじゃなくてこのパソコンに対して遠隔でClaudeコードに指示出して、コンピューターを動かして開発させるとか、勝手に仕事させるみたいなものがちょっと流行っていて。それがオープンクローズってやつなんですけど、それも多分X見てるとアンテナ貼ったらめっちゃ出てくると思います。</p>
+<p>それは例えば究極言うと、設定を色々やっておいてLINE公式アカウントなどと連携しておくと、LINEでメッセージを送ったらパソコンが反応して「開発を開始します」と言って開発を始める、みたいなことができるっていうことだけは覚えておいてください。ただ、別にそこまでやりたくないよ、やらなくてもいいやって人は、普通にカーソルをまず使いこなせばいいと思います。</p>
+<p>ただ、話題にはめちゃくちゃなるんで、Claudeコードっていうのは知っておいた方がいいなと思います。</p>
+<p>大丈夫そうですか？何か質問あります？まあとりあえず質問なければまた開発に戻ってもらってください。こんな感じです。</p>
+<p>ちなみに、本番環境までは終わったよって言ってる方はいますか？デプロイした方？</p>
+<p>**Speaker N**: （返答）</p>
+<p>**青木**: 1、2、3、4、5人ですね。なるほど。一応今5時半過ぎぐらいで、あと2時間以内にできれば1個は本番環境デプロイまでいけたら嬉しいです。</p>
+<p>やっぱり自分一人で本番環境までいけたっていう体感値を持って帰ってもらった方がいろいろできると思うんで、あと2時間の間に1個は本番環境に上げてください。</p>
+<p>えっと、7時半過ぎぐらいになったら、せっかくこれだけの方が集まってくれたんで、皆さんがどんなものを作ったかっていうのをシェアし合うみたいな事をすると、「あ、確かにそういうツールもいいな」とか「それ俺も今度やってみよう」とか、「そういうツールがあるんだったら確かに応用してこういうこともできるな」っていう発想が広がる機会になるんで、7時半過ぎぐらいになったらちょっと発表会を開いて、その後懇親会っていう感じです。懇親会来る方は懇親会会場に移動してという感じでいきます。</p>
+<p>あと把握しておきたいのが、懇親会は一応23時過ぎぐらいに終わろうかなと思ってるんですけど、希望者は普通にフィクション（※会場名と思われる）でさらに二次会もやろうかなと思ってるんで、希望者の人数だけ把握したいんで、ざっくりでも「いこうかな」って検討中でもいいですけど、人数が多かったら先に席を抑えとかなきゃいけないので、オープンチャットに「二次会もいこうかな」っていう気分です、みたいなことは一応オープンチャットに入れておいてください。そんな感じです。じゃあちょっと続きいきましょう。</p>
+<p>---</p>
+<p>**青木**: 30万3千円を捨ててもらえる、みたいな話ですよね。何がいいのかって言って。</p>
+<p>**青木**: なんか「クロード」でいいんじゃないですか？別にそれで。精度は高いんですけどね。</p>
+<p>**青木**: APIコストが結構かかるっていう話で、O3以上とかだとAPIコストがかなり高くなります。ただ、APIで古いモデルに戻したら上手くいかないこともあって、GeminiとかGemini 2.5のモデルに切り替えるっていうのも一つの手ですね。</p>
+<p>**Speaker S**: なるほど。最新モデルを試しながらやってみるのがいいと思います。</p>
+<p>**Speaker P**: （相槌）</p></div>
+  </details>
+</section>
+  <footer>動画ナレッジ化システム — 自動生成</footer>
+</div>
+</body>
+</html>
