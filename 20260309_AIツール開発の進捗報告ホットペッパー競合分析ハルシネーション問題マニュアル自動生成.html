@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIツール開発の進捗報告：ホットペッパー競合分析・ハルシネーション問題・マニュアル自動生成</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; color: #1a1a1a; background: #f8f9fa; line-height: 1.8; }
+  .container { max-width: 820px; margin: 0 auto; padding: 24px 20px 60px; }
+  header { margin-bottom: 32px; }
+  h1 { font-size: 1.6em; font-weight: 700; margin-bottom: 12px; line-height: 1.4; }
+  .thumbnail { width: 100%; max-width: 480px; border-radius: 8px; margin-bottom: 16px; }
+  .video-link { display: inline-block; background: #ff0000; color: #fff; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-size: 0.9em; font-weight: 600; margin-bottom: 16px; }
+  .video-link:hover { background: #cc0000; }
+  .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; margin-bottom: 16px; padding: 16px; background: #fff; border-radius: 8px; border: 1px solid #e8e8e8; }
+  .meta-item { display: flex; gap: 8px; font-size: 0.88em; }
+  .meta-label { color: #666; white-space: nowrap; }
+  .meta-label::after { content: ":"; }
+  .meta-value { color: #1a1a1a; font-weight: 500; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+  .tag { background: #e8f0fe; color: #1a73e8; padding: 2px 10px; border-radius: 12px; font-size: 0.8em; }
+  h2 { font-size: 1.15em; font-weight: 700; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid #1a73e8; color: #1a73e8; }
+  section { background: #fff; border-radius: 8px; border: 1px solid #e8e8e8; padding: 20px 24px; margin-bottom: 20px; }
+  .summary-list { padding-left: 20px; }
+  .summary-list li { margin-bottom: 8px; font-size: 0.95em; }
+  .content-block { font-size: 0.92em; }
+  .content-block p { margin-bottom: 12px; }
+  .content-block .section-heading { font-weight: 700; color: #333; margin-top: 16px; margin-bottom: 4px; }
+  .keypoints p { padding-left: 8px; border-left: 3px solid #fbbc04; margin-bottom: 8px; }
+  .swipe { background: #fef7ff; border-radius: 4px; }
+  .transcript { font-size: 0.88em; line-height: 2; color: #333; }
+  .transcript p { margin-bottom: 12px; }
+  details { cursor: pointer; }
+  details summary { font-size: 0.9em; color: #1a73e8; padding: 8px 0; font-weight: 500; }
+  details[open] summary { margin-bottom: 16px; }
+  .back-link { display: inline-block; margin-bottom: 16px; color: #1a73e8; text-decoration: none; font-size: 0.9em; }
+  .back-link:hover { text-decoration: underline; }
+  footer { text-align: center; color: #999; font-size: 0.8em; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="index.html" class="back-link">← 一覧に戻る</a>
+  <header>
+    
+    <h1>AIツール開発の進捗報告：ホットペッパー競合分析・ハルシネーション問題・マニュアル自動生成</h1>
+    
+    <div class="meta-grid"><div class="meta-item"><span class="meta-label">種別</span><span class="meta-value">講義・セミナー</span></div>
+<div class="meta-item"><span class="meta-label">カテゴリ</span><span class="meta-value">external</span></div>
+<div class="meta-item"><span class="meta-label">動画時間</span><span class="meta-value">不明</span></div>
+<div class="meta-item"><span class="meta-label">文字起こし方式</span><span class="meta-value">Whisper / AI文字起こし</span></div>
+<div class="meta-item"><span class="meta-label">話者</span><span class="meta-value">Speaker A, Speaker D, Speaker F</span></div></div>
+    <div class="tags"><span class="tag">AI開発</span> <span class="tag">ホットペッパー</span> <span class="tag">競合分析</span> <span class="tag">キーワード戦略</span> <span class="tag">ハルシネーション</span> <span class="tag">YouTube</span> <span class="tag">マニュアル自動生成</span> <span class="tag">ローカル環境</span> <span class="tag">本番環境</span> <span class="tag">開発進捗</span></div>
+  </header>
+  
+<section>
+  <h2>3行要約</h2>
+  <ul class="summary-list"><li>ホットペッパーの競合キーワード分析ツールの開発進捗が報告され、自社と競合のキーワード対応状況を可視化する仕組みが紹介された。</li>
+<li>AIによるアカウント情報の架空生成（ハルシネーション）や、ローカル環境と本番環境でのYouTube検索結果の乖離など、複数の技術的課題が報告された。</li>
+<li>マニュアル自動生成機能やスライドテンプレート連携の開発が進行中だが、テスト後に動作しない部分があり引き続き調整中とのこと。</li></ul>
+</section>
+<section>
+  <h2>内容整理</h2>
+  <div class="content-block"><p>### ホットペッパー競合キーワード分析ツールの概要</p>
+<p>Speaker Aが開発・報告したツールは、ホットペッパーの情報を取得・活用することを主軸としたAIシステムである。具体的には、以下の機能が実装または開発中とされた。</p>
+<p>**競合ベンチマーク機能**: ホットペッパー上の競合店舗情報を取得し、ベンチマーク競合として追加・設定できる仕組みが構築されている。企業ごとに設定を行い、実際にホットペッパー上で営業担当が活用する「月間キーワードランキング」に対応している。</p>
+<p>**キーワード上位表示分析**: ホットペッパーでは月間キーワードランキングによって集客経路の集客数が大きく左右されるとSpeaker Aは説明しており、そのキーワードで自社が実際に上位表示できているかどうかが集客上の重要指標とされている。このツールでは、狙いたいキーワードを入力すると「自社がそのキーワードにどれだけ対応できているか」と「他社がそのキーワードに対してどれだけページを作っているか」が可視化される。そこから戦略を立案するフローが想定されている。</p>
+<p>**競合テキスト・戦略分析機能**: 競合のテキスト情報から学びを抽出し、使いたいキーワードや戦略の方向性を探るための仕組みも構築中であるとされた。</p>
+<p>**レポート機能（開発中）**: 毎日情報収集を行い、変更結果を日次レポートとして出力する機能も設計されているが、現時点では本番環境に反映されていない。作り込みの過程でこちらへの反映が追いつかず、まだローカル環境上にのみ存在している状態とのこと。</p>
+<p>---</p>
+<p>### AIのハルシネーション問題と架空アカウント生成</p>
+<p>Speaker Dが言及した問題として、AIが「存在しないアカウント」を架空で生成し始めているという事象が報告された。具体例として「イサオ」「山本」といった名前が挙げられ、「こんな人物はいない」「存在しない」とAIが生成した情報について困惑するやり取りがなされた。Speaker Dは「めちゃくちゃ久しぶりにハルシネーションという言葉を思い出した」と発言しており、実際の開発・運用の現場でこの問題に直面したことへの驚きを示している。この問題は現時点では解決されておらず、「まだこれが出ているならダメだった」という評価がなされている。</p>
+<p>---</p>
+<p>### ランチリサーチ機能と「嘘っぽさ」の課題</p>
+<p>Speaker Dが別のAI機能についても言及しており、「ランチのリサーチ」に関連する機能として、物語の悩みや課題を網羅的に調べ、そこからインサイトのヒントを抽出・深掘りするという仕組みが開発されていたことが紹介された。しかし、Speaker Dはこの出力について「嘘っぽい」「そんなの知らない」という感想を持っており、信頼性に疑問を抱いている。またエラーも発生しているとのことで、実用段階には至っていない状況とみられる。</p>
+<p>---</p>
+<p>### ローカル環境と本番環境の乖離問題（YouTube動画検索）</p>
+<p>Speaker Fが報告した課題として、YouTubeの動画検索機能においてローカル環境では正常に動作していたが、本番環境に展開したところ「一個もないので調べませんでした」という応答がAIから返ってきてしまう問題が発生したとのこと。ローカルと本番の環境差異が原因とみられ、この機能は現時点ではまだ使用できない状態と報告されている。</p>
+<p>---</p>
+<p>### マニュアル自動生成・スライドテンプレート連携機能</p>
+<p>Speaker Fが別途開発中の機能として、マニュアルの自動生成がある。毎回手動でマニュアルを作成することへの煩雑さを解消するため、テンプレートを活用してスライドなどの資料を自動作成できる仕組みを構築しているとのこと。テスト環境上で入力を行い、テンプレートを利用してスライド等を生成するフローが紹介されたが、テスト後に動作しなかった部分があり、引き続き調整中という状況である。音声認識ノイズにより詳細の一部は聞き取り不明となっている。</p>
+<p>---</p>
+<p>### 全体的な開発フェーズの状況</p>
+<p>本会話全体を通じて、複数のAIツール機能が同時並行で開発中であることがわかる。ホットペッパー競合分析・日次レポート・ランチリサーチ・YouTube動画検索・マニュアル自動生成のいずれも、ローカル環境での動作確認は進んでいるが本番環境への反映や品質担保に課題が残っている。ハルシネーション・環境差異・エラー発生といった問題が重なっており、実用・運用フェーズへの移行にはさらなる調整が必要な段階とみられる。</p></div>
+</section>
+<section>
+  <h2>キーポイント</h2>
+  <div class="content-block keypoints"><p>・[不明] Speaker A: 「ホットペッパーの月間キーワードランキングでの上位表示が集客数に大きく影響するため、自社と競合のキーワード対応状況を可視化するツールを開発中。日次レポート機能はまだローカル環境にのみ存在。」</p>
+<p>・[00:03:41] Speaker D: 「AIが存在しないアカウント（イサオ、山本など）を架空で生成するハルシネーションが発生しており、「まだこれが出ているならダメだった」と評価。ランチリサーチ機能の出力も「嘘っぽい」と感じており信頼性に疑問。」</p>
+<p>・[不明] Speaker F: 「YouTube動画検索機能がローカルでは正常動作していたが、本番環境では「一個もないので調べませんでした」と返答されてしまい使用不可の状態。マニュアル自動生成・スライドテンプレート連携もテスト後に動作しない部分があり調整中。」</p></div>
+</section>
+<section>
+  <h2>整形済み文字起こし（全文）</h2>
+  <details>
+    <summary>展開して表示（1,358文字）</summary>
+    <div class="transcript"><p>**Speaker A**: （聞き取り不明）</p>
+<p>**Speaker A**: ホットペッパーの情報をここに入れると、情報を取得するということもやっていて、ここでベンチマークした競合として追加するようなこともしていくと、この競合でベースの設定になっています。設定したものを企業に対してこんな感じで、ホットペッパーで実際にやると、営業担当からこのランキング、月間のキーワードランキングみたいなのを立てて、そのキーワードランキングで集客経路の集客数がかなり変わってくるので、そこのキーワードで実際に上位表示できているかどうかというのが重要です。そこのキーワードをここに入れています。</p>
+<p>例えばこういう狙いたいキーワードを入れると、自社がそのキーワードに対してどのぐらい今狙えているのかということと、他社がどのぐらいそのキーワードに対してページを作っているのかというのが表示されるので、そこの中から戦略を練っていくという感じですね。</p>
+<p>プラスで、競合のテキストから学びたいことを調べたり、どんなキーワードを使いたいか、どんな戦略を使いたいかというのを探っていくような仕組みも作っています。</p>
+<p>レポートに関してはまだ毎日情報収集して変更した結果が毎日レポートとして出るような形になるんですが、まだ表示されていないという感じですね。作り込んでいたらこちらに反映させることができなかったので、まだローカル上にあるという感じです。</p>
+<p>以上です。</p>
+<p>---</p>
+<p>**Speaker D**: （聞き取り不明）</p>
+<p>**Speaker E**: （聞き取り不明）</p>
+<p>**Speaker D**: （聞き取り不明）</p>
+<p>[00:03:41]</p>
+<p>**Speaker D**: 存在しないアカウントとかを架空で作り始めてたりしているのか。</p>
+<p>そんなイサオみたいな、こんな奴いるのみたいな、山本がついてる？こんな奴いるんだったら存在しませんみたいな。</p>
+<p>めちゃくちゃ久しぶりにハルシネーションという言葉を思い出しちゃった。こんなことあるんだと思って、ちょっと掴みきれないな、今まだこれが出ているならダメでした。</p>
+<p>もう一個はちょっとランチのリサーチで、物語のその悩み・課題とかが全部ザーッと調べられて、そこからインサイトのヒントみたいなのをこう揉んでいくというのを作っていたんですけど、これもちょっとなんか嘘っぽい。嘘っぽくない？これ、なんかそんな知らないな、みたいな。</p>
+<p>これとかがエラーも起こっちゃうし、ちょっとうーん、ってなんか。</p>
+<p>**Speaker F**: ローカルだとちゃんと検索してくれていたんですけど、YouTubeの動画とか本番環境に出したら、なんか一個もないんで調べませんでしたみたいなことを言われちゃって、これもちょっとまだ使えないんであれだったんですけど。</p>
+<p>もう一個がマニュアルを作っていたりするんですけど、毎回マニュアルを作るのがめんどくさいなと思っていたので、ここにテストでやっちゃうんですけど、例えばここに（聞き取り不明）を入れて、テンプレートを使ってスライドなどを作れるようにしているんですが、テスト後にうまく動かなかった部分もあって、引き続き調整中という感じです。</p>
+<p>（以降、音声認識ノイズのため聞き取り不明）</p></div>
+  </details>
+</section>
+  <footer>動画ナレッジ化システム — 自動生成</footer>
+</div>
+</body>
+</html>
