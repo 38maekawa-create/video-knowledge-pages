@@ -93,7 +93,7 @@
 <section>
   <h2>整形済み文字起こし（全文）</h2>
   <details>
-    <summary>展開して表示（12,109文字）</summary>
+    <summary>展開して表示（12,601文字）</summary>
     <div class="transcript"><p># Kさん対談（2025-09-13）</p>
 <p>&gt; 30代前半。LINEヤフー勤務。年収約800万円。コンテンツマーケティング担当（IT/メディアプラットフォーム系）。本業として広告誘導・番組制作・コンテンツ周りを一貫して担当。最近パパになったタイミングで参加。</p>
 <p class="section-heading">撮影前の雑談</p>
@@ -258,10 +258,18 @@
 <p>・ホスト名（藤田 or ハオ）→ 撮影記録参照推奨</p>
 <p>・Kさんのニックネーム経緯: 当初「キザケイ」と発音されたあと、Kさん側の希望で「Kさん」に変更（本人バレ防止）</p>
 <p>・一部数値の正確性: 「今21点ないぐらいですかね、17ぐらい」の意味（21万円 or 21件）は文脈で「3ヶ月目の利益17万」と解釈</p>
-<p>**SPEAKER_MASTER参照:**</p>
-<p>・canonical_name候補: 「Kさん」（新規追加候補）</p>
-<p>・role: member（30代中盤・LINEヤフー勤務・年収約800万・コンテンツマーケティング担当）</p>
-<p>・aliases候補: 「ケイさん」「キザケイ」（収録冒頭で言及）</p></div>
+<p>**SPEAKER_MASTER参照（2026-04-28 pao#91 確定）:**</p>
+<p>・canonical_name: **「かえで」**（TEKO5期生・なおとさん明示・2026-04-28）</p>
+<p>・text_display_name: 「Kさん」（公開コンテンツ用・本人希望でバレ防止）</p>
+<p>・aliases: [&quot;Kさん&quot;, &quot;Kaede&quot;, &quot;カエデ&quot;, &quot;ケイケイ&quot;]</p>
+<p>・transcription_errors: [&quot;カレガケイクズ&quot;, &quot;キザケイ&quot;, &quot;カレガケイ&quot;] ← 文字起こし誤変換の登録</p>
+<p>・role: member（5期生・1993年生まれ・LINEヤフー勤務・コンテンツマーケ・年収約800万・パパ）</p>
+<p>・「Kさん」呼称由来: Kaede の頭文字 K</p>
+<p>・ニックネーム遷移: 当初「キザケイ」発音 → 本人希望で「Kさん」に変更（=「ケイケイで知ってる人もいる」発言は本名「かえで」由来の他経路呼称への配慮）</p>
+<p>**運用ルール（hdd-archive 後追いナレッジ化の汎用）:**</p>
+<p>・公開コンテンツ（整形MD本体・HTML）: text_display_name=「Kさん」を使用</p>
+<p>・内部メタデータ（frontmatter / Supabase / SPEAKER_MASTER / 検索インデックス）: canonical_name=「かえで」+ cohort=5 を使用</p>
+<p>・横断検索時は canonical_name で名寄せ可能</p></div>
   </details>
 </section>
   <footer>動画ナレッジ化システム — 自動生成</footer>
