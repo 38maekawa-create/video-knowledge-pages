@@ -4,71 +4,1049 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow,noarchive">
-<title>実際に買った投資用の不動産物件の売買の歴史とリスト - 品質確認中</title>
+<title>実際に買った投資用の不動産物件の売買の歴史とリスト</title>
 <style>
   * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: #f5f6f8;
-    color: #202124;
-    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
-    line-height: 1.75;
-  }
-  main {
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 48px 20px 80px;
-  }
-  .panel {
-    background: #fff;
-    border: 1px solid #dfe3e8;
-    border-radius: 8px;
-    padding: 30px;
-  }
-  .label {
-    display: inline-flex;
-    border: 1px solid #d93025;
-    color: #b3261e;
-    background: #fff7f6;
-    border-radius: 999px;
-    padding: 4px 10px;
-    font-size: 13px;
-    font-weight: 700;
-  }
-  h1 {
-    margin: 18px 0 12px;
-    font-size: 30px;
-    line-height: 1.4;
-    letter-spacing: 0;
-  }
-  p {
-    margin: 0 0 14px;
-    font-size: 16px;
-  }
-  .meta {
-    margin-top: 24px;
-    padding-top: 18px;
-    border-top: 1px solid #edf0f2;
-    color: #5f6368;
-    font-size: 13px;
-  }
+  body { margin: 0; background: #f5f6f8; color: #202124; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; line-height: 1.8; }
+  .page { max-width: 1080px; margin: 0 auto; padding: 32px 20px 72px; }
+  .topline { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: #5f6368; font-size: 13px; }
+  .status { color: #137333; background: #e6f4ea; border: 1px solid #b7dfc1; border-radius: 999px; padding: 4px 10px; font-weight: 700; }
+  header { padding: 28px 0 22px; border-bottom: 1px solid #dfe3e8; }
+  h1 { margin: 12px 0 14px; font-size: clamp(28px, 4vw, 44px); line-height: 1.28; letter-spacing: 0; }
+  .lead { max-width: 820px; color: #3c4043; font-size: 17px; }
+  .meta, .terms { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill { display: inline-flex; align-items: center; min-height: 30px; padding: 5px 11px; border: 1px solid #dfe3e8; border-radius: 999px; background: #fff; color: #3c4043; font-size: 13px; }
+  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; margin-top: 24px; align-items: start; }
+  section, aside { background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; }
+  section { margin-bottom: 18px; padding: 24px; }
+  aside { position: sticky; top: 18px; padding: 18px; }
+  h2 { margin: 0 0 14px; font-size: 21px; line-height: 1.4; }
+  h3 { margin: 18px 0 8px; font-size: 15px; }
+  .summary-list { margin: 0; padding-left: 1.2em; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { border: 1px solid #e8eaed; padding: 8px 10px; vertical-align: top; text-align: left; }
+  th { background: #f8fafd; }
+  .quote-grid { display: grid; gap: 12px; }
+  .quote-card { padding: 16px; border: 1px solid #e8eaed; border-radius: 8px; background: #fbfcff; }
+  .quote-head { display: flex; gap: 8px; margin-bottom: 8px; }
+  .speaker { display: inline-flex; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+  .speaker.yaesu { background: #e8f0fe; color: #174ea6; }
+  .speaker.kakushi { background: #e6f4ea; color: #137333; }
+  .quote-card p, .turn p { margin: 8px 0 0; overflow-wrap: anywhere; }
+  details { border: 1px solid #dfe3e8; border-radius: 8px; background: #fff; }
+  summary { padding: 15px 17px; color: #0b57d0; font-weight: 700; cursor: pointer; }
+  details[open] summary { border-bottom: 1px solid #e8eaed; }
+  .turn { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 14px; padding: 15px 17px; border-bottom: 1px solid #eef0f2; }
+  .turn:last-child { border-bottom: 0; }
+  .turn time { color: #5f6368; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
+  .quality { margin: 0; padding-left: 1.1em; font-size: 14px; }
+  .quality li { margin: 7px 0; }
+  footer { margin-top: 28px; color: #80868b; font-size: 12px; text-align: center; }
+  @media (max-width: 840px) { .layout { grid-template-columns: 1fr; } aside { position: static; } }
+  @media (max-width: 620px) { .page { padding: 22px 14px 52px; } section { padding: 18px; } .turn { grid-template-columns: 1fr; gap: 4px; } table { font-size: 13px; } }
 </style>
 </head>
 <body>
-<main>
-  <section class="panel">
-    <span class="label">品質確認中</span>
+<main class="page">
+  <div class="topline"><span>プロパー八重洲YouTube撮影素材 / v3</span><span class="status">continuation covered</span></div>
+  <header>
     <h1>実際に買った投資用の不動産物件の売買の歴史とリスト</h1>
-    <p>この文字起こしページは、整形本文の品質確認のため一時的に非表示にしています。</p>
-    <p>話者特定、固有名詞補正、文単位の区切りをやり直した v3 版で差し替えます。</p>
-    <p>素材管理用URLは維持しています。</p>
-    <div class="meta">
-      <div>package_id: 02_property_purchase_list</div>
-      <div>status: formatted_material_v3_rework_pending</div>
-      <div>updated_at: 2026-05-16T13:24:34+09:00</div>
-      <div>url: https://38maekawa-create.github.io/video-knowledge-pages/20260515_%E3%83%97%E3%83%AD%E3%83%91%E3%83%BC%E5%85%AB%E9%87%8D%E6%B4%B2YouTube%E7%B4%A0%E6%9D%90_03_%E4%B8%8D%E5%8B%95%E7%94%A3%E8%B3%BC%E5%85%A5%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88.html</div>
+    <p class="lead">前半rawで途中終了していた区分6件目以降を、承認済みの後半音声で補完したv3版です。物件10件、融資、売却、家賃年収、金利リスクまで編集者が読める形に整えました。</p>
+    <div class="meta"><span class="pill">話者: 八重洲さん / かくしくん</span><span class="pill">発話数: 115</span><span class="pill">本文文字数: 約9,839字</span><span class="pill">10物件補完済み</span></div>
+  </header>
+  <div class="layout">
+    <div>
+      <section><h2>3行要約</h2><ul class="summary-list"><li>八重洲さんが25歳ごろから買ってきた中古区分マンション6件と、その後の一棟アパート4件を、金額・融資・家賃・売却経験込みで順番に話す。</li><li>区分マンションは「練習」として学びが大きかった一方、資産拡大には一棟物・土地付き物件・金融機関評価・手元キャッシュが重要だと整理されている。</li><li>現在は借入約6億円、家賃年収約3800万円規模まで進み、最大リスクは金利上昇によるキャッシュフロー悪化だと説明している。</li></ul></section>
+      <section><h2>物件リスト整理</h2><table><tr><th>no</th><th>種別</th><th>エリア/駅</th><th>概要</th><th>結果/学び</th></tr>
+<tr><td>1</td><td>区分</td><td>大阪・江坂</td><td>約2000万円。住宅ローンで購入し、後に貸し出し。家賃13万円ほどで早期客付け。</td><td>売却時は購入価格より高く売れた。最初の成功体験。</td></tr>
+<tr><td>2</td><td>区分</td><td>神戸・兵庫駅</td><td>1000万円弱。初めて投資用ローンで購入。家賃5.5万円ほど。</td><td>大成功ではないが、低稼働で良い練習になった。</td></tr>
+<tr><td>3</td><td>区分</td><td>大阪・緑橋</td><td>約500万円。駅徒歩1分、家賃4万円ほど。</td><td>入退去が多く、清掃・修繕で利益が削られた。属性/エリアの学び。</td></tr>
+<tr><td>4</td><td>区分</td><td>大阪・東三国</td><td>約900万円。駅ポテンシャルで買ったが、変則間取りで客付けに苦戦。</td><td>半年空室も経験。間取りと内見改善の重要性を学んだ。</td></tr>
+<tr><td>5</td><td>区分</td><td>大阪・野田</td><td>約1200万円。法人契約のオーナーチェンジ物件、家賃6.6万円ほど。</td><td>2年ほどで約1300万円売却。区分の中では当たり物件。</td></tr>
+<tr><td>6</td><td>区分</td><td>新大阪</td><td>約420万円を現金買い。高齢入居者つき。</td><td>現金買いでキャッシュフローは厚いが、孤独死リスクなども学んだ。</td></tr>
+<tr><td>7</td><td>一棟アパート</td><td>東大阪・瓢箪山</td><td>約9300万円。融資約8500万円、頭金/諸費用で約1500万円。利回り約7.1%。</td><td>サラリーマン退職後でも、事業実績と現金があれば融資がつくと確認。</td></tr>
+<tr><td>8</td><td>一棟アパート</td><td>東大阪</td><td>約1.1億円。融資約1億円。2か月連続決済。</td><td>法人を分けて金融機関評価を受け、追加融資を受けた。</td></tr>
+<tr><td>9</td><td>一棟アパート</td><td>大阪・江坂</td><td>約1.75億円。融資約1.57億円。築浅12部屋。</td><td>家賃増額後も早期客付け。売却益3000万-4000万円も狙える見立て。</td></tr>
+<tr><td>10</td><td>一棟アパート</td><td>枚方市・宮之阪</td><td>約1.45億円。フルローン。建築中/プラン買い。</td><td>満室運営後の評価が次の実績になる。</td></tr></table></section>
+      <section><h2>編集で拾いやすい発話</h2><div class="quote-grid">
+      <article class="quote-card">
+        <div class="quote-head"><span>09:16</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>そうですね。<br>僕が25歳くらいからコツコツ買ってきた不動産を全部お伝えしていきます。<br>サラリーマンの方でも不動産投資はできると思うので、そのイメージを少しでも湧かせてもらいたいなと思っています。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>10:43</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>中古の区分マンションとアパートですね。<br>不動産投資を知らない方も見ているかもしれませんが、僕が買い進めてきた種類は大きくこの2つです。<br>最初に買っていた区分マンションが6部屋、アパートが4棟あります。<br>合計10種類あるので、それを紹介できたらと思います。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>13:24</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>そういう意味では、もう少し強気にいってもよかったのかなという反省はあります。<br>売却するときは、2300万円から2400万円くらいだったので、プラスで売れました。<br>いい思いをしつつ、思い切って勢いで買ってよかったなと思っています。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>23:42</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>結論から言うと、間取りです。<br>普通の間取りは、玄関を入るとちょっと廊下があって、キッチンがあって、奥に正方形か長方形の部屋がある、という作りじゃないですか。<br>この物件は、変な形の間取りだったんですよ。<br>飛び出ているところがあったり、横も飛び出ていたり。<br>でも、買った時点では入居者がついていたので、それでも決まるだろうと思っていました。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>30:45</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>僕は今までローンを借りて、金融機関の力を借りて買ってきました。<br>自分の資本に対してレバレッジを効かせて、融資を引っ張って買っていたわけです。<br>ただ、これはサラリーマンだと限界があります。<br>借りられるお金の枠があるんです。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>03:14</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>初めての試みでしたけど、やっぱりレバレッジをかけられるなら、かけた方がいいですね。<br>銀行のローンを借りられるなら借りた方がいい。<br>あと、区分を買い集めていくと、どうしても伸びないんです。<br>レバレッジを活かすには、一棟物など、しっかり土地がついている物件を買って、不動産賃貸業としての実績を作る。<br>サラリーマンの与信の枠を超えていかないといけない、というところにたどり着きました。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>07:25</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>金融機関さんに過去2期分の決算、いわゆる通信簿を見てもらいました。<br>あとは手元の現金と、過去に区分を回していた実績もあったので、貸してくれました。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>13:13</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>9棟目は、最初に買った江坂駅にまた戻ってくるんです。<br>思い出の地ですね。<br>駅から3、4分くらい離れている物件です。<br>土地勘がありまくるので、ここはめちゃくちゃいいところだと思いました。<br>金額は1億7500万円です。<br>さすがにここまで来ると、僕も高いなと思いました。<br>大丈夫かなと少しビビりました。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>19:23</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>まだ宮之阪が建っていないですけど、あそこが入ってきたら年3000万円後半、3800万円くらいです。<br>新築や築浅の良いところは、退去もそんなには出ないですし、修繕も発生しにくいことです。<br>不労所得とまでは言えないですが、事業所得以外にそういうものを作れているのは良かったなと思います。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>20:52</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>最悪なのは、金利上昇がもっと進んで、日々得られるキャッシュフロー、インカムと、借り入れの返済のバランスが崩れてしまうことです。<br>思ったより毎月収益が出ない状況ができた時は最悪だと思います。</p>
+      </article></div></section>
+      <section><h2>整形済み文字起こし全文</h2><details open><summary>全文を表示（115発話 / 約9,839字）</summary><div>
+      <article class="turn">
+        <time>00:00:42</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>まずは、物件を購入してきた話ですね。<br>購入物件を開示する企画です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>06:20</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>挨拶の一言は何がいいんですかね。<br>純資産1億みたいな自己紹介よりも、パラレルキャリア的な方がいいと思うんですけど。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>06:43</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>そういうキャッチフレーズだった方がいいですか。<br>例えば「何年でどれくらいの資産を築きました」みたいな。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>07:54</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>真面目系だったら、ビジネスパーソンのキャリア支援をしている、みたいな感じがいいと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>08:08</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>投資って手段じゃないですか。<br>最終的に得られる便益は、生き方の自由度が増えるとか、選択肢が増えるとか、豊かになるというところです。<br>会社員としての兼業であったり、生き方が柔軟になったりするところを、僕らは売っているので。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>08:57</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ビジネスパーソンのキャリア支援をやっています、プロパー八重洲です。<br>よろしくお願いします。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>09:04</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>今日はどういう話ですか。<br>個人情報を公開する、ということですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>09:10</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ただ漏れでいきたいと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>09:12</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>今まで投資したもの、ということですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>09:16</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そうですね。<br>僕が25歳くらいからコツコツ買ってきた不動産を全部お伝えしていきます。<br>サラリーマンの方でも不動産投資はできると思うので、そのイメージを少しでも湧かせてもらいたいなと思っています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>09:35</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>実際に25歳から始めて、今32歳で、どれくらいになったんですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>09:43</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>総資産でいうと、7億円ちょっとくらいですかね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>09:48</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>もともとめちゃくちゃお金持ちだったんですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>09:50</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>全然ないです。<br>買い始めた時は、本当に貯金もないレベルでした。<br>総資産なので、もちろん見合いの負債もついています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>10:13</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>これは誰でもできるんですか。<br>特別なことを話すわけではないんですよね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>10:17</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>やり方というよりは、僕が買ってきた軌跡という感じです。<br>誰でもできるかというと語弊はあります。<br>その辺が気になる場合は、また別のノウハウで話そうかなと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>10:40</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>まず何個くらい紹介があるんですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>10:43</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>中古の区分マンションとアパートですね。<br>不動産投資を知らない方も見ているかもしれませんが、僕が買い進めてきた種類は大きくこの2つです。<br>最初に買っていた区分マンションが6部屋、アパートが4棟あります。<br>合計10種類あるので、それを紹介できたらと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>11:14</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>記念すべき1つ目なんですけど、そんなにテンションが上がって買ったわけではありません。<br>買いたいなと思って行動して、お金がないけど奥さんから借りて買った1部屋目です。<br>若干、思い入れはあります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>11:38</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>大阪の吹田市にある江坂駅という、御堂筋線のかなりいい駅があります。<br>そこから徒歩9分くらいのマンションです。<br>当時は2000万円くらいで買いました。<br>これは住宅ローンで買ったんですよね。<br>奥さんと新婚で、24歳の終わりに結婚したんですけど、最初は住もうということで買いました。<br>僕が転勤族だったこともありますし、転職するかもしれないから、ゆくゆくは貸しに出すこともできるかなという2つの目的で購入した物件です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>12:22</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>こんな場所まで言ってくれるんですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>12:26</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>僕の中ではもう売った物件なので、言っていいかなと思っています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>12:30</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>これは結局、貸し出しをしたということですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>12:36</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そうですね。<br>最初は2、3年くらい住んでいました。<br>築20年くらいの、そんなに新しいマンションではなかったんですけど、その後に転居しないといけなくなったので貸しに出しました。<br>確か、募集開始から1週間くらいでお客さんがつきました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>12:56</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>それはラッキーな方ですよね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>12:59</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>相場はちゃんと調べていました。<br>自分たちが住んでいる江坂エリアの徒歩圏内で、どれくらいの家賃だったらすぐ決まるのかを、賃貸会社にヒアリングしていました。<br>だいたい12、3万円くらいが相場だったので、時期も鑑みて、割と強気に出してもすぐつきそうだと思いました。<br>それで13万円で出して、1週間くらいでついたという感じです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>13:24</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そういう意味では、もう少し強気にいってもよかったのかなという反省はあります。<br>売却するときは、2300万円から2400万円くらいだったので、プラスで売れました。<br>いい思いをしつつ、思い切って勢いで買ってよかったなと思っています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>14:05</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>2つ目は兵庫の方ですね。<br>神戸の兵庫駅というJRの駅があるんですけど、そこから徒歩5分くらいの物件です。<br>築20年くらいで、1000万円弱くらいの物件でした。<br>1件目は住宅ローンで買ったんですが、2区分目は投資用のローンで買いました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>14:41</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>マンションやアパートなどの不動産を買うとき、実需の方、つまり自分たちが住む用のローンは金利が低いです。<br>投資用ローンの場合は、少し金利が2%とか3%高いという感じです。<br>その投資用ローンで買った記念すべき物件でした。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>15:25</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>どういう物件だったんですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>15:27</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ワンルーム、1Kかな。<br>18平米か20平米くらいで、そんなに大きくはない単身者向けのマンションでした。<br>僕は1社目でプライム上場の製薬会社に勤めていたんですけど、そこの先輩方も区分マンションを結構持っていました。<br>だから、僕もちょっと買ってみようと思って、結果的には良かったですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>16:05</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>何が良いかというと、貸し出しの家賃も結構高くて、5万円くらいのところを5.5万円で貸せました。<br>たまたま市役所勤務の女性が借りてくれたので、勤続年数も長くなる傾向があるし、年収もそれなりにある。<br>飛んだりもしないという意味で、属性が良かったんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>16:32</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>毎月ちゃんと残債も減っていきました。<br>最終的に売却して、これは50万円から100万円弱くらいの利益で出したと思います。<br>6年くらい保有したのかな。<br>毎月5.5万円の家賃が入って、返済が3万円くらい。<br>修繕もありますが、手残りは1.5万円から2万円弱くらいでした。<br>それが6年分あって、さらにキャピタルゲインも少しありました。<br>大成功ではないけれど、いい練習になったと思っています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>17:48</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>3つ目は、地下鉄の緑橋駅です。<br>大阪の城東区か東成区だったと思います。<br>徒歩1分で、立地だけでいうと完璧でした。<br>出口を出たらそこにある、みたいな駅近の物件です。<br>築29年か30年くらいで、小ぶりな500万円くらいで買いました。<br>東京だったらありえないと思うんですけど。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>18:16</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>500万円ということもあって、15平米くらいの物件で、家賃も4万円くらいしか取れません。<br>ただ、駅徒歩1分なので客付けには困らないかなと思っていました。<br>相場より少し安いかなと思っていたので、1部屋目、2部屋目を買ってから3か月後くらいに買いました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>18:57</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>売却が終わってから3つ目、ではなくて、2つ目がうまくいったかどうかも分からないまま買ったんですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>19:06</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そうですね。<br>環境が良かったです。<br>周りにも不動産投資をしている人がいましたし、ちゃんと勉強している人がいました。<br>業者に言われるまま買うのではなく、自分で勉強されている先輩がいて、「こういうところを見るんだよ」と教えてくれました。<br>それは大きかったです。<br>あと金利も低かったですし、今ほどマンション価格も高騰していませんでした。<br>再現性があるかと言われると、ちょっと微妙です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>19:55</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>結果はどうだったんですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>19:57</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>結構苦労しました。<br>徒歩1分なんですけど、築年数が古いことと、エリア的にそこまで良いエリアではなかったんです。<br>家賃も高くないので、入居者属性が低くなりやすい。<br>退去が早いことが多かったんですよね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>20:40</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>4、5年は保有していましたけど、1年に1回くらい入居者が変わっていたんじゃないですかね。<br>短いです。<br>売却するときも、ちょっとプラスくらいだったので、めちゃくちゃ旨味がある投資ではありませんでした。<br>客付けがしんどかったですね。<br>退去が多いので、そのたびに清掃や修繕が発生して、4、5万円ずつ出ていく。<br>少しずつ溜まってきた家賃が、また減るわけです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>21:32</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>客付けで工夫したことはありますか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>21:37</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>正直、そんなにはないです。<br>賃貸相場をちゃんと把握したうえで、賃貸会社さんに伺ったり、管理会社と連携するという、ごく当たり前のことをやった感じです。<br>良い経験でしたね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>22:03</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>4つ目は、1部屋目の江坂駅の近くです。<br>1駅南に東三国駅という駅がありまして、神戸や大阪駅と江坂の間にある駅です。<br>そこの徒歩5分くらいの物件でした。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>22:52</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>僕はやるとなったら勢いで行ってしまうタイプなので、半年で4部屋くらい持っていました。<br>銀行は全部別です。<br>この物件は900万円ちょっとくらいで、オリックス銀行だったと思うんですけど、ローンを引いて購入しました。<br>築20年くらいだったんですが、この物件はあかんかったですね。<br>普通に失敗していると思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>23:40</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>何がダメだったんですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>23:42</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>結論から言うと、間取りです。<br>普通の間取りは、玄関を入るとちょっと廊下があって、キッチンがあって、奥に正方形か長方形の部屋がある、という作りじゃないですか。<br>この物件は、変な形の間取りだったんですよ。<br>飛び出ているところがあったり、横も飛び出ていたり。<br>でも、買った時点では入居者がついていたので、それでも決まるだろうと思っていました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>24:14</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>退去した後の客付けが全然決まらなくて、半年近く空室になっていたタイミングがありました。<br>東三国だから駅のポテンシャルとしては良いだろう、ということで、ほぼノールックで買ってしまった感じです。<br>本当に良くなかったですね。<br>反省しています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>24:49</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>部屋の飾り付けの話もいいですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>24:55</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>結局、客付けに困ったので、このままではダメだということで、妻と部屋の掃除をこまめにしに行きました。<br>内覧で断られているんじゃないか、という仮説を立てて、部屋を見に行って、掃除をし直しました。<br>芳香剤を置いたり、スリッパを綺麗に用意したり、ライトを置いたり、見栄えが良くなるように飾り付けをしました。<br>間取りが変な分、パッと入った時の印象を良くしないといけないと思ったんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>25:51</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>その間がきつかったですね。<br>当時の僕からすると、この賃料収入は生命線だったので、半年空室というのは結構きつかったです。<br>その間もローンの返済はもちろん行われています。<br>だから、間取りもオーソドックスなものを選ぶことは大事です。<br>駅のポテンシャルだけで安易に判断したため、非常に勉強になりました。<br>決まらない時に、管理会社とどう連携して動くか、自分たちにできることはないのかを考えないといけないと思いました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>27:23</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>この東三国の物件は、結局900万円くらいで、買った値段くらいで売れました。<br>マイナスではないです。<br>とはいえ、入ってくる家賃も期待していたほどのインカムは得られなかったですし、売却もトントンくらいだったので、時間と労力をかけた割には、全然でしたね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>27:55</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>野田の方は、1200万円くらいで買った物件だったと思います。<br>これは最初から法人さんが借りてくれていて、6.6万円くらいで借りてくれていたと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>28:11</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>元々入居者がついていたオーナーチェンジ物件です。<br>最初の自分たちが住む用以外は、基本的に入居者がついた状態で買うオーナーチェンジ物件でした。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>28:32</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>野田の物件は、相場より高く家賃がついていました。<br>昔から入っている人がずっと契約してくれていたので、家賃が下がっていなかったんです。<br>利回りも高かったので、すぐ買いました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>29:08</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>最初の江坂も含めて、これまでは築20年くらいのものを買っていました。<br>少し若めの物件を買ったら月々のキャッシュフローが出るのかという不安はありました。<br>ただ、家賃相場より高く客付けできていることもあったので、キャッシュフローもしっかり出ました。<br>確か2年くらいで売却したのかな。<br>区分は卒業したい気分になっていたので早めに売ったんですが、買った金額より高く出したら、それでもすぐ売れました。<br>1300万円くらいで出したと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>30:10</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>当たり物件ですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>30:18</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>最高でしたね。<br>やってきてよかったと思いました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>30:28</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>区分編でいうと、次が最後ですね。<br>同じことをずっとやり続けると飽きてしまうので、何か違った買い方をしたいなと思いました。<br>先ほどお伝えした先輩の投資家さんも、現金で買っていたんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>30:45</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>僕は今までローンを借りて、金融機関の力を借りて買ってきました。<br>自分の資本に対してレバレッジを効かせて、融資を引っ張って買っていたわけです。<br>ただ、これはサラリーマンだと限界があります。<br>借りられるお金の枠があるんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:00</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>それまでは借りることができたんですけど、投資家さんが現金で結構買い進めて、キャッシュフローを厚くしていたんです。<br>借り入れがない分、家賃がまるまる入ってくるじゃないですか。<br>それを見て、じゃあ自分もそうしようかなと思いました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:18</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>新大阪の徒歩5分くらいだったと思います。<br>築35年くらいのマンションで、420万円くらいでした。<br>めちゃくちゃ安かったんですよ。<br>相場を見ると480万円くらい、高くても500万円くらいだったので、それより70万円から80万円くらい安かった。<br>速攻で現金買いしました。<br>その時は27歳くらいだったと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>01:01</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>それでもちゃんと貯めていたんですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>01:03</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>今までの家賃収入を全部貯めていましたし、普通に貯金もしていたので、えいやっと買いました。<br>その物件も毎月4万円くらい家賃が入ってくるので、年間48万円じゃないですか。<br>10年くらいで回収する利回りの物件でした。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>01:25</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>これは成功の方なんですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>01:32</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>成功だと思います。<br>ただ苦労した部分としては、安かった理由が、住まれている方が70代くらいのおばあちゃんだったことです。<br>言い方は難しいですけど、いつお亡くなりになってもおかしくない年齢だったので、孤独死のリスクがありました。<br>そこが安かった理由だったんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>01:58</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>孤独死された場合、その物件の価値は下がるんですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>02:00</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>告知義務というものが基本的にはあります。<br>そういう事実があったことを告知しないといけないので、次の客付けがつきにくくなる可能性があります。<br>また、亡くなられた時に特殊清掃などが必要になると、清掃費がかなりかかります。<br>なので僕は、孤独死対策の保険をかけたり、いろいろリスクヘッジをしたうえで運用しました。<br>最終的には、同じ値段か少し高いくらいで売れたので、キャッシュフローも積み上がり、売却金も少し得られた。<br>投資としては良かったですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>02:35</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ああいう現金買いの物件は、早めに回した方がいいかなと思いました。<br>買って、少しキャッシュを得て、売却する。<br>それがいいかなと思いました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>03:10</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>現金買いは結局良かったんですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>03:14</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>初めての試みでしたけど、やっぱりレバレッジをかけられるなら、かけた方がいいですね。<br>銀行のローンを借りられるなら借りた方がいい。<br>あと、区分を買い集めていくと、どうしても伸びないんです。<br>レバレッジを活かすには、一棟物など、しっかり土地がついている物件を買って、不動産賃貸業としての実績を作る。<br>サラリーマンの与信の枠を超えていかないといけない、というところにたどり着きました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>03:43</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>手元にキャッシュを置いておくことが一番正義なんだな、というのは思いました。<br>金融機関に不動産賃貸業として評価してもらう時には、手元のキャッシュも見られます。<br>そして区分以外で実績を作っていくことが大事です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>04:17</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>巷にあふれている不動産投資家の本を読んでも、区分マンションで金持ちになっている人はほぼいません。<br>アパートや一棟マンションでどうたら、という一棟物の話ばかりです。<br>例外で芦沢晃さんという有名な方はいらっしゃいますけど、あの方も現金買いでやっているので、状況が全然違います。<br>今からワンルームマンション投資をしようとしている人は、いろいろ勉強し直した方がいいと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>05:01</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>すでにワンルーム投資をしている人は、どうしたらいいですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>05:08</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>まずは売却査定をいろいろな会社に出して、相見積もりを取って、少しでも条件がいいところに売却してもらうことです。<br>早めの方がいいと思います。<br>2018年くらいに買っていて、今売れるならすぐ売った方がいいと思います。<br>ただ、最近買ってしまった人は、今売ろうと思っても手出しが500万円、600万円出てしまうと思うので、やむなくホールドしないといけないと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>05:37</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>ここで区分の終末を迎えるというか、考え方が変わってきたところですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>05:48</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>練習みたいな気持ちもありましたけど、やっぱり確信に変わって、一棟物に行ったという感じです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>05:54</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>一棟物が7つ目の物件で、瓢箪山の9500万円くらいの物件ですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>06:02</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>物件7つ目、アパート1棟目です。<br>この時は全然テンションは上がらなかったです。<br>大正じゃないです。東大阪です。<br>9300万円くらいでした。<br>今までの6部屋の区分よりも、トータルで高い金額になりました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>06:47</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>瓢箪山駅から徒歩6分くらいです。<br>大阪市内ではないという指摘はあるかもしれないですけど、立派なエリアだと思っています。<br>融資は8500万円くらいです。<br>800万円くらいは頭金として入れないといけなかった。<br>諸費用も含めると、トータル1500万円くらい出さないといけない感じでした。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>07:21</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>サラリーマンを辞めた後に、8500万円を借りられたんですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>07:25</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>金融機関さんに過去2期分の決算、いわゆる通信簿を見てもらいました。<br>あとは手元の現金と、過去に区分を回していた実績もあったので、貸してくれました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>07:50</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>サラリーマンを辞めた後の方が、お金は借りにくいと思います。<br>これにチャレンジする前にも一度、不動産賃貸業をやりたいと相談したことがあります。<br>その時は2期目の途中くらいで、門前払いでした。<br>2期が終わって3期目に入ったタイミングで動き始めると、2期黒字でちゃんと出しているから評価してもらいました。<br>ちゃんとやってきてよかったなと思いましたし、サラリーマンを辞めたとしても、事業でちゃんと成績表が良ければ借りられることが分かりました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>08:29</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>1回借りられたことは、また実績になるんですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>08:34</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そうです。<br>しかも地銀さんだったので、銀行にも都市銀行、地方銀行、信用金庫、信用組合のような階層があります。<br>地方銀行から借りているということは、信用金庫さんも評価してくれやすくなります。<br>不動産の場合は、特にそれが強いかなと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>09:17</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>利回りでいうと7%くらいです。<br>7.1%くらいですね。<br>年間のキャッシュフローがあり、返済もありますが、月でいうと数十万円くらいのキャッシュフローが入ってくる感じです。<br>これはまだ買って間もないです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>11:01</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>8つ目ですね。<br>続いて、もう東大阪なんですけど、金融機関から連携された紹介でした。<br>提携している業者さんがあって、その業者さんと銀行が一緒に紹介してくれました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>11:27</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>金融機関が紹介する物件はやめておけ、みたいな話もありますよね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>11:38</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>僕は全然、むしろ良いのかなと思っています。<br>これも同じく7%くらいで、1億1000万円くらいでした。<br>融資は1億円です。<br>9月と10月の2か月連続決済だったので、よく貸してくれたなと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>12:17</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>僕は法人が2つあって、両方とも成績が良いので、1つの法人ずつで貸してくれました。<br>法人ごとに1物件ずつ買わせてくれた感じです。<br>手出しでいうと、頭金1000万円と諸費用があり、これも1000万円台はお金を入れました。<br>3年から5年くらいの間で売却を見ると思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>13:13</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>9棟目は、最初に買った江坂駅にまた戻ってくるんです。<br>思い出の地ですね。<br>駅から3、4分くらい離れている物件です。<br>土地勘がありまくるので、ここはめちゃくちゃいいところだと思いました。<br>金額は1億7500万円です。<br>さすがにここまで来ると、僕も高いなと思いました。<br>大丈夫かなと少しビビりました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>13:57</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ただ、ある信用金庫さんが1億5700万円くらい、約9割の融資を出してくれるということで、行こうと判断しました。<br>利回りは6.7%くらいです。<br>江坂の駅という時点でポテンシャルがあることは分かっています。<br>物件は立地です。<br>まず立地以外でやらない方がいいですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>14:37</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>これは12部屋で築3年です。<br>新築ではなかったんですけど、最近2部屋退去がありました。<br>3月と4月に、それぞれ家賃を5000円、7000円くらい上げたんですが、両方1週間で決まりました。<br>上げようと思えば上げられます。<br>この物件は部屋も広く、38平米くらいあります。<br>安く買えたし、融資がついてよかったという感じです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>15:40</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>売却益も結構出そうですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>15:42</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>出ると思います。<br>3000万円とか4000万円とかいくと思いますね。<br>本当に売った時はテンションが上がるかもしれません。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>16:17</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>最後は、まだ建築中なんですよ。<br>土地と建物のプランを建築会社が作ってくれていて、それをプラン買いするような感じです。<br>1億4500万円で買いました。<br>僕が住んでいる枚方市の宮之阪の物件です。<br>徒歩12分くらいですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>16:41</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>人気というか、入居がつくイメージがあまりないんですけど。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>16:45</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>宮之阪は人気ですよ。<br>家賃も結構高く取れます。<br>僕からすると、これも土地勘があります。<br>自分が住んでいる地域なので、だいたい分かりますし、相場もなんとなく分かっています。<br>6月か7月くらいに完成という感じです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>17:07</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>購入金額は。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>17:08</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>1億4500万円で、融資も1億4500万円です。<br>フルローンでついたという感じですね。<br>金融機関が頑張ってくれた感じです。<br>貸し出したら金利を得られるので、金融機関にもメリットはあります。<br>貸し倒れがないという判断をされたということです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>17:36</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>この物件は、まだ家賃が入ってきていません。<br>客付けをちゃんとして満室にできたら評価されるかな、という物件です。<br>利回りは6%台で、7%いけたら嬉しいかなというくらいです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>18:07</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ここまで7年です。<br>結構時間はかかりました。<br>区分マンションであまり失敗をすることなく練習して、経験値を積み上げて、アパートに移行できたということが分かったと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>18:23</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>最初からアパートは無理なんですかね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>18:27</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そんなことはありません。<br>ちゃんと勉強する環境や、努力をしたうえで正しいやり方をやっていけば、むしろアパートから始めた方がいいんじゃないかなと思います。<br>僕は石橋を叩いて渡るところもありますし、一方で無知だったこともあって、区分からやってしまったところがあります。<br>区分の中でも失敗しないように頑張ってやっていた、という感じです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>18:58</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>トータルの借り入れでいうと、今現在で6億円くらいですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>19:06</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>今でどれくらいだろう。<br>6億円くらいになるんですかね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>19:21</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>家賃収入だけで。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>19:23</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>まだ宮之阪が建っていないですけど、あそこが入ってきたら年3000万円後半、3800万円くらいです。<br>新築や築浅の良いところは、退去もそんなには出ないですし、修繕も発生しにくいことです。<br>不労所得とまでは言えないですが、事業所得以外にそういうものを作れているのは良かったなと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>20:05</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>事業も頑張りつつ、最終的には不動産も今後拡大していって、働かない世界線に行けたらいいなと思います。<br>Xの冒頭で書かせてもらったのは本音です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>20:43</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>最悪のパターンはどういうことが考えられますか。<br>借り入れがある状態も含めて。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>20:52</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>最悪なのは、金利上昇がもっと進んで、日々得られるキャッシュフロー、インカムと、借り入れの返済のバランスが崩れてしまうことです。<br>思ったより毎月収益が出ない状況ができた時は最悪だと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>21:20</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>今は変動金利がどんどん上がっています。<br>知らない間にハガキが来て、来月から0.25%上げます、ということが最近よくあります。<br>だから、ちゃんと収支計算して、金利が仮に1%、2%上がっても大丈夫なシミュレーションをしておくことが大事です。<br>最後の想定はそこかなと思います。<br>火災や天災もありますが、その辺は火災保険でヘッジできます。<br>大体のリスクは洗い出されているから不動産投資は成り立っているわけで、それを知っておくことが重要だと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>21:56</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>すごい勉強になりました。<br>ありがとうございます。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>22:11</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>私はこんな形で、ビジネスパーソンのキャリアを少しでも上げていくために情報発信しています。<br>海外輸出、不動産などいろいろなジャンルでやっています。<br>それを運営しているTEKOというコミュニティプラットフォームがありますので、情報を受け取りたい方は、概要欄の公式メールマガジンに登録していただければと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>22:37</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>粘り力を上げていきましょう。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>22:39</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>ありがとうございました。</p>
+        </div>
+      </article></div></details></section>
     </div>
-  </section>
+    <aside>
+      <h2>補正済み固有名詞</h2>
+      <div class="terms"><span class="pill">江坂</span><span class="pill">兵庫駅</span><span class="pill">緑橋</span><span class="pill">東三国</span><span class="pill">野田</span><span class="pill">新大阪</span><span class="pill">瓢箪山</span><span class="pill">宮之阪</span><span class="pill">区分マンション</span><span class="pill">オーナーチェンジ</span><span class="pill">現金買い</span><span class="pill">一棟アパート</span><span class="pill">融資</span><span class="pill">与信</span><span class="pill">家賃年収3800万円</span><span class="pill">金利上昇</span><span class="pill">TEKO</span></div>
+      <h3>品質メモ</h3>
+      <ul class="quality"><li>話者は二者固定</li><li>後半音声で企画末尾まで補完</li><li>raw speaker labelなし</li><li>旧v2の危険誤変換は検出0件</li></ul>
+    </aside>
+  </div>
+  <footer>generated_at: 2026-05-16T15:34:04+09:00 / local preview</footer>
 </main>
 </body>
 </html>
