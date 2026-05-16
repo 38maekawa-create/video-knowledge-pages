@@ -4,71 +4,769 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow,noarchive">
-<title>会社員が今すぐやるべき、円安時代の最強の副業のやり方を解説 - 品質確認中</title>
+<title>会社員が今すぐやるべき、円安時代の最強の副業のやり方を解説</title>
 <style>
   * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: #f5f6f8;
-    color: #202124;
-    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
-    line-height: 1.75;
-  }
-  main {
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 48px 20px 80px;
-  }
-  .panel {
-    background: #fff;
-    border: 1px solid #dfe3e8;
-    border-radius: 8px;
-    padding: 30px;
-  }
-  .label {
-    display: inline-flex;
-    border: 1px solid #d93025;
-    color: #b3261e;
-    background: #fff7f6;
-    border-radius: 999px;
-    padding: 4px 10px;
-    font-size: 13px;
-    font-weight: 700;
-  }
-  h1 {
-    margin: 18px 0 12px;
-    font-size: 30px;
-    line-height: 1.4;
-    letter-spacing: 0;
-  }
-  p {
-    margin: 0 0 14px;
-    font-size: 16px;
-  }
-  .meta {
-    margin-top: 24px;
-    padding-top: 18px;
-    border-top: 1px solid #edf0f2;
-    color: #5f6368;
-    font-size: 13px;
-  }
+  body { margin: 0; background: #f5f6f8; color: #202124; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; line-height: 1.8; }
+  .page { max-width: 1080px; margin: 0 auto; padding: 32px 20px 72px; }
+  .topline { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: #5f6368; font-size: 13px; }
+  .status { color: #137333; background: #e6f4ea; border: 1px solid #b7dfc1; border-radius: 999px; padding: 4px 10px; font-weight: 700; }
+  header { padding: 28px 0 22px; border-bottom: 1px solid #dfe3e8; }
+  h1 { margin: 12px 0 14px; font-size: clamp(28px, 4vw, 44px); line-height: 1.28; letter-spacing: 0; }
+  .lead { max-width: 820px; color: #3c4043; font-size: 17px; }
+  .meta, .terms { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill { display: inline-flex; align-items: center; min-height: 30px; padding: 5px 11px; border: 1px solid #dfe3e8; border-radius: 999px; background: #fff; color: #3c4043; font-size: 13px; }
+  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; margin-top: 24px; align-items: start; }
+  section, aside { background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; }
+  section { margin-bottom: 18px; padding: 24px; }
+  aside { position: sticky; top: 18px; padding: 18px; }
+  h2 { margin: 0 0 14px; font-size: 21px; line-height: 1.4; }
+  h3 { margin: 18px 0 8px; font-size: 15px; }
+  .summary-list { margin: 0; padding-left: 1.2em; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { border: 1px solid #e8eaed; padding: 8px 10px; vertical-align: top; text-align: left; }
+  th { background: #f8fafd; }
+  .quote-grid { display: grid; gap: 12px; }
+  .quote-card { padding: 16px; border: 1px solid #e8eaed; border-radius: 8px; background: #fbfcff; }
+  .quote-head { display: flex; gap: 8px; margin-bottom: 8px; }
+  .speaker { display: inline-flex; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+  .speaker.yaesu { background: #e8f0fe; color: #174ea6; }
+  .speaker.kakushi { background: #e6f4ea; color: #137333; }
+  .quote-card p, .turn p { margin: 8px 0 0; overflow-wrap: anywhere; }
+  details { border: 1px solid #dfe3e8; border-radius: 8px; background: #fff; }
+  summary { padding: 15px 17px; color: #0b57d0; font-weight: 700; cursor: pointer; }
+  details[open] summary { border-bottom: 1px solid #e8eaed; }
+  .turn { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 14px; padding: 15px 17px; border-bottom: 1px solid #eef0f2; }
+  .turn:last-child { border-bottom: 0; }
+  .turn time { color: #5f6368; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
+  .quality { margin: 0; padding-left: 1.1em; font-size: 14px; }
+  .quality li { margin: 7px 0; }
+  footer { margin-top: 28px; color: #80868b; font-size: 12px; text-align: center; }
+  @media (max-width: 840px) { .layout { grid-template-columns: 1fr; } aside { position: static; } }
+  @media (max-width: 620px) { .page { padding: 22px 14px 52px; } section { padding: 18px; } .turn { grid-template-columns: 1fr; gap: 4px; } table { font-size: 13px; } }
 </style>
 </head>
 <body>
-<main>
-  <section class="panel">
-    <span class="label">品質確認中</span>
+<main class="page">
+  <div class="topline"><span>プロパー八重洲YouTube撮影素材</span><span class="status">weak-yen export covered</span></div>
+  <header>
     <h1>会社員が今すぐやるべき、円安時代の最強の副業のやり方を解説</h1>
-    <p>この文字起こしページは、整形本文の品質確認のため一時的に非表示にしています。</p>
-    <p>話者特定、固有名詞補正、文単位の区切りをやり直した v3 版で差し替えます。</p>
-    <p>素材管理用URLは維持しています。</p>
-    <div class="meta">
-      <div>package_id: 05_weak_yen_export_side_business</div>
-      <div>status: formatted_material_v3_rework_pending</div>
-      <div>updated_at: 2026-05-16T13:24:34+09:00</div>
-      <div>url: https://38maekawa-create.github.io/video-knowledge-pages/20260515_%E3%83%97%E3%83%AD%E3%83%91%E3%83%BC%E5%85%AB%E9%87%8D%E6%B4%B2YouTube%E7%B4%A0%E6%9D%90_06_%E5%86%86%E5%AE%89%E6%99%82%E4%BB%A3%E3%81%AE%E8%BC%B8%E5%87%BA%E5%89%AF%E6%A5%AD.html</div>
+    <p class="lead">円安・海外輸出・eBay・副業実績・TEKO導線まで、企画スプシrow6とサムネZ理論の文脈を反映したv3版です。副業一般論ではなく、外貨獲得とジャンル選びの話として読める形に整えています。</p>
+    <div class="meta"><span class="pill">話者: 八重洲さん / かくしくん</span><span class="pill">発話数: 80</span><span class="pill">本文文字数: 約4,915字</span><span class="pill">円安・海外輸出・TEKO導線補完済み</span></div>
+  </header>
+  <div class="layout">
+    <div>
+      <section><h2>3行要約</h2><ul class="summary-list"><li>円安・インフレ局面では、国内向けの労働集約型副業より、外貨を獲得できる海外輸出が会社員の副業として強いという企画。</li><li>八重洲さん自身の会社員時代の月利益300万円前後の実績と、TEKOメンバーの月利100万円超/700万円級の事例を出し、怪しさをかくしくんが突っ込みながら構造を分解する。</li><li>eBay、メルカリ/ヤフオク、コレクター商品、無在庫販売、Payoneer、配送/関税/トラブル対応まで触れ、最後は「副業ジャンル選び」と「本業・副業・投資の掛け算」に接続する。</li></ul></section>
+      <section><h2>論点整理</h2><table><tr><th>no</th><th>論点</th><th>要点</th><th>編集メモ</th></tr>
+<tr><td>1</td><td>副業選びはジャンルが重要</td><td>動画編集や営業代行などは月100万〜300万円に届きにくい。</td><td>冒頭で副業一般論との違いを出す。</td></tr>
+<tr><td>2</td><td>円安時代は外貨獲得が強い</td><td>ドル/ユーロで売上が入り、円安局面では利益構造が有利。</td><td>サムネZ理論「円安でくそ儲かる」に接続。</td></tr>
+<tr><td>3</td><td>海外輸出は市場が大きい</td><td>日本市場ではなく、アメリカ/ヨーロッパの大きな市場に売る。</td><td>「海外の需要を取りに行く」説明。</td></tr>
+<tr><td>4</td><td>eBayで日本のコレクター商品を売る</td><td>プラモ、トレカ、古いおもちゃ、スタバご当地マグ、着物、アニメ/漫画グッズなど。</td><td>商品例は視聴者が想像しやすい。</td></tr>
+<tr><td>5</td><td>無在庫販売は仕組み理解が必要</td><td>売れてから仕入れる設計は可能だが、在庫管理・発送日数・規約理解が必要。</td><td>「犯罪では？」への回答を丁寧に。</td></tr>
+<tr><td>6</td><td>関税・規制・配送が難所</td><td>FDA、輸入消費税、国ごとの規制、関税率、配送/破損/紛失/詐欺対応がある。</td><td>簡単に稼げる訴求にしすぎない。</td></tr>
+<tr><td>7</td><td>独学では古い情報に当たりやすい</td><td>ネットやLLMが参照する情報が古く、関税や運用ルールが変わっている。</td><td>AI万能ではない文脈。</td></tr>
+<tr><td>8</td><td>TEKOは海外輸出から不動産へつなぐ</td><td>個人PLを強化し、BSに当て、不動産賃貸業へ広げる。</td><td>パラレルキャリア導線。</td></tr>
+<tr><td>9</td><td>成果が出ても資金の使い方が重要</td><td>勝って兜を締め、在庫・販路・事業拡張・不動産に回す。</td><td>成功後のリスク管理。</td></tr>
+<tr><td>10</td><td>誰でも簡単ではない</td><td>結果を出すために頑張れる人、積み上げてきた人向け。</td><td>エントリー/メルマガ導線へ。</td></tr></table></section>
+      <section><h2>編集で拾いやすい発話</h2><div class="quote-grid">
+      <article class="quote-card">
+        <div class="quote-head"><span>00:00:59</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>最高月の利益でいうと、300万円くらいは出していました。<br>当時のサラリーマンの月収手取りが70万円くらいだったので、5倍近く出していたことになります。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:04:09</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>基本的に僕らがターゲットにしているのは、アメリカやヨーロッパです。<br>日本の市場で戦っているわけではありません。<br>市場が大きいので、少し取るだけでも利益になります。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:06:43</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>やり方としては、eBayというプラットフォームを使います。<br>ヤフオクの海外版、US版みたいなイメージです。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:10:32</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>メルカリやヤフオクで1万円の商品があり、eBayでは2万円で売れていることがあります。<br>その場合、まずeBayに出品します。<br>2万円で売れたら、国内で1万円のものを仕入れるという流れです。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:12:36</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>とはいえ、自分で利益商品を探す行為が必要です。<br>あとは国際取引なので、関税や規制も理解しないといけません。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:15:00</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>そうですね。<br>TEKOでは最初のアカウント設定、Payoneerという資金決済の受取サービスの設定などを扱っています。<br>この設定がまた面倒なんです。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:16:39</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>ネットに落ちている情報だけでは難しいと思います。<br>情報が古いんです。<br>AI、LLMに聞いても、参照してくる情報が古ければ出てくる情報も古い。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:17:58</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>報告人数としては、だいたい200人くらいが報告してくれています。<br>そのうち70%が月の利益で10万円以上。<br>25%が月利100万円以上残しているという感じです。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:20:37</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>ただ、結果が出てからも「勝って兜の緒を締めよ」は常に言っています。<br>利益を無駄遣いするのではなく、適切な在庫を確保する、違う販路を開拓する、事業を拡張する、不動産に入れていく。<br>私利私欲のためだけにお金を使わないでほしい、ということは主催者として口酸っぱく言っています。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:22:41</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>それもあります。<br>ただ、どれだけ能力が高くても、選択する業界を間違っていたらダメです。<br>良い副業のジャンルを選べていることと、良い人材が掛け合わさっていること。<br>これを今後も一番やっていきたいと思っています。</p>
+      </article></div></section>
+      <section><h2>整形済み文字起こし全文</h2><details open><summary>全文を表示（80発話 / 約4,915字）</summary><div>
+      <article class="turn">
+        <time>00:00:06</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>サラリーマンのキャリア形成支援を行っています、プロパー八重洲です。<br>よろしくお願いします。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:00:12</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>お願いします。<br>今回は、いろんな副業があると思うんですけど、その中で今って円安だと思うので、円安時代にこそしっかり稼げる副業を紹介していただきたいです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:00:31</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>最近の副業って、稼げないものも多いみたいな話を聞きますよね。<br>選択肢が多すぎる問題もあるかもしれません。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:00:44</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>その中でいうと、僕自身が30歳ぐらいまでサラリーマンをやっていました。<br>それと並行して海外輸出をやっていて、これがいわゆる円安時代に強い副業です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:00:59</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>最高月の利益でいうと、300万円くらいは出していました。<br>当時のサラリーマンの月収手取りが70万円くらいだったので、5倍近く出していたことになります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:01:13</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>今はTEKOという、海外輸出や不動産賃貸業を教えるプラットフォームをやっています。<br>そこでもメンバーが毎月Xで実績報告をしていて、現役のCAさんが月700万円くらい利益を残していたりします。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:01:38</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>僕は本業のサラリーマンをしながら月200万円、300万円を出していたので、自分の中ではトラックレコードだと思っていました。<br>でも、それを上回る人たちが出てきている状況です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:01:58</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>これは今の時代にも乗っていると思います。<br>僕もそうですし、僕の周りも結果が出ているので、再現性があるんじゃないかという話です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:02:10</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>ちょっと、いかにも怪しいですけどね。<br>かなり怪しいので、一回話を聞いてジャッジしようかなと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:02:18</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>では、他に副業って何がありますか。<br>思いつくもので。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:02:23</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>動画編集ですかね。<br>でも、月300万円は無理です。<br>めちゃくちゃ働かなきゃいけないです。<br>いけて10万円、20万円くらいだと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:02:51</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>動画編集は労働収益なので、持続可能性の問題がありますよね。<br>Web制作やプログラミングも、AIで短縮化できてきています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:03:10</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>物販もそうじゃないんですか。<br>AIである程度できると思うじゃないですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:03:18</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>リサーチ、つまり利益が出る商品を自分で見つける作業は、意外と完璧にはできないんです。<br>僕もツールを作っていますが、7割くらいの精度です。<br>残り3割は、秘伝のタレみたいな部分があります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:03:37</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>今日一番怪しいですね。<br>具体的なノウハウをもったいぶっている感じがします。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:03:51</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>画面を使って説明しないと難しい部分があります。<br>ただ、手元で差別化ができているという感じです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:04:00</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>いろんな副業がありますが、結局それで月100万円、200万円は正直難しいじゃないですか。<br>でも海外輸出に関しては、まずマーケットがいいんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:04:09</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>基本的に僕らがターゲットにしているのは、アメリカやヨーロッパです。<br>日本の市場で戦っているわけではありません。<br>市場が大きいので、少し取るだけでも利益になります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:04:36</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そして円安です。<br>外貨を稼いだら得なわけです。<br>アメリカやヨーロッパを相手にしているので、ドルやユーロで売上が入ってきます。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:05:01</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>国内で戦っていないことと、外貨が得られること。<br>この2つで、そもそも稼ぎやすい構造になっています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:05:18</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>僕も業務委託系で、営業代行、Wi-Fiルーターの営業、光通信系、電力自由化の時の営業、保険のブローカー、ブログなど、いろいろやりました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:06:06</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>その中で経験した上で、やっぱり海外輸出が良かったということなんですね。<br>具体的にはどういうものなんですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:06:43</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>やり方としては、eBayというプラットフォームを使います。<br>ヤフオクの海外版、US版みたいなイメージです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:07:04</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>eBayに売れそうな国内の商品を出品します。<br>特徴としては、コレクター商品が多いです。<br>たとえばプラモデル、限定品のトレーディングカード、昔のおもちゃ、ベイブレードの昔のものなどです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:07:48</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>昔のベイブレードは、1個5万円くらいするものもあります。<br>昔は2、3000円だったものです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:08:02</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>最近のものだと、スターバックスのご当地マグカップ。<br>浜松や沖縄のマグなども売れます。<br>これもコレクター要素です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:08:27</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>あとは古い着物、日本のキャラクター商品、ポケモン、ワンピース、鬼滅の刃、呪術廻戦、進撃の巨人などです。<br>海外の人にとって、日本のキャラクターやコレクター商品は売れやすいんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:09:10</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>eBayは月20ドルくらいかかりますが、そこにたとえばAttack on Titanと入れて、進撃の巨人関連で売れている商品を調べます。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:09:27</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>たとえばUSJで出ていた立体機動装置のような商品が、海外で売れていると分かる。<br>それが売れそうだとなったら、次に国内で探します。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:09:51</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>海外の人も、日本のメルカリやヤフオクを探せるんじゃないですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:10:09</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>一部の国によっては日本のサイトを使えなかったり、代行購入サービスを通す必要があったりします。<br>でも、eBayという慣れ親しんだプラットフォームに出ているなら、そちらで買いたいというアメリカ人やヨーロッパ人もいます。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:10:32</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>メルカリやヤフオクで1万円の商品があり、eBayでは2万円で売れていることがあります。<br>その場合、まずeBayに出品します。<br>2万円で売れたら、国内で1万円のものを仕入れるという流れです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:10:58</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>それって犯罪ではないんですか。<br>無在庫転売は良くない、みたいな話もありますよね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:11:07</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>犯罪ではありません。<br>ドロップシッピングという形が認められています。<br>eBayの規約的にも認められているので、発送までの日数、ハンドリングタイムを適切に設定すればできます。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:11:31</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ただし、売れてから着金まで3日かかることもあります。<br>売れた時点で先に買って、数日後に着金するという現実的な運用になります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:11:42</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>無在庫販売は可能ですが、在庫管理は必要です。<br>メルカリで出ていた商品が売り切れたのにeBay側で出品したままだと、買われた時に困ります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:12:03</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>だから、在庫管理ツールを使って、国内側の商品がなくなったらeBay側の出品を止める。<br>そういうリスクマネジメントをしないと、アカウント停止になったり、お客さんに迷惑をかけたりします。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:12:24</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>それが今、熱いんですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:12:28</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>今熱いですね。<br>PIVOTさんでも特集されていたくらいなので、注目はされていると思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:12:36</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>とはいえ、自分で利益商品を探す行為が必要です。<br>あとは国際取引なので、関税や規制も理解しないといけません。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:12:48</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>たとえばアメリカだと、食品の輸出は非常に厳しい。<br>FDAの規制があります。<br>国ごとに輸出できるもの、輸入できるもの、税率が決まっています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:13:08</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>輸入に対して税金がかかることもあります。<br>10%、15%など、関税率もありますし、トランプさんの政策のように頻繁に変わることもあります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:13:23</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>僕がやっているアンティークコイン投資でも、関税の影響はあります。<br>中国とアメリカの関税が高くなると、中国のコインが値上がりするようなこともあります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:14:29</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>海外輸出は熱いですが、関税、英語、設定など、面倒な部分があります。<br>そこを乗り越えられたらいい。<br>僕もそこは自分で乗り越えてきましたし、TEKOメンバーも乗り越えているから利益が出ています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:14:47</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>誰でも簡単に稼げるとは勘違いしてほしくないです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:14:58</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>その乗り越える手助けをTEKOでやっているんですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:15:00</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そうですね。<br>TEKOでは最初のアカウント設定、Payoneerという資金決済の受取サービスの設定などを扱っています。<br>この設定がまた面倒なんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:15:18</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>利益が出る商品をどう見つけるのか。<br>何をもって売れていると判断するのか。<br>数字で理解しないといけないので、その指標を教えています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:15:36</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>出品した後も、広告をかけたり、セールを打ったり、売れやすくするための簡単なマーケティングが必要です。<br>売れた後は、海外配送でどの配送会社を使うか、送料をどう最適化するかもあります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:16:03</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>一番大事なのはトラブル対応です。<br>海外配送はトラブルが多いんです。<br>破損、紛失、詐欺まがいの問い合わせなどがあります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:16:15</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>本当は届いているのに、空箱の写真を送ってきて「中に物が入っていない」と言って返金を求めるようなケースもあります。<br>そういう時にどう対処するか。<br>どんなエビデンスを残すか。<br>そのあたりも教えています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:16:33</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>この辺を独学でやるのは結構厳しいですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:16:39</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ネットに落ちている情報だけでは難しいと思います。<br>情報が古いんです。<br>AI、LLMに聞いても、参照してくる情報が古ければ出てくる情報も古い。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:17:02</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>別に僕らのTEKOで学ぶ必要はないかもしれません。<br>ただ、海外輸出の情報発信者さんはたくさんいるので、何かしらの環境に入って、最新の関税情報や最新のやり方を学ぶのが一番いいと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:17:39</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>海外輸出に関しては、TEKOで2年運営してきて、延べ人数で450名くらいが参加しています。<br>毎月の結果はXで報告してくれているので見てほしいです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:17:58</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>報告人数としては、だいたい200人くらいが報告してくれています。<br>そのうち70%が月の利益で10万円以上。<br>25%が月利100万円以上残しているという感じです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:18:15</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>半数以上が月利30万円くらい。<br>立ち上がりが早い人だと、2ヶ月目くらいから月利益3万円、5万円。<br>3ヶ月目にちゃんと運営していれば、月利益10万円にいくことは、見ている限りそこまで難しくないと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:18:41</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>稼いでもらって、そこから不動産投資をしていくコミュニティなんですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:18:48</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>基本的にはそんな流れです。<br>他の動画でも説明していますが、個人のPL、つまり収支を強化して、それをBS、バランスシートに当てていく。<br>海外輸出でPLを強化して、不動産賃貸業に広げていくコミュニティです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:19:09</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>今は円安時代だからこそ、海外輸出が適していると思います。<br>インフレ局面でもあり、円の価値が下がっているので、外貨を獲得する価値は高い。<br>選ぶ副業のファーストチョイスは大事です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:19:52</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>TEKOメンバーのほとんど、95%くらいは副業未経験です。<br>僕が昔を振り返ると、彼らがうらやましいです。<br>僕は散々いろいろ試して、辛酸をなめた思いがあります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:20:37</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ただ、結果が出てからも「勝って兜の緒を締めよ」は常に言っています。<br>利益を無駄遣いするのではなく、適切な在庫を確保する、違う販路を開拓する、事業を拡張する、不動産に入れていく。<br>私利私欲のためだけにお金を使わないでほしい、ということは主催者として口酸っぱく言っています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:21:12</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>ちなみにいくらぐらいなんですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:21:14</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>それは個別で面談してお知らせしています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:21:17</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>興味がある人は個別面談を申し込んでもいいんですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:21:22</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そうですね。<br>ただ、誰でもOKというわけではありません。<br>僕らは基本的に、今まで積み上げてきたものがあるビジネスパーソン向けです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:21:40</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>学生生活でも、就職している会社でも、何かしらやってきたことがある人。<br>真面目なので、新しいことに取り組む時にも一定コミットしてくれる人。<br>そういう人たちを対象にしています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:21:55</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>概要欄にリンクがあるので、そこからホームページに飛んでください。<br>メルマガ登録をしていただくと、僕らがパラレルキャリアと呼んでいる、本業と副業と投資の掛け算のキャリアを説明している動画があります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:22:08</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>それを見た上で、エントリーシートを書いてもらう感じです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:22:14</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>就活みたいですね。<br>結果が出る人に届けたいということですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:22:21</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そうです。<br>その人たちだけに入ってきてほしいので、間口は狭くしています。<br>狭き門をくぐり抜けてきた人たちだから、努力の基準値が高く、一定のパラメータが高い。<br>だから、ちゃんとノウハウを提供すると実績が出ているという流れです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:22:34</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>誰でもかんでもできるわけではなく、結果を出すために頑張れる人を採用しているということですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:22:41</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>それもあります。<br>ただ、どれだけ能力が高くても、選択する業界を間違っていたらダメです。<br>良い副業のジャンルを選べていることと、良い人材が掛け合わさっていること。<br>これを今後も一番やっていきたいと思っています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:22:58</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>興味がある方は、選ばれし者になる覚悟がある方は、概要欄からお願いします。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:23:06</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そんなに片肘張らずに来てほしいですけどね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:23:10</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>ちなみに僕はどうなりますか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:23:11</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>かくしくんは、多分エントリーシートで落ちています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:23:14</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>じゃあ皆さん、結構狭き門です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:23:17</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そういう捉え方もあります。<br>ありがとうございました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:23:20</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>ありがとうございました。</p>
+        </div>
+      </article></div></details></section>
     </div>
-  </section>
+    <aside>
+      <h2>補正済みキーワード</h2>
+      <div class="terms"><span class="pill">円安</span><span class="pill">海外輸出</span><span class="pill">副業月収320万円</span><span class="pill">月利益300万円</span><span class="pill">eBay</span><span class="pill">メルカリ</span><span class="pill">ヤフオク</span><span class="pill">コレクター商品</span><span class="pill">無在庫販売</span><span class="pill">ドロップシッピング</span><span class="pill">Payoneer</span><span class="pill">関税</span><span class="pill">FDA</span><span class="pill">PIVOT</span><span class="pill">PL/BS</span><span class="pill">パラレルキャリア</span><span class="pill">TEKO</span></div>
+      <h3>品質メモ</h3>
+      <ul class="quality"><li>話者は二者固定</li><li>本編末尾のTEKO導線まで反映</li><li>撮影後雑談は本文外</li><li>副業一般論ではなく円安/外貨獲得文脈として整理</li><li>旧v2の危険誤変換は検出0件</li></ul>
+    </aside>
+  </div>
+  <footer>generated_at: 2026-05-16T17:04:44+09:00</footer>
 </main>
 </body>
 </html>
