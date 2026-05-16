@@ -4,71 +4,833 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow,noarchive">
-<title>ひとり法人は、税金払う方がクソ儲かる - 品質確認中</title>
+<title>ひとり法人は、税金払う方がクソ儲かる</title>
 <style>
   * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: #f5f6f8;
-    color: #202124;
-    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
-    line-height: 1.75;
-  }
-  main {
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 48px 20px 80px;
-  }
-  .panel {
-    background: #fff;
-    border: 1px solid #dfe3e8;
-    border-radius: 8px;
-    padding: 30px;
-  }
-  .label {
-    display: inline-flex;
-    border: 1px solid #d93025;
-    color: #b3261e;
-    background: #fff7f6;
-    border-radius: 999px;
-    padding: 4px 10px;
-    font-size: 13px;
-    font-weight: 700;
-  }
-  h1 {
-    margin: 18px 0 12px;
-    font-size: 30px;
-    line-height: 1.4;
-    letter-spacing: 0;
-  }
-  p {
-    margin: 0 0 14px;
-    font-size: 16px;
-  }
-  .meta {
-    margin-top: 24px;
-    padding-top: 18px;
-    border-top: 1px solid #edf0f2;
-    color: #5f6368;
-    font-size: 13px;
-  }
+  body { margin: 0; background: #f5f6f8; color: #202124; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; line-height: 1.8; }
+  .page { max-width: 1080px; margin: 0 auto; padding: 32px 20px 72px; }
+  .topline { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: #5f6368; font-size: 13px; }
+  .status { color: #137333; background: #e6f4ea; border: 1px solid #b7dfc1; border-radius: 999px; padding: 4px 10px; font-weight: 700; }
+  header { padding: 28px 0 22px; border-bottom: 1px solid #dfe3e8; }
+  h1 { margin: 12px 0 14px; font-size: clamp(28px, 4vw, 44px); line-height: 1.28; letter-spacing: 0; }
+  .lead { max-width: 820px; color: #3c4043; font-size: 17px; }
+  .meta, .terms { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill { display: inline-flex; align-items: center; min-height: 30px; padding: 5px 11px; border: 1px solid #dfe3e8; border-radius: 999px; background: #fff; color: #3c4043; font-size: 13px; }
+  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; margin-top: 24px; align-items: start; }
+  section, aside { background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; }
+  section { margin-bottom: 18px; padding: 24px; }
+  aside { position: sticky; top: 18px; padding: 18px; }
+  h2 { margin: 0 0 14px; font-size: 21px; line-height: 1.4; }
+  h3 { margin: 18px 0 8px; font-size: 15px; }
+  .summary-list { margin: 0; padding-left: 1.2em; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { border: 1px solid #e8eaed; padding: 8px 10px; vertical-align: top; text-align: left; }
+  th { background: #f8fafd; }
+  .quote-grid { display: grid; gap: 12px; }
+  .quote-card { padding: 16px; border: 1px solid #e8eaed; border-radius: 8px; background: #fbfcff; }
+  .quote-head { display: flex; gap: 8px; margin-bottom: 8px; }
+  .speaker { display: inline-flex; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+  .speaker.yaesu { background: #e8f0fe; color: #174ea6; }
+  .speaker.kakushi { background: #e6f4ea; color: #137333; }
+  .quote-card p, .turn p { margin: 8px 0 0; overflow-wrap: anywhere; }
+  details { border: 1px solid #dfe3e8; border-radius: 8px; background: #fff; }
+  summary { padding: 15px 17px; color: #0b57d0; font-weight: 700; cursor: pointer; }
+  details[open] summary { border-bottom: 1px solid #e8eaed; }
+  .turn { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 14px; padding: 15px 17px; border-bottom: 1px solid #eef0f2; }
+  .turn:last-child { border-bottom: 0; }
+  .turn time { color: #5f6368; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
+  .quality { margin: 0; padding-left: 1.1em; font-size: 14px; }
+  .quality li { margin: 7px 0; }
+  footer { margin-top: 28px; color: #80868b; font-size: 12px; text-align: center; }
+  @media (max-width: 840px) { .layout { grid-template-columns: 1fr; } aside { position: static; } }
+  @media (max-width: 620px) { .page { padding: 22px 14px 52px; } section { padding: 18px; } .turn { grid-template-columns: 1fr; gap: 4px; } table { font-size: 13px; } }
 </style>
 </head>
 <body>
-<main>
-  <section class="panel">
-    <span class="label">品質確認中</span>
+<main class="page">
+  <div class="topline"><span>プロパー八重洲YouTube撮影素材</span><span class="status">title recovery covered</span></div>
+  <header>
     <h1>ひとり法人は、税金払う方がクソ儲かる</h1>
-    <p>この文字起こしページは、整形本文の品質確認のため一時的に非表示にしています。</p>
-    <p>話者特定、固有名詞補正、文単位の区切りをやり直した v3 版で差し替えます。</p>
-    <p>素材管理用URLは維持しています。</p>
-    <div class="meta">
-      <div>package_id: 04_one_person_corporation_tax</div>
-      <div>status: formatted_material_v3_rework_pending</div>
-      <div>updated_at: 2026-05-16T13:24:34+09:00</div>
-      <div>url: https://38maekawa-create.github.io/video-knowledge-pages/20260515_%E3%83%97%E3%83%AD%E3%83%91%E3%83%BC%E5%85%AB%E9%87%8D%E6%B4%B2YouTube%E7%B4%A0%E6%9D%90_05_%E3%81%B2%E3%81%A8%E3%82%8A%E6%B3%95%E4%BA%BA%E3%81%A8%E7%A8%8E%E9%87%91.html</div>
+    <p class="lead">後続の八重洲さんマイクで欠落していた「黒字納税が信用と融資を作る」回収まで補完したv3版です。節税テクニック集ではなく、会社員が法人を持つ時の設計思想として読める形に整えています。</p>
+    <div class="meta"><span class="pill">話者: 八重洲さん / かくしくん</span><span class="pill">発話数: 88</span><span class="pill">本文文字数: 約6,396字</span><span class="pill">黒字納税・TEKO導線補完済み</span></div>
+  </header>
+  <div class="layout">
+    <div>
+      <section><h2>3行要約</h2><ul class="summary-list"><li>「ひとり法人=節税の箱」という浅い理解ではなく、事業を作り、利益を残し、納税して信用を積む方が長期的に手元資金が大きくなるという企画。</li><li>会社員は給与所得控除という決められた枠の中にいるため、まず事業を作り、個人事業主から法人へ移し、法人側にキャッシュを貯める考え方を整理する。</li><li>倒産防止共済や社宅などの合法的な節税は扱いつつ、最後は黒字決算・納税・金融機関評価・融資による事業拡大/不動産取得が本質だと回収する。</li></ul></section>
+      <section><h2>論点整理</h2><table><tr><th>no</th><th>論点</th><th>要点</th><th>編集メモ</th></tr>
+<tr><td>1</td><td>会社員はタックスコントロールしづらい</td><td>給与所得控除がみなし経費で、個別に経費を積む自由度は低い。</td><td>冒頭の「節税に弱い」問題提起。煽りすぎない。</td></tr>
+<tr><td>2</td><td>まず事業を作る</td><td>収益が発生し、そのための支出だと説明できる構造を作る。</td><td>海外輸出・不動産賃貸業の実例。</td></tr>
+<tr><td>3</td><td>個人事業主から法人なり</td><td>収益が伸びると累進課税が重くなるため、売上を受ける箱を法人に分ける。</td><td>「法人なり」「箱を分ける」が中心。</td></tr>
+<tr><td>4</td><td>会社員は役員報酬を抜かない設計もある</td><td>副業バレや所得税増を避けるため、法人にキャッシュを貯める考え方。</td><td>副業OK/NGの条件差は断定しない。</td></tr>
+<tr><td>5</td><td>経費化は説明責任が本質</td><td>定款や事業実態に沿って説明できる支出だけを扱う。</td><td>脱税/グレー断定にしない。</td></tr>
+<tr><td>6</td><td>合法的な利益圧縮</td><td>家族への実態ある報酬、借り上げ社宅、交通費、通信費、交際費など。</td><td>税務判断は専門家確認前提。</td></tr>
+<tr><td>7</td><td>税率差分だけでも十分に意味がある</td><td>高所得会社員の所得税率と法人税率の差分が、そもそも節税になる。</td><td>法人にキャッシュを貯める話につなぐ。</td></tr>
+<tr><td>8</td><td>倒産防止共済は利益コントロール</td><td>損金にでき、最大800万円まで積めるが、多くは繰延であることも説明する。</td><td>「倒産防止共済」「繰延」「借入」を正しく表記。</td></tr>
+<tr><td>9</td><td>不動産も法人で持つ選択がある</td><td>家賃収入や売却益を法人側で扱うと、税率差分の絶対額で得する部分がある。</td><td>繰延と絶対額の節税を分ける。</td></tr>
+<tr><td>10</td><td>黒字納税が信用と融資を作る</td><td>黒字決算・納税実績が金融機関評価につながり、融資で事業/資産形成が加速する。</td><td>後続音声で補完された最重要回収。</td></tr></table></section>
+      <section><h2>編集で拾いやすい発話</h2><div class="quote-grid">
+      <article class="quote-card">
+        <div class="quote-head"><span>00:10:34</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>ただ、最終的に何のために法人になるのか。<br>節税のためだけですか、という話なんです。<br>本質は、事業を拡大していくためじゃないですか。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:13:18</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>まず1つ目は、サラリーマンはタックスコントロールできない、税金をなかなかコントロールできないんだと認識することです。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:15:04</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>ではどうしたらいいのか。<br>説明がつくようにすればいいんです。<br>ステップ2としては、事業を作る。<br>収益が発生して、それに対する経費だと説明できる構造を作るということです。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:17:01</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>収益が上がると、所得全体の金額が上がります。<br>給与所得は累進課税なので、どんどん税金が高くなっていく。<br>ちゃんとやっていれば儲かっていくはずなので、そこで出てくるのが法人なりです。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:18:52</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>本業の会社から給与があり、自分の法人からも役員報酬を取ると、給与が二重に入っている状態になります。<br>基本的には、自分の事業で作った法人から役員報酬を抜かないのが鉄則です。<br>副業OKの会社なら別ですが、サラリーマンの法人設計ではここを理解しておいた方がいいです。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:20:15</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>元々は全くタックスコントロールができない立場だったサラリーマンが、事業を作ったり、法人を作ったり、定款を整えたりすることで、一気に幅が広がる。<br>ここが話の本質です。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:25:18</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>今後何か収益を立てるなら、基本的には法人で考えた方がいい。<br>新しい事業を作る時も、定款に加えて法人の中で作っていく。<br>最終的に法人税は大体32%、33%くらいなので、その税率差分が基本的には節税になっています。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:27:55</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>その理解はすごく正しいです。<br>節税と言われているものの多くは、基本的には繰延です。<br>倒産防止共済、オペレーティングリース、節税商品として扱われる不動産なども、いつかお金が返ってきたり売却したりするタイミングで課税されます。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:31:38</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>700万円の利益が出るなら、700万円でちゃんと納税した方がいい。<br>なぜかというと、信頼が貯まるからです。<br>サラリーマンには会社の看板や個人の与信がありますが、事業者にはそれがありません。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:33:24</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>そうすると、一気に資産形成が加速します。<br>事業に対してもお金を貸してもらえて、僕はそのお金をまた事業に投資できる。<br>細かい節税をしているより、事業を拡大して、事業でリターンを得た方が、最終的に手元に残るお金は大きいんです。</p>
+      </article></div></section>
+      <section><h2>整形済み文字起こし全文</h2><details open><summary>全文を表示（88発話 / 約6,396字）</summary><div>
+      <article class="turn">
+        <time>00:09:22</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ビジネスパーソンのキャリア支援をしています、プロパー八重洲です。<br>今日のテーマは「ひとり法人」ですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:09:31</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>今日は、しっかり納税した方が逆に儲かる、という話をしていきたいと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:09:40</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>ダウト。<br>税金って、払うほど儲かるというより、節税がよく言われているじゃないですか。<br>それに反しているということですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:09:55</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>サラリーマンをしながら一人社長で法人を持つとか、個人事業主から法人になるという話は、結構ブームだと思うんです。<br>その中に絶対ついて回るのが「節税」ですよね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:10:15</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>法人を持つと、交際費を入れやすくなるとか、日当を取りやすくなるとか、小規模企業共済、倒産防止共済、役員報酬を取れるとか、確かに節税の幅は広がります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:10:34</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ただ、最終的に何のために法人になるのか。<br>節税のためだけですか、という話なんです。<br>本質は、事業を拡大していくためじゃないですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:10:43</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>個人で法人を立てる人って、そんなに事業拡大のつもりではなくて、本当に税金のためというか。<br>会社を拡大するために法人化している人は、この動画を見に来ていない気もします。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:11:04</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>でも本当は、ちゃんと利益を出して最終的に手残りが残る方がいい。<br>金融機関から評価されてお金を借りられる方がいい。<br>そういう方向に持っていった方が、目の前の小さな節税にとらわれるより、手元に残るお金は多いんじゃないか、という話をしていきたいです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:12:10</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>今回は、どちらかというと一人社長になりたいサラリーマン向けに話します。<br>サラリーマンほど、中途半端に節税という言葉に弱いんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:12:24</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>ワンルームマンション投資とか、節税をうたって買わされるイメージがあります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:12:38</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そうです。<br>特に高収入のサラリーマンは「不当に税金を取られている」と思いやすい。<br>ただ、国の制度に乗って給与をもらっているから、そのルールの中で税金が取られているだけだよ、という話でもあります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:12:57</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そこをうまく調整しつつ、しっかり利益を出せる法人を作っていこう、というのが僕の本質です。<br>ステップ形式で、ちゃんと利益が出る法人をどう作るかを話していきます。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:13:18</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>まず1つ目は、サラリーマンはタックスコントロールできない、税金をなかなかコントロールできないんだと認識することです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:13:43</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>本業で使っているベンツとかは、経費にならないんですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:13:53</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ならないですね。<br>そもそも事業がないので「事業のために使った」と説明できないんです。<br>本業に関係あることでも、基本的にはサラリーマン個人の経費としては通りづらいです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:14:20</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>サラリーマンには給与所得があって、給料から決められた額の給与所得控除があります。<br>これが、いわゆるみなし経費です。<br>損金算入できる金額も決まっていて、所得税の税率も決まっている。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:14:38</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>たとえば会社に行くためにベンツを使ったから、減価償却で100万円を経費にしたいですと言っても、基本的には通りません。<br>だからまず、給与所得者は税金のコントロールが難しいんだと認識する必要があります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:14:50</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>現状把握ですね。<br>自分の立ち位置を理解する。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:14:55</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そういうことです。<br>弱者という話ではないです。<br>僕もそうだったので、まず立ち位置を理解しようということです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:15:04</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ではどうしたらいいのか。<br>説明がつくようにすればいいんです。<br>ステップ2としては、事業を作る。<br>収益が発生して、それに対する経費だと説明できる構造を作るということです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:15:20</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>これは正直、何でもいいと思います。<br>僕の経験でいうと海外輸出や不動産賃貸業です。<br>本業の給与所得とは別で所得を得る。<br>最初は個人事業主から始めたらいいと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:15:42</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>たとえば海外輸出で仕入れに行くために、ドン・キホーテやセカンドストリートに行く。<br>その移動のために車を使ったのであれば、仕入れのための移動だと説明できる可能性が出てきます。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:16:02</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>会社員かける個人事業主という枠組みで、経費を使える状態にする。<br>個人事業主の所得と給与所得は、確定申告では合算されます。<br>結果的に、事業所得側の経費が全体の所得に効いてくる状況を作れるんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:16:25</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>それは脱税ではないんですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:16:28</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>脱税ではありません。<br>節税ではあります。<br>もちろん、ベンツである必要があるかどうかは議論の余地がありますけどね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:16:46</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ステップ3として、開業届を出して個人事業主で事業を育てていく。<br>ただ、さっきお伝えした通り、個人事業主の所得は給与所得と合算されます。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:17:01</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>収益が上がると、所得全体の金額が上がります。<br>給与所得は累進課税なので、どんどん税金が高くなっていく。<br>ちゃんとやっていれば儲かっていくはずなので、そこで出てくるのが法人なりです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:17:26</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>これは、売上を受け取る箱を分けましょうという話です。<br>個人は個人として会社から給与を受け取る。<br>自分の事業で作った売上は、法人の箱に入れていく。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:17:44</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>実際にやろうとした時、難易度は高くないですか。<br>会社によっては副業アウトじゃないですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:17:58</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>給料というより、事業の売上の話ですね。<br>勤めている会社から給与を受け取る流れは変わりません。<br>今まで個人事業で発生していたお金の流れを、法人に変えるということです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:18:24</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>サラリーマンの場合、自分の法人から給与や役員報酬を受け取らない方がいいケースがあります。<br>所得税がよりかかることもありますし、会社に副業がバレるリスクもあります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:18:52</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>本業の会社から給与があり、自分の法人からも役員報酬を取ると、給与が二重に入っている状態になります。<br>基本的には、自分の事業で作った法人から役員報酬を抜かないのが鉄則です。<br>副業OKの会社なら別ですが、サラリーマンの法人設計ではここを理解しておいた方がいいです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:19:16</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>役員報酬は法人側では経費になります。<br>ただ、自分に抜けば個人側の課税も出てきます。<br>なので、しっかり法人に利益をプールしていくという感じです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:19:30</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>節税というのは、そもそも簡単ではありません。<br>法人を作れば何でも使える、という話ではないんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:19:42</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>たとえば定款にスーツレンタル事業や時計レンタル事業を入れて、自分が買ったものを誰かに貸したことにして、高額なものを経費にする。<br>そういうのは脱税ですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:20:00</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>半ばプライベートで買ったものを、それも経費にできるんじゃないか、という話ですね。<br>これは、はっきり言い切ってはいけないところです。<br>ただ、経費というのは説明がつけばできるものです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:20:15</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>元々は全くタックスコントロールができない立場だったサラリーマンが、事業を作ったり、法人を作ったり、定款を整えたりすることで、一気に幅が広がる。<br>ここが話の本質です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:20:37</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>法人設立自体は、司法書士などの専門家に任せればいいと思います。<br>合同会社がいいのか、株式会社がいいのかは、ご自身で判断されるところです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:20:50</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>僕らが運営しているTEKOというプラットフォームでは、海外輸出や不動産賃貸業を教えています。<br>それに適した会社の作り方も扱っているので、気になる人は見ていただければと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:21:13</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>自分の事業の売上を法人に立てていくことと、役員報酬を自分に抜かないことは重要です。<br>それでも利益が出ると、法人税がなんだかんだ30%前後かかります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:21:34</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>年収1000万円、1200万円、1500万円のサラリーマンなら、住民税まで入れると43%くらいかかるかもしれない。<br>それと比べれば、法人税の方が安い。<br>その差分が、そもそも節税になっています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:21:55</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>さらに経費を作りたい場合は、家族に報酬を払うとかですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:22:01</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そうです。<br>ファミリーカンパニーのように、奥様を役員に入れて役員報酬を出す。<br>もちろん、奥様がちゃんと務めていることが大事です。<br>副業OKの会社だったり、専業主婦だったりするなら、設計の余地があります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:22:30</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>扶養内に入れてあげるなら、90万円や100万円くらいの支給では所得税がかからない範囲もあります。<br>それによって法人の利益を少し圧縮できる。<br>これは、利益が出ている中での適切な圧縮だと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:22:47</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>他にも、僕がサラリーマンをしながらやっていたことでいうと、法人名義で賃貸を借りる。<br>いわゆる借り上げ社宅です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:23:07</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>20万円の家賃のところを、たとえば法人に15万円負担してもらって、自分は5万円だけ払う。<br>その15万円分は法人側で損金になります。<br>これは節税になりますよね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:23:31</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>あとは、事業で使う交通費、通信費、光熱費などです。<br>プライベートと仕事が少し曖昧になっているものでも、事業に利用したものとして説明できれば、一部を経費化できる可能性があります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:24:05</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>交際費に関しても、法人の場合は800万円までは損金算入可能です。<br>個人事業主よりも幅が広い。<br>サラリーマンの副業法人で800万円を使うことはなかなかないかもしれませんが、ハードルが下がる特徴はあります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:25:02</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>僕らが想定しているのは、本業でもそこそこ稼いでいるサラリーマンです。<br>所得税が重い、税率が高い状況にある人です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:25:18</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>今後何か収益を立てるなら、基本的には法人で考えた方がいい。<br>新しい事業を作る時も、定款に加えて法人の中で作っていく。<br>最終的に法人税は大体32%、33%くらいなので、その税率差分が基本的には節税になっています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:25:48</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ここは繰り返しですが、法人にしている時点で十分に節税になっているんです。<br>だから、法人にしっかりキャッシュを貯めていく。<br>これが大事です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:26:07</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>安易な節税ではなく、国に認められた合法的な方法としては、倒産防止共済があります。<br>年間240万円まで入れられて、損金にできます。<br>最大800万円までプールされます。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:26:40</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>800万円まで貯まると、その一部を借りることもできます。<br>金利もたしか1%台くらいで、1年間で返さないといけませんが、そのお金をもとに新しい事業を始めることもできる。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:27:03</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>自分で預けて、自分で借りるということですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:27:06</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そうです。<br>自分で預けた時に、まず損金になる。<br>1000万円利益が出た時に、240万円を入れれば、その分だけ課税される所得を減らせます。<br>ただし、お金は出ていきます。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:27:45</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>要は先延ばしということですよね。<br>いつか払わないといけないものを先延ばしにしている。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:27:55</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>その理解はすごく正しいです。<br>節税と言われているものの多くは、基本的には繰延です。<br>倒産防止共済、オペレーティングリース、節税商品として扱われる不動産なども、いつかお金が返ってきたり売却したりするタイミングで課税されます。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:28:40</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>だから倒産防止共済も繰延ではあります。<br>ただ、利益をコントロールできる商品です。<br>なおかつ借入もできる。<br>預けたお金の中からさらにお金を借りて、それで挑戦できるわけです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:29:10</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>こういう仕組みは絶対に知って使った方がいいです。<br>僕は法人が2つありますけど、両方満額でやっています。<br>会社員をしている時からやっていました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:29:33</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>あと、僕は不動産賃貸業をやっていますが、不動産も法人で買っています。<br>これもさっきの話に戻りますが、法人税の方が最終的に安いからです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:29:46</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>不動産のインカム、毎月の家賃収入が入ってくる。<br>売却する時にキャピタルゲインが出る。<br>その時、個人で所得税として課税されるより、法人で売買したり家賃を得たりした方が、最終的な税金が安くなる場合があります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:30:10</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>なるほど。<br>でも、それも先送りということなんですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:30:16</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>一部はそうです。<br>ただ、法人税が安いことと、所得税が高いことの差分は、絶対額の話です。<br>ここは繰延ではなく、単純に得している部分です。<br>ここを押さえておいてほしいです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:30:36</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ここまで、法人と個人の違いや、サラリーマンがどう組み合わせていくかを話してきました。<br>結局、タイトルの回収としては、納税した方がクソ儲かるという話です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:30:50</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>適切な節税をしてください、という話はここまでしてきました。<br>ただ最終的には、ちゃんと黒字で利益を残した方がいい。<br>法人税32%、33%は払った方がいいんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:31:04</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>1000万円の利益を700万円くらいにして、200万円や300万円くらい納税する。<br>これは確実にした方がいいです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:31:12</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>もったいないから全部使った方がいい、ではないんですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:31:17</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>1000万円の利益に対して1000万円の経費を作ってゼロにする、という発想の人は多いと思います。<br>特にサラリーマンは、ドケチ根性が強い人も多い。<br>ただ、事業者としてはそれだと甘いです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:31:38</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>700万円の利益が出るなら、700万円でちゃんと納税した方がいい。<br>なぜかというと、信頼が貯まるからです。<br>サラリーマンには会社の看板や個人の与信がありますが、事業者にはそれがありません。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:31:52</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>事業者として評価されると何がいいか。<br>お金を借りられるんです。<br>ここをちゃんと理解していない人が多すぎます。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:32:07</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>納税をちゃんとして、当期純利益が黒字の決算書を作っておく。<br>そうすると金融機関は評価してくれます。<br>できれば3期連続黒字、2期連続でもいい。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:32:25</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>1回でも赤字を出したら厳しいですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:32:29</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>厳しいですね。<br>ただ、説明ができればある程度は許容範囲なのかなと思います。<br>僕は赤字を出したことがないので、正確には分からないです。<br>もちろん、意図的な赤字も出していません。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:32:50</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>実体験として、両法人とも2期黒字でした。<br>その結果、海外輸出の法人では運転資金として500万円、1000万円を普通に融資してもらえました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:33:04</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>もう1つのTEKOをやっている法人は、正直運転資金がほとんどいらないんですが、それでも3000万円くらい融資してもらいました。<br>さらに両法人で不動産も買っています。<br>不動産を買っていいですよ、ということで融資してもらっています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:33:24</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そうすると、一気に資産形成が加速します。<br>事業に対してもお金を貸してもらえて、僕はそのお金をまた事業に投資できる。<br>細かい節税をしているより、事業を拡大して、事業でリターンを得た方が、最終的に手元に残るお金は大きいんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:33:46</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>もし僕が1期目、2期目を中途半端に節税して、経費をぶつけて赤字にしていたら、こうはなっていません。<br>目の前の安易な節税に踊らされるのではなく、しっかり黒字を出して、後からお金を借りたりして、資産形成と事業を伸ばす。<br>その方がトータルでプラスだという話です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:34:10</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>事業者の人は分かっていると思います。<br>でも、サラリーマンで法人を持つということをまず学んでほしい。<br>法人を持つなら、黒字経営していった方があなたのためになります。<br>最終的に一番お金が残るのはそれだ、ということを理解して帰ってほしいです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:34:35</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>もちろん、事業を作ること自体は難しいです。<br>具体的な方法は、また別の動画でお話ししていきます。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:34:47</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>今日のところは、節税という概念は確かに大事ですし、ひとり法人ももちろん大事です。<br>ただ、そもそも一人社長とは何かを学ばないといけない。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:35:02</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>正しい節税の考え方と、利益を残して納税していくことで後から得られる便益。<br>そこをトータルで学んだ上で、サラリーマンは一人社長という肩書きも持つべきだ、というお話でした。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:35:16</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>ありがとうございました。<br>いつもと少し角度が違うというか、守りの話もできるんだなという感じでした。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:35:28</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>税理士さんが本来話すべき内容も多分にあると思うので、僕はあくまでも一般論に留めています。<br>自分がやってきた実体験を話しているだけなので、足りない部分もあるかもしれません。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:35:49</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ただ、それなりにまっとうにやってきて、その分のリターンもかなり得ています。<br>一人でも多くのサラリーマンが真似をしてくれたり、気づきを得てくれたらいいなと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:36:04</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>こういった税務中心の話は普段あまりしていません。<br>話す時は、グロリア税理士法人さんという提携している税理士法人さんに情報提供してもらっています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:36:18</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そういった内容も含めて、我々TEKOというプラットフォームでキャリア形成を支援しています。<br>興味がある方は概要欄の公式ホームページからメルマガ登録できますので、そちらで情報をお待ちいただければと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:36:32</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ありがとうございました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:36:34</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>ありがとうございました。</p>
+        </div>
+      </article></div></details></section>
     </div>
-  </section>
+    <aside>
+      <h2>補正済みキーワード</h2>
+      <div class="terms"><span class="pill">ひとり法人</span><span class="pill">タックスコントロール</span><span class="pill">給与所得控除</span><span class="pill">事業所得</span><span class="pill">法人なり</span><span class="pill">役員報酬</span><span class="pill">定款</span><span class="pill">借り上げ社宅</span><span class="pill">法人税</span><span class="pill">所得税</span><span class="pill">倒産防止共済</span><span class="pill">繰延</span><span class="pill">借入</span><span class="pill">不動産賃貸業</span><span class="pill">黒字決算</span><span class="pill">金融機関評価</span><span class="pill">グロリア税理士法人</span><span class="pill">TEKO</span></div>
+      <h3>品質メモ</h3>
+      <ul class="quality"><li>話者は二者固定</li><li>後続音声でタイトル回収まで補完</li><li>撮影前相談/雑談は本文外</li><li>税務表現は一般論・実体験として整理</li><li>旧v2の危険誤変換は検出0件</li></ul>
+    </aside>
+  </div>
+  <footer>generated_at: 2026-05-16T16:48:16+09:00</footer>
 </main>
 </body>
 </html>
