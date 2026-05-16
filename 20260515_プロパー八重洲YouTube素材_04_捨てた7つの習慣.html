@@ -4,71 +4,817 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow,noarchive">
-<title>会社員の僕が32歳でキャッシュ1.5億を得るために捨てた7つの習慣 - 品質確認中</title>
+<title>会社員の僕が32歳でキャッシュ1.5億を得るために捨てた7つの習慣</title>
 <style>
   * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: #f5f6f8;
-    color: #202124;
-    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
-    line-height: 1.75;
-  }
-  main {
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 48px 20px 80px;
-  }
-  .panel {
-    background: #fff;
-    border: 1px solid #dfe3e8;
-    border-radius: 8px;
-    padding: 30px;
-  }
-  .label {
-    display: inline-flex;
-    border: 1px solid #d93025;
-    color: #b3261e;
-    background: #fff7f6;
-    border-radius: 999px;
-    padding: 4px 10px;
-    font-size: 13px;
-    font-weight: 700;
-  }
-  h1 {
-    margin: 18px 0 12px;
-    font-size: 30px;
-    line-height: 1.4;
-    letter-spacing: 0;
-  }
-  p {
-    margin: 0 0 14px;
-    font-size: 16px;
-  }
-  .meta {
-    margin-top: 24px;
-    padding-top: 18px;
-    border-top: 1px solid #edf0f2;
-    color: #5f6368;
-    font-size: 13px;
-  }
+  body { margin: 0; background: #f5f6f8; color: #202124; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; line-height: 1.8; }
+  .page { max-width: 1080px; margin: 0 auto; padding: 32px 20px 72px; }
+  .topline { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: #5f6368; font-size: 13px; }
+  .status { color: #137333; background: #e6f4ea; border: 1px solid #b7dfc1; border-radius: 999px; padding: 4px 10px; font-weight: 700; }
+  header { padding: 28px 0 22px; border-bottom: 1px solid #dfe3e8; }
+  h1 { margin: 12px 0 14px; font-size: clamp(28px, 4vw, 44px); line-height: 1.28; letter-spacing: 0; }
+  .lead { max-width: 820px; color: #3c4043; font-size: 17px; }
+  .meta, .terms { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill { display: inline-flex; align-items: center; min-height: 30px; padding: 5px 11px; border: 1px solid #dfe3e8; border-radius: 999px; background: #fff; color: #3c4043; font-size: 13px; }
+  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; margin-top: 24px; align-items: start; }
+  section, aside { background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; }
+  section { margin-bottom: 18px; padding: 24px; }
+  aside { position: sticky; top: 18px; padding: 18px; }
+  h2 { margin: 0 0 14px; font-size: 21px; line-height: 1.4; }
+  h3 { margin: 18px 0 8px; font-size: 15px; }
+  .summary-list { margin: 0; padding-left: 1.2em; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { border: 1px solid #e8eaed; padding: 8px 10px; vertical-align: top; text-align: left; }
+  th { background: #f8fafd; }
+  .quote-grid { display: grid; gap: 12px; }
+  .quote-card { padding: 16px; border: 1px solid #e8eaed; border-radius: 8px; background: #fbfcff; }
+  .quote-head { display: flex; gap: 8px; margin-bottom: 8px; }
+  .speaker { display: inline-flex; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+  .speaker.yaesu { background: #e8f0fe; color: #174ea6; }
+  .speaker.kakushi { background: #e6f4ea; color: #137333; }
+  .quote-card p, .turn p { margin: 8px 0 0; overflow-wrap: anywhere; }
+  details { border: 1px solid #dfe3e8; border-radius: 8px; background: #fff; }
+  summary { padding: 15px 17px; color: #0b57d0; font-weight: 700; cursor: pointer; }
+  details[open] summary { border-bottom: 1px solid #e8eaed; }
+  .turn { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 14px; padding: 15px 17px; border-bottom: 1px solid #eef0f2; }
+  .turn:last-child { border-bottom: 0; }
+  .turn time { color: #5f6368; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
+  .quality { margin: 0; padding-left: 1.1em; font-size: 14px; }
+  .quality li { margin: 7px 0; }
+  footer { margin-top: 28px; color: #80868b; font-size: 12px; text-align: center; }
+  @media (max-width: 840px) { .layout { grid-template-columns: 1fr; } aside { position: static; } }
+  @media (max-width: 620px) { .page { padding: 22px 14px 52px; } section { padding: 18px; } .turn { grid-template-columns: 1fr; gap: 4px; } table { font-size: 13px; } }
 </style>
 </head>
 <body>
-<main>
-  <section class="panel">
-    <span class="label">品質確認中</span>
+<main class="page">
+  <div class="topline"><span>プロパー八重洲YouTube撮影素材 / 整形済み文字起こし v3</span><span class="status">7 habits covered</span></div>
+  <header>
     <h1>会社員の僕が32歳でキャッシュ1.5億を得るために捨てた7つの習慣</h1>
-    <p>この文字起こしページは、整形本文の品質確認のため一時的に非表示にしています。</p>
-    <p>話者特定、固有名詞補正、文単位の区切りをやり直した v3 版で差し替えます。</p>
-    <p>素材管理用URLは維持しています。</p>
-    <div class="meta">
-      <div>package_id: 03_seven_habits_deleted</div>
-      <div>status: formatted_material_v3_rework_pending</div>
-      <div>updated_at: 2026-05-16T13:24:34+09:00</div>
-      <div>url: https://38maekawa-create.github.io/video-knowledge-pages/20260515_%E3%83%97%E3%83%AD%E3%83%91%E3%83%BC%E5%85%AB%E9%87%8D%E6%B4%B2YouTube%E7%B4%A0%E6%9D%90_04_%E6%8D%A8%E3%81%A6%E3%81%9F7%E3%81%A4%E3%81%AE%E7%BF%92%E6%85%A3.html</div>
+    <p class="lead">後続音声で欠落していた7つ目とクロージングまで補完したv3版です。逆張りの企画意図を保ちつつ、7項目を編集者が拾いやすい形で整理しました。</p>
+    <div class="meta"><span class="pill">話者: 八重洲さん / かくしくん</span><span class="pill">発話数: 87</span><span class="pill">本文文字数: 約6,203字</span><span class="pill">7項目補完済み</span></div>
+  </header>
+  <div class="layout">
+    <div>
+      <section><h2>3行要約</h2><ul class="summary-list"><li>八重洲さんが「32歳でキャッシュ1.5億」に至るまでに、何を始めたかではなく、何を捨てたかを7項目で話す企画。</li><li>主要メッセージは、独学・思考停止の継続・給与依存・曖昧なゴール・稼ぐ前のきれいごと・もらう側の固定化・大衆と同じ安心感を捨てること。</li><li>締めでは、才能や努力量だけではなく「知恵をつけること」と「勇気を持って選択する/しないこと」が人生を好転させると整理し、TEKOメルマガ導線につなぐ。</li></ul></section>
+      <section><h2>7つの習慣整理</h2><table><tr><th>no</th><th>捨てた習慣</th><th>要点</th><th>編集メモ</th></tr>
+<tr><td>1</td><td>独学で新しいことを始める習慣</td><td>無料情報だけで走ると時間が溶ける。先駆者、メンター、環境に投資する方が早い。</td><td>冒頭の実体験。海外輸出、数十万円の自己投資、環境の話を残す。</td></tr>
+<tr><td>2</td><td>継続すれば報われるという思考停止</td><td>継続は前提だが、改善・検証・エビデンスがない継続は停滞する。</td><td>サプリ、筋トレ、SNS発信、不動産/海外輸出の改善に接続。</td></tr>
+<tr><td>3</td><td>給料は会社からもらうものという思考</td><td>給与所得だけのゲームから、事業所得・不動産所得を作るゲームへ片足を移す。</td><td>会社員批判ではなく、資本主義ゲームへの認識変更として扱う。</td></tr>
+<tr><td>4</td><td>ゴールを曖昧にしたまま進む習慣</td><td>時代変化はあっても、どこへ向かうかのピンを置かないと走れない。</td><td>30歳までに手取り2000万円、ストレッチ目標、マンダラチャート文脈。</td></tr>
+<tr><td>5</td><td>「お金が全てじゃない」と稼ぐ前に言う習慣</td><td>お金が全てではないが、その言葉で稼ぐことから逃げていないかを問う。</td><td>5つ目の山場。自己防衛・95%はお金で解決の論点を丁寧に扱う。</td></tr>
+<tr><td>6</td><td>もらう側で居続ける習慣</td><td>最初は誰でもテイカーでよいが、できることを小さく返すと情報が集まる。</td><td>GIVEの自己犠牲論ではなく、小さな価値提供とバランスの話。</td></tr>
+<tr><td>7</td><td>みんなと同じで安心する習慣</td><td>大衆と同じ方向に進む安心を捨て、自分で選択肢を吟味する。</td><td>転職、M&amp;A仲介、製薬会社に戻る経験、知恵と勇気の締めまで含める。</td></tr></table></section>
+      <section><h2>編集で拾いやすい発話</h2><div class="quote-grid">
+      <article class="quote-card">
+        <div class="quote-head"><span>00:00:41</span><span class="speaker kakushi">かくしくん</span></div>
+        <p>八重洲さんって会社員だったじゃないですか。<br>それで32歳でキャッシュ1.5億円。<br>ちょっといやらしい話ですけど、そのキャッシュを作るために捨てた習慣を聞きたいなと思っています。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:05:27</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>独学でやるメリットは、逆にほとんどないと思っています。<br>懐は少し痛むかもしれないけれど、最終的にお金や資産を得たいなら、環境を作った方が近道です。<br>独学でやるという思考は捨てた方がいいです。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:12:03</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>継続するのは当たり前です。<br>ただ、継続だけで自己満足していませんか、という話ですね。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:16:43</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>給与という形態に依存して、もらう側だけの意識でやっていると、蓄財は加速しません。<br>資本主義ゲームに片足を移して、事業所得や不動産所得を作るゲームに移行しないと、一気に蓄財はしないです。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:20:41</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>どこかにピンを置かない限り、人間はちゃんと走れないと思っています。<br>再現性高く結果を出すなら、絶対に意識した方がいいです。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:22:41</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>それとは言っていません。<br>お金が全てじゃないとは思っています。<br>ただ、その言葉を前面に出して自己防衛に走っていないか。<br>本当はまだ自分の納得いくくらい稼いでいないのに、言葉が先に出てしまっていないか、という話です。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:28:38</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>小さくても、自分の中で得た情報や強みを見つけて、誰かにギブしていく。<br>最初はそれでいいと思います。<br>もらうこと自体は、恥ずべきことではありません。<br>テイクはしていい。<br>ただ、搾取はダメです。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:33:49</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>捨てるべきなのは、同じ方向に進んでいれば安心だという習慣です。<br>選択肢はいくつかある。<br>みんながあまり選んでいない方向もあるけれど、これはどうだろうと吟味する感覚を持つことが大事です。</p>
+      </article>
+
+      <article class="quote-card">
+        <div class="quote-head"><span>00:35:51</span><span class="speaker yaesu">八重洲さん</span></div>
+        <p>人生を好転させたい、幸せになりたいというのは、多くの人が生まれついてから思っていることだと思います。<br>才能や努力もとても重要です。<br>ただ、後天的にできることとしては、知恵をつけることと、勇気を持って選択をする、もしくは選択をしないことです。</p>
+      </article></div></section>
+      <section><h2>整形済み文字起こし全文</h2><details open><summary>全文を表示（87発話 / 約6,203字）</summary><div>
+      <article class="turn">
+        <time>00:00:24</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ビジネスパーソンのキャリア支援をしています、プロパー八重洲です。<br>今日もよろしくお願いします。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:00:33</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>よろしくお願いします。<br>今日は僕が聞きたいことがありまして、習慣ですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:00:41</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>八重洲さんって会社員だったじゃないですか。<br>それで32歳でキャッシュ1.5億円。<br>ちょっといやらしい話ですけど、そのキャッシュを作るために捨てた習慣を聞きたいなと思っています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:00:58</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>意識した習慣じゃなくて、捨てた習慣ということですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:01:03</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>そうです。<br>何をやるかより、何をやらないかの方が大事だとよく言いますよね。<br>やる習慣はもういいと。<br>どうせ僕もできないので、やめる方を聞きたいです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:01:31</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ずっとやっていたけれど、やめたら一気に人生が好転したな、という習慣はありますね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:02:21</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>せっかくなので「7つの習慣」に合わせて、7つ教えていただきたいです。<br>これをやめたらキャッシュ1億が貯まる、というのは過言ですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:02:38</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>過言です。<br>ただ、自分の収入を上げる、キャッシュを加速させるという意味では、何かしらプラスになる部分はあると思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:03:07</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>まず1つ目は、独学で何か新しいことを始める習慣です。<br>これは思い切ってやめました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:03:25</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>僕も25、26歳くらいから副業を始めました。<br>本業の年収は600万、700万円くらいあって生活には困っていなかったんですけど、プラスアルファで稼いでいかないと家庭を守れないなと思ったんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:03:47</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>最初はネットやSNSで無料情報をかき集めてやっていました。<br>でも、時間だけ溶けて全然結果が出ない。<br>出ても月3万円とか5万円で、10時間かけてこれか、という感じでした。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:04:14</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>新婚だったので、奥さんとの時間も犠牲にしてこれかよ、というのが最初の失敗体験です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:04:31</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>結果が出た海外輸出の背景には、メンターみたいな人がいました。<br>数十万円払って学んだんです。<br>当時の僕には大きかったですけど、逃げられない環境になったし、やるしかない状態になりました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:04:57</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>無料では得られない情報はあります。<br>実践者、経験者、実績を出してきた人だけが知っている情報がある。<br>それにアクセスできることと、同じ熱量でやっている人が周りにいることが大きかったですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:05:27</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>独学でやるメリットは、逆にほとんどないと思っています。<br>懐は少し痛むかもしれないけれど、最終的にお金や資産を得たいなら、環境を作った方が近道です。<br>独学でやるという思考は捨てた方がいいです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:06:11</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>一番最初に何十万円も払う経験がないと、なかなかポンとはいけないですよね。<br>それで失敗するケースもありますし。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:06:22</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>もちろんあります。<br>必ず成功するという話ではありません。<br>ただ、転職も1回すると次の転職のハードルが下がるじゃないですか。<br>副業も、一度お金を払って経験を得ると、そこから見えるものがあります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:07:03</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ノウハウコレクターになるのではなく、ちゃんと追い込まれる自己投資をしてほしいです。<br>数万円のノウハウをちょこちょこ買うのではなく、隣に教えてくれる人がいて、一緒にやっている環境がある。<br>そういう状態にお金を払うのが、独学ではない状態だと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:08:01</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>2つ目は、継続していれば報われるという考えです。<br>これは捨てた方がいいです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:08:12</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>え、継続って報われるんじゃないですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:08:19</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>健康や筋トレのように、継続するとリターンが返ってきやすいものはあります。<br>ただ、ビジネスで「ただ続ければいい」と考えるのは違います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:09:22</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>かくしくんのSNS発信が少しずつお金や出会いにつながっているのは、考えてやっているからだと思います。<br>誰に届けるか、どう発信するかを考えているからです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:10:03</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>継続していれば報われると思っている人はいます。<br>でも、何でも惰性で続けていたら、最終的に得たい便益が得られるというのは妄想です。<br>とりあえずこなすだけではダメです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:10:52</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>筋トレでも健康でも、改善やエビデンスを用いてやる必要があります。<br>僕も不動産や海外輸出をやってきましたが、何も考えずに続けていた時は実績が停滞しました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:11:35</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>新しい外注さんを雇う、ノウハウを見直す、先駆者が言っていることを違う角度から実践してみる。<br>そうやって試して、歯車が噛み合った時に一気に伸びるんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:12:03</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>継続するのは当たり前です。<br>ただ、継続だけで自己満足していませんか、という話ですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:12:38</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>考えていない練習は意味がない、という話ですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:12:45</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>その通りです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:13:02</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>3つ目は、給料は会社から与えられるものだ、という思考です。<br>これは捨てた方がいいと思っています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:14:39</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>多くのサラリーマンは、ハイスペックな人でも、会社から給料が出るという感覚を持っていると思います。<br>毎月25日に月収90万円、100万円が入ってくる。<br>でも、それがまず異常なんだと気づいてほしいです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:15:13</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>お金は自分で稼ぎ出すものだという思考に変えた方がいい。<br>価値提供をしたり、仕組みやビジネスモデルを回した時に、自分でお金を作り出す感覚です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:15:29</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>給与所得の縛りから抜けないと、資産やキャッシュは一気に積み上がっていきません。<br>給料は、自分の生命力を回復するための必要経費として与えられるもの、という見方もできます。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:16:06</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ストレスフルな仕事は年収が高いことも多いですが、そのストレスを回復するためにお金を使ってしまう。<br>いい場所に住む、飲みに行く、バッグを買う。<br>周りもそういう人たちが多いから、つられてしまうんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:16:43</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>給与という形態に依存して、もらう側だけの意識でやっていると、蓄財は加速しません。<br>資本主義ゲームに片足を移して、事業所得や不動産所得を作るゲームに移行しないと、一気に蓄財はしないです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:17:10</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>戦っているゲームが違うんです。<br>自分でお金を作るには、ビジネスモデルを持っているなら、どこで何をしたらお金を得られるのかを考える必要があります。<br>もらう前提だと、どこに転職したらいいかという発想になりがちです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:17:40</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>給料が何で生まれているのか、お金がどこから入ってくるのかを理解できると、本業でも力を入れるところ、逆に力を抜いていいところが見えてきます。<br>相乗効果はあると思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:18:03</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>4つ目は、ゴールを曖昧にしたまま進み続ける習慣です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:18:11</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>ゴール設定ってよく言いますけど、やっていく中で変わりませんか。<br>時代の変化も早いですし、3年後、5年後を話しても意味がないんじゃないかと思っています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:18:43</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>僕は、どこに向かって走るのかという大きな枠でいいので、ピンを刺すことが絶対に重要だと思っています。<br>お金持ちになる、でもいいんです。<br>僕は人生をそうやって生きてきました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:19:26</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>中学生か高校生くらいから、具体的な目標設定をするようになりました。<br>マンダラチャートのようなものを作っていましたね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:20:05</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>社会人になってからなら、お金を稼ぐという優先度が高くなると思います。<br>僕は30歳までに手取り2000万円を稼ぐ、というピンを置きました。<br>手法は時代の流れや、その時に学べることで変わっていいんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:20:41</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>どこかにピンを置かない限り、人間はちゃんと走れないと思っています。<br>再現性高く結果を出すなら、絶対に意識した方がいいです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:21:08</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>未来を確定させるのが嫌なら、ストレッチ目標を立てればいい。<br>想像もできないくらい大きい目標を置いておくんです。<br>10年後に武道館に立つ、みたいな目標でもいい。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:21:44</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>意外とみんな、恥ずかしくて言えないのかもしれません。<br>でも、恥ずかしげもなくちゃんと決めておくことが重要です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:22:16</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>5つ目は、「お金が全てじゃない」という言葉を、稼いでもいない人が言う習慣です。<br>これは速攻でやめた方がいいです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:22:37</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>じゃあ八重洲さんは、お金が全てだと思っているんですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:22:41</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>それとは言っていません。<br>お金が全てじゃないとは思っています。<br>ただ、その言葉を前面に出して自己防衛に走っていないか。<br>本当はまだ自分の納得いくくらい稼いでいないのに、言葉が先に出てしまっていないか、という話です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:23:13</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>自分の生活を振り返った時に、目標とのギャップはありますよね。<br>それを埋めるために大事なのはお金じゃないですか。<br>志だけでは埋められない部分があります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:24:01</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>お金で事業をすることもそうですし、武道館を埋めることもそうです。<br>影響力そのものはお金では買えないけれど、お金を稼ぐ過程で得られるものもあります。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:24:22</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>大抵のものは、お金を稼ぐという行為によって95%くらいは解決すると思っています。<br>むしろ残りの5%を埋めるのが大変です。<br>人間関係や家族関係などは、その過程で希薄になる瞬間もあるかもしれない。<br>そこをもう一度温めることが、残りの5%を満たす部分です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:24:53</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>まず、その95%から逃げていませんか、という話です。<br>僕も絶賛そこに立ち向かっている最中なので、「お金が全てじゃないです」ということは言わないようにしています。<br>まだそのフェーズが終わっていないからです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:25:09</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>経験していないのに言うべきではない、ということですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:25:12</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>そうです。<br>稼いでいないのに言うべきではない。<br>稼いでいる人だったら、言ってもいいと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:25:44</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>6つ目は、もらう側で居続ける習慣です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:25:55</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>さっきの給与の話に近いですか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:25:59</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>近いですが、もう少し抽象的な話です。<br>人から与えられる、人からもらい続ける状態、いわゆるテイカーで居続けることはやめた方がいいという話です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:26:24</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ただ、ギバーになれと言っているわけではありません。<br>人生は誰しも最初はテイカーです。<br>生まれた時から、教科書、部活動の顧問、先輩、上司、独立後の支援など、いろいろなものをもらっている。<br>それ自体は全然いいんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:26:54</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ただ、その過程で何か少しでも自分ができるようになることはあるはずです。<br>それをすぐ返していく、価値提供していく。<br>何もない自分かもしれないけれど、自分にできることはないかと常に考えることです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:27:22</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>テイカーであるフェーズは絶対にあります。<br>でも、自分の中でギブできることがないかを常に考え続ける。<br>ギバーになれと言っているわけではなく、バランスを取るということです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:27:47</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>GIVEには自己犠牲が含まれすぎている感じもありますよね。<br>渡せるものがないと、自信をなくしてしまう人もいると思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:28:02</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>例えばTEKOというコミュニティでも、まだ大きな実績がない人はいます。<br>でも、トレーディングカードの補修がすごく得意な人がいて、その情報を頑張って周りに落としている。<br>そうすると、その人に情報が集まり始めるんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:28:38</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>小さくても、自分の中で得た情報や強みを見つけて、誰かにギブしていく。<br>最初はそれでいいと思います。<br>もらうこと自体は、恥ずべきことではありません。<br>テイクはしていい。<br>ただ、搾取はダメです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:29:08</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>僕は、テイカーかギバーかという二極論があまり好きではありません。<br>世の中はもっと複雑で、だいたいグレーです。<br>白黒つかないことの方が多い。<br>だからこそ、バランスが大事だと思っています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:29:43</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>最後は、みんなと同じで安心する習慣ですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:30:01</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>僕の経験でいうと、僕はサラリーマンだったわけです。<br>数年前まで、みんな同じ会社の枠組みの中で、同じ目標を追いかけたり、敷かれたレールの中で出世競争をしたりしていました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:30:20</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>飲み会などの交流もたくさんあって、どんどん同質化していきます。<br>それ自体は決して悪いことではないんですけど、そこに染まり切ると、製薬会社員としての人間としてでしか生きられなくなるんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:30:39</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>実際に転職する時、僕もめちゃくちゃ怖かったです。<br>製薬会社から飛び出ることが、清水の舞台から飛び降りる、自殺に近い行為に感じるくらいでした。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:30:51</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>それは、みんなとずっと一緒にいたし、同じ考えでいたから安心していたんです。<br>でも、一回出てみると、めちゃくちゃ視野が広がります。<br>僕は異業種に行ったんですけど、こんな働き方があるんだ、と思いました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:31:14</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>製薬会社の仕事は、正直かなり恵まれていたんだなとも感じました。<br>お金を稼ぐことは、サラリーマンでもこんなに大変なんだ、仕事はここまでやり切らないといけないんだ、ということも分かりました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:31:35</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>その後また製薬会社に戻ったんですけど、転職に対するハードルはめちゃくちゃ下がりました。<br>僕が取った、製薬会社からM&amp;A仲介に行って、また製薬会社に戻るというキャリアは、かなり少数派です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:31:55</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ただ、だからこそ製薬会社の良さも語れます。<br>外から見た製薬会社が分かる。<br>時間という面でも、お金という面でも、めちゃくちゃ恵まれている業界だと分かったんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:32:17</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>周りで副業している人も、最近は増えてきましたけど、当時はあまりいませんでした。<br>25歳くらいの若い時から副業に触れて、事業を作る大変さや、そこで得られるお金のメリットも含めて学べました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:32:43</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>周りから「お前らしいことをやっているな」と言われることもありました。<br>でも、それを気にせずやり続けてきたから今があると思います。<br>大衆が進んでいる方向に行き続けると、それなりの結果に収まってしまうということを身をもって感じました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:33:10</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>逆張り人生をしろ、という話ではありません。<br>みんなが選んでいない方向は何だろうと、一度立ち止まって考えてみる。<br>その選択を取るか取らないかは、最終的には自分次第です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:33:30</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>みんなと違うことだけをやればいいわけではありません。<br>みんなが正しい時もあります。<br>だから、常に選択肢はこっちだけじゃないよね、と考える感覚が大事です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:33:49</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>捨てるべきなのは、同じ方向に進んでいれば安心だという習慣です。<br>選択肢はいくつかある。<br>みんながあまり選んでいない方向もあるけれど、これはどうだろうと吟味する感覚を持つことが大事です。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:34:19</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>一度みんなと違うことをやって、違うことをやっている人たちで集まると、またその中で同じになってしまうこともあります。<br>だから、そこでさらに視野を広げる活動が他にもあるかもしれないと、常に可能性を探ることが重要だと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:34:48</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>これだけ捨てたら、さすがにお金持ちになれますか。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:34:52</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>分からないですけど、ちょっとお金は稼げると思います。<br>間違いなく、大事だったことばかりが入っていると思うので、できていない人は1個でも捨てていただければと思います。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:35:05</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>基本的には、全部勇気のいる選択だと思います。<br>簡単にできるものではないですし、環境によって戻されることもあります。<br>引っ張られる引力が強いんです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:35:25</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ただ、人生をより良くしたい、幸せになりたいと、多くの人は思っているはずです。<br>そういう時に必要なのは、知恵と勇気だと思います。<br>この2つがあれば、何とかなると思っています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:35:45</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>才能とか努力量ではなく、知恵と勇気ということですね。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:35:51</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>人生を好転させたい、幸せになりたいというのは、多くの人が生まれついてから思っていることだと思います。<br>才能や努力もとても重要です。<br>ただ、後天的にできることとしては、知恵をつけることと、勇気を持って選択をする、もしくは選択をしないことです。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:36:18</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>このチャンネルが、皆さんにとってその一助になればと思っています。<br>最終的には、自分のご機嫌を取ることもそうですし、身の周りにいる友達や家族の選択肢を増やし続けられる人間になってほしい。<br>僕もまだその途中ですが、そう思っています。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:36:39</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>こういった考え方やキャリア形成を支援するプラットフォーム、TEKOを運営しています。<br>概要欄から公式メルマガに登録していただければ情報を受け取れるようにしていますので、興味のある方は登録をお願いします。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:36:58</time>
+        <div class="turn-body">
+          <span class="speaker kakushi">かくしくん</span>
+          <p>ありがとうございました。</p>
+        </div>
+      </article>
+
+      <article class="turn">
+        <time>00:37:04</time>
+        <div class="turn-body">
+          <span class="speaker yaesu">八重洲さん</span>
+          <p>ありがとうございました。</p>
+        </div>
+      </article></div></details></section>
     </div>
-  </section>
+    <aside>
+      <h2>補正済みキーワード</h2>
+      <div class="terms"><span class="pill">キャッシュ1.5億</span><span class="pill">独学を捨てる</span><span class="pill">継続と改善</span><span class="pill">給与所得</span><span class="pill">事業所得</span><span class="pill">不動産所得</span><span class="pill">ゴール設定</span><span class="pill">ストレッチ目標</span><span class="pill">お金が全てじゃない</span><span class="pill">テイカー</span><span class="pill">GIVE</span><span class="pill">TEKO</span><span class="pill">M&amp;A仲介</span><span class="pill">製薬会社</span><span class="pill">知恵と勇気</span></div>
+      <h3>品質メモ</h3>
+      <ul class="quality"><li>話者は二者固定</li><li>後半音声で企画末尾まで補完</li><li>raw話者ラベルなし</li><li>旧v2の危険誤変換は検出0件</li></ul>
+    </aside>
+  </div>
+  <footer>generated_at: 2026-05-16T15:53:48+09:00 / public page</footer>
 </main>
 </body>
 </html>
