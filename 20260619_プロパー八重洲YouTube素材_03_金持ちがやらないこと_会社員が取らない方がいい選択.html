@@ -4,212 +4,282 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow,noarchive">
-<title>金持ちがやらないこと / 会社員が取らない方がいい選択 | プロパー八重洲YouTube素材</title>
+<title>金持ちがやらないこと / 会社員が取らない方がいい選択</title>
 <style>
   * { box-sizing: border-box; }
-  body { margin: 0; background: #f5f6f8; color: #202124; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; line-height: 1.8; }
+  body {
+    margin: 0;
+    background: #f5f6f8;
+    color: #202124;
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+    line-height: 1.8;
+  }
   .page { max-width: 1040px; margin: 0 auto; padding: 32px 20px 72px; }
   .topline { display: flex; justify-content: space-between; gap: 16px; align-items: center; flex-wrap: wrap; color: #5f6368; font-size: 13px; }
   .status { color: #137333; background: #e6f4ea; border: 1px solid #b7dfc1; border-radius: 999px; padding: 4px 10px; font-weight: 700; }
   header { padding: 28px 0 22px; border-bottom: 1px solid #dfe3e8; }
   h1 { margin: 12px 0 14px; font-size: clamp(28px, 4vw, 46px); line-height: 1.28; letter-spacing: 0; }
-  h2 { margin: 0 0 14px; font-size: 21px; line-height: 1.4; }
-  .lead { max-width: 840px; margin: 0; color: #3c4043; font-size: 17px; }
+  .lead { max-width: 820px; margin: 0; color: #3c4043; font-size: 17px; }
   .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
   .pill { display: inline-flex; align-items: center; min-height: 30px; padding: 5px 11px; border: 1px solid #dfe3e8; border-radius: 999px; background: #fff; color: #3c4043; font-size: 13px; }
-  section { margin: 18px 0; padding: 24px; background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; }
+  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; margin-top: 24px; align-items: start; }
+  section, aside { background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; }
+  section { margin-bottom: 18px; padding: 24px; }
+  aside { position: sticky; top: 18px; padding: 18px; }
+  h2 { margin: 0 0 14px; font-size: 21px; line-height: 1.4; }
+  h3 { margin: 18px 0 8px; font-size: 15px; }
   .summary-list { margin: 0; padding-left: 1.2em; }
   .summary-list li { margin: 8px 0; }
+  .coverage-complete { border-color: #b7dfc1; background: #f7fff9; }
+  .coverage-complete h2 { color: #137333; }
   .chapters { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-  .chapters li { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 12px; padding: 12px; border: 1px solid #edf0f2; border-radius: 8px; }
+  .chapters li { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 12px; padding: 12px; border: 1px solid #edf0f2; border-radius: 8px; background: #fff; }
   .chapters time, .turn time, .quote-head time { color: #5f6368; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
   .chapters strong { display: block; line-height: 1.4; }
   .chapters span { display: block; color: #3c4043; font-size: 14px; }
+  .terms { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .term { padding: 4px 9px; border-radius: 999px; background: #f1f3f4; color: #3c4043; font-size: 13px; }
   .quote-grid { display: grid; gap: 12px; }
-  .quote-card { padding: 16px; border: 1px solid #e8eaed; border-radius: 8px; background: #fbfcff; }
-  .quote-head { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
-  .speaker { display: inline-flex; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; }
-  .speaker.yaesu { background: #e8f0fe; color: #174ea6; }
-  .speaker.kakushi { background: #e6f4ea; color: #137333; }
-  .quote-card p, .turn p { margin: 8px 0 0; overflow-wrap: anywhere; }
-  .turn { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 14px; padding: 15px 0; border-bottom: 1px solid #eef0f2; }
+  .quote-card { border: 1px solid #e1e4e8; border-radius: 8px; padding: 16px; background: #fcfcfd; }
+  .quote-head { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; flex-wrap: wrap; }
+  .speaker { display: inline-flex; align-items: center; min-height: 26px; padding: 3px 10px; border-radius: 999px; font-weight: 700; font-size: 13px; }
+  .speaker.yaesu { color: #0b57d0; background: #e8f0fe; }
+  .speaker.kakushi { color: #137333; background: #e6f4ea; }
+  .quote-card p, .turn p { margin: 0; }
+  details { border: 1px solid #e1e4e8; border-radius: 8px; overflow: hidden; background: #fff; }
+  summary { cursor: pointer; padding: 16px 18px; color: #0b57d0; font-weight: 800; border-bottom: 1px solid #e1e4e8; }
+  .turn { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 12px; padding: 18px; border-bottom: 1px solid #edf0f2; }
   .turn:last-child { border-bottom: 0; }
-  .turn-body { min-width: 0; }
-  table { width: 100%; border-collapse: collapse; font-size: 14px; }
-  th, td { border: 1px solid #e8eaed; padding: 8px 10px; vertical-align: top; text-align: left; }
-  th { background: #f8fafd; }
-  footer { margin-top: 28px; color: #80868b; font-size: 12px; text-align: center; }
-  @media (max-width: 620px) { .page { padding: 22px 14px 52px; } section { padding: 18px; } .chapters li, .turn { grid-template-columns: 1fr; gap: 4px; } }
+  .turn .speaker { margin-bottom: 8px; }
+  .turn p { color: #202124; font-size: 16px; }
+  .quality-note { color: #3c4043; }
+  .quality-note p { margin: 8px 0; }
+  .small { color: #5f6368; font-size: 13px; }
+  @media (max-width: 760px) {
+    .page { padding: 18px 14px 48px; }
+    .layout { grid-template-columns: 1fr; }
+    aside { position: static; }
+    section { padding: 20px 16px; }
+    h1 { font-size: 30px; }
+    .lead { font-size: 15px; }
+    .chapters li, .turn { grid-template-columns: 1fr; gap: 6px; }
+    .turn p { font-size: 18px; line-height: 1.95; }
+    summary { font-size: 16px; }
+  }
 </style>
 </head>
 <body>
-<main class="page">
-  <div class="topline"><span>プロパー八重洲YouTube撮影素材 / 整形済み文字起こし</span><span class="status">db terms corrected</span></div>
+<div class="page">
+  <div class="topline">
+    <span>proper_yaesu_youtube_material / 20260619 / GitHub Pages archive</span>
+    <span class="status">5月型HTML再生成済み</span>
+  </div>
   <header>
     <h1>金持ちがやらないこと / 会社員が取らない方がいい選択</h1>
-    <p class="lead">5月公開分と同じ読解導線に戻し、DB突合・固有名詞補正・話者二者固定を本文へ反映した整形済み全文です。noindexの全文アーカイブとして扱います。</p>
-    <div class="meta"><span class="pill">話者: 八重洲さん / かくしくん</span><span class="pill">発話数: 140</span><span class="pill">既知未補正語: なし</span><span class="pill">noindex</span></div>
+    <p class="lead">会社員が資産形成の順番を崩さないために、先に避けるべき選択肢を整理した編集確認用ページ。</p>
+    <div class="meta">
+      <span class="pill">話者: 八重洲さん / かくしくん</span>
+      <span class="pill">発話数: 140</span>
+      <span class="pill">本文: 約11,139字</span>
+      <span class="pill">noindex</span>
+    </div>
   </header>
-  <section><h2>3行要約</h2><ol class="summary-list"><li>生命保険、NISA、iDeCo、ペアローン、太陽光、不動産など、会社員が先に飛びつきがちな選択を棚卸しする。</li>
-<li>順番を間違えると資産形成ではなく固定費・信用毀損・判断停止につながる、という八重洲さんの警告を中心に整理する。</li>
-<li>編集では煽り切りにせず、何をやるかより先に何をやらないかを決める動画として見せる。</li></ol></section>
-  <section><h2>話の流れ</h2><ul class="chapters"><li><time>0:22</time><div><strong>やりがちな選択の列挙</strong><span>はいサラリーマンのキャリア形成支援をしています、プロパー八重洲ですですよろしくお願いします</span></div></li><li><time>4:31</time><div><strong>保険・NISA・iDeCoの順番</strong><span>その一部が会社に帰ってくるからその営業マンにも帰ってくるみたいな そういう商品を売った方が得なんですよ これ保険会社が思惑というか それは構造としてあって そこでてきているのがどるだての 運用保険というのがあってでだいた</span></div></li><li><time>8:57</time><div><strong>住宅ローン・ペアローンの注意</strong><span>それめっちゃ調べたんですよと - あの運用は運用で別でやった方がいいじゃんってなるんでこの辺をちゃんとわかってたら別に保険に入る必要がないなってなる</span></div></li><li><time>13:32</time><div><strong>会社員が守るべき信用と余力</strong><span>なんか今調べたらね、その当時は1キロワット40円みたいな価格やったけど、今はもう10円台下</span></div></li></ul></section>
-  <section><h2>編集で拾いやすい発話</h2><div class="quote-grid"><article class="quote-card"><div class="quote-head"><time>1:19</time><span class="speaker yaesu">八重洲さん</span></div><p>悪くはないですけどこういうのがあると生命保険とかですねまぁあとiDeCoとかかこういうのがあるんでこの辺がえーまぁ順番とかね投資なんで大体先にすべきことあるよねって話とかもちょっとしたいんですけどあとワンルーム買っていませんか？みたいな話とかもあるんですけど何がおかんのかって話をちょっとしてこういうのをきっちり避けていけば練習もちゃんと上がっていくだろうしあと資産形成ってミスったらその分 負のリターンもでかいんで そういうものを防いでしっかりと資産形成加速して</p></article>
-<article class="quote-card"><div class="quote-head"><time>3:51</time><span class="speaker yaesu">八重洲さん</span></div><p>5000円とか月々掛け捨てて で死んだ時に まあこれ1億円入ってくるとか まあそういうのは結構あると思うんですよ でこれまあ保険会社の収益構造として契約いただいたもの何パーセントとか毎月帰ってきて 年収になってからなったりとかするわけですね だから積立金額とかかけ捨て金額が低くと その保険が入ってくる割合が低かったりするわけですよ ってなった時じゃあ何するかっていうと長くまず継続してくれる方 ことと月々の課金が結構高くなるもの をあとなおかつ収益が生まれて その投資の運用みたいなに回して</p></article>
-<article class="quote-card"><div class="quote-head"><time>6:45</time><span class="speaker yaesu">八重洲さん</span></div><p>なんでいらんなってなったかっていうと ここ3万あるんやったらどっかかけるんやったら自分で投資した方がいいんすよ っていう当たり前の結論にたどり着くっていうこととあとじゃあなんでみんなそうならないかって言った時に保証が欲しいわけですよ運用したらええやんあそれは分かりますと保証がついてるからいいんですと ってなった時に保証ってなんやねんっていうの調べまくったんですよ なった時に まず働けなるなくなることが怖いわけじゃないですか そうなったとき国の制度があるんですよ知ってます？働 症病手当金</p></article>
-<article class="quote-card"><div class="quote-head"><time>12:36</time><span class="speaker yaesu">八重洲さん</span></div><p>で、えっと金融機関、これも僕がやってないんだけど実際にやってる人何人か知ってて結構メインでやってる人 じゃあ次アパートとかに行こうと思った時には基本的にそれもまた信用毀損していて 銀行としては</p></article>
-<article class="quote-card"><div class="quote-head"><time>17:06</time><span class="speaker yaesu">八重洲さん</span></div><p>これ何回も動画の動画でも言ってますけどちみちみ投資するぐらいだったらまず自己投資して自分で事業を作ったりとかキャッシュロン出る物件を買ってく不動産投資するための種ゼネにした方がいいよという主張がまずあるんで</p></article>
-<article class="quote-card"><div class="quote-head"><time>18:47</time><span class="speaker yaesu">八重洲さん</span></div><p>DCって言って企業側の確定教室年金っていうのもあるからこれは自分たちの給与からこう退職金から前借りしてかけてくような感じだから実際の手出しはないんですよだから企業型のその確定教室年金っていうのは入っといてもいいと思いますね個人型の井出子っていうのはあれプラスアルファで会社員がかけたり僕らみたいな個人で事業をやってたりとか</p></article>
-<article class="quote-card"><div class="quote-head"><time>20:31</time><span class="speaker kakushi">かくしくん</span></div><p>の仕組みとしてただ最近子供2,3みたいなもの増悪してるから増悪するからそっちの方入れたりももちろんしていいでしょうしそれ埋めた後はまあ日風邪ではないけど普通に投資をしていくのはありですよね で、それで株式でやるのか不動産でやるのかその試協を見たりとか、まあそういうので判断していかなきゃいけないですね どんだけお金あっても1800万しか 引かせる部分がないってこと 今のところそうですね 早く入れたら入れるほどいいのは良いんですか？ そんなことはないんですか別に</p></article>
-<article class="quote-card"><div class="quote-head"><time>22:42</time><span class="speaker kakushi">かくしくん</span></div><p>分かんないですけどまぁ僕の周りでも離婚したって人はまだあんま見てないですけど えっと奥さんの年収が1000万旦那さんの年収が1000万位で えー東京の23区のまあ2億ぐらい2億ちょっとぐらいのタワーマンを購入して2億ってなると月々の返済いくらなんだろう ちょっとわかんないですけど多分7、80万ぐらいするんですかね フェアローンっていうのは二人の信用を掛け合わせてその本来買えないものを買おうってことなんです 家、家のことをペアローンと言うんですか？ この家以外のこともペアローン、まあ2人で組み合わせたら全部ペアローン</p></article></div></section>
-  <section><h2>整形済み文字起こし全文</h2><div class="turn"><time>0:22</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>はいサラリーマンのキャリア形成支援をしています、プロパー八重洲ですですよろしくお願いします</p></div></div>
-<div class="turn"><time>0:27</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>では今日は に誰でも4キロ痩せれるダイエット法 簡単一ヶ月あればできる いや 違う違う 誰でも まあ勝手にやってくださいっていう感じじゃないですけどえー 金持ちになり方を教えてくださいっていう</p></div></div>
-<div class="turn"><time>0:41</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>あーなるほど</p></div></div>
-<div class="turn"><time>0:42</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>感じでのシンプルな</p></div></div>
-<div class="turn"><time>0:43</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>うんうんうん そうすね まぁだから金持ちになり方みたいなのは まぁ言ったら他の動画でも話してるしまぁそもそも何が金持ちかって話を置いといてですね 一方でも金持ちの人がおそらくやらないだろうっていうその</p></div></div>
-<div class="turn"><time>1:01</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>それですよね</p></div></div>
-<div class="turn"><time>1:02</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>サラリーマンの 投資とかなんか手法とかがあったりするんですけど 例えばまあ前も話したけどワンルームマンション 太陽光発電 あとなんかペアロン組んでターマン買うとか</p></div></div>
-<div class="turn"><time>1:19</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>悪くはないですけどこういうのがあると生命保険とかですねまぁあとiDeCoとかかこういうのがあるんでこの辺がえーまぁ順番とかね投資なんで大体先にすべきことあるよねって話とかもちょっとしたいんですけどあとワンルーム買っていませんか？みたいな話とかもあるんですけど何がおかんのかって話をちょっとしてこういうのをきっちり避けていけば練習もちゃんと上がっていくだろうしあと資産形成ってミスったらその分 負のリターンもでかいんで そういうものを防いでしっかりと資産形成加速して</p></div></div>
-<div class="turn"><time>1:53</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>例えば僕も純資産1億とか1.5億とか30ちょっとでいけてるんですけどこういうことやってきてないからいってると思ってるんではいまあちょっと説得力あるんじゃないかなと思いますね</p></div></div>
-<div class="turn"><time>2:04</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なるほどちょっと今ことに関してはもううちのね親が</p></div></div>
-<div class="turn"><time>2:11</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>どこが痛かったですか あそうなんすね えそれはどうなんすか太陽が儲かってたんすか？</p></div></div>
-<div class="turn"><time>2:18</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いやもうかってなんかもう儲かってるって感じじゃないけどなんかまあ多分もう繰るめられて</p></div></div>
-<div class="turn"><time>2:23</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>あそうなんすか？</p></div></div>
-<div class="turn"><time>2:24</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なんていうの家の電気代がちょっと浮くかみたいななんか多分そんな ああでもそりゃいいんじゃないですか？ 計算してないと思うんでそもそもの</p></div></div>
-<div class="turn"><time>2:30</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>なるほど.</p></div></div>
-<div class="turn"><time>2:30</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ソレふさわしい人間かって言われるとちょっと</p></div></div>
-<div class="turn"><time>2:34</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>儲かろうとしてるそれやってたらちゃう？ちゃう？ 多分目的と手段が合ってる</p></div></div>
-<div class="turn"><time>2:38</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>僕もちっちゃいから、 ちっちゃい時の話や、6歳とか7歳の時とかでも、太陽光で電気なんかかっこいいなみたいな思っちゃって、なんか親父とかに太陽光買ってよみたいなこと言ったら、</p></div></div>
-<div class="turn"><time>2:49</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>太陽光買ってよって おもちゃじゃないやろ</p></div></div>
-<div class="turn"><time>2:53</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>電気のつくものみたいな</p></div></div>
-<div class="turn"><time>2:54</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ああまあまあええ家庭ですねそれ いいやんでは</p></div></div>
-<div class="turn"><time>2:59</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>電話ね、見せかけの電話いいですね</p></div></div>
-<div class="turn"><time>3:04</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>はい、普通太陽光つかないですよ、嫌い</p></div></div>
-<div class="turn"><time>3:05</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>やめてください やめましょう</p></div></div>
-<div class="turn"><time>3:06</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>はい、じゃあ話して</p></div></div>
-<div class="turn"><time>3:09</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ニンソの方がいい効きたいですねニンソなんかもやった方がええよと思ってるんで</p></div></div>
-<div class="turn"><time>3:19</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>だけど順番とかあるよねって話</p></div></div>
-<div class="turn"><time>3:22</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ちょっと色々聞いてみます</p></div></div>
-<div class="turn"><time>3:24</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>はい、よろしくお願いします じゃあもうまあ金持ちになる上でこう会社員の方が取らない方がいい選択肢一つ目としては 運用型の生命保険とかですね</p></div></div>
-<div class="turn"><time>3:38</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>運用型の生命保険はい</p></div></div>
-<div class="turn"><time>3:39</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>わかりますこれどう</p></div></div>
-<div class="turn"><time>3:40</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いやぶっちゃけわかんないですね生命保険に運用型とかあるんだみたいな感じです</p></div></div>
-<div class="turn"><time>3:46</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>生命保険って掛け捨ての保険があって例えば死亡保険</p></div></div>
-<div class="turn"><time>3:50</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そうそうそう</p></div></div>
-<div class="turn"><time>3:51</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>5000円とか月々掛け捨てて で死んだ時に まあこれ1億円入ってくるとか まあそういうのは結構あると思うんですよ でこれまあ保険会社の収益構造として契約いただいたもの何パーセントとか毎月帰ってきて 年収になってからなったりとかするわけですね だから積立金額とかかけ捨て金額が低くと その保険が入ってくる割合が低かったりするわけですよ ってなった時じゃあ何するかっていうと長くまず継続してくれる方 ことと月々の課金が結構高くなるもの をあとなおかつ収益が生まれて その投資の運用みたいなに回して</p></div></div>
-<div class="turn"><time>4:31</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>その一部が会社に帰ってくるからその営業マンにも帰ってくるみたいな そういう商品を売った方が得なんですよ これ保険会社が思惑というか それは構造としてあって そこでてきているのがどるだての 運用保険というのがあってでだいたい3パーセントとか 運用できますよっていう 自分たちが月2、3万かけたらまあわかんないですその保険あー保険に対してかけたお金を多分保険会社がそれこそS&amp;Pとか米 国債とかで運用して3パーセントお返しますみたいな感じですね</p></div></div>
-<div class="turn"><time>5:06</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>でなおかつ新なくなった時には1億までは出ないかけ捨ての方が高いんですよね保険金はでもえっと1000万とか5000万がドルベース 落ちてきますと運用もされるしなくなった時とかお金も入ってくるよみたいな</p></div></div>
-<div class="turn"><time>5:25</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なるほどねー</p></div></div>
-<div class="turn"><time>5:26</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>保証と運用がセットになった商品って結構あるんですよ これなんか聞いた感じめっちゃ良さそうじゃないですか</p></div></div>
-<div class="turn"><time>5:32</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なんかいいとこ取りみたいな感じ</p></div></div>
-<div class="turn"><time>5:34</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそういいとこ取り</p></div></div>
-<div class="turn"><time>5:35</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>には聞こえますよね</p></div></div>
-<div class="turn"><time>5:37</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>Mまあそのさっき言った陰謀論的な話をすると 保険の営業マンにちゃんとお金がバックされるからっていうから保険営業マンおいしいと で顧客側もまあまあ運用と保険保障がついてやったらまあええかって話なんですけど えー僕もですねあのソニー生命さんまぁちょっと倍ネーム言うの良くないかもしれない</p></div></div>
-<div class="turn"><time>5:54</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>けど はい</p></div></div>
-<div class="turn"><time>5:54</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まぁ高校で1年目の時に何か会って欲しい人おるんやって先輩に言われて営業マン紹介されてもう右も左も何も分かってない時ですよ生命保険ってなんやみたいなでもなんかお母さんも入ってたし俺も入ってた方がいいんかなみたいなで月3万 の運用型の保険に入ったんですね</p></div></div>
-<div class="turn"><time>6:14</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まあまあ高いです</p></div></div>
-<div class="turn"><time>6:16</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>いやそうだから当時の僕そんな給料高くなかったから 頑張って集めた んですけど なんかいるか？みたいな 高ないか？みたいな色々勉強して今の保険会社の裏側</p></div></div>
-<div class="turn"><time>6:27</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>どういう収益構造になっているのかとか何で運用しているのかとかめっちゃ勉強したんですよ保険の窓口とかあるじゃないですかああいうとこ行って全部の商品聞いて何がちゃうんですか？とかパウレット全部もらってめっちゃ勉強して結論いらんかったんですよ</p></div></div>
-<div class="turn"><time>6:45</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>なんでいらんなってなったかっていうと ここ3万あるんやったらどっかかけるんやったら自分で投資した方がいいんすよ っていう当たり前の結論にたどり着くっていうこととあとじゃあなんでみんなそうならないかって言った時に保証が欲しいわけですよ運用したらええやんあそれは分かりますと保証がついてるからいいんですと ってなった時に保証ってなんやねんっていうの調べまくったんですよ なった時に まず働けなるなくなることが怖いわけじゃないですか そうなったとき国の制度があるんですよ知ってます？働 症病手当金</p></div></div>
-<div class="turn"><time>7:18</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>商業テラテキン</p></div></div>
-<div class="turn"><time>7:19</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>はい給与の3分の2か半分くらいか忘れてたんですけど半年間くらいは工場が国から</p></div></div>
-<div class="turn"><time>7:26</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>働けなくなるそれケガ？</p></div></div>
-<div class="turn"><time>7:27</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ケガとかまあ</p></div></div>
-<div class="turn"><time>7:29</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>自分でやめるならなるほどね</p></div></div>
-<div class="turn"><time>7:30</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそうまあ自分でやめたとしても失業手当</p></div></div>
-<div class="turn"><time>7:33</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>会社にもよるんですかそれ</p></div></div>
-<div class="turn"><time>7:35</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まあ会員に入ったとしてもそれは国の制度ですね</p></div></div>
-<div class="turn"><time>7:38</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>消費用手当てを</p></div></div>
-<div class="turn"><time>7:39</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>消費税ってあるんですよあとは例えば会社のところで見ると健康保険とかの付加給付っていうのがあったりしてそもそも3割負担じゃないですか僕らってそこに会社によっては健康組合っていうのがあってそこからプラス何万円とかもしくは自己負担はもう絶対2万円まででいいですよみたいなそんな強強な健康組合があったりするんですよで僕の会社はまさか の人はまさしくそうだったんですね</p></div></div>
-<div class="turn"><time>8:07</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ああ、そうなんだ</p></div></div>
-<div class="turn"><time>8:08</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ってなったとき医療費なんてそんなかかんないんですよ あと国の制度として高額療養費って聞いたことありますよね</p></div></div>
-<div class="turn"><time>8:14</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なんかまあ高かったら帰</p></div></div>
-<div class="turn"><time>8:16</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそうそうそう</p></div></div>
-<div class="turn"><time>8:17</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ってくるみたいな</p></div></div>
-<div class="turn"><time>8:17</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそうそうそう で大体所得に応じて変わるんですけど上限がいくら8万までとか10万までしかかからないっていうのがあるんですね そんなに考えたら保険料 予防線張るよりかはちゃんとお金稼いで何かあったときはアッパ 保険金払うてよくないじゃなくてですよ</p></div></div>
-<div class="turn"><time>8:38</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>あぁじゃ保険、最低限の保険は国がやってくれてるっていうことを理解したんだ</p></div></div>
-<div class="turn"><time>8:43</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そういうことです何かあってもこれとこの制度あるしこの制度あったらこれ組み合わせても全然いけるやんとか</p></div></div>
-<div class="turn"><time>8:48</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>え？何にも入ってなくてもそういう国のやつを使える んですか？ うわ俺は商業定で持って良かった会社やから</p></div></div>
-<div class="turn"><time>8:54</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そういうのあるんですよ知らないじゃないですか</p></div></div>
-<div class="turn"><time>8:56</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>知らないです</p></div></div>
-<div class="turn"><time>8:57</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>それめっちゃ調べたんですよと - あの運用は運用で別でやった方がいいじゃんってなるんでこの辺をちゃんとわかってたら別に保険に入る必要がないなってなる</p></div></div>
-<div class="turn"><time>9:07</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>保険じゃあ入った方が良い人はどういう人なんですか？ どういった時に保険のプラスになるんですか？</p></div></div>
-<div class="turn"><time>9:12</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まあそういう制度を正直知らない人ですよねまず調べるのめんどくさい申請がめんどくさいとか分からないやっぱ知ってて申請しないといけなかったりするからそのがめんどくさい人は保険やったらその会社にまるっとソニーとかに連絡したらね保険金おりたりとか 運用もしてくれるから一応いいじゃないですかだから投資するのはめんどくさいとか まるっとまとまっているのはそれがメリットあると思って</p></div></div>
-<div class="turn"><time>9:34</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>めんどくさい人には悪くはないかと 長弱ってことですね</p></div></div>
-<div class="turn"><time>9:39</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まずおね。ベストでないけどベターって感じ 全然悪いと思わないけど</p></div></div>
-<div class="turn"><time>9:44</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>分かった上で入ってるかどうかっていうのは結構大事</p></div></div>
-<div class="turn"><time>9:46</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そういうことですね。分かった上で、うん、 あえてその選択を知るだったら全然いいと思うし 一応僕の結論としては入らない、基本は入らない、で運用を自分でする でもどうしても、うーん、例えばあの入院代とかは保険的お買いだとして結構お金がかかったりするから</p></div></div>
-<div class="turn"><time>10:03</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>別の国のやつからね</p></div></div>
-<div class="turn"><time>10:04</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそう、ああいう別途代、差額別途代とか入院代を保っ を補填するためだけに共済には入ってて不眠共済とかあるじゃないですか</p></div></div>
-<div class="turn"><time>10:10</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>コープ へえ</p></div></div>
-<div class="turn"><time>10:11</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>共済 あの東京都の都民共済とか ま地方によって共済ってあるんすよ なんとか共済 コープ共済とか あれはかけ金1000円とか2000円なんですよ で それなりの保証が得られるんですよ そんなんでいいんすよ そんなんもある そんなんもある それと国の制度があってある程度所得が てかお金があれば 全く問題ない すいません保険についてめっちゃ熱く語ったんです</p></div></div>
-<div class="turn"><time>10:33</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>けど いやすごいなるほど</p></div></div>
-<div class="turn"><time>10:35</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>こういうことちゃんと理解しない 電源入ってるんですか？っていう もしくは入ってないってセットがしているんだったらまあそれ なんで入ってないのかっていう この辺で無駄なお金をね支出してしまってるとなかなか金持ちになれないですよねってところですね. はい.まぁもうこれだけで話も終わってもいいかなと思うぐらいなんですけ まあ、ご家族がされてるってことで あの自宅にその自分たちのえ 電気代を賄うっていう 意味合いでの多分つけてるの多分そうだと思うんですけど</p></div></div>
-<div class="turn"><time>11:14</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>それぐらいだったらいいと思うんです じゃなくて あの不動産投資と同じような考えで</p></div></div>
-<div class="turn"><time>11:21</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>あーどっかの場所に</p></div></div>
-<div class="turn"><time>11:23</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそうそう 難期とか本当にパネルがいっぱいあってこれを1期丸々買います だいたい2000万とか3000万とか1期あたりすると思うんですけど</p></div></div>
-<div class="turn"><time>11:32</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そんなするんですか？</p></div></div>
-<div class="turn"><time>11:33</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そう、結構数千万単位にするんですよ</p></div></div>
-<div class="turn"><time>11:35</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>動くったら数百万あったと思うけど</p></div></div>
-<div class="turn"><time>11:38</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>を高いエスケールレベルだから だから結構金額をするとデカくなるんですよまず で人工融資引いてやるんで、このワンルームマンション同士近い やりくあのロ 座組みを出し、ロットも 金額ロットも同じくらいだから、で大体みんな1基買ったら2基3基いっていくんですよ</p></div></div>
-<div class="turn"><time>11:57</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>えーなんで？</p></div></div>
-<div class="turn"><time>11:58</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>いやーなんか不動産と一緒なんですけど買い体病になるんですよね</p></div></div>
-<div class="turn"><time>12:01</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>えええええ</p></div></div>
-<div class="turn"><time>12:02</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>なんか対して儲かってないのに買いたいみたいな これやってみたら分からんすけど まぁ周周壁に若干近い感じ ででーあれ太陽光とかってfitって言って固定価格でなんか買取してくれるみたいな制度が ちょっと今あるのか分かんないんですけど まぁ売電のその受給とかの金額も結構上振れ下振れするしそのfitとかの買取の価格も年々減少傾向になるっていうんで 結構リザ屋出しにくいんですよね。 利益が出にくい。ワンルームマンションと近しいようなそこもリザ屋も構造になってるんで大して儲からないんですよね。</p></div></div>
-<div class="turn"><time>12:36</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>で、えっと金融機関、これも僕がやってないんだけど実際にやってる人何人か知ってて結構メインでやってる人 じゃあ次アパートとかに行こうと思った時には基本的にそれもまた信用毀損していて 銀行としては</p></div></div>
-<div class="turn"><time>12:50</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>あまりそんな</p></div></div>
-<div class="turn"><time>12:51</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>太陽光を評価してくれないんですよ</p></div></div>
-<div class="turn"><time>12:52</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>信用毀損してるんだ もう太陽光をやる上弱なんていらないんじゃない</p></div></div>
-<div class="turn"><time>12:58</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まあそこまで言ってないです</p></div></div>
-<div class="turn"><time>12:59</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そこまで言ってないけどでももうなんか簡単に言えばそういうことでないですか</p></div></div>
-<div class="turn"><time>13:03</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>でもまあそれ金融機関によると思うんですけど金融機関によって全く評価してくれなくて</p></div></div>
-<div class="turn"><time>13:07</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>SNSなんていうこと</p></div></div>
-<div class="turn"><time>13:08</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>単純によしんくってるって見られるから本来だったら 1億借金できるとこはもうあと2,000万しかできないとかになって</p></div></div>
-<div class="turn"><time>13:16</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>それ半端ないですね</p></div></div>
-<div class="turn"><time>13:18</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>新しいそのアパートとかのチャレンジができないみたいなことはあるんで結局勝負しないといけないみたいな なんか自分は投資して結構ホクホクみたいな気持ちになってるかもしれないけど、 実は遠回りしちゃってるみたいなことは、まあ周りでも聞きますね。</p></div></div>
-<div class="turn"><time>13:32</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なんか今調べたらね、その当時は1キロワット40円みたいな価格やったけど、今はもう10円台下</p></div></div>
-<div class="turn"><time>13:39</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そんな下がってるんですね。</p></div></div>
-<div class="turn"><time>13:40</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>がってるらしいんで、 同じですね。</p></div></div>
-<div class="turn"><time>13:44</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>だから必然的にリマインが上がりますよね。</p></div></div>
-<div class="turn"><time>13:46</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>2012年5年のブーム あーまあ最近バリバリやってるって言うことはないけど</p></div></div>
-<div class="turn"><time>13:54</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>最近TEKOに入会された方僕らがやってるプラットフォームに入会された方で なんかそういう話してる人いたんですよでなんか2期目買おうかどうかってめっちゃ迷ってるみたいなんで止めた記憶がありますね止めてアパート行きましょうみたいな話はしたんですけど</p></div></div>
-<div class="turn"><time>14:10</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>アパートとかだったら信用起損値でもむしろ上がるぐらいなんですよね多分</p></div></div>
-<div class="turn"><time>14:13</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まあちゃんと経営できていればね。ちゃんと収支がプラスで出ていれば、土地がついている分評価はされやすいですね。 だから太陽光は気をつけた方がいいですね。 僕もこうやったことがあるわけじゃないんで、ちょっとこう若干空中戦みたいになっちゃいますけど、 いろんな人の話聞いてたりとか実際実例聞いて、そんな儲かっている人もありえたことないから。 他にやるべきことあるんじゃないかなと思いますねや じゃあ次3つ目が悪いマーシャル投資ですね</p></div></div>
-<div class="turn"><time>14:44</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>これは他の動画でもちょっと話してるんで見ていただけたらなと思いますけどやってるとめっちゃ美味しい これはさっきの太陽光とも本当近い感じでまず銀行の良し</p></div></div>
-<div class="turn"><time>15:00</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>1万円で2千万3千万って買っていくとどんどん信用がなくなっていって もう自分が借金できる金額って減っていくんですよ 借金て別悪い意味で取られるがちですけど投資のためにある借金て基本的にまあプラスですよね でもそのプラスの借金ができなくなってくるっていう まあ言うたろうですけどゴミが積み上がってる感じですね</p></div></div>
-<div class="turn"><time>15:40</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>だったりしてるんで結局金持ちになるために不動産したのに 毎月お財布からお金 が出ていく それ一番地獄っすよ 一番地獄ですよね 何やってんだか わからへんみたいな マジでだってそんなんでお金にならないように本当に意味ないっすもんね 本当に意味ないし 地獄すぎるもんな まあでもそういうのがきっかけで監督動産について勉強するようになって挽回するってことができればいいんだけど多くの人は多分 そうじゃないまあなんか不動産会社のせいにしたりとか 金融機関のせいにしたりとか</p></div></div>
-<div class="turn"><time>16:11</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>だと思うんで、そうなことをしてると まぁ一生金持ちになれないだろうし 一生多分アパート投資ができないっていう 感じっすね だからまぁあんまり詳しくは今日はここで説明しないですけど もし買われるんだとしたらちゃんと毎月黒字の収支が出るような物件を中古とかで選定するべきでしょうし まぁ例えば銀行評価があんま落ちないようなアパートとかに挑戦するべきなのかなとは思いますね ここは順番間違えない方がいいかな と思いますね はい ありがとうございます.</p></div></div>
-<div class="turn"><time>16:42</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>はい で三つ目がえーまあ兄さんとか井出子とか まあいった国が用意してくれているようなえーいわゆるこう非課税の措置があったりとか 節税の効果があるようなえーいわゆる座組商品というか座組ですね こういったものは しちゃいけないとは思わないんですけど 僕の主張としてはまずやらないこと</p></div></div>
-<div class="turn"><time>17:06</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>これ何回も動画の動画でも言ってますけどちみちみ投資するぐらいだったらまず自己投資して自分で事業を作ったりとかキャッシュロン出る物件を買ってく不動産投資するための種ゼネにした方がいいよという主張がまずあるんで</p></div></div>
-<div class="turn"><time>17:18</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>任意里が否定したいわけじゃないけど順番としてはもっと後でいいんじゃないという話なんでまあこれは先にすべきではないと思ってますとはいで まあなんでかっていうとまあ制度としてはすごい素晴らしいんですけど 結局新井沙とかイデコってこれ投資じゃないですか で大体みんなS&amp;P500とかオルカンとか最近だったらNASDAQとかスペースXとかねオープンAIとかアンスロピックが上場するっていうので皆さんたぶんNASDAQに流れるんですけどこんなん買ってくじゃないですかでもこんなん種銭がないと もちろん投資ってリターン増えないんで</p></div></div>
-<div class="turn"><time>17:54</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まあなんか月2,3万ですみたいな積み立てそんなぶっちゃけ積み立て金額としては雀の涙ですよ やるぐらいだったらしっかりとまあ貯めて50万100万貯めて何か事業を自分で起こすなり学ぶなり自分の人的資本を高めて そこからいろいろ収益を他のところから得られるようにしてその金額を投資に充てていくっていうこの流れでやったほうが 絶対最終的に伸びはこっちのほうが大きいんですよ はい なんか順番間違えないで欲しいな っていう感じですかね はい ありがとうございました</p></div></div>
-<div class="turn"><time>18:27</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>はい僕も兄さんやってますよ兄さんやってるんですけどそれは事業がある程度自分で作れるようになって いろんなところから収益が出て入金力ってやつですね毎月入れる金額がまぁ数十万とかあるからやってるって感じ</p></div></div>
-<div class="turn"><time>18:43</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>井出子とかは個人で入るもので</p></div></div>
-<div class="turn"><time>18:47</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>DCって言って企業側の確定教室年金っていうのもあるからこれは自分たちの給与からこう退職金から前借りしてかけてくような感じだから実際の手出しはないんですよだから企業型のその確定教室年金っていうのは入っといてもいいと思いますね個人型の井出子っていうのはあれプラスアルファで会社員がかけたり僕らみたいな個人で事業をやってたりとか</p></div></div>
-<div class="turn"><time>19:13</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>だから無理してまでまずかける必要が ない、 うーん のと60歳まで資金拘束されるから資金効率が非常に悪い、のと投資できる商品も非常に限られている ロックされるの？ ロックされますね あれは年金を年金というか60歳65歳以降のこう年金用の四原資としてやるっていう印象コンセプトだから そういう意味でもやるんだったらどちらかというと兄さんの方がいいですよね、まだ 兄さんは正直やらない理由がないかなっていう マイク動かさず セロキオーオフ ずっと入ってない？ 補修消えたのかな？ まぁ一応こっちでも二重で撮ってる ん ではい</p></div></div>
-<div class="turn"><time>19:56</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>っていう感じですね兄さんは今どんぐらいのバッグあるか知ってます？日課税のバッグ 220万でしたっけ？ なんか絶妙なこと言いますね えっと1800万かな たしかに。 年間なら360 まあなんか220なんかちょっとおかしいな すいませんでした その枠埋めるぐらいはそのうちやってもいいかもしれないですよね あの引き数だからねあれやらない理由はないですねぶっちゃけ じゃあ1800万以上はあんま意味ないんですか？ 意味ないことはないけど1800万以上入れられないから 入れ、出ないんだ</p></div></div>
-<div class="turn"><time>20:31</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>の仕組みとしてただ最近子供2,3みたいなもの増悪してるから増悪するからそっちの方入れたりももちろんしていいでしょうしそれ埋めた後はまあ日風邪ではないけど普通に投資をしていくのはありですよね で、それで株式でやるのか不動産でやるのかその試協を見たりとか、まあそういうので判断していかなきゃいけないですね どんだけお金あっても1800万しか 引かせる部分がないってこと 今のところそうですね 早く入れたら入れるほどいいのは良いんですか？ そんなことはないんですか別に</p></div></div>
-<div class="turn"><time>20:56</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いやそんなことはないでしょうけどそれは投資なんで相場にもよるでしょうけど うん、まあ枠を埋める分には別に ニッサがいつまでやるかも分かんないからまあ続くとは思うんですさすがに うん、なくなることはないと思うんだけど ぶっちゃけ、やったほうがいいと思うわけですよ。1800万埋めるってまあまあ大変じゃないですか？ 普通の一般の人達だったら だったらまずその1800万を 気軽に埋めれるくらいになったほうがいいよねっていう話 だと思いますね ありがとうございます. で、最後がえーペアローンですね。</p></div></div>
-<div class="turn"><time>21:29</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>はーこれはちょっとtwitterとか x では炎上しがちなネタでちょっと youtube で触れるのもしのびないんですけど まぁこれって要は奥様のお互いの信用力を出し合わせてまぁかなりこうつま先立ちぐらい 伸びしてうん物件買うって話じゃない ですなるほど 制約みたいな まぁ婚結婚してんのにさらに制約重ねるって感じっすねなんならこっちの契約の方が重いみたいな 縛りみたいな 縛りに縛りっすね その分出力が高くなる そうやね縛り に縛ってるから りに縛って 全役と制約で うん、なんかそれ話してるだけで怖いじゃないですか</p></div></div>
-<div class="turn"><time>22:10</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>リスクしかない もうモロ派の剣みたいな そうそうそうそう 言ったら恋愛ものみたいな感じがする いざ離婚するってなった時 話し合いである程度決まる部分があるかもしれないけど 多分基本どんだけお互いの信用力を分け合ったかっていうので負担すると思うんですよね 旦那さんの方が年収低かったら旦那さん そんなそんなもちろん負担割合が低かったりするんだけど でも男っていうのもあるからいざ離婚するとなった時にはもしかしたら負担額がでかくなっちゃうかもしれないですよね まぁそこは多分綺麗に割れるもんじゃないのかもしれないんで</p></div></div>
-<div class="turn"><time>22:42</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>分かんないですけどまぁ僕の周りでも離婚したって人はまだあんま見てないですけど えっと奥さんの年収が1000万旦那さんの年収が1000万位で えー東京の23区のまあ2億ぐらい2億ちょっとぐらいのタワーマンを購入して2億ってなると月々の返済いくらなんだろう ちょっとわかんないですけど多分7、80万ぐらいするんですかね フェアローンっていうのは二人の信用を掛け合わせてその本来買えないものを買おうってことなんです 家、家のことをペアローンと言うんですか？ この家以外のこともペアローン、まあ2人で組み合わせたら全部ペアローン</p></div></div>
-<div class="turn"><time>23:19</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>1人では買えないという意味では金額が高いから大体が住宅になるんで住宅ローンをペアで組むことを大体はペアローンと 指してますね まあだからまず月々の支払いコストがめちゃくちゃ高くなりますよね まあお互いできっちり割るんだったらいいけど まあ必ずそうでもないでしょうし で何か環境の変化とかまあそれこそ離婚みたいな話があった時の まあその負担割合とかどうなるんだっていうのがあるんで 泥沼感がすごいのとまあ かなり背伸びして買ってるパターンがほとんどなんで</p></div></div>
-<div class="turn"><time>23:57</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まあ何かこうマンション価格が下落してしまったりとかした時のダメージもでかいんでレバレッジめっちゃかけてるってことなんで で大体住宅じゃないですか 要は収入生まないわけですよその資産はだった時にそこまでリスク取る必要があるのかっていう話 ですね収入生むんだったらある程度リスク取ってもいいかもしれないですけどっていうのがあるんでペアローンでねなんか投資用のマンションとかできたらまあそれもリスクだけど プサロスは出資ってバンドみたいな話じゃないですけど そうじゃないんでまぁリスクしかないかなって思いますね なるほど.</p></div></div>
-<div class="turn"><time>24:29</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>それでCMがパンパンに使っちゃってじゃあ次収益埋めるための不動産が買えなくなっちゃってるとかっていう人はよくいるんでで売ろうにも売れないじゃないですか自分の意思だけじゃ言ったらもう株式を50-50割ってる会社みたいな感じなんで経営権がもう半分半分なんで意思決定できないんですよ基本的にはまぁ50-50ではないかもしれないですけど</p></div></div>
-<div class="turn"><time>24:51</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>でも自分の意思だけで動かせないという時点で流動性がめっちゃ低いから 危険ですね あとヨシンワクめっちゃ食われちゃってるっていう なんでこの辺をやっちゃってると身動き取れなくなって自分のアクティブな投資とかまあ事業ができないみたいな話はまああるんじゃないかなと思います 制約でも多いですねペアローンでターマンとか買ってる人 別にみんなじゃあ掃除でどうかっていうパッと見の見た目はねターマン住んでて金持ちっぽいかもしれないけど多分ほとんど金ないと思いますね聞いててもみんな必死に働いてますしねペアローン返すためだけの</p></div></div>
-<div class="turn"><time>25:27</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>あんまり良いとは思えなかった僕は うわーなんかペアローンもしてる気がしてきた親が 親ディスルビ会みたいになってるよほんとごめんなさいねそんなつもりはないんですけど だから必ず必ずこの動画見てちょっとうってなる人がいると思うんで あのたいはないのであの傷つかないようにしてほしいなと思います まあ基本的にはナンセンスなことやってるっていうこの5つぐらいなんですか？ どう捉えたらいいんですか？ いやーまあナンセンスってばっさり切るのはダメですけど まあおそらく多分ね理解してないんですよその制度のリスクとか</p></div></div>
-<div class="turn"><time>26:01</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そのやろうとしている投資のリスクとか 絶対投資にはリスクが付きまとう ものなんであとはこうさっきの生命保険の話もそうですけど面倒くさいとかね 面倒くさいを賄ってくれるものって確かに便利ではある一方で その本来得られる旨味みたいなのを捨ててる部分もあったりするわけですよ そういうのが掃除てリスクと旨味のところを理解できてない じゃないかなと思うんで そういうのもちゃんと理解したりとかやっぱお金持ちになってる人たちってそういうところ突き詰めてたりしちゃう ちゃんと理解してるなってやってるっていう特徴があると思うんですよね</p></div></div>
-<div class="turn"><time>26:36</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>人に任せる なんとなくやってないっていう人たちが多いですか ねそうそう何を自分がやってるのかって説明できるとか まああと有名ななんか投資家さんとか稼がれてる投資家さんあとウォーレン・バフェットとかも よく言うじゃないですかね分からないものは投資しないって まあそういうことなのかなって思いますけどね自分が分かるものだけに投資するっていうのが大事なんじゃないかなと思います 意外と大事っす 意外とできてない人多いですよね ほとんどそうなんじゃないですか 割と勢いというかなんか何で買っちゃうんですかね</p></div></div>
-<div class="turn"><time>27:08</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いや僕も100%できてるかっていうとそうじゃない勢いも大事な時あるんですけど やっぱりめんどくさい時一つあるだろうし なんていうんですか儲け話って なんか俺はいけるんじゃないかみたいな 自己正当化バイアスじゃないですけど そういうのが働くと思うんですよ 自分だけはイケるんじゃないか自分だけは違うんじゃないかもそうだし なんじゃい？ って感じですね あーまぁ今楽しいんだけですよ 何飛び出ちゃうか分かってます</p></div></div>
-<div class="turn"><time>27:41</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>お話もしてますしあのじゃあじゃあどうしたらいいねんっていう話をですねあの我々が運営してるTEKOっていうプラットフォームとかでまあ海外輸出とか不動産詳しく解説してます 概要欄からそういった情報を受け取れるように公式ホームページ載せてますんでぜひ気になる人受け取ってください じゃあそのままして はいじゃあ今日はこれで終わりたいと思います ありがとうございました ありがとうございました</p></div></div></section>
-  <section><h2>補正済み固有名詞</h2><table><tr><th>正規化済み語句</th><th>補正回数</th></tr><tr><td>TEKO</td><td>2</td></tr>
-<tr><td>信用毀損</td><td>2</td></tr>
-<tr><td>iDeCoとか</td><td>1</td></tr>
-<tr><td>サラリーマンのキャリア形成支援をしています、プロパー八重洲です</td><td>1</td></tr>
-<tr><td>ワンルーム買っていませんか</td><td>1</td></tr>
-<tr><td>事業</td><td>1</td></tr>
-<tr><td>海外輸出とか</td><td>1</td></tr></table></section>
-  <footer>Proper Yaesu transcript archive</footer>
-</main>
+  <div class="layout">
+    <main>
+      <section class="coverage-complete">
+        <h2>3行要約</h2>
+        <ul class="summary-list">
+<li>会社員が先に避けたい選択は、信用枠と現金余力を縛るもの。</li>
+<li>保険、ペアローン、ワンルーム、太陽光、iDeCo/NISAは目的と順番を確認する。</li>
+<li>小さく投資する前に、収入源とキャッシュフローを作る。</li>
+        </ul>
+      </section>
+      <section>
+        <h2>話の流れ</h2>
+        <ol class="chapters">
+<li><time>00:00:22</time><div><strong>会社員が先に避ける選択</strong><span>ワンルーム、太陽光、ペアローン、保険を俯瞰する</span></div></li>
+<li><time>00:04:31</time><div><strong>保険商品の構造</strong><span>保証と投資を分けて、手数料と目的を見る</span></div></li>
+<li><time>00:08:57</time><div><strong>住宅ローン・ペアローン</strong><span>信用枠を使う順番と資産形成への影響を確認する</span></div></li>
+<li><time>00:17:06</time><div><strong>自己投資と種銭づくり</strong><span>小さく投資する前に収入源とキャッシュフローを作る</span></div></li>
+        </ol>
+      </section>
+      <section>
+        <h2>編集で拾いやすい発話</h2>
+        <div class="quote-grid">
+<article class="quote-card"><div class="quote-head"><time>00:01:02</time><span class="speaker yaesu">八重洲さん</span></div><p>金持ちがやらない選択肢を避けるだけでも、会社員の資産形成はかなり守れます。</p></article>
+<article class="quote-card"><div class="quote-head"><time>00:04:31</time><span class="speaker yaesu">八重洲さん</span></div><p>保険は保証と投資を分けて見ないと、手数料の高い商品を買っているだけになることがあります。</p></article>
+<article class="quote-card"><div class="quote-head"><time>00:08:57</time><span class="speaker yaesu">八重洲さん</span></div><p>ペアローンや住宅ローンは、資産形成の順番を間違えると信用を大きく使ってしまいます。</p></article>
+<article class="quote-card"><div class="quote-head"><time>00:17:06</time><span class="speaker yaesu">八重洲さん</span></div><p>小さく投資する前に、自己投資やキャッシュフローが出る不動産の種銭を作る方が優先です。</p></article>
+        </div>
+      </section>
+      <section>
+        <h2>整形済み文字起こし全文</h2>
+        <details open>
+          <summary>全文を表示（140発話 / 約11,139字）</summary>
+<div class="turn"><time>00:00:23</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>はいサラリーマンのキャリア形成支援をしています、プロパー八重洲ですよろしくお願いします</p></div></div>
+<div class="turn"><time>00:00:28</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>では今日はに誰でも4キロ痩せれるダイエット法簡単一ヶ月あればできるいや違う違う誰でもまあ勝手にやってくださいっていう感じじゃないですけどえー 金持ちになり方を教えてくださいっていう</p></div></div>
+<div class="turn"><time>00:00:42</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>あーなるほど</p></div></div>
+<div class="turn"><time>00:00:42</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>感じでのシンプルな</p></div></div>
+<div class="turn"><time>00:00:44</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>うんうんうんそうすねまぁだから金持ちになり方みたいなのはまぁ言ったら他の動画でも話してるしまぁそもそも何が金持ちかって話を置いといてですね。一方でも金持ちの人がおそらくやらないだろうっていうその</p></div></div>
+<div class="turn"><time>00:01:01</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>それですよね</p></div></div>
+<div class="turn"><time>00:01:03</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>サラリーマンの投資とかなんか手法とかがあったりするんですけど例えばまあ前も話したけどワンルームマンション太陽光発電あとなんかペアロン組んでタワマン買うとか</p></div></div>
+<div class="turn"><time>00:01:20</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>悪くはないですけどこういうのがあると生命保険とかですねまぁあとiDeCoとかかこういうのがあるんでこの辺がえーまぁ順番とかね投資なんで大体先にすべきことあるよねって話とかもちょっとしたいんですけどあとワンルーム買っていませんか？みたいな話とかもあるんですけど何がおかんのかって話をちょっとしてこういうのをきっちり避けていけば年収もちゃんと上がっていくだろうしあと資産形成ってミスったらその分負のリターンもでかいんでそういうものを防いでしっかりと資産形成加速して</p></div></div>
+<div class="turn"><time>00:01:54</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>例えば僕も純資産1億とか1.5億とか30ちょっとでいけてるんですけどこういうことやってきてないからいってると思ってるんではいまあちょっと説得力あるんじゃないかなと思いますね</p></div></div>
+<div class="turn"><time>00:02:04</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なるほどちょっと今ことに関してはもううちのね親が</p></div></div>
+<div class="turn"><time>00:02:11</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>どこが痛かったですかあそうなんすねえそれはどうなんすか太陽が儲かってたんすか？</p></div></div>
+<div class="turn"><time>00:02:18</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いやもうかってなんかもう儲かってるって感じじゃないけどなんかまあ多分もう繰るめられて</p></div></div>
+<div class="turn"><time>00:02:23</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>あそうなんすか？</p></div></div>
+<div class="turn"><time>00:02:24</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なんていうの家の電気代がちょっと浮くかみたいななんか多分そんなああでもそりゃいいんじゃないですか？ 計算してないと思うんでそもそもの</p></div></div>
+<div class="turn"><time>00:02:31</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>なるほど.</p></div></div>
+<div class="turn"><time>00:02:31</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ソレふさわしい人間かって言われるとちょっと</p></div></div>
+<div class="turn"><time>00:02:35</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>儲かろうとしてるそれやってたらちゃう？ちゃう？ 多分目的と手段が合ってる</p></div></div>
+<div class="turn"><time>00:02:39</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>僕もちっちゃいから、 ちっちゃい時の話や、6歳とか7歳の時とかでも、太陽光で電気なんかかっこいいなみたいな思っちゃって、なんか親父とかに太陽光買ってよみたいなこと言ったら、</p></div></div>
+<div class="turn"><time>00:02:50</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>太陽光買ってよっておもちゃじゃないやろ</p></div></div>
+<div class="turn"><time>00:02:53</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>電気のつくものみたいな</p></div></div>
+<div class="turn"><time>00:02:54</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ああまあまあええ家庭ですねそれいいやんでは</p></div></div>
+<div class="turn"><time>00:02:59</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>電話ね、見せかけの電話いいですね</p></div></div>
+<div class="turn"><time>00:03:04</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>はい、普通太陽光つかないですよ、嫌い</p></div></div>
+<div class="turn"><time>00:03:06</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>やめてくださいやめましょう</p></div></div>
+<div class="turn"><time>00:03:07</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>はい、じゃあ話して</p></div></div>
+<div class="turn"><time>00:03:10</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ニンソの方がいい効きたいですねニンソなんかもやった方がええよと思ってるんで</p></div></div>
+<div class="turn"><time>00:03:20</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>だけど順番とかあるよねって話</p></div></div>
+<div class="turn"><time>00:03:23</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ちょっと色々聞いてみます</p></div></div>
+<div class="turn"><time>00:03:24</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>はい、よろしくお願いします。じゃあもうまあ金持ちになる上でこう会社員の方が取らない方がいい選択肢一つ目としては運用型の生命保険とかですね</p></div></div>
+<div class="turn"><time>00:03:39</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>運用型の生命保険はい</p></div></div>
+<div class="turn"><time>00:03:40</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>わかりますこれどう</p></div></div>
+<div class="turn"><time>00:03:41</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いやぶっちゃけわかんないですね生命保険に運用型とかあるんだみたいな感じです</p></div></div>
+<div class="turn"><time>00:03:47</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>生命保険って掛け捨ての保険があって例えば死亡保険</p></div></div>
+<div class="turn"><time>00:03:51</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そうそうそう</p></div></div>
+<div class="turn"><time>00:03:51</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>5000円とか月々掛け捨ててで死んだ時にまあこれ1億円入ってくるとかまあそういうのは結構あると思うんですよでこれまあ保険会社の収益構造として契約いただいたもの何パーセントとか毎月帰ってきて年収になってからなったりとかするわけですね。だから積立金額とかかけ捨て金額が低くとその保険が入ってくる割合が低かったりするわけですよってなった時じゃあ何するかっていうと長くまず継続してくれる方ことと月々の課金が結構高くなるものをあとなおかつ収益が生まれてその投資の運用みたいなに回して</p></div></div>
+<div class="turn"><time>00:04:32</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>その一部が会社に帰ってくるからその営業マンにも帰ってくるみたいなそういう商品を売った方が得なんですよこれ保険会社が思惑というかそれは構造としてあってそこでてきているのがどるだての運用保険というのがあってでだいたい3パーセントとか運用できますよっていう自分たちが月2、3万かけたらまあわかんないですその保険あー保険に対してかけたお金を多分保険会社がそれこそS&amp;Pとか米国債とかで運用して3パーセントお返しますみたいな感じですね</p></div></div>
+<div class="turn"><time>00:05:07</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>でなおかつ新なくなった時には1億までは出ないかけ捨ての方が高いんですよね保険金はでもえっと1000万とか5000万がドルベース落ちてきますと運用もされるしなくなった時とかお金も入ってくるよみたいな</p></div></div>
+<div class="turn"><time>00:05:25</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なるほどねー</p></div></div>
+<div class="turn"><time>00:05:26</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>保証と運用がセットになった商品って結構あるんですよこれなんか聞いた感じめっちゃ良さそうじゃないですか</p></div></div>
+<div class="turn"><time>00:05:33</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なんかいいとこ取りみたいな感じ</p></div></div>
+<div class="turn"><time>00:05:34</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそういいとこ取り</p></div></div>
+<div class="turn"><time>00:05:35</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>には聞こえますよね</p></div></div>
+<div class="turn"><time>00:05:37</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>Mまあそのさっき言った陰謀論的な話をすると保険の営業マンにちゃんとお金がバックされるからっていうから保険営業マンおいしいとで顧客側もまあまあ運用と保険保障がついてやったらまあええかって話なんですけどえー僕もですねあのソニー生命さんまぁちょっと倍ネーム言うの良くないかもしれない</p></div></div>
+<div class="turn"><time>00:05:54</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>けどはい</p></div></div>
+<div class="turn"><time>00:05:55</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まぁ高校で1年目の時に何か会って欲しい人おるんやって先輩に言われて営業マン紹介されてもう右も左も何も分かってない時ですよ生命保険ってなんやみたいなでもなんかお母さんも入ってたし俺も入ってた方がいいんかなみたいなで月3万の運用型の保険に入ったんですね</p></div></div>
+<div class="turn"><time>00:06:15</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まあまあ高いです</p></div></div>
+<div class="turn"><time>00:06:16</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>いやそうだから当時の僕そんな給料高くなかったから頑張って集めたんですけどなんかいるか？みたいな高ないか？みたいな色々勉強して今の保険会社の裏側</p></div></div>
+<div class="turn"><time>00:06:28</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>どういう収益構造になっているのかとか何で運用しているのかとかめっちゃ勉強したんですよ保険の窓口とかあるじゃないですかああいうとこ行って全部の商品聞いて何がちゃうんですか？とかパウレット全部もらってめっちゃ勉強して結論いらんかったんですよ</p></div></div>
+<div class="turn"><time>00:06:46</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>なんでいらんなってなったかっていうとここ3万あるんやったらどっかかけるんやったら自分で投資した方がいいんすよっていう当たり前の結論にたどり着くっていうこととあとじゃあなんでみんなそうならないかって言った時に保証が欲しいわけですよ運用したらええやんあそれは分かりますと保証がついてるからいいんですとってなった時に保証ってなんやねんっていうの調べまくったんですよなった時にまず働けなるなくなることが怖いわけじゃないですかそうなったとき国の制度があるんですよ知ってます？働症病手当金</p></div></div>
+<div class="turn"><time>00:07:19</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>商業テラテキン</p></div></div>
+<div class="turn"><time>00:07:20</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>はい給与の3分の2か半分くらいか忘れてたんですけど半年間くらいは工場が国から</p></div></div>
+<div class="turn"><time>00:07:26</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>働けなくなるそれケガ？</p></div></div>
+<div class="turn"><time>00:07:28</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ケガとかまあ</p></div></div>
+<div class="turn"><time>00:07:29</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>自分でやめるならなるほどね</p></div></div>
+<div class="turn"><time>00:07:31</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそうまあ自分でやめたとしても失業手当</p></div></div>
+<div class="turn"><time>00:07:33</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>会社にもよるんですかそれ</p></div></div>
+<div class="turn"><time>00:07:35</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まあ会員に入ったとしてもそれは国の制度ですね</p></div></div>
+<div class="turn"><time>00:07:38</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>消費用手当てを</p></div></div>
+<div class="turn"><time>00:07:40</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>消費税ってあるんですよあとは例えば会社のところで見ると健康保険とかの付加給付っていうのがあったりしてそもそも3割負担じゃないですか僕らってそこに会社によっては健康組合っていうのがあってそこからプラス何万円とかもしくは自己負担はもう絶対2万円まででいいですよみたいなそんな強強な健康組合があったりするんですよで僕の会社はまさかの人はまさしくそうだったんですね</p></div></div>
+<div class="turn"><time>00:08:07</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ああ、そうなんだ</p></div></div>
+<div class="turn"><time>00:08:08</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ってなったとき医療費なんてそんなかかんないんですよあと国の制度として高額療養費って聞いたことありますよね</p></div></div>
+<div class="turn"><time>00:08:15</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なんかまあ高かったら帰</p></div></div>
+<div class="turn"><time>00:08:17</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそうそうそう</p></div></div>
+<div class="turn"><time>00:08:17</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ってくるみたいな</p></div></div>
+<div class="turn"><time>00:08:18</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそうそうそうで大体所得に応じて変わるんですけど上限がいくら8万までとか10万までしかかからないっていうのがあるんですね。そんなに考えたら保険料予防線張るよりかはちゃんとお金稼いで何かあったときはアッパ保険金払うてよくないじゃなくてですよ</p></div></div>
+<div class="turn"><time>00:08:38</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>あぁじゃ保険、最低限の保険は国がやってくれてるっていうことを理解したんだ</p></div></div>
+<div class="turn"><time>00:08:43</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そういうことです何かあってもこれとこの制度あるしこの制度あったらこれ組み合わせても全然いけるやんとか</p></div></div>
+<div class="turn"><time>00:08:49</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>え？何にも入ってなくてもそういう国のやつを使えるんですか？ うわ俺は商業定で持って良かった会社やから</p></div></div>
+<div class="turn"><time>00:08:55</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そういうのあるんですよ知らないじゃないですか</p></div></div>
+<div class="turn"><time>00:08:57</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>知らないです</p></div></div>
+<div class="turn"><time>00:08:57</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>それめっちゃ調べたんですよと - あの運用は運用で別でやった方がいいじゃんってなるんでこの辺をちゃんとわかってたら別に保険に入る必要がないなってなる</p></div></div>
+<div class="turn"><time>00:09:07</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>保険じゃあ入った方が良い人はどういう人なんですか？ どういった時に保険のプラスになるんですか？</p></div></div>
+<div class="turn"><time>00:09:12</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まあそういう制度を正直知らない人ですよねまず調べるのめんどくさい申請がめんどくさいとか分からないやっぱ知ってて申請しないといけなかったりするからそのがめんどくさい人は保険やったらその会社にまるっとソニーとかに連絡したらね保険金おりたりとか運用もしてくれるから一応いいじゃないですかだから投資するのはめんどくさいとかまるっとまとまっているのはそれがメリットあると思って</p></div></div>
+<div class="turn"><time>00:09:34</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>めんどくさい人には悪くはないかと長弱ってことですね</p></div></div>
+<div class="turn"><time>00:09:40</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まずおね。ベストでないけどベターって感じ全然悪いと思わないけど</p></div></div>
+<div class="turn"><time>00:09:44</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>分かった上で入ってるかどうかっていうのは結構大事</p></div></div>
+<div class="turn"><time>00:09:47</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そういうことですね。分かった上で、うん、 あえてその選択を知るだったら全然いいと思うし一応僕の結論としては入らない、基本は入らない、で運用を自分でするでもどうしても、うーん、例えばあの入院代とかは保険的お買いだとして結構お金がかかったりするから</p></div></div>
+<div class="turn"><time>00:10:03</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>別の国のやつからね</p></div></div>
+<div class="turn"><time>00:10:04</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそう、ああいう別途代、差額別途代とか入院代を保っを補填するためだけに共済には入ってて不眠共済とかあるじゃないですか</p></div></div>
+<div class="turn"><time>00:10:11</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>コープへえ</p></div></div>
+<div class="turn"><time>00:10:11</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>共済あの東京都の都民共済とかま地方によって共済ってあるんすよなんとか共済コープ共済とかあれはかけ金1000円とか2000円なんですよでそれなりの保証が得られるんですよそんなんでいいんすよそんなんもあるそんなんもあるそれと国の制度があってある程度所得がてかお金があれば全く問題ないすいません保険についてめっちゃ熱く語ったんです</p></div></div>
+<div class="turn"><time>00:10:33</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>けどいやすごいなるほど</p></div></div>
+<div class="turn"><time>00:10:35</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>こういうことちゃんと理解しない電源入ってるんですか？っていうもしくは入ってないってセットがしているんだったらまあそれなんで入ってないのかっていうこの辺で無駄なお金をね支出してしまってるとなかなか金持ちになれないですよねってところですね. はい.まぁもうこれだけで話も終わってもいいかなと思うぐらいなんですけまあ、ご家族がされてるってことであの自宅にその自分たちのえ電気代を賄うっていう意味合いでの多分つけてるの多分そうだと思うんですけど</p></div></div>
+<div class="turn"><time>00:11:15</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>それぐらいだったらいいと思うんですじゃなくてあの不動産投資と同じような考えで</p></div></div>
+<div class="turn"><time>00:11:22</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>あーどっかの場所に</p></div></div>
+<div class="turn"><time>00:11:23</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそうそう難期とか本当にパネルがいっぱいあってこれを1期丸々買いますだいたい2000万とか3000万とか1期あたりすると思うんですけど</p></div></div>
+<div class="turn"><time>00:11:33</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そんなするんですか？</p></div></div>
+<div class="turn"><time>00:11:33</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そう、結構数千万単位にするんですよ</p></div></div>
+<div class="turn"><time>00:11:36</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>動くったら数百万あったと思うけど</p></div></div>
+<div class="turn"><time>00:11:38</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>を高いエスケールレベルだからだから結構金額をするとデカくなるんですよまずで人工融資引いてやるんで、このワンルームマンション同士近いやりくあのロ座組みを出し、ロットも金額ロットも同じくらいだから、で大体みんな1基買ったら2基3基いっていくんですよ</p></div></div>
+<div class="turn"><time>00:11:57</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>えーなんで？</p></div></div>
+<div class="turn"><time>00:11:59</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>いやーなんか不動産と一緒なんですけど買い体病になるんですよね</p></div></div>
+<div class="turn"><time>00:12:01</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>えええええ</p></div></div>
+<div class="turn"><time>00:12:02</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>なんか対して儲かってないのに買いたいみたいなこれやってみたら分からんすけどまぁ周周壁に若干近い感じででーあれ太陽光とかってfitって言って固定価格でなんか買取してくれるみたいな制度がちょっと今あるのか分かんないんですけどまぁ売電のその受給とかの金額も結構上振れ下振れするしそのfitとかの買取の価格も年々減少傾向になるっていうんで結構リザ屋出しにくいんですよね。 利益が出にくい。ワンルームマンションと近しいようなそこもリザ屋も構造になってるんで大して儲からないんですよね。</p></div></div>
+<div class="turn"><time>00:12:37</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>で、えっと金融機関、これも僕がやってないんだけど実際にやってる人何人か知ってて結構メインでやってる人じゃあ次アパートとかに行こうと思った時には基本的にそれもまた信用毀損していて銀行としては</p></div></div>
+<div class="turn"><time>00:12:51</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>あまりそんな</p></div></div>
+<div class="turn"><time>00:12:51</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>太陽光を評価してくれないんですよ</p></div></div>
+<div class="turn"><time>00:12:53</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>信用毀損してるんだもう太陽光をやる上弱なんていらないんじゃない</p></div></div>
+<div class="turn"><time>00:12:58</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まあそこまで言ってないです</p></div></div>
+<div class="turn"><time>00:13:00</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そこまで言ってないけどでももうなんか簡単に言えばそういうことでないですか</p></div></div>
+<div class="turn"><time>00:13:03</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>でもまあそれ金融機関によると思うんですけど金融機関によって全く評価してくれなくて</p></div></div>
+<div class="turn"><time>00:13:07</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>SNSなんていうこと</p></div></div>
+<div class="turn"><time>00:13:09</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>単純によしんくってるって見られるから本来だったら 1億借金できるとこはもうあと2,000万しかできないとかになって</p></div></div>
+<div class="turn"><time>00:13:17</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>それ半端ないですね</p></div></div>
+<div class="turn"><time>00:13:18</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>新しいそのアパートとかのチャレンジができないみたいなことはあるんで結局勝負しないといけないみたいななんか自分は投資して結構ホクホクみたいな気持ちになってるかもしれないけど、 実は遠回りしちゃってるみたいなことは、まあ周りでも聞きますね。</p></div></div>
+<div class="turn"><time>00:13:33</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なんか今調べたらね、その当時は1キロワット40円みたいな価格やったけど、今はもう10円台下</p></div></div>
+<div class="turn"><time>00:13:40</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そんな下がってるんですね。</p></div></div>
+<div class="turn"><time>00:13:41</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>がってるらしいんで、 同じですね。</p></div></div>
+<div class="turn"><time>00:13:45</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>だから必然的にリマインが上がりますよね。</p></div></div>
+<div class="turn"><time>00:13:47</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>2012年5年のブームあーまあ最近バリバリやってるって言うことはないけど</p></div></div>
+<div class="turn"><time>00:13:55</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>最近TEKOに入会された方僕らがやってるプラットフォームに入会された方でなんかそういう話してる人いたんですよでなんか2期目買おうかどうかってめっちゃ迷ってるみたいなんで止めた記憶がありますね止めてアパート行きましょうみたいな話はしたんですけど</p></div></div>
+<div class="turn"><time>00:14:11</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>アパートとかだったら信用起損値でもむしろ上がるぐらいなんですよね多分</p></div></div>
+<div class="turn"><time>00:14:14</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まあちゃんと経営できていればね。ちゃんと収支がプラスで出ていれば、土地がついている分評価はされやすいですね。 だから太陽光は気をつけた方がいいですね。 僕もこうやったことがあるわけじゃないんで、ちょっとこう若干空中戦みたいになっちゃいますけど、 いろんな人の話聞いてたりとか実際実例聞いて、そんな儲かっている人もありえたことないから。 他にやるべきことあるんじゃないかなと思いますねやじゃあ次3つ目が悪いマーシャル投資ですね</p></div></div>
+<div class="turn"><time>00:14:45</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>これは他の動画でもちょっと話してるんで見ていただけたらなと思いますけどやってるとめっちゃ美味しいこれはさっきの太陽光とも本当近い感じでまず銀行の良し</p></div></div>
+<div class="turn"><time>00:15:00</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>1万円で2千万3千万って買っていくとどんどん信用がなくなっていってもう自分が借金できる金額って減っていくんですよ借金て別悪い意味で取られるがちですけど投資のためにある借金て基本的にまあプラスですよね。でもそのプラスの借金ができなくなってくるっていうまあ言うたろうですけどゴミが積み上がってる感じですね</p></div></div>
+<div class="turn"><time>00:15:40</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>だったりしてるんで結局金持ちになるために不動産したのに毎月お財布からお金が出ていくそれ一番地獄っすよ一番地獄ですよね。何やってんだかわからへんみたいなマジでだってそんなんでお金にならないように本当に意味ないっすもんね本当に意味ないし地獄すぎるもんなまあでもそういうのがきっかけで監督動産について勉強するようになって挽回するってことができればいいんだけど多くの人は多分そうじゃないまあなんか不動産会社のせいにしたりとか金融機関のせいにしたりとか</p></div></div>
+<div class="turn"><time>00:16:12</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>だと思うんで、そうなことをしてるとまぁ一生金持ちになれないだろうし一生多分アパート投資ができないっていう感じっすねだからまぁあんまり詳しくは今日はここで説明しないですけどもし買われるんだとしたらちゃんと毎月黒字の収支が出るような物件を中古とかで選定するべきでしょうしまぁ例えば銀行評価があんま落ちないようなアパートとかに挑戦するべきなのかなとは思いますね。ここは順番間違えない方がいいかなと思いますね。はいありがとうございます.</p></div></div>
+<div class="turn"><time>00:16:43</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>はいで三つ目がえーまあ兄さんとかiDeCoとかまあいった国が用意してくれているようなえーいわゆるこう非課税の措置があったりとか節税の効果があるようなえーいわゆる座組商品というか座組ですね。こういったものはしちゃいけないとは思わないんですけど僕の主張としてはまずやらないこと</p></div></div>
+<div class="turn"><time>00:17:06</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>これ何回も動画の動画でも言ってますけどちみちみ投資するぐらいだったらまず自己投資して自分で事業を作ったりとかキャッシュフロー出る物件を買ってく不動産投資するための種ゼネにした方がいいよという主張がまずあるんで</p></div></div>
+<div class="turn"><time>00:17:18</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>任意里が否定したいわけじゃないけど順番としてはもっと後でいいんじゃないという話なんでまあこれは先にすべきではないと思ってますとはいでまあなんでかっていうとまあ制度としてはすごい素晴らしいんですけど結局新井沙とかイデコってこれ投資じゃないですかで大体みんなS&amp;P500とかオルカンとか最近だったらNASDAQとかスペースXとかねオープンAIとかアンスロピックが上場するっていうので皆さんたぶんNASDAQに流れるんですけどこんなん買ってくじゃないですかでもこんなん種銭がないともちろん投資ってリターン増えないんで</p></div></div>
+<div class="turn"><time>00:17:54</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まあなんか月2,3万ですみたいな積み立てそんなぶっちゃけ積み立て金額としては雀の涙ですよやるぐらいだったらしっかりとまあ貯めて50万100万貯めて何か事業を自分で起こすなり学ぶなり自分の人的資本を高めてそこからいろいろ収益を他のところから得られるようにしてその金額を投資に充てていくっていうこの流れでやったほうが絶対最終的に伸びはこっちのほうが大きいんですよはいなんか順番間違えないで欲しいなっていう感じですかねはいありがとうございました</p></div></div>
+<div class="turn"><time>00:18:28</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>はい僕も兄さんやってますよ兄さんやってるんですけどそれは事業がある程度自分で作れるようになっていろんなところから収益が出て入金力ってやつですね毎月入れる金額がまぁ数十万とかあるからやってるって感じ</p></div></div>
+<div class="turn"><time>00:18:43</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>iDeCoとかは個人で入るもので</p></div></div>
+<div class="turn"><time>00:18:47</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>DCって言って企業側の確定拠出年金っていうのもあるからこれは自分たちの給与からこう退職金から前借りしてかけてくような感じだから実際の手出しはないんですよだから企業型のその確定拠出年金っていうのは入っといてもいいと思いますね個人型のiDeCoっていうのはあれプラスアルファで会社員がかけたり僕らみたいな個人で事業をやってたりとか</p></div></div>
+<div class="turn"><time>00:19:13</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>だから無理してまでまずかける必要がない、 うーんのと60歳まで資金拘束されるから資金効率が非常に悪い、のと投資できる商品も非常に限られているロックされるの？ ロックされますねあれは年金を年金というか60歳65歳以降のこう年金用の四原資としてやるっていう印象コンセプトだからそういう意味でもやるんだったらどちらかというと兄さんの方がいいですよね、まだ兄さんは正直やらない理由がないかなっていうマイク動かさずセロキオーオフずっと入ってない？ 補修消えたのかな？ まぁ一応こっちでも二重で撮ってるんではい</p></div></div>
+<div class="turn"><time>00:19:57</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>っていう感じですね兄さんは今どんぐらいのバッグあるか知ってます？日課税のバッグ 220万でしたっけ？ なんか絶妙なこと言いますねえっと1800万かなたしかに。 年間なら360 まあなんか220なんかちょっとおかしいなすいませんでしたその枠埋めるぐらいはそのうちやってもいいかもしれないですよね。あの引き数だからねあれやらない理由はないですねぶっちゃけじゃあ1800万以上はあんま意味ないんですか？ 意味ないことはないけど1800万以上入れられないから入れ、出ないんだ</p></div></div>
+<div class="turn"><time>00:20:32</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>の仕組みとしてただ最近iDeCoみたいなもの増悪してるから増悪するからそっちの方入れたりももちろんしていいでしょうしそれ埋めた後はまあNISAではないけど普通に投資をしていくのはありですよね。で、それで株式でやるのか不動産でやるのかその市況を見たりとか、まあそういうので判断していかなきゃいけないですね。どんだけお金あっても1800万しか引かせる部分がないってこと今のところそうですね。早く入れたら入れるほどいいのは良いんですか？ そんなことはないんですか別に</p></div></div>
+<div class="turn"><time>00:20:56</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いやそんなことはないでしょうけどそれは投資なんで相場にもよるでしょうけどうん、まあ枠を埋める分には別にニッサがいつまでやるかも分かんないからまあ続くとは思うんですさすがにうん、なくなることはないと思うんだけどぶっちゃけ、やったほうがいいと思うわけですよ。1800万埋めるってまあまあ大変じゃないですか？ 普通の一般の人達だったらだったらまずその1800万を気軽に埋めれるくらいになったほうがいいよねっていう話だと思いますね。ありがとうございます. で、最後がえーペアローンですね。</p></div></div>
+<div class="turn"><time>00:21:30</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>はーこれはちょっとtwitterとか x では炎上しがちなネタでちょっと youtube で触れるのもしのびないんですけどまぁこれって要は奥様のお互いの信用力を出し合わせてまぁかなりこうつま先立ちぐらい伸びしてうん物件買うって話じゃないですなるほど制約みたいなまぁ婚結婚してんのにさらに制約重ねるって感じっすねなんならこっちの契約の方が重いみたいな縛りみたいな縛りに縛りっすねその分出力が高くなるそうやね縛りに縛ってるからりに縛って全役と制約でうん、なんかそれ話してるだけで怖いじゃないですか</p></div></div>
+<div class="turn"><time>00:22:10</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>リスクしかないもうモロ派の剣みたいなそうそうそうそう言ったら恋愛ものみたいな感じがするいざ離婚するってなった時話し合いである程度決まる部分があるかもしれないけど多分基本どんだけお互いの信用力を分け合ったかっていうので負担すると思うんですよね。旦那さんの方が年収低かったら旦那さんそんなそんなもちろん負担割合が低かったりするんだけどでも男っていうのもあるからいざ離婚するとなった時にはもしかしたら負担額がでかくなっちゃうかもしれないですよね。まぁそこは多分綺麗に割れるもんじゃないのかもしれないんで</p></div></div>
+<div class="turn"><time>00:22:42</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>分かんないですけどまぁ僕の周りでも離婚したって人はまだあんま見てないですけどえっと奥さんの年収が1000万旦那さんの年収が1000万位でえー東京の23区のまあ2億ぐらい2億ちょっとぐらいのタワーマンを購入して2億ってなると月々の返済いくらなんだろうちょっとわかんないですけど多分7、80万ぐらいするんですかねフェアローンっていうのは二人の信用を掛け合わせてその本来買えないものを買おうってことなんです家、家のことをペアローンと言うんですか？ この家以外のこともペアローン、まあ2人で組み合わせたら全部ペアローン</p></div></div>
+<div class="turn"><time>00:23:20</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>1人では買えないという意味では金額が高いから大体が住宅になるんで住宅ローンをペアで組むことを大体はペアローンと指してますねまあだからまず月々の支払いコストがめちゃくちゃ高くなりますよねまあお互いできっちり割るんだったらいいけどまあ必ずそうでもないでしょうしで何か環境の変化とかまあそれこそ離婚みたいな話があった時のまあその負担割合とかどうなるんだっていうのがあるんで泥沼感がすごいのとまあかなり背伸びして買ってるパターンがほとんどなんで</p></div></div>
+<div class="turn"><time>00:23:57</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まあ何かこうマンション価格が下落してしまったりとかした時のダメージもでかいんでレバレッジめっちゃかけてるってことなんでで大体住宅じゃないですか要は収入生まないわけですよその資産はだった時にそこまでリスク取る必要があるのかっていう話ですね収入生むんだったらある程度リスク取ってもいいかもしれないですけどっていうのがあるんでペアローンでねなんか投資用のマンションとかできたらまあそれもリスクだけどプサロスは出資ってバンドみたいな話じゃないですけどそうじゃないんでまぁリスクしかないかなって思いますね。なるほど.</p></div></div>
+<div class="turn"><time>00:24:30</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>それでCMがパンパンに使っちゃってじゃあ次収益埋めるための不動産が買えなくなっちゃってるとかっていう人はよくいるんでで売ろうにも売れないじゃないですか自分の意思だけじゃ言ったらもう株式を50-50割ってる会社みたいな感じなんで経営権がもう半分半分なんで意思決定できないんですよ基本的にはまぁ50-50ではないかもしれないですけど</p></div></div>
+<div class="turn"><time>00:24:52</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>でも自分の意思だけで動かせないという時点で流動性がめっちゃ低いから危険ですね。あとヨシンワクめっちゃ食われちゃってるっていうなんでこの辺をやっちゃってると身動き取れなくなって自分のアクティブな投資とかまあ事業ができないみたいな話はまああるんじゃないかなと思います。制約でも多いですねペアローンでタワマンとか買ってる人別にみんなじゃあ掃除でどうかっていうパッと見の見た目はねタワマン住んでて金持ちっぽいかもしれないけど多分ほとんど金ないと思いますね聞いててもみんな必死に働いてますしねペアローン返すためだけの</p></div></div>
+<div class="turn"><time>00:25:27</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>あんまり良いとは思えなかった僕はうわーなんかペアローンもしてる気がしてきた親が親ディスルビ会みたいになってるよほんとごめんなさいねそんなつもりはないんですけどだから必ず必ずこの動画見てちょっとうってなる人がいると思うんであのたいはないのであの傷つかないようにしてほしいなと思います。まあ基本的にはナンセンスなことやってるっていうこの5つぐらいなんですか？ どう捉えたらいいんですか？ いやーまあナンセンスってばっさり切るのはダメですけどまあおそらく多分ね理解してないんですよその制度のリスクとか</p></div></div>
+<div class="turn"><time>00:26:01</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そのやろうとしている投資のリスクとか絶対投資にはリスクが付きまとうものなんであとはこうさっきの生命保険の話もそうですけど面倒くさいとかね面倒くさいを賄ってくれるものって確かに便利ではある一方でその本来得られる旨味みたいなのを捨ててる部分もあったりするわけですよそういうのが掃除てリスクと旨味のところを理解できてないじゃないかなと思うんでそういうのもちゃんと理解したりとかやっぱお金持ちになってる人たちってそういうところ突き詰めてたりしちゃうちゃんと理解してるなってやってるっていう特徴があると思うんですよね</p></div></div>
+<div class="turn"><time>00:26:36</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>人に任せるなんとなくやってないっていう人たちが多いですかねそうそう何を自分がやってるのかって説明できるとかまああと有名ななんか投資家さんとか稼がれてる投資家さんあとウォーレン・バフェットとかもよく言うじゃないですかね分からないものは投資しないってまあそういうことなのかなって思いますけどね自分が分かるものだけに投資するっていうのが大事なんじゃないかなと思います。意外と大事っす意外とできてない人多いですよね。ほとんどそうなんじゃないですか割と勢いというかなんか何で買っちゃうんですかね</p></div></div>
+<div class="turn"><time>00:27:09</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いや僕も100%できてるかっていうとそうじゃない勢いも大事な時あるんですけどやっぱりめんどくさい時一つあるだろうしなんていうんですか儲け話ってなんか俺はいけるんじゃないかみたいな自己正当化バイアスじゃないですけどそういうのが働くと思うんですよ自分だけはイケるんじゃないか自分だけは違うんじゃないかもそうだしなんじゃい？ って感じですね。あーまぁ今楽しいんだけですよ何飛び出ちゃうか分かってます</p></div></div>
+<div class="turn"><time>00:27:42</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>お話もしてますしあのじゃあじゃあどうしたらいいねんっていう話をですねあの我々が運営してるTEKOっていうプラットフォームとかでまあ海外輸出とか不動産詳しく解説してます概要欄からそういった情報を受け取れるように公式ホームページ載せてますんでぜひ気になる人受け取ってくださいじゃあそのまましてはいじゃあ今日はこれで終わりたいと思います。ありがとうございました。ありがとうございました</p></div></div>
+        </details>
+      </section>
+      <section class="quality-note">
+        <h2>品質メモ</h2>
+        <p>5月撮影分のページ構成に合わせ、章立ては短い編集用要約、発話候補は短いカード、全文は折りたたみで再生成。</p>
+        <p>プロパー八重洲 / かくしくん / TEKO / NISA / iDeCo / 登記簿謄本など、既知の固有名詞・頻出誤変換を補正済み。</p>
+      </section>
+    </main>
+    <aside>
+      <h2>ページ情報</h2>
+      <h3>補正済みキーワード</h3>
+      <div class="terms">
+<span class="term">iDeCo</span>
+<span class="term">NISA</span>
+<span class="term">ペアローン</span>
+<span class="term">生命保険</span>
+<span class="term">キャッシュフロー</span>
+      </div>
+      <h3>話者内訳</h3>
+      <p class="small">八重洲さん: 65発話 / かくしくん: 75発話</p>
+      <h3>生成境界</h3>
+      <p class="small">公開URL維持 / noindex / 2026-06-29 v5 rebuild</p>
+    </aside>
+  </div>
+</div>
 </body>
 </html>
