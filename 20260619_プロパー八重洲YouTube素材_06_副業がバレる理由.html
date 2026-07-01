@@ -7,345 +7,208 @@
 <title>副業がバレる理由</title>
 <style>
 * { box-sizing: border-box; }
-  body { margin: 0; background: #f5f6f8; color: #202124; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; line-height: 1.85; }
-  .page { max-width: 1040px; margin: 0 auto; padding: 32px 20px 72px; }
-  .topline { display: flex; justify-content: space-between; gap: 16px; align-items: center; flex-wrap: wrap; color: #5f6368; font-size: 13px; }
-  .status { color: #174ea6; background: #e8f0fe; border: 1px solid #c6dafc; border-radius: 999px; padding: 4px 10px; font-weight: 700; }
-  header { padding: 28px 0 22px; border-bottom: 1px solid #dfe3e8; }
-  h1 { margin: 12px 0 14px; font-size: clamp(28px, 4vw, 46px); line-height: 1.28; letter-spacing: 0; }
-  h2 { margin: 0 0 14px; font-size: 21px; line-height: 1.4; }
-  h3 { margin: 18px 0 8px; font-size: 15px; }
-  .lead { max-width: 840px; margin: 0; color: #3c4043; font-size: 17px; }
-  .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
-  .pill { display: inline-flex; align-items: center; min-height: 30px; padding: 5px 11px; border: 1px solid #dfe3e8; border-radius: 999px; background: #fff; color: #3c4043; font-size: 13px; }
-  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; margin-top: 24px; align-items: start; }
-  section, aside { background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; }
-  section { margin-bottom: 18px; padding: 24px; }
-  aside { position: sticky; top: 18px; padding: 18px; }
-  .summary-list { margin: 0; padding-left: 1.2em; }
-  .summary-list li { margin: 8px 0; }
-  .chapters { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-  .chapters li { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 12px; padding: 12px; border: 1px solid #edf0f2; border-radius: 8px; background: #fff; }
-  .chapters time, .turn time, .quote-head time { color: #5f6368; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
-  .chapters strong { display: block; line-height: 1.4; }
-  .chapters span { display: block; color: #3c4043; font-size: 14px; }
-  .quote-grid { display: grid; gap: 12px; }
-  .quote-card { border: 1px solid #e1e4e8; border-radius: 8px; padding: 16px; background: #fcfcfd; }
-  .quote-head { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; flex-wrap: wrap; }
-  .speaker { display: inline-flex; align-items: center; min-height: 26px; padding: 3px 10px; border-radius: 999px; font-weight: 700; font-size: 13px; }
-  .speaker.yaesu { color: #0b57d0; background: #e8f0fe; }
-  .speaker.kakushi { color: #137333; background: #e6f4ea; }
-  .quote-card p, .turn p { margin: 0; }
-  details { border: 1px solid #e1e4e8; border-radius: 8px; overflow: hidden; background: #fff; }
-  summary { cursor: pointer; padding: 16px 18px; color: #0b57d0; font-weight: 800; border-bottom: 1px solid #e1e4e8; }
-  .turn { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 12px; padding: 18px; border-bottom: 1px solid #edf0f2; }
-  .turn:last-child { border-bottom: 0; }
-  .turn .speaker { margin-bottom: 8px; }
-  .turn p { color: #202124; font-size: 16px; white-space: pre-line; overflow-wrap: anywhere; }
-  .quality-note { color: #3c4043; }
-  .quality-note p { margin: 8px 0; }
-  .small { color: #5f6368; font-size: 13px; }
-  @media (max-width: 760px) {
-    .page { padding: 18px 14px 48px; }
-    .layout { grid-template-columns: 1fr; }
-    aside { position: static; }
-    section { padding: 20px 16px; }
-    h1 { font-size: 30px; }
-    .lead { font-size: 15px; }
-    .chapters li, .turn { grid-template-columns: 1fr; gap: 6px; }
-    .turn p { font-size: 18px; line-height: 1.95; }
-    summary { font-size: 16px; }
-  }
-  .term { padding: 4px 9px; border-radius: 999px; background: #f1f3f4; color: #3c4043; font-size: 13px; }
-  .terms { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+body {
+  margin: 0;
+  background: #f5f6f8;
+  color: #202124;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  line-height: 1.9;
+}
+.page { max-width: 1040px; margin: 0 auto; padding: 32px 20px 72px; }
+.topline { display: flex; justify-content: space-between; gap: 16px; align-items: center; flex-wrap: wrap; color: #5f6368; font-size: 13px; }
+.status { color: #174ea6; background: #e8f0fe; border: 1px solid #c6dafc; border-radius: 999px; padding: 4px 10px; font-weight: 700; }
+header { padding: 28px 0 22px; border-bottom: 1px solid #dfe3e8; }
+h1 { margin: 12px 0 14px; font-size: clamp(28px, 4vw, 46px); line-height: 1.28; letter-spacing: 0; }
+h2 { margin: 0 0 14px; font-size: 21px; line-height: 1.4; }
+h3 { margin: 18px 0 8px; font-size: 15px; }
+.lead { max-width: 840px; margin: 0; color: #3c4043; font-size: 17px; }
+.meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
+.pill { display: inline-flex; align-items: center; min-height: 30px; padding: 5px 11px; border: 1px solid #dfe3e8; border-radius: 999px; background: #fff; color: #3c4043; font-size: 13px; }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; margin-top: 24px; align-items: start; }
+section, aside { background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; }
+section { margin-bottom: 18px; padding: 24px; }
+aside { position: sticky; top: 18px; padding: 18px; }
+.summary-list { margin: 0; padding-left: 1.2em; }
+.summary-list li { margin: 8px 0; }
+.chapters { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.chapters li { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 12px; padding: 12px; border: 1px solid #edf0f2; border-radius: 8px; background: #fff; }
+.chapters time, .turn time { color: #5f6368; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
+.chapters strong { display: block; line-height: 1.4; }
+.chapters span { display: block; color: #3c4043; font-size: 14px; }
+.speaker { display: inline-flex; align-items: center; min-height: 26px; padding: 3px 10px; border-radius: 999px; font-weight: 700; font-size: 13px; }
+.speaker.yaesu { color: #0b57d0; background: #e8f0fe; }
+.speaker.kakushi { color: #137333; background: #e6f4ea; }
+.speaker.other { color: #5f6368; background: #f1f3f4; }
+details { border: 1px solid #e1e4e8; border-radius: 8px; overflow: hidden; background: #fff; }
+summary { cursor: pointer; padding: 16px 18px; color: #0b57d0; font-weight: 800; border-bottom: 1px solid #e1e4e8; }
+.turn { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 12px; padding: 18px; border-bottom: 1px solid #edf0f2; }
+.turn:last-child { border-bottom: 0; }
+.turn .speaker { margin-bottom: 8px; }
+.turn p { margin: 0; color: #202124; font-size: 17px; white-space: pre-line; overflow-wrap: anywhere; }
+.small { color: #5f6368; font-size: 13px; }
+.toc { display: grid; gap: 8px; }
+.toc a { color: #174ea6; text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+@media (max-width: 760px) {
+  .page { padding: 18px 14px 48px; }
+  .layout { grid-template-columns: 1fr; }
+  aside { position: static; }
+  section { padding: 20px 16px; }
+  h1 { font-size: 30px; }
+  .lead { font-size: 15px; }
+  .chapters li, .turn { grid-template-columns: 1fr; gap: 6px; }
+  .turn p { font-size: 18px; line-height: 1.95; }
+  summary { font-size: 16px; }
+}
 </style>
 </head>
 <body>
 <div class="page">
-  <div class="topline">
-    <span>proper_yaesu_youtube_material / 20260619 / GitHub Pages archive</span>
-    <span class="status">全文整形v6 / 5月型候補</span>
-  </div>
+  <div class="topline"><span>proper_yaesu_youtube_material / 20260619 / v3 replay archive</span><span class="status">旧v3正規ルート replay候補</span></div>
   <header>
     <h1>副業がバレる理由</h1>
-    <p class="lead">副業が会社に伝わる経路、住民税、確定申告、登記簿謄本、法人設計の注意点を整理したページ。</p>
-    <div class="meta">
-      <span class="pill">話者: 八重洲さん / かくしくん</span>
-      <span class="pill">発話数: 171</span>
-      <span class="pill">本文: 約9,468字</span>
-      <span class="pill">noindex</span>
-    </div>
+    <p class="lead">副業がバレる論点は住民税だけではなく、登記や社内情報も含む。</p>
+    <div class="meta"><span class="pill">話者: 八重洲さん / かくしくん</span><span class="pill">発話数: 171</span><span class="pill">本文: 約9,731字</span><span class="pill">noindex</span></div>
   </header>
   <div class="layout">
     <main>
-      <section>
-        <h2>3行要約</h2>
-        <ul class="summary-list">
-<li>副業がバレる論点は住民税だけではなく、登記や社内情報も含む。</li>
+      <section id="summary"><h2>3行要約</h2><ol class="summary-list"><li>副業がバレる論点は住民税だけではなく、登記や社内情報も含む。</li>
 <li>普通徴収/特別徴収、確定申告、自治体運用を理解する。</li>
-<li>守りを固めた上で、副業や事業へ進む。</li>
-        </ul>
-      </section>
-      <section>
-        <h2>話の流れ</h2>
-        <ol class="chapters">
-<li><time>00:06:30</time><div><strong>副業バレの前提</strong><span>住民税と会社員の不安を分けて考える</span></div></li>
+<li>守りを固めた上で、副業や事業へ進む。</li></ol></section>
+      <section id="flow"><h2>話の流れ</h2><ol class="chapters"><li><time>00:06:30</time><div><strong>副業バレの前提</strong><span>住民税と会社員の不安を分けて考える</span></div></li>
 <li><time>00:15:58</time><div><strong>住民税で見える仕組み</strong><span>特別徴収、普通徴収、自治体運用を確認する</span></div></li>
 <li><time>00:20:23</time><div><strong>登記簿謄本リスク</strong><span>法人情報や役員情報から辿られる可能性を見る</span></div></li>
-<li><time>00:31:09</time><div><strong>守りを固めて攻める</strong><span>制度理解の上で副業・事業の実践へ進む</span></div></li>
-        </ol>
-      </section>
-      <section>
-        <h2>編集で拾いやすい発話</h2>
-        <div class="quote-grid">
-<article class="quote-card"><div class="quote-head"><time>00:06:30</time><span class="speaker yaesu">八重洲さん</span></div><p>副業がバレる理由は、住民税や社内での情報の見え方を理解していないことが多いです。</p></article>
-<article class="quote-card"><div class="quote-head"><time>00:15:58</time><span class="speaker yaesu">八重洲さん</span></div><p>住民税を特別徴収から普通徴収にする話はよく出ますが、自治体ごとの運用も確認が必要です。</p></article>
-<article class="quote-card"><div class="quote-head"><time>00:20:23</time><span class="speaker yaesu">八重洲さん</span></div><p>登記簿謄本など、会社の外に出ている情報から副業や法人が辿られることもあります。</p></article>
-<article class="quote-card"><div class="quote-head"><time>00:31:09</time><span class="speaker kakushi">かくしくん</span></div><p>守りを固めたうえで、あとは攻める。副業を持ちたい人は情報を取りに来てください。</p></article>
-        </div>
-      </section>
-      <section>
-        <h2>整形済み文字起こし全文</h2>
-        <details open>
-          <summary>全文を表示（171発話 / 約9,468字）</summary>
-<div class="turn"><time>00:06:31</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>サラリーマンのキャリア形成支援をしています、プロパー八重洲です。よろしくお願いします。今日は副業バレについて話そうかな。</p></div></div>
-<div class="turn"><time>00:06:39</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>副業バレはいはいはい。</p></div></div>
-<div class="turn"><time>00:06:41</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>サラリーマンであるってことが前提ですけどね関係ないですよね。</p></div></div>
-<div class="turn"><time>00:06:46</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いやいや関係ありますよサラリーマンやってた時もまあバレたらアバンナーと思いながらやってたんすか？</p></div></div>
-<div class="turn"><time>00:06:56</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>その時からやってたんすか？</p></div></div>
-<div class="turn"><time>00:06:58</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>その時もやってました。会社員、そう会社員。</p></div></div>
-<div class="turn"><time>00:07:01</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まだ1年目とかじゃん。</p></div></div>
-<div class="turn"><time>00:07:02</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>一年目です、その大学生の時から会社してたので。</p></div></div>
-<div class="turn"><time>00:07:06</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そういうことかなんで就職したんすか？</p></div></div>
-<div class="turn"><time>00:07:10</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いやいや世の中ではやっぱみんな就職してるんでそれを知った方がいいなっていうところで僕も学べることまだまだあるんじゃないかっていうので。</p></div></div>
-<div class="turn"><time>00:07:19</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>真面目な理由だったんすね。</p></div></div>
-<div class="turn"><time>00:07:20</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>真面目な理由、 まぁみんなが就職しないから僕やっぱ逆張りしようなったら順張りになったみたいな逆逆を越したら順になったみたいな逆の逆を行き過ぎて普通になった普通になったってやりましたけど確かにこれあれですよね。
-副業をやってる人は知りたいというか気を付けような副業する時の分かった会社員の人が副業をしようとした時にやらなくていい理由を探す第一歩だいたいバレるからっていう。</p></div></div>
-<div class="turn"><time>00:07:54</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうねまず結論から言っておくと100%バレない方法ってないね。</p></div></div>
-<div class="turn"><time>00:07:58</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まあ100%ね。</p></div></div>
-<div class="turn"><time>00:08:00</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>あとこのテーマって本来は税理士の先生とか税務が関わってくるところだから本来は専門家の方に聞いてくださいっていう一応スタンスは取らせてもらうんですけど、
-僕の実体験としてこういうことをやってきたとかこういう人がバレてたよみたいな話をしたいなと思います。</p></div></div>
-<div class="turn"><time>00:08:18</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なるほどバレてた人の話も聞けるのちょっと嬉しいですね。</p></div></div>
-<div class="turn"><time>00:08:21</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>いやまあその人には申し訳ないですけど特定のことは言わないですけど確かあとはあるようなかくしくんが今言ったように逃げ口上ではあるね。</p></div></div>
-<div class="turn"><time>00:08:32</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>本当にそうで僕腹立つんですよこの。</p></div></div>
-<div class="turn"><time>00:08:36</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そういう経験あります？</p></div></div>
-<div class="turn"><time>00:08:37</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そう言ってくる人とかなんかお金稼ぎたいねけどみたいな僕が仕事で結果出したことで相談来て副業やりますよ副業やりますよってこっからやるみたいな会社背拝ってないですけど
-こういうことできるよって言った時に会社にダメだって言われてるかなって言われたな、お前ならしいなってなるし会社なんてさなんぼでもバレないようにできる方法はあるはずだろ。</p></div></div>
-<div class="turn"><time>00:09:11</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>それをねちょっと話したいなと思って。</p></div></div>
-<div class="turn"><time>00:09:13</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そうそうそうしかもその。</p></div></div>
-<div class="turn"><time>00:09:15</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そこに思考が回らないのかと。</p></div></div>
-<div class="turn"><time>00:09:17</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そうなんで郵便って会社に許可取ってからやるわみたいなそれ言ったらダメって言うやろみたいなベースみたいななんかその学校の規則を全部守ろうみたいな感じの人やとちょっともう。</p></div></div>
-<div class="turn"><time>00:09:32</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>確かにそうそもそも確かにそういう人は多分副業したいって言ってる自分に酔っ払ってるから。</p></div></div>
-<div class="turn"><time>00:09:37</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>それはあると思いますねもうそれに付き合わされたっていうのが分かった瞬間腹立つもんなんで俺でそれを解消してくれ。</p></div></div>
-<div class="turn"><time>00:09:43</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>だからこの動画を見てほしい人はそういうファッションの人じゃなくてとガチでやりたくてただリスクは極力排除しておきたいっていう方まあ多分僕の視聴者さんでいう人多いからそういう人に向けてなんかこうお伝えできたらなと思う。</p></div></div>
-<div class="turn"><time>00:09:57</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>これを見たならば必ずチャレンジしてください皆さん。</p></div></div>
-<div class="turn"><time>00:10:02</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>っていう感じっすね僕より思って。</p></div></div>
-<div class="turn"><time>00:10:05</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>怒りが先に。</p></div></div>
-<div class="turn"><time>00:10:09</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>感情乗ってたね。</p></div></div>
-<div class="turn"><time>00:10:10</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>めちゃくちゃも色々悩まされて俺。</p></div></div>
-<div class="turn"><time>00:10:13</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>多分その100倍くらいその相談聞いてるけどね。</p></div></div>
-<div class="turn"><time>00:10:16</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>じゃあちょっと色々相談のプロに聞いていきましょう。</p></div></div>
-<div class="turn"><time>00:10:20</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうですねお願いします。
-解決策伝えていく前に僕もそういう質問ね100人くらいから終わって話したんですけど本当にそういう質問すると正直センスないなと思います
-マジですセンスないというかなんていうんだろうちゃんと自分で調べたのかと思ったりしますよねで、よく言われている一つ目の対策としては。</p></div></div>
-<div class="turn"><time>00:10:44</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>っきく3つですみたいな。</p></div></div>
-<div class="turn"><time>00:10:46</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>大きく3つあってバレるところバレる点ですよね一つは住民税の変動。</p></div></div>
-<div class="turn"><time>00:10:54</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>中国ではねはいはい。</p></div></div>
-<div class="turn"><time>00:10:56</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>これよく言う話だと思うんですけど、これでバレる会社にバレると言われます2つ目はこれちょっとレアケースであるんですけど法人仮に所得分散の話は後にしますけど法人の代表になっていてそれが会社に知られてバレるパターン。
-ですね。で最後3つ目がこれが正直一番あるあるなんですけど友達とか同僚とかにちょっとお金を稼げたからといって自慢をして多分飲み会席とか。</p></div></div>
-<div class="turn"><time>00:11:28</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>でねはいはい。</p></div></div>
-<div class="turn"><time>00:11:28</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>でええええリークされて足元救われて終わるっていう。</p></div></div>
-<div class="turn"><time>00:11:32</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>これ一番多いんすか？</p></div></div>
-<div class="turn"><time>00:11:34</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>これが一番多いっすね。</p></div></div>
-<div class="turn"><time>00:11:35</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>一番防げそうな。</p></div></div>
-<div class="turn"><time>00:11:36</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>一番防げそうで一番難しいという。</p></div></div>
-<div class="turn"><time>00:11:38</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>マジですか？</p></div></div>
-<div class="turn"><time>00:11:39</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>知らないですけど、これまぁ後で事例とかも話します大きくこの3つっすね。</p></div></div>
-<div class="turn"><time>00:11:42</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なるほどちょっとこの3つのところの対策みたいなことを。</p></div></div>
-<div class="turn"><time>00:11:47</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうっすね対策はいお願いします。はいえーじゃあ一つ目が住民税に関するお話。</p></div></div>
-<div class="turn"><time>00:11:55</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>住民税なんかこれはよく調べた一個に出てきますよね。</p></div></div>
-<div class="turn"><time>00:12:00</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ですね1個目出てくる。</p></div></div>
-<div class="turn"><time>00:12:02</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いらんなでポータルの支出からあータオタルの収入からなんか住民税って決まるからあれ会社で支給してる金額よりこいつ多いじゃんみたいなことってバレるってことですよね。</p></div></div>
-<div class="turn"><time>00:12:13</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そう答え言うてもてるから。</p></div></div>
-<div class="turn"><time>00:12:14</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>あーこれその答えですか。</p></div></div>
-<div class="turn"><time>00:12:15</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>これが本当あってて正解で去年の確定申告した所得に応じてまあ住民税ってその地域によってちょっと違うけど大体10%ぐらいが取られるでそれを元に会社員っていうのはまず給与天引きされていると10% 天引きの金額が変動するわけですよね。
-会社は700万年収支給しているのに本来だったらじゃあ住民税分かりやすく70万だとしましょうでもこれが副業して収入増えてるから本来は70万とここ100万取られててそれ毎月天引きになったら8万とかになるじゃないですか12割割12して。
-なんでこの人住民税高いのってなるわけですね。会社からしたらで怪しいんちゃうか問い合わせみたいな感じですね。</p></div></div>
-<div class="turn"><time>00:13:05</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まぁまず実際にバレるのか本当にバレるのかってところと。</p></div></div>
-<div class="turn"><time>00:13:10</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>はいどうはい。</p></div></div>
-<div class="turn"><time>00:13:10</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>やったら防げるんですかっていうことを二軸で教えてほしいっす。</p></div></div>
-<div class="turn"><time>00:13:13</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうですね本当にバレるかというと本当にバレるみたいで。</p></div></div>
-<div class="turn"><time>00:13:17</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>気になる気にするんですよその実際経理の人とかが。</p></div></div>
-<div class="turn"><time>00:13:21</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ああそうでこれめちゃ大企業とかで多分あんまなくて。</p></div></div>
-<div class="turn"><time>00:13:24</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>あですよね。</p></div></div>
-<div class="turn"><time>00:13:25</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうまあ正直そんな気にしてられへんっていうのがあると思うしなんならただ不動産とかをオッケーとしている会社とかってするんで不動産の所得も個人で乗っかってくるから。</p></div></div>
-<div class="turn"><time>00:13:36</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>不動産投資？</p></div></div>
-<div class="turn"><time>00:13:37</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そう不動産賃貸業とか株式の譲渡益とか発生するから株式とか不動産まで禁止しない会社多いわけですよだった時に正直禁止ないんだけど
-中小企業みたいな中小企業さんとか働かれて従業員少ないところやったら割と細かく見られたりするんでこれ税理士とか確定申告上げてるからその管轄の税務署とかこういったところで税理士に話が入るっていうのを僕は3人くらい聞いたことがあります税理士から聞きましたそういう問い合わせがありました。
-会社から。</p></div></div>
-<div class="turn"><time>00:14:10</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なるほどこれ。</p></div></div>
-<div class="turn"><time>00:14:10</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>っていうのがあって割とあるケース会社から直接その人にと言ってパターンはちょっと僕の近くではまだ聞いたことないですけど、実際にあるみたいです。</p></div></div>
-<div class="turn"><time>00:14:26</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>実際そもそも会社にバレるとどんな会社によると思うんですけど。</p></div></div>
-<div class="turn"><time>00:14:30</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>会社によるですね。</p></div></div>
-<div class="turn"><time>00:14:31</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>どんな処罰があるんですか。</p></div></div>
-<div class="turn"><time>00:14:33</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>いやだからほんと会社によるっていうのは結論ですけど就業規則っていうのが絶対あってまあ社内のイントラネットってまあホームページみたいなのがあると思うからみんなそこの就業規則を読んだ上で対策はしてほしいんですけど大抵はなんか懲戒とか解雇みたいなものに繋がったりとか言及とかそういうなんじゃないですか大体。</p></div></div>
-<div class="turn"><time>00:14:54</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>あーまぁまぁ。</p></div></div>
-<div class="turn"><time>00:14:55</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>割と重いの処分じゃない。</p></div></div>
-<div class="turn"><time>00:14:56</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まぁまぁ重いですね。それなんかちょっとやめときゃみたいなその遅刻こうした感じの。</p></div></div>
-<div class="turn"><time>00:15:01</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そんなんちゃういいよね。</p></div></div>
-<div class="turn"><time>00:15:02</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そんなんじゃないんだけど。</p></div></div>
-<div class="turn"><time>00:15:03</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ただ時代の流れ的には今日撮ってる時点で2026年6月だからかなり副業解禁してる会社多いですよね。
-僕が1社目にいたお値合企業って会社ももう副業解禁してるし僕がいた時はしてなかったけどもう製薬業界とか結構固めな業界でもどんどん解禁してるから。</p></div></div>
-<div class="turn"><time>00:15:23</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>やってくれないですよね時代の流れで。</p></div></div>
-<div class="turn"><time>00:15:25</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まあそういう側面もあるだろうしいろんなところでちゃんと事業自分で作った方が1ビジネスパーソンとしてもスキル上がるやんみたいな話もあると思うんでまあまあだから今の質問には会社によるってことですけど
-ちゃんと集約規則を読んどくの大事だと思うんですよね。</p></div></div>
-<div class="turn"><time>00:15:43</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>じゃあ対策ゼロコメですけどそういう会社に対策しないんですよね。</p></div></div>
-<div class="turn"><time>00:15:50</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ゼロコメで言うとまあそもそも確かにもうめちゃめちゃ厳重な服用禁止という会社に勤めないというのも一つのリスクヘッ。</p></div></div>
-<div class="turn"><time>00:15:58</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ね、ここが大事だと思います。</p></div></div>
-<div class="turn"><time>00:15:59</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>で0。
-5個目としては就業規則が読もうねという感じでじゃあ1個目の対策に戻ると住民税に関しては今天引きされているのが特別徴収というやつなんですね
-言い方としてはいわゆる住民税が会社がちゃんと把握しているという状況これをなくせばいいというのがよく言われている対策で確定申告するときに住民税を普通徴収にするというチェックボックスがあったりするんですよe-taxでも紙でも。
-そこにチェックつけると翌年6月からの住民税は納付書が来て自分で収めるだから会社に住民税の変動がまずわからないだからバれないよねみたいなロジックで語れることが多いですけど、
-これちょっと注意点もあって自治体によっては普通徴収の切り替えがちょっと厳しいみたいな。</p></div></div>
-<div class="turn"><time>00:16:49</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ひびしいんだ。</p></div></div>
-<div class="turn"><time>00:16:50</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>なんか言われる自治体があるみたいですけどなんか僕もTECOというコミュニティをプラットフォーム運営してて3,400人とかいるんですけどそこでそういうの言われたって人はまだいないけど
-なんかいろんな記事とか読んでるとそういうこともあるみたいななので100%の対策ではないけど1つできる絶対やっといた方がいい対策が1つですね。</p></div></div>
-<div class="turn"><time>00:17:14</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>やるに越したことない確定申告結構難しいですか大変。</p></div></div>
-<div class="turn"><time>00:17:18</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>確定申告の時チェックするだけ。</p></div></div>
-<div class="turn"><time>00:17:21</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>確定申告ってでも自分でやらないんですよね。会社の人。</p></div></div>
-<div class="turn"><time>00:17:24</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>かえっと確定申告っていうのは要は副業やってる場合は年間20万以上の売上だったから利益じゃなくて売上が立ってる場合はしないといけないから。</p></div></div>
-<div class="turn"><time>00:17:35</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>それをまあ加味はしないといけないですよね今から副業を始める人たちも多分これ見てると思うんです。</p></div></div>
-<div class="turn"><time>00:17:40</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>今から始める人。</p></div></div>
-<div class="turn"><time>00:17:42</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>今から始める人たちがバレるかもしれないから今やろう見てると思うんですけど。</p></div></div>
-<div class="turn"><time>00:17:47</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>確かに。</p></div></div>
-<div class="turn"><time>00:17:48</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そういう人たちは普段会社がやってくれてた確定申告を副業は副業で別でやらないといけない。</p></div></div>
-<div class="turn"><time>00:17:53</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そう会社員はそもそも確定職しなくていいけど副業本当にこれから始めるってなってしかもなんなら売上立った時は絶対しないといけないから会社員といつしてされてるものはちょっと今勘違いされてる源泉徴収とか年末調整も。</p></div></div>
-<div class="turn"><time>00:18:08</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まだ違うんだ。</p></div></div>
-<div class="turn"><time>00:18:09</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>全然違う年末調整とか源泉徴収っていうのは会社員は確かに自動的にされてるけど確定申告は事業をやっていくっていうのは絶対せなあかんからそのタイミングで住民税を普通徴収しましょうって話ですね。</p></div></div>
-<div class="turn"><time>00:18:23</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ありがとうございました。</p></div></div>
-<div class="turn"><time>00:18:24</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>この年末調整と確定申告の違いすら分かってない人会社員多いと思うけどね。</p></div></div>
-<div class="turn"><time>00:18:29</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いや僕も分かったよ。</p></div></div>
-<div class="turn"><time>00:18:32</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>取られすぎた分返すとかそういうのも仕組み的には似てるっちゃ似てるん。</p></div></div>
-<div class="turn"><time>00:18:36</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>だねうん。</p></div></div>
-<div class="turn"><time>00:18:37</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まぁちょっとここは別のまた機会お願いします2つ目ですね2つ目は法人の代表になってみたいな話ですよね。これちょっと難しいんですけど、まず対策の方から話したいんですけど。</p></div></div>
-<div class="turn"><time>00:19:06</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そもそもさっきの話住民税が変動するしないって話あるじゃないですか。
-これって要は副業を個人でやってるから給与と合算されてで住民税が動くって話じゃないですか個人の総所得として見られるからじゃあそもそも個人と法人分けて口座っぽいものではないけど考えとして。</p></div></div>
-<div class="turn"><time>00:19:34</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>テレビとか。</p></div></div>
-<div class="turn"><time>00:19:39</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>個人と法人の財布を分けてしまえばいいじゃんっていう話があって個人の方は個人で給料だけもらってて副業の所得収入っていうのは全部自分の何々株式会社とかに売上げを立てるとそうすれば所得は分散されてるんで住民税は変動しないんですよこういうリスクヘッジの仕方もあるっていうのをまず押さえておかないといけなくてでこの会社建てる時って代表者が必要ですね代表取締役とか代表社員とかでそこで自分の名前でまあ代表になる人ほとんどだと思うんですけど、でなんかねこれ小さい会社とかであった事例らしいんですけど、実際にこう何かこう。
-不動産やってるよとか副業やってるよみたいな話がどっかから漏れたらしくて一人疑惑を持ちかけられて社員がいるらしいですね
-こいつなんかやってるらしいぞみたいなでも住民税とか見たら普通だから俺なんもないやん、となったんですけど
+<li><time>00:31:09</time><div><strong>守りを固めて攻める</strong><span>制度理解の上で副業・事業の実践へ進む</span></div></li></ol></section>
+      <section id="full"><h2>整形済み文字起こし全文</h2><details open><summary>全文を表示（171発話 / 約9,731字）</summary><div class="turn"><time>00:06:31</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>サラリーマンのキャリア形成支援をしています、プロパー八重洲です。
+よろしくお願いします。
+今日は副業がバレるについて話そうかな。</p></div></div><div class="turn"><time>00:06:39</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>副業がバレるはいはいはい。</p></div></div><div class="turn"><time>00:06:41</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>サラリーマンであるってことが前提ですけど、ね関係ないですよね。</p></div></div><div class="turn"><time>00:06:46</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いやいや関係ありますよサラリーマンやってた時もまあバレたら嫌だな、と思いながらやってたんすか？</p></div></div><div class="turn"><time>00:06:56</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>その時からやってたんすか？</p></div></div><div class="turn"><time>00:06:58</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>その時もやってました。
+会社員です。</p></div></div><div class="turn"><time>00:07:01</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まだ1年目とかじゃん。</p></div></div><div class="turn"><time>00:07:02</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>一年目です、その大学生の時から会社を持っていたので。</p></div></div><div class="turn"><time>00:07:06</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そういうことかなんで就職したんすか？</p></div></div><div class="turn"><time>00:07:10</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いやいや世の中ではやっぱみんな就職してるんでそれを知った方がいいなっていうところで僕も学べることまだまだあるんじゃないかっていうので。</p></div></div><div class="turn"><time>00:07:19</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>真面目な理由だったんすね。</p></div></div><div class="turn"><time>00:07:20</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>真面目な理由、まぁみんなが就職しないから僕やっぱ逆張りしようなったら順張りになったみたいな逆の逆を越したら順になったみたいな。
+逆の逆を行き過ぎて普通になったってやりましたけど確かにこれあれですよね。
+副業をやってる人は知りたいというか気を付けような副業する時の分かった会社員の人が副業をしようとした時に、やらなくていい理由として、第一にだいたいバレるからっていう。</p></div></div><div class="turn"><time>00:07:54</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうねまず、結論から言っておくと100%バレない方法ってないね。</p></div></div><div class="turn"><time>00:07:58</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まあ100%ね。</p></div></div><div class="turn"><time>00:08:00</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>あとこのテーマって本来は税理士の先生とか税務が関わってくるところだから、本来は専門家の方に聞いてくださいっていう一応スタンスは取らせてもらうんですけど、
+僕の実体験としてこういうことをやってきたとこういう人がバレていたよみたいな話をしたいなと思います。</p></div></div><div class="turn"><time>00:08:18</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なるほどバレていた人の話も聞けるのちょっと嬉しいですね。</p></div></div><div class="turn"><time>00:08:21</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>いやまあその人には申し訳ないですけど、特定のことは言わないですけど、確かあとは、あるようなかくしくんが今言ったように逃げ口上ではあるね。</p></div></div><div class="turn"><time>00:08:32</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>本当にそうで僕腹立つんですよこの。</p></div></div><div class="turn"><time>00:08:36</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そういう経験あります？</p></div></div><div class="turn"><time>00:08:37</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そう言ってくる人とかなんかお金稼ぎたいんですけど、みたいな僕が仕事で結果出したことで相談来て副業やりますよ副業やりますよってこっからやるみたいな。
+会社を辞めろと言っているわけではないですけど、こういうことはできるよって言った時に会社にダメだって言われているからって言われたら、もったいないなってなるし会社なんてさなんぼでもバレないようにできる方法はあるはずだろ。</p></div></div><div class="turn"><time>00:09:11</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>それをねちょっと話したいなと思って。</p></div></div><div class="turn"><time>00:09:13</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そうそうそうしかもその。</p></div></div><div class="turn"><time>00:09:15</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そこに思考が回らないのかと。</p></div></div><div class="turn"><time>00:09:17</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そうなんで郵便って会社に許可取ってからやるわみたいな。
+それ言ったらダメって言うやろみたいなベースみたいな。
+なんかその学校の規則を全部守ろうみたいな感じの人やとちょっともう。</p></div></div><div class="turn"><time>00:09:32</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>確かにそうそもそも確かにそういう人は多分副業したいって言ってる自分に酔っ払ってるから。</p></div></div><div class="turn"><time>00:09:37</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>それはあると思います。
+ねもうそれに付き合わされたっていうのが分かった瞬間腹立つもんなんで俺でそれを解消してくれ。</p></div></div><div class="turn"><time>00:09:43</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>だから、この動画を見てほしい人はそういうファッション副業の人じゃなくてとガチでやりたくてただ、リスクは極力排除しておきたいっていう方まあ、
+多分僕の視聴者さんでいう人多いからそういう人に向けてなんかこうお伝えできたらなと思う。</p></div></div><div class="turn"><time>00:09:57</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>これを見たならば必ずチャレンジしてください皆さん。</p></div></div><div class="turn"><time>00:10:02</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>っていう感じっすね僕より思って。</p></div></div><div class="turn"><time>00:10:05</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>怒りが先に。</p></div></div><div class="turn"><time>00:10:09</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>感情乗ってたね。</p></div></div><div class="turn"><time>00:10:10</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>めちゃくちゃも色々悩まされて俺。</p></div></div><div class="turn"><time>00:10:13</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>多分その100倍くらいその相談聞いてるけどね。</p></div></div><div class="turn"><time>00:10:16</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>じゃあちょっと色々相談のプロに聞いていきましょう。</p></div></div><div class="turn"><time>00:10:20</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうですねお願いします。
+解決策伝えていく前に僕もそういう質問ね100人くらいから終わって話したんですけど、本当にそういう質問すると正直センスないなと思います
+マジですセンスないというかなんていうんだろうちゃんと自分で調べたのかと思ったりしますよねで、よく言われている一つ目の対策としては。</p></div></div><div class="turn"><time>00:10:44</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>っきく3つですみたいな。</p></div></div><div class="turn"><time>00:10:46</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>大きく3つあってバレるところバレる点ですよね。
+一つは住民税の変動。</p></div></div><div class="turn"><time>00:10:54</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>中国ではねはいはい。</p></div></div><div class="turn"><time>00:10:56</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>これよく言う話だと思うんですけど、これでバレる会社にバレると言われます2つ目はこれちょっとレアケースであるんですけど。
+法人仮に所得分散の話は後にしますけど法人の代表になっていてそれが会社に知られてバレるパターン。
+ですね。
+で最後3つ目がこれが正直一番あるあるなんですけど、友達とか同僚とかにちょっとお金を稼げたからといって自慢をして多分飲み会席とか。</p></div></div><div class="turn"><time>00:11:28</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>でねはいはい。</p></div></div><div class="turn"><time>00:11:28</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>でええええリークされて足元救われて終わるっていう。</p></div></div><div class="turn"><time>00:11:32</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>これ一番多いんすか？</p></div></div><div class="turn"><time>00:11:34</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>これが一番多いっすね。</p></div></div><div class="turn"><time>00:11:35</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>一番防げそうな。</p></div></div><div class="turn"><time>00:11:36</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>一番防げそうで一番難しいという。</p></div></div><div class="turn"><time>00:11:38</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>マジですか？</p></div></div><div class="turn"><time>00:11:39</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>知らないですけど、これまぁ後で事例とかも話します大きくこの3つっすね。</p></div></div><div class="turn"><time>00:11:42</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なるほどちょっとこの3つのところの対策みたいなことを。</p></div></div><div class="turn"><time>00:11:47</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうっすね対策はいお願いします。
+はいじゃあ一つ目が住民税に関するお話。</p></div></div><div class="turn"><time>00:11:55</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>住民税なんかこれはよく調べた一個に出てきますよね。</p></div></div><div class="turn"><time>00:12:00</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ですね1個目出てくる。</p></div></div><div class="turn"><time>00:12:02</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いらんなでポータルのトータルの収入からなんか住民税って決まるからあれ会社で支給してる金額よりこいつ多いじゃんみたいなことってバレるってことですよね。</p></div></div><div class="turn"><time>00:12:13</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そう答え言うてもてるから。</p></div></div><div class="turn"><time>00:12:14</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>これその答えですか。</p></div></div><div class="turn"><time>00:12:15</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>これが本当あってて正解で去年の確定申告した所得に応じてまあ住民税ってその地域によってちょっと違うけど大体10%ぐらいが取られるでそれを元に会社員っていうのはまず。
+給与天引きされていると10% 天引きの金額が変動するわけですよね。
+会社は700万年収支給しているのに本来だったらじゃあ住民税分かりやすく70万だとしましょうでもこれが副業して収入増えてるから。
+本来は70万とここ100万取られててそれ毎月天引きになったら8万とかになるじゃないですか。
+12で割ってして。
+なんでこの人住民税高いのってなるわけですね。
+会社からしたら。
+で怪しいんちゃうか問い合わせみたいな感じですね。</p></div></div><div class="turn"><time>00:13:05</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まぁまず、実際にバレるのか本当にバレるのかってところと。</p></div></div><div class="turn"><time>00:13:10</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>はいどうはい。</p></div></div><div class="turn"><time>00:13:10</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>やったら防げるんですかっていうことを二軸で教えてほしいっす。</p></div></div><div class="turn"><time>00:13:13</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうですね本当にバレるかというと本当にバレるみたいで。</p></div></div><div class="turn"><time>00:13:17</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>気になる気にするんですよその実際、経理の人とかが。</p></div></div><div class="turn"><time>00:13:21</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ああそう。
+でこれめちゃ大企業とかで多分あんまなくて。</p></div></div><div class="turn"><time>00:13:24</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>あですよね。</p></div></div><div class="turn"><time>00:13:25</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうまあ正直そんな気にしてられへんっていうのがあると思うしなんならただ、不動産とかをオッケーとしている会社とかってするんで不動産の所得も個人で乗っかってくるから。</p></div></div><div class="turn"><time>00:13:36</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>不動産投資？</p></div></div><div class="turn"><time>00:13:37</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そう不動産賃貸業とか株式の譲渡益とか発生するから、株式とか不動産まで禁止しない会社多いわけですよ。
+だった時に正直禁止ないんだけど、
+中小企業みたいな中小企業さんとか働かれて従業員少ないところやったら割と細かく見られたりするん。
+でこれ税理士とか確定申告を上げているから、その管轄の税務署とかこういったところで税理士に話が入るっていうのを僕は3人くらい聞いたことがあります税理士から聞きましたそういう問い合わせ。
+い合わせがありました。
+会社から。</p></div></div><div class="turn"><time>00:14:10</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なるほどこれ。</p></div></div><div class="turn"><time>00:14:10</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>っていうのがあって割とあるケース会社から直接その人にと言ってパターンはちょっと僕の近くではまだ聞いたことないですけど、実際にあるみたいです。</p></div></div><div class="turn"><time>00:14:26</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>実際、そもそも会社にバレるとどんな会社によると思うんです。</p></div></div><div class="turn"><time>00:14:30</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>会社によるですね。</p></div></div><div class="turn"><time>00:14:31</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>どんな処罰があるんですか。</p></div></div><div class="turn"><time>00:14:33</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>いやだから、ほんと会社によるっていうのは結論ですけど、就業規則っていうのが絶対あってまあ社内のイントラネットってまあホームページみたいな。
+のがあると思うからみんなそこの就業規則を読んだ上で対策はしてほしいんですけど、大抵はなんか懲戒とか解雇みたいなものに繋がったりとか言及とかそういうなんじゃないですか。
+大体。</p></div></div><div class="turn"><time>00:14:54</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まぁまぁ。</p></div></div><div class="turn"><time>00:14:55</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>割と重いの処分じゃない。</p></div></div><div class="turn"><time>00:14:56</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まぁまぁ重いですね。
+それなんかちょっとやめときゃみたいな。
+その遅刻こうした感じの。</p></div></div><div class="turn"><time>00:15:01</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そんなんちゃういいよね。</p></div></div><div class="turn"><time>00:15:02</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そんなんじゃないんだ。</p></div></div><div class="turn"><time>00:15:03</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ただ、時代の流れ的には今日撮ってる時点で2026年6月だから、かなり副業解禁してる会社多いですよね。
+僕が1社目にいたお値合企業って会社ももう副業解禁してるし僕がいた時はしてなかったけど、もう製薬業界とか結構固めな業界でもどんどん解禁してるから。</p></div></div><div class="turn"><time>00:15:23</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>やってくれないですよね。
+時代の流れで。</p></div></div><div class="turn"><time>00:15:25</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まあそういう側面もあるだろうしいろんなところでちゃんと事業自分で作った方が1ビジネスパーソンとしてもスキル上がるやんみたいな話もあると思うんでまあまあだから。
+今の質問には会社によるってことですけど
+ちゃんと集約規則を読んどくの大事だと思うんですよね。</p></div></div><div class="turn"><time>00:15:43</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>じゃあ対策ゼロコメですけど、そういう会社に対策しないんですよね。</p></div></div><div class="turn"><time>00:15:50</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ゼロコメで言うとまあそもそも確かにもうめちゃめちゃ厳重な副業禁止という会社に勤めないというのも一つのリスクヘッジ。</p></div></div><div class="turn"><time>00:15:58</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ね、ここが大事だと思います。</p></div></div><div class="turn"><time>00:15:59</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>で5個目としては、就業規則が読もうねという感じ。
+でじゃあ1個目の対策に戻ると住民税に関しては今天引きされているのが特別徴収というやつなんですね
+言い方として、はいわゆる住民税が会社がちゃんと把握しているという状況これをなくせばいいというのがよく言われている対策で確定申告するときに住民税を普通徴収にするというチェック。
+ボックスがあったりするんですよe-Taxでも紙でも。
+そこにチェックつけると翌年6月からの住民税は納付書が来て自分で納めるだから、会社に住民税の変動がまず、わからないだから、バレないよねみたいな。
+ロジックで語れることが多いですけど
+これちょっと注意点もあって自治体によっては普通徴収の切り替えがちょっと厳しいみたいな。</p></div></div><div class="turn"><time>00:16:49</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ひびしいんだ。</p></div></div><div class="turn"><time>00:16:50</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>なんか言われる自治体があるみたいですけど、なんか僕もTEKOというコミュニティをプラットフォーム運営してて3,400人とかいるんですけど。
+そこでそういうの言われたって人はまだいないけど
+なんかいろんな記事とか読んでるとそういうこともあるみたいななので、100%の対策ではないけど1つできる絶対やっといた方がいい対策が1つですね。</p></div></div><div class="turn"><time>00:17:14</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>やるに越したことない確定申告結構難しいですか大変。</p></div></div><div class="turn"><time>00:17:18</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>確定申告の時チェックするだけ。</p></div></div><div class="turn"><time>00:17:21</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>確定申告ってでも自分でやらないんですよね。
+会社の人。</p></div></div><div class="turn"><time>00:17:24</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>か確定申告っていうのは要は、副業やってる場合は年間20万以上の売上だったから利益じゃなくて売上が立ってる場合はしないといけないから。</p></div></div><div class="turn"><time>00:17:35</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>それをまあ加味はしないといけないですよね。
+今から副業を始める人たちも多分これ見てると思うんです。</p></div></div><div class="turn"><time>00:17:40</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>今から始める人。</p></div></div><div class="turn"><time>00:17:42</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>今から始める人たちがバレるかもしれないから今やろう見てると思うんです。</p></div></div><div class="turn"><time>00:17:47</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>確かに。</p></div></div><div class="turn"><time>00:17:48</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そういう人たちは普段会社がやってくれてた確定申告を副業は副業で別でやらないといけない。</p></div></div><div class="turn"><time>00:17:53</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そう会社員はそもそも確定申告しなくていいけど、副業本当にこれから始めるってなってしかもなんなら売上立った時は絶対しないといけないから会社員としてされてるものはちょっと今勘違。
+いされてる源泉徴収とか年末調整も。</p></div></div><div class="turn"><time>00:18:08</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まだ違うんだ。</p></div></div><div class="turn"><time>00:18:09</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>全然違う年末調整とか源泉徴収っていうのは会社員は確かに自動的にされてるけど。
+確定申告は事業をやっていくっていうのは絶対せなあかんからそのタイミングで住民税を普通徴収しましょうって話ですね。</p></div></div><div class="turn"><time>00:18:23</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ありがとうございました。</p></div></div><div class="turn"><time>00:18:24</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>この年末調整と確定申告の違いすら分かってない人会社員多いと思うけどね。</p></div></div><div class="turn"><time>00:18:29</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いや僕も分かったよ。</p></div></div><div class="turn"><time>00:18:32</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>取られすぎた分返すとかそういうのも仕組み的には似てるっちゃ似てるん。</p></div></div><div class="turn"><time>00:18:36</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>だねうん。</p></div></div><div class="turn"><time>00:18:37</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まぁちょっとここは別のまた機会お願いします2つ目ですね2つ目は法人の代表になってみたいな話ですよね。
+これちょっと難しいんですけど、まず、対策の方から話したいんです。</p></div></div><div class="turn"><time>00:19:06</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そもそもさっきの話住民税が変動するしないって話あるじゃないですか。
+これって要は、副業を個人でやってるから給与と合算されてで住民税が動くって話じゃないですか。
+個人の総所得として見られるからじゃあそもそも個人と法人分けて口座っぽいもので、はないけど考えとして。</p></div></div><div class="turn"><time>00:19:34</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>テレビとか。</p></div></div><div class="turn"><time>00:19:39</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>個人と法人の財布を分けてしまえばいいじゃんっていう話があって個人の方は個人で給料だけもらってて副業の所得収入っていうのは全部自分の何々株式投資とかに売上げを立てるとそうすれ。
+ば所得は分散されてるんで住民税は変動しないんですよこういうリスクヘッジの仕方もあるっていうのをまず。
+押さえておかないといけなくてでこの会社建てる時って代表者が必要ですね代表取締役とか代表社員とか。
+でそこで自分の名前でまあ代表になる人ほとんどだと思うんですけど、
+でなんかねこれ小さい会社とかであった事例らしいんですけど、実際にこう何かこう。
+不動産やってるよとか副業やってるよみたいな話がどっかから、漏れたらしくて一人疑惑を持ちかけられて社員がいるらしいですね
+こいつなんかやってるらしいぞみたいな。
+でも住民税とか見たら普通だから、俺なんもないやん、となったんですけど
 そっから会社って登記簿謄本っていう情報が詰まってるシートみたいな個人情報CICとか信用情報的な照会できる、
-誰でも照会できるデータベースみたいなのがそこを取り寄せてやったらその代表者が社員だったみたいな話があって実際会社を運営してるよねと。</p></div></div>
-<div class="turn"><time>00:21:08</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いやそこまで調べるんですねままれですか。</p></div></div>
-<div class="turn"><time>00:21:11</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>めっちゃ稀だと思います。</p></div></div>
-<div class="turn"><time>00:21:13</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>までも調べようと思えばそこから全然調べれるよねってことなんです。</p></div></div>
-<div class="turn"><time>00:21:17</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうです誰でも取れる情報なんであのそこは気をつけた方がいいです本当にだから代表法人の代表も例えば奥様名義にするとか親族名義にするとかまあそういうの聞いたことあると思うんですけど、
-それ聞く理由としてはそこですねリスケッチをして自分が代表になってない代表者と役員になってなければ乗らないので東方には。</p></div></div>
-<div class="turn"><time>00:21:39</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ああなるほど別の人が出て。</p></div></div>
-<div class="turn"><time>00:21:43</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>かつ役員もなっちゃダメですね。</p></div></div>
-<div class="turn"><time>00:21:45</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>役員もか役員を考えるにあたってはそこまで徹底してもいいんじゃないかと思います。</p></div></div>
-<div class="turn"><time>00:21:51</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそうそうですね。
-まず法人にリスクヘッジしている時点でだいぶ優秀なんですけどさらにもっと網かけようと思ったら役員から外れるっていうこと代表から役員から外れるっていうこと当たり前だけど法人に利益溜まるじゃないですか。
-でこれ役員報酬として吐き出したら経費になるし個人にも所得出せるんだけどそれやっちゃうと個人のまた所得上がっちゃうから住民税変動するって話になるので役員にはならないのもそうだし役員報酬とかも仮に役員になっても取らないこれもやらないといけないです法人と個人間でお金を移動させない。</p></div></div>
-<div class="turn"><time>00:22:34</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>では次はやめてほしい。</p></div></div>
-<div class="turn"><time>00:22:37</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ちょっとまずいけどちょっとまずいしそんな怒りにくい話だと思うんですけどここまでやってる人はまあばれないでしょうねと正直思います。はいっていう感じですね。はい。
-で最後ですね3つ目これが一番多いって言いましたけど本当に多いですね身内に敵はいます。</p></div></div>
-<div class="turn"><time>00:23:04</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>プレネミーって知ってます？</p></div></div>
-<div class="turn"><time>00:23:05</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>最近なんか流行って。</p></div></div>
-<div class="turn"><time>00:23:07</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>流行ってるとか。</p></div></div>
-<div class="turn"><time>00:23:08</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>とフレンドでした。</p></div></div>
-<div class="turn"><time>00:23:09</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>フレンドエネミー。</p></div></div>
-<div class="turn"><time>00:23:10</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>フレンドエネミーですよね友達の顔した敵ってやつですよねなんか見たねそれ。</p></div></div>
-<div class="turn"><time>00:23:15</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そういうの流行ってるけど本当にそんな感じじゃないけど悪ギガってやってる人たちはあんまりいないと思いますけど。</p></div></div>
-<div class="turn"><time>00:23:22</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>てかこんな言葉が流行ってる世の中やばいですよね。</p></div></div>
-<div class="turn"><time>00:23:24</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ヤバイですね。</p></div></div>
-<div class="turn"><time>00:23:25</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>フレネミー。</p></div></div>
-<div class="turn"><time>00:23:26</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ヤバイそれをちょっと話すぎると多分この人たち興味ないと思うので。</p></div></div>
-<div class="turn"><time>00:23:33</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>でも本当にごめんね大事な話それも大事な話だと思いますけどそんな話もしながらちょっと言うと僕もね体験体験というか分かる気持ちが分かる部分があって実際に26歳とか7歳くらいの時には副業で月2,30万くらい稼いでたんですよだったら本業の手取りとそんなに変わらないんですよで本業でもそれなりに出世コース乗ってたんでそれに加えてこんだけのお金収入があるとなるとまあ気持ちちょっとデカなりますよで別にハブリがいいとかじゃないですけど。
+誰でも照会できるデータベースみたいなのがそこを取り寄せてやったらその代表者が社員だったみたいな話があって実際、会社を運営してるよねと。</p></div></div><div class="turn"><time>00:21:08</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いやそこまで調べるんですねままれですか。</p></div></div><div class="turn"><time>00:21:11</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>めっちゃ稀だと思います。</p></div></div><div class="turn"><time>00:21:13</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>までも調べようと思えばそこから全然調べれるよねってことなんです。</p></div></div><div class="turn"><time>00:21:17</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうです誰でも取れる情報なんであのそこは気をつけた方がいいです本当にだから、代表法人の代表も例えば、奥様名義にするとか親族名義にするとかまあ、
+そういうの聞いたことあると思うんですけど
+それ聞く理由としてはそこですねリスケッチをして自分が代表になってない代表者と役員になってなければ乗らないので東方には。</p></div></div><div class="turn"><time>00:21:39</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ああなるほど別の人が出て。</p></div></div><div class="turn"><time>00:21:43</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>かつ役員もなっちゃダメですね。</p></div></div><div class="turn"><time>00:21:45</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>役員もか役員を考えるにあたってはそこまで徹底してもいいんじゃないかと思います。</p></div></div><div class="turn"><time>00:21:51</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそうそうですね。
+まず、法人にリスクヘッジしている時点でだいぶ優秀なんですけど、さらにもっと網かけようと思ったら役員から外れるっていうこと代表から役員から外れるっていうこと当たり前だけど。
+法人に利益溜まるじゃないですか。
+でこれ役員報酬として吐き出したら経費になるし個人にも所得出せるんだけど、それやっちゃうと個人のまた所得上がっちゃうから住民税変動するって話。
+になるので役員にはならないのもそうだし役員報酬とかも仮に役員になっても取らないこれもやらないといけないです法人と個人間でお金を移動させない。</p></div></div><div class="turn"><time>00:22:34</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>では次はやめてほしい。</p></div></div><div class="turn"><time>00:22:37</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ちょっとまず、いけどちょっとまず、いしそんな怒りにくい話だと思うんですけどここまでやってる人はまあばれないでしょうねと正直思います。
+はいっていう感じですね。
+はい。
+で最後ですね3つ目これが一番多いって言いましたけど、本当に多いですね身内に敵はいます。</p></div></div><div class="turn"><time>00:23:04</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>プレネミーって知ってます？</p></div></div><div class="turn"><time>00:23:05</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>最近なんか流行って。</p></div></div><div class="turn"><time>00:23:07</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>流行ってるとか。</p></div></div><div class="turn"><time>00:23:08</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>とフレンドでした。</p></div></div><div class="turn"><time>00:23:09</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>フレンドエネミー。</p></div></div><div class="turn"><time>00:23:10</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>フレンドエネミーですよね。
+友達の顔した敵ってやつですよね。
+なんか見たねそれ。</p></div></div><div class="turn"><time>00:23:15</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そういうの流行ってるけど、本当にそんな感じじゃないけど悪ギガってやってる人たちはあんまりいないと思います。
+。</p></div></div><div class="turn"><time>00:23:22</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>てかこんな言葉が流行ってる世の中やばいですよね。</p></div></div><div class="turn"><time>00:23:24</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ヤバイですね。</p></div></div><div class="turn"><time>00:23:25</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>フレネミー。</p></div></div><div class="turn"><time>00:23:26</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ヤバイそれをちょっと話すぎると多分この人たち興味ないと思うので。</p></div></div><div class="turn"><time>00:23:33</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>でも本当にごめんね大事な話それも大事な話だと思います。
+けどそんな話もしながらちょっと言うと僕もね体験体験というか分かる気持ちが分かる部分があって実際。
+に26歳とか7歳くらいの時には副業で月2,30万くらい稼いでたんですよだったら本業の手取りとそんなに変わらないんですよで本業でもそれなりに出世コース乗ってたんでそれに加えて。
+こんだけのお金収入があるとなるとまあ気持ちちょっとデカなりますよで別にハブリがいいとかじゃないですけど。
 なんかそういう飲みの席とかになった時にみんなあんま給料思ってる上がらへんな5年目とかやけどみたいな話になった時になんかしてることあるとか科学の勉強してるわとか、
-出世のためにこういうことやってるわとかみんなそういうわけですよ藤田はって聞かれてなんかの表紙で僕言っちゃったんですよね。</p></div></div>
-<div class="turn"><time>00:24:34</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>言ったんだ。</p></div></div>
-<div class="turn"><time>00:24:35</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>多分言いたかったんですよまあ。</p></div></div>
-<div class="turn"><time>00:24:37</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>孤独ですしね。</p></div></div>
-<div class="turn"><time>00:24:39</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>それはそう。</p></div></div>
-<div class="turn"><time>00:24:40</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>孤独と頑張頑張ったって言ってほしいそのお金持ってるどうこうの話じゃなくて頑張ったって頑張ったねって言ってくれる人100人でも欲しいしそれ。</p></div></div>
-<div class="turn"><time>00:24:51</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>僕の奥さんはね意外と褒めてくれないから多分ねそう誰かに褒めてもらいたかった。</p></div></div>
-<div class="turn"><time>00:24:58</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>もありますよね人間の差がというか努力してたもんねだって。</p></div></div>
-<div class="turn"><time>00:25:02</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそれって言ってもらえるだけで気楽じゃないですか。
-だからこれは本当皆さん気をつけた方が良くて孤独であるし稼げたらめちゃ嬉しいなんだろちょっと身につけるものが変わってきたりとかしちゃうんですよ見せたいものなんですよ
-人間は基本的にはなんでこれ言っちゃうじゃないですかそうするとですねさっき言ったようにみんなは本業で真面目に頑張ってるわけです
-サラリーマンとか目の前の仕事とか頑張ってない奴もいるかもしれないですけど基本ネタバレます素で応援してくれる人間って少ないです。</p></div></div>
-<div class="turn"><time>00:25:35</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>怪しいもしくは羨ましい大体こういうなんか言うたらあんまり前向きな感情にはならないですね。</p></div></div>
-<div class="turn"><time>00:25:41</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まぁそれをね許してしまうと努力をしていない自分たちはどうなんだっていうふうになってしまいますけど深い話になっちゃう。</p></div></div>
-<div class="turn"><time>00:25:47</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そういうそういう心理もあるでしょうし単純にねなんかそれができてない俺何なのとか悔しいとか同じやと思ってたのにみたいなあれでしょうねなんか。</p></div></div>
-<div class="turn"><time>00:26:00</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>影が消されたみたいな。</p></div></div>
-<div class="turn"><time>00:26:02</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そういう優劣がついたんじゃないかみたいなでリークされるかわかんないですけど他の飲みの席で先輩とかと藤田あいうことやってるらしいですよってなってブワッと広がっていくっていうまあパンデミックですね。</p></div></div>
-<div class="turn"><time>00:26:14</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>それどうなったんですか？</p></div></div>
-<div class="turn"><time>00:26:16</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>僕の場合は同じ役員の時は幸いそういう同期もあんまりこう言う人いなかったからでまぁアレクションの時もまぁ全。</p></div></div>
-<div class="turn"><time>00:26:26</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>社で言ってんの。</p></div></div>
-<div class="turn"><time>00:26:28</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>いやストライクの時は言ってなかったですよアレクションの時はなんか入った時は副業OKの会社だったんですよでなんか飲み会席とかみんなそういう話普通にするわけです
-よで僕が一番稼いでるみたいなで話稼ぎの角とか言わなかったけどみんな副業やってますとか言ってなんかしょうもないことやってたんですよ。</p></div></div>
-<div class="turn"><time>00:26:50</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>終わっててるねやっぱり。</p></div></div>
-<div class="turn"><time>00:26:51</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>って思ってたけどでなんか何やろみんな良い人やったから僕の場合はそれがじゃあ上司に言われるとかなかったけど
-僕の友達とかではそれでシェアオスでもしてたやつがいたらしくてそいつがコンプライアン違反コンプラのところとかにリークしてで実際その会社辞めることだったみたいなそれこそフレネミーですよね
-フレンドエネミーですよフレンドだと思ってたのにだからやっぱ人間の嫉妬とか優劣に対する劣等感みたいなものを僕もXでだいぶ煽っちゃってるのかもしれないけど良くないなと特にリアルの場でやるのは。</p></div></div>
-<div class="turn"><time>00:27:34</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>裏切られず副業バレっていうのはこういう人間からもたらされることです。</p></div></div>
-<div class="turn"><time>00:27:40</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>分かってそうなんですけどね。</p></div></div>
-<div class="turn"><time>00:27:42</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>何よりこれ一番対策難しいです。</p></div></div>
-<div class="turn"><time>00:27:44</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>難しいですか言わなきゃいいだけじゃんって思うけどそれが結構難しいそういう人を一番馬鹿にしそうじゃないですか。</p></div></div>
-<div class="turn"><time>00:27:55</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>プロパー八重洲ヤイスはですね人間臭いとこもあるわけですよ普通に言いたくなるですね。</p></div></div>
-<div class="turn"><time>00:28:03</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なるほど確かに。</p></div></div>
-<div class="turn"><time>00:28:05</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まぁある程度のこうなんていうんですかね承認欲求とかあるから発信してるわけなんで本当にそういうのが興味ない人は大丈夫なんでしょうけどねあと
-SNSに書き込んじゃうとかね最近その自慢副業で稼いでる自慢じゃないですけどいろんな大手の会社さんとかで銀行さんとかで社員が研修資料をピッとSNSに貼り付けちゃったりとか内部情報とかを外に出して炎上するってことあるじゃないですかあれも自分のこういう会社で頑張ってるんだとかを見せたいわけじゃないですか同じですよね構図として。</p></div></div>
-<div class="turn"><time>00:28:45</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>あれも触れねえみーっちゅーの触れねえみーみたいなもんですよね。</p></div></div>
-<div class="turn"><time>00:28:48</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ねほんとに。</p></div></div>
-<div class="turn"><time>00:28:49</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>触れで言うと。</p></div></div>
-<div class="turn"><time>00:28:50</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>触れねみーまあ人間と人間のそういう感情の工作みたいなのが一番副業バレに実はつながるんだよって話ですね。でこれ対策は正直ないのかもしれないけどないっすね。</p></div></div>
-<div class="turn"><time>00:29:10</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>地元の友達とか。</p></div></div>
-<div class="turn"><time>00:29:12</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうなんかはけ口を。</p></div></div>
-<div class="turn"><time>00:29:13</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>はけ口ちゃんと作ると。</p></div></div>
-<div class="turn"><time>00:29:14</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>はけ口を会社の人じゃない所に置き換えるっていうのが確かに僕は良いかなと思うでもそれはあんまやってなかったけどね。</p></div></div>
-<div class="turn"><time>00:29:23</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>難しいですよね。</p></div></div>
-<div class="turn"><time>00:29:24</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ただ本当バレる方法これバレる方法も話して対策もっていう話かもしれないけどバレる方法まず知ってもらうなんでバレるのか知ってほしいから。</p></div></div>
-<div class="turn"><time>00:29:31</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>意外とバレるぜってことですよね。これぐらいいけるかなって思ったラインの10倍ぐらいはバレやすいぞっていうのを皆さん知っておくだけでも。</p></div></div>
-<div class="turn"><time>00:29:40</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ちゃうっすね。</p></div></div>
-<div class="turn"><time>00:29:41</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>一人に言ったらもう十人に知れ渡っているくらいの気持ちでいなさいみたいなですねゴキブリと一緒ですよね一。</p></div></div>
-<div class="turn"><time>00:29:47</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>一匹見たらってやつね。</p></div></div>
-<div class="turn"><time>00:29:48</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>匹目が例えが悪かったですね。</p></div></div>
-<div class="turn"><time>00:29:50</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>悪いけどねでもほんとそのくらいの気持ちでやっといた方がいいからあとめっちゃ残酷なこと会社の人たち友達じゃないから基本的に。</p></div></div>
-<div class="turn"><time>00:30:00</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>本当そうです。
+出世のためにこういうことやってるわとかみんなそういうわけですよ。
+藤田はって聞かれてなんかの表紙で僕言っちゃったんですよね。</p></div></div><div class="turn"><time>00:24:34</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>言ったんだ。</p></div></div><div class="turn"><time>00:24:35</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>多分言いたかったんですよまあ。</p></div></div><div class="turn"><time>00:24:37</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>孤独ですしね。</p></div></div><div class="turn"><time>00:24:39</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>それはそう。</p></div></div><div class="turn"><time>00:24:40</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>孤独と頑張頑張ったって言ってほしいそのお金持ってるどうこうの話じゃなくて頑張ったって頑張ったねって言ってくれる人100人でも欲しいしそれ。</p></div></div><div class="turn"><time>00:24:51</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>僕の奥さんはね意外と褒めてくれないから、多分ねそう誰かに褒めてもらいたかった。</p></div></div><div class="turn"><time>00:24:58</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>もありますよね人間の差がというか努力してたもんねだって。</p></div></div><div class="turn"><time>00:25:02</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそれって言ってもらえるだけで気楽じゃないですか。
+だから、これは本当皆さん気をつけた方が良くて孤独であるし稼げたらめちゃ嬉しいなんだろちょっと身につけるものが変わってきたりとかしちゃうんですよ見せたいものなんですよ
+人間は基本的にはなんでこれ言っちゃうじゃないですか。
+そうするとですねさっき言ったようにみんなは本業で真面目に頑張ってるわけです
+サラリーマンとか目の前の仕事とか頑張ってない奴もいるかもしれないですけど、基本ネタバレるます素で応援してくれる人間って少ないです。</p></div></div><div class="turn"><time>00:25:35</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>怪しいもしくは羨ましい大体こういうなんか言うたらあんまり前向きな感情にはならないですね。</p></div></div><div class="turn"><time>00:25:41</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まぁそれをね許してしまうと努力をしていない自分たちはどうなんだっていうふうになってしまいますけど、深い話になっちゃう。</p></div></div><div class="turn"><time>00:25:47</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そういうそういう心理もあるでしょうし単純にねなんかそれができてない俺何なのとか悔しいとか同じや、と思ってたのにみたいなあれでしょうねなんか。</p></div></div><div class="turn"><time>00:26:00</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>影が消されたみたいな。</p></div></div><div class="turn"><time>00:26:02</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そういう優劣がついたんじゃないかみたいな。
+でリークされるかわかんないですけど、他の飲みの席で先輩とかと藤田あいうことやってるらしいですよってなってブワッと広がっていくっていうまあパンデミックですね。</p></div></div><div class="turn"><time>00:26:14</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>それどうなったんですか？</p></div></div><div class="turn"><time>00:26:16</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>僕の場合は同じ役員の時は幸いそういう同期もあんまりこう言う人いなかったから、でまぁアレクションの時もまぁ全。</p></div></div><div class="turn"><time>00:26:26</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>社で言ってんの。</p></div></div><div class="turn"><time>00:26:28</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>いやストライクの時は、言ってなかったですよアレクションの時はなんか入った時は副業OKの会社だったんですよ。
+でなんか飲み会席とかみんなそういう話普通にするわけで、す
+よで僕が一番稼いでるみたいな。
+で話稼ぎの角とか言わなかったけど、みんな副業やってますとか言ってなんかしょうもないことやってたんですよ。</p></div></div><div class="turn"><time>00:26:50</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>終わっててるねやっぱり。</p></div></div><div class="turn"><time>00:26:51</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>って思ってたけど。
+でなんか何やろみんな良い人やったから僕の場合はそれがじゃあ上司に言われるとかなかったけど
+僕の友達とかではそれで、シェアオスでもしてたやつがいたらしくてそいつがコンプライアン違反コンプラのところとかにリークしてで実際、その会社辞めることだったみたいな。
+それこそフレネミーですよね
+フレンドエネミーですよフレンドだと思ってたのにだから、やっぱ人間の嫉妬とか優劣に対する劣等感みたいな。
+ものを僕もXでだいぶ煽っちゃってるのかもしれないけど良くないなと特にリアルの場でやるのは。</p></div></div><div class="turn"><time>00:27:34</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>裏切られず副業がバレるっていうのはこういう人間からもたらされることです。</p></div></div><div class="turn"><time>00:27:40</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>分かってそうなんですけど、ね。</p></div></div><div class="turn"><time>00:27:42</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>何よりこれ一番対策難しいです。</p></div></div><div class="turn"><time>00:27:44</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>難しいですか言わなきゃいいだけじゃんって思うけど、それが結構難しいそういう人を一番馬鹿にしそうじゃないですか。</p></div></div><div class="turn"><time>00:27:55</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>プロパー八重洲ヤイスはですね人間臭いとこもあるわけですよ。
+普通に言いたくなるですね。</p></div></div><div class="turn"><time>00:28:03</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なるほど確かに。</p></div></div><div class="turn"><time>00:28:05</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まぁある程度のこうなんていうんですかね承認欲求とかあるから発信してるわけなんで本当にそういうのが興味ない人は大丈夫なんでしょうけどねあと
+SNSに書き込んじゃうとかね最近その自慢副業で稼いでる自慢じゃないですけど。
+いろんな大手の会社さんとかで銀行さんとかで社員が研修資料をピッとSNSに貼り付けちゃったりとか内部情報とかを外に出して炎上するってことあるじゃないですか。
+あれも自分のこういう会社で頑張ってるんだとかを見せたいわけじゃないですか。
+同じですよね。
+構図として。</p></div></div><div class="turn"><time>00:28:45</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>あれも触れねえみーっちゅーの触れねえみーみたいなもんですよね。</p></div></div><div class="turn"><time>00:28:48</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ねほんとに。</p></div></div><div class="turn"><time>00:28:49</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>触れで言うと。</p></div></div><div class="turn"><time>00:28:50</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>触れねみーまあ人間と人間のそういう感情の工作みたいなのが一番副業がバレるに実はつながるんだよって話ですね。
+でこれ対策は正直ないのかもしれないけどないっすね。</p></div></div><div class="turn"><time>00:29:10</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>地元の友達とか。</p></div></div><div class="turn"><time>00:29:12</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうなんかはけ口を。</p></div></div><div class="turn"><time>00:29:13</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>はけ口ちゃんと作ると。</p></div></div><div class="turn"><time>00:29:14</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>はけ口を会社の人じゃない所に置き換えるっていうのが確かに僕は良いかな、と思うでもそれはあんまやってなかったけどね。</p></div></div><div class="turn"><time>00:29:23</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>難しいですよね。</p></div></div><div class="turn"><time>00:29:24</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ただ、本当バレる方法これバレる方法も話して対策もっていう話かもしれないけどバレる方法まず、知ってもらうなんでバレるのか知ってほしいから。</p></div></div><div class="turn"><time>00:29:31</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>意外とバレるぜってことですよね。
+これぐらいいけるかなって思ったラインの10倍ぐらいはバレるやすいぞっていうのを皆さん知っておくだけでも。</p></div></div><div class="turn"><time>00:29:40</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ちゃうっすね。</p></div></div><div class="turn"><time>00:29:41</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>一人に言ったらもう十人に知れ渡っているくらいの気持ちでいなさいみたいな。
+ですねゴキブリと一緒ですよね。
+一。</p></div></div><div class="turn"><time>00:29:47</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>一匹見たらってやつね。</p></div></div><div class="turn"><time>00:29:48</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>匹目が例えが悪かったですね。</p></div></div><div class="turn"><time>00:29:50</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>悪いけどねでもほんとそのくらいの気持ちでやっといた方がいいから、あとめっちゃ残酷なこと会社の人たち友達じゃないから基本的に。</p></div></div><div class="turn"><time>00:30:00</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>本当そうです。
 あの僕は1社目の同じの同期は半年間一緒に生活するからあの製薬会社の研修ってあいつら友達だと思ってますけどなんかそうじゃないただ
-転職した会社とかでそれなり仲良くしてくれてる人も言うても会社の付き合いだからあんまりこうお金とかキャリアに関わることってかなりセンシティブというかその人の感情が多く話なので取り扱い注意って感じですね友達とかかなり自分の中で距離が近いって思ってると危険だよっていうところね思ったより会社の人たちと辞めたら興味合わないしね。
-だからそういうスタンスを実は心の中でどっかに持ってくっていうのが大事かもしれないなるほど対策対策としてはそれかなちょっとここはほんと難しい話ですけどねこの3つちゃんと意識しとけばあと
-はもう副業で攻めるのみって感じですねなるほどここまで準備できたらまたやりましょうそうですねもう言い訳できないですからねはい、皆さんにはこれからチャレンジしていってもらおうかなと思います
+転職した会社とかでそれなり仲良くしてくれてる人も言うても会社の付き合いだから、あんまりこうお金とかキャリアに関わることってかなりセンシティブというかその人の感情が多く話なので。
+取り扱い注意って感じですね友達とかかなり自分の中で、距離が近いって思ってると危険だよっていうところね思ったより会社の人たちと辞めたら興味合わないしね。
+だから、そういうスタンスを実は心の中でどっかに持ってくっていうのが大事かもしれないなるほど対策対策としてはそれかなちょっとここはほんと難しい話ですけど。
+ねこの3つちゃんと意識しとけばあと
+はもう副業で攻めるのみって感じですねなるほどここまで準備できたらまたやりましょうそうですねもう言い訳できないですからねはい。
+皆さんにはこれからチャレンジしていってもらおうかなと思います
 ね本当に会社のせいにしちゃダメですね、副業できない理由をそう思います。
-概要欄に記載しているので、チャレンジの場所を用意していますそうっすねはいここで防御力しっかり高めていただいて後はもう攻めるのみ、副業を持ちたいっていう方は概要欄の方にですね
-我々がやってるTEKOプラットフォームですけどもそこへのこう入会のアナウンスだったりとかそれにまつわるような情報の配信をやってますのでホームページ見ていただければと思います登録したりとかホームページ見ても会社にバレないですか？
-見ただけじゃバレないと思いますバレないですか？大丈夫？その通知ってやばいよね。そんな高度なシステムはないけどねじゃあじゃあじゃあ大丈夫？
-じゃあ安心していきますねまぁ実際にそういうのをしっかり対策されて自分たちで海外輸出とか不動産とか事業をやってる人たちのインタビューとかもいっぱい載ってるからまぁそういうのも見て余計に勇気づけられてあとそれを友達に言わなければ大丈夫だと思いますそういうの見てるぜって言わなければ大丈夫ですねうんそうね言っちゃいけないですね。
-それは気をつけた方がいいと思います。じゃあ興味がある方で概要欄の方から受け取っていただければありがとうございましたありがとうございました。</p></div></div>
-        </details>
-      </section>
-      <section class="quality-note">
-        <h2>補正済みキーワード</h2>
-        <p>v4で残っていたASR断片、短い相づち行、既知誤変換、途中で切れた語を、#7全文整形用に再処理。</p>
-        <p>このページは公開URL維持のためのnoindexアーカイブです。外部write/API/runner/launchdは使っていません。</p>
-        <p>残課題: なし</p>
-      </section>
+概要欄に記載しているので、チャレンジの場所を用意していますそうっすねはいここで防御力しっかり高めていただ、いて後はもう攻めるのみ。
+副業を持ちたいっていう方は概要欄の方にですね
+我々がやってるTEKOプラットフォームですけど、もそこへのこう入会のアナウンスだったりとかそれにまつわるような情報の配信をやってますのでホームページ見ていただければと思います。
+。
+登録したりとかホームページ見ても会社にバレないですか？
+見ただけじゃバレないと思います。
+バレないですか？
+大丈夫？
+その通知ってやばいよね。
+そんな高度なシステムはないけどねじゃあじゃあじゃあ大丈夫？
+じゃあ安心していきますねまぁ実際にそういうのをしっかり対策されて自分たちで海外輸出とか不動産とか事業をやってる人たちのインタビューとかもいっぱい載ってるからまぁそういうのも。
+見て余計に勇気づけられてあとそれを友達に言わなければ大丈夫だと思います。
+そういうの見てるぜって言わなければ大丈夫ですねうんそうね言っちゃいけないですね。
+それは気をつけた方がいいと思います。
+じゃあ興味がある方で概要欄の方から受け取っていただければありがとうございましたありがとうございました。</p></div></div></details></section>
     </main>
-    <aside>
-      <h2>ページ情報</h2>
-      <h3>語句</h3>
-      <div class="terms">
-<span class="term">副業</span>
-<span class="term">住民税</span>
-<span class="term">普通徴収</span>
-<span class="term">特別徴収</span>
-<span class="term">登記簿謄本</span>
-      </div>
-      <h3>生成境界</h3>
-      <p class="small">2026-06-29 v6 fulltext reformat / local-only</p>
-    </aside>
+    <aside><h2>確認用</h2><div class="toc"><a href="#summary">3行要約</a><a href="#flow">話の流れ</a><a href="#full">全文</a></div><p class="small">外部write/API/runner/launchdなし。ローカルv3 replay候補。</p></aside>
   </div>
 </div>
 </body>

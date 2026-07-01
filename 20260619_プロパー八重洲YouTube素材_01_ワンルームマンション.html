@@ -7,279 +7,361 @@
 <title>ワンルームマンション投資</title>
 <style>
 * { box-sizing: border-box; }
-  body { margin: 0; background: #f5f6f8; color: #202124; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; line-height: 1.85; }
-  .page { max-width: 1040px; margin: 0 auto; padding: 32px 20px 72px; }
-  .topline { display: flex; justify-content: space-between; gap: 16px; align-items: center; flex-wrap: wrap; color: #5f6368; font-size: 13px; }
-  .status { color: #174ea6; background: #e8f0fe; border: 1px solid #c6dafc; border-radius: 999px; padding: 4px 10px; font-weight: 700; }
-  header { padding: 28px 0 22px; border-bottom: 1px solid #dfe3e8; }
-  h1 { margin: 12px 0 14px; font-size: clamp(28px, 4vw, 46px); line-height: 1.28; letter-spacing: 0; }
-  h2 { margin: 0 0 14px; font-size: 21px; line-height: 1.4; }
-  h3 { margin: 18px 0 8px; font-size: 15px; }
-  .lead { max-width: 840px; margin: 0; color: #3c4043; font-size: 17px; }
-  .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
-  .pill { display: inline-flex; align-items: center; min-height: 30px; padding: 5px 11px; border: 1px solid #dfe3e8; border-radius: 999px; background: #fff; color: #3c4043; font-size: 13px; }
-  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; margin-top: 24px; align-items: start; }
-  section, aside { background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; }
-  section { margin-bottom: 18px; padding: 24px; }
-  aside { position: sticky; top: 18px; padding: 18px; }
-  .summary-list { margin: 0; padding-left: 1.2em; }
-  .summary-list li { margin: 8px 0; }
-  .chapters { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-  .chapters li { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 12px; padding: 12px; border: 1px solid #edf0f2; border-radius: 8px; background: #fff; }
-  .chapters time, .turn time, .quote-head time { color: #5f6368; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
-  .chapters strong { display: block; line-height: 1.4; }
-  .chapters span { display: block; color: #3c4043; font-size: 14px; }
-  .quote-grid { display: grid; gap: 12px; }
-  .quote-card { border: 1px solid #e1e4e8; border-radius: 8px; padding: 16px; background: #fcfcfd; }
-  .quote-head { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; flex-wrap: wrap; }
-  .speaker { display: inline-flex; align-items: center; min-height: 26px; padding: 3px 10px; border-radius: 999px; font-weight: 700; font-size: 13px; }
-  .speaker.yaesu { color: #0b57d0; background: #e8f0fe; }
-  .speaker.kakushi { color: #137333; background: #e6f4ea; }
-  .quote-card p, .turn p { margin: 0; }
-  details { border: 1px solid #e1e4e8; border-radius: 8px; overflow: hidden; background: #fff; }
-  summary { cursor: pointer; padding: 16px 18px; color: #0b57d0; font-weight: 800; border-bottom: 1px solid #e1e4e8; }
-  .turn { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 12px; padding: 18px; border-bottom: 1px solid #edf0f2; }
-  .turn:last-child { border-bottom: 0; }
-  .turn .speaker { margin-bottom: 8px; }
-  .turn p { color: #202124; font-size: 16px; white-space: pre-line; overflow-wrap: anywhere; }
-  .quality-note { color: #3c4043; }
-  .quality-note p { margin: 8px 0; }
-  .small { color: #5f6368; font-size: 13px; }
-  @media (max-width: 760px) {
-    .page { padding: 18px 14px 48px; }
-    .layout { grid-template-columns: 1fr; }
-    aside { position: static; }
-    section { padding: 20px 16px; }
-    h1 { font-size: 30px; }
-    .lead { font-size: 15px; }
-    .chapters li, .turn { grid-template-columns: 1fr; gap: 6px; }
-    .turn p { font-size: 18px; line-height: 1.95; }
-    summary { font-size: 16px; }
-  }
-  .term { padding: 4px 9px; border-radius: 999px; background: #f1f3f4; color: #3c4043; font-size: 13px; }
-  .terms { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+body {
+  margin: 0;
+  background: #f5f6f8;
+  color: #202124;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  line-height: 1.9;
+}
+.page { max-width: 1040px; margin: 0 auto; padding: 32px 20px 72px; }
+.topline { display: flex; justify-content: space-between; gap: 16px; align-items: center; flex-wrap: wrap; color: #5f6368; font-size: 13px; }
+.status { color: #174ea6; background: #e8f0fe; border: 1px solid #c6dafc; border-radius: 999px; padding: 4px 10px; font-weight: 700; }
+header { padding: 28px 0 22px; border-bottom: 1px solid #dfe3e8; }
+h1 { margin: 12px 0 14px; font-size: clamp(28px, 4vw, 46px); line-height: 1.28; letter-spacing: 0; }
+h2 { margin: 0 0 14px; font-size: 21px; line-height: 1.4; }
+h3 { margin: 18px 0 8px; font-size: 15px; }
+.lead { max-width: 840px; margin: 0; color: #3c4043; font-size: 17px; }
+.meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
+.pill { display: inline-flex; align-items: center; min-height: 30px; padding: 5px 11px; border: 1px solid #dfe3e8; border-radius: 999px; background: #fff; color: #3c4043; font-size: 13px; }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; margin-top: 24px; align-items: start; }
+section, aside { background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; }
+section { margin-bottom: 18px; padding: 24px; }
+aside { position: sticky; top: 18px; padding: 18px; }
+.summary-list { margin: 0; padding-left: 1.2em; }
+.summary-list li { margin: 8px 0; }
+.chapters { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.chapters li { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 12px; padding: 12px; border: 1px solid #edf0f2; border-radius: 8px; background: #fff; }
+.chapters time, .turn time { color: #5f6368; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
+.chapters strong { display: block; line-height: 1.4; }
+.chapters span { display: block; color: #3c4043; font-size: 14px; }
+.speaker { display: inline-flex; align-items: center; min-height: 26px; padding: 3px 10px; border-radius: 999px; font-weight: 700; font-size: 13px; }
+.speaker.yaesu { color: #0b57d0; background: #e8f0fe; }
+.speaker.kakushi { color: #137333; background: #e6f4ea; }
+.speaker.other { color: #5f6368; background: #f1f3f4; }
+details { border: 1px solid #e1e4e8; border-radius: 8px; overflow: hidden; background: #fff; }
+summary { cursor: pointer; padding: 16px 18px; color: #0b57d0; font-weight: 800; border-bottom: 1px solid #e1e4e8; }
+.turn { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 12px; padding: 18px; border-bottom: 1px solid #edf0f2; }
+.turn:last-child { border-bottom: 0; }
+.turn .speaker { margin-bottom: 8px; }
+.turn p { margin: 0; color: #202124; font-size: 17px; white-space: pre-line; overflow-wrap: anywhere; }
+.small { color: #5f6368; font-size: 13px; }
+.toc { display: grid; gap: 8px; }
+.toc a { color: #174ea6; text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+@media (max-width: 760px) {
+  .page { padding: 18px 14px 48px; }
+  .layout { grid-template-columns: 1fr; }
+  aside { position: static; }
+  section { padding: 20px 16px; }
+  h1 { font-size: 30px; }
+  .lead { font-size: 15px; }
+  .chapters li, .turn { grid-template-columns: 1fr; gap: 6px; }
+  .turn p { font-size: 18px; line-height: 1.95; }
+  summary { font-size: 16px; }
+}
 </style>
 </head>
 <body>
 <div class="page">
-  <div class="topline">
-    <span>proper_yaesu_youtube_material / 20260619 / GitHub Pages archive</span>
-    <span class="status">全文整形v6 / 5月型候補</span>
-  </div>
+  <div class="topline"><span>proper_yaesu_youtube_material / 20260619 / v3 replay archive</span><span class="status">旧v3正規ルート replay候補</span></div>
   <header>
     <h1>ワンルームマンション投資</h1>
-    <p class="lead">ワンルームマンション投資の悪評、収益構造、買う場合の条件、損切り判断を整理した編集確認用アーカイブ。</p>
-    <div class="meta">
-      <span class="pill">話者: 八重洲さん / かくしくん</span>
-      <span class="pill">発話数: 82</span>
-      <span class="pill">本文: 約10,002字</span>
-      <span class="pill">noindex</span>
-    </div>
+    <p class="lead">ワンルームマンションは、買う/買わないではなく収益構造と価格で判断する。</p>
+    <div class="meta"><span class="pill">話者: 八重洲さん / かくしくん</span><span class="pill">発話数: 63</span><span class="pill">本文: 約8,911字</span><span class="pill">noindex</span></div>
   </header>
   <div class="layout">
     <main>
-      <section>
-        <h2>3行要約</h2>
-        <ul class="summary-list">
-<li>ワンルームマンションは、買う/買わないではなく収益構造と価格で判断する。</li>
+      <section id="summary"><h2>3行要約</h2><ol class="summary-list"><li>ワンルームマンションは、買う/買わないではなく収益構造と価格で判断する。</li>
 <li>新築、サブリース、節税営業は毎月赤字になりやすく、会社員の信用を消耗しやすい。</li>
-<li>買うなら中古、賃貸需要、出口、キャッシュフローを確認し、赤字なら売却判断も持つ。</li>
-        </ul>
-      </section>
-      <section>
-        <h2>話の流れ</h2>
-        <ol class="chapters">
-<li><time>00:05:08</time><div><strong>ワンルーム投資の悪評と構造</strong><span>9割が儲かりにくい理由と、光の部分を分ける</span></div></li>
-<li><time>00:10:35</time><div><strong>新築・中古・サブリースの収支差</strong><span>節税営業、家賃保証、毎月赤字の構造を分解する</span></div></li>
-<li><time>00:14:50</time><div><strong>八重洲さんの購入条件</strong><span>価格、賃貸需要、出口、融資条件を確認する</span></div></li>
-<li><time>00:22:40</time><div><strong>高収入会社員への警告</strong><span>信用毀損と赤字物件の損切り判断を先に置く</span></div></li>
-        </ol>
-      </section>
-      <section>
-        <h2>編集で拾いやすい発話</h2>
-        <div class="quote-grid">
-<article class="quote-card"><div class="quote-head"><time>00:05:08</time><span class="speaker yaesu">八重洲さん</span></div><p>結論から言うと、9割のワンルームマンションは押し売りで買ってしまうと、ほとんど儲からないと思います。</p></article>
-<article class="quote-card"><div class="quote-head"><time>00:07:14</time><span class="speaker yaesu">八重洲さん</span></div><p>収益構造を理解しておけば、買わない判断も、収益が出る物件を買う判断もできます。</p></article>
-<article class="quote-card"><div class="quote-head"><time>00:21:02</time><span class="speaker yaesu">八重洲さん</span></div><p>新築ではなく中古で、価格と賃貸需要を確認して買う。そこまで見て初めて検討できるという話です。</p></article>
-<article class="quote-card"><div class="quote-head"><time>00:27:43</time><span class="speaker yaesu">八重洲さん</span></div><p>毎月キャッシュフローが赤字なら、少しでも利益が出るうちに売る判断も必要です。</p></article>
-        </div>
-      </section>
-      <section>
-        <h2>整形済み文字起こし全文</h2>
-        <details open>
-          <summary>全文を表示（82発話 / 約10,002字）</summary>
-<div class="turn"><time>00:05:08</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>サラリーマンのキャリア形成支援をしています、プロパー八重洲です。よろしくお願いします。今日はですね、ワンルームマンションの投資についてお話ししたいなと思います。聞いたことあるっすかね。
-悪い意味で、いや、僕はそんなあの一方的に批判するつもりはないんですけど、まあ闇の部分とえーでもうまく活用すれば光の部分もあるんじゃない？みたいな話をしたいなと思いますね。
-結論から言うとかくしくんが持ってるイメージの通り9割の物件は営業の押しで買ってしまうと、まあほとんど儲からないと思います。
-でそういうのに騙されているとか、 はめ込まれてしまっているような、正直こう勉強不足のサラリーマンもたくさんいらっしゃると思います。はい。
-でこの後詳しく話をしますけど特に新築のワンルームマンションであったりとかサブリースって言われるようなこう借り上げをしてくれてで家賃の100%本当は5万円もらえるものが8割80%渡しますよ、みたいなそういう契約があったりするんです。
-そういったものをしていると収支が合わなくなっていわゆる赤字毎月赤字みたいなことになってしまっているそういった大量に生まれているから評判が良くないんですよね。
-でなんか他にも節税になりますとかで将来のこう生命保険代わりになりますとかまあこういったあと
-こう借金払い終わった後は自分の丸々資産になりますとかまあ言うたらこうサラリーマンがちょっと苦しんでいる資産形成の部分とか今の税金の部分にうまく懐に入り込んでくるような営業トークで結構買わされちゃったりするんで、 致し方ない部分もあるんですけど、まずそもそもワンルームマンションがどういう収益構造になっているのかっていうのを理解しておけばこの辺とかも買わずにでなおかつ収益の出るワンルームマンションとかを買うっていうそっちの光の部分を手に入れることもできるのでまあなんかちょっとそういう話をしていきたいなと思います。</p></div></div>
-<div class="turn"><time>00:07:32</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ぶっちゃけ、光の部分ってないですか？あるんですか？</p></div></div>
-<div class="turn"><time>00:07:36</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>光の部分？</p></div></div>
-<div class="turn"><time>00:07:37</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>光の部分ってあるんですか？</p></div></div>
-<div class="turn"><time>00:07:39</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>光の部分でいうとさっき言った新築ではないものを、相場よりも少し安いものをちゃんと自分が目利きして買うとかすれば言ったらそのアパートとかマンション1棟も買わなくて金額1億とかいくわけじゃないそんなのなかなか買えないでしょうじゃなくてワンルームマンションのいいところって金額のロットが小さいことですよ。
-1000万とか2000万とかで一応不動産投資の入門編というかそういった経験値を積めるんでそれで、まあちゃんと毎月利益が出るんだったら別にそれは悪い投資じゃないと思うんですね。</p></div></div>
-<div class="turn"><time>00:08:13</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>実際八重洲さんは買ったりしたんですか？</p></div></div>
-<div class="turn"><time>00:08:17</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>僕も実際6部屋ぐらいその1ルームはその中でも5つですけどを持って実際全部収益は出てで売却までしてるので、 今はアパートの方に移行してます。
-だからあくまでも僕の中で練習だったんですけどんこれでじゃあ大損したとか毎月赤字だったみたいなことはなかったから一定説得力持って話せるんじゃないかなと。</p></div></div>
-<div class="turn"><time>00:08:38</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>じゃ実際は練習代として一番いいってことなんですか今は。</p></div></div>
-<div class="turn"><time>00:08:42</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>いやーどうなんでしょうね。</p></div></div>
-<div class="turn"><time>00:08:43</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>買ってるわけじゃないじゃないですか。</p></div></div>
-<div class="turn"><time>00:08:44</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>今は買ってないですね。</p></div></div>
-<div class="turn"><time>00:08:45</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>最初の小ロットで始めれるかつ肌感というか肌感というかをこうやって養っていくためのものとして一番ベストっていう感じですか。
-めっちゃこれで一番ね、費用対効果一番投資として最高だよっていうつもりはないってことですよね。</p></div></div>
-<div class="turn"><time>00:09:02</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ポジションとしてはあくまでも練習ではあるんですけど、この練習の時点でいきなりそんな赤字こいて修行みたいなことはしなくていいんじゃないっていうスタンスですね。
-これだけでしっかり儲けていらっしゃる方も世の中探したらいるかもしれないのであくまで僕のスタンスとしてはそっちですね。まあだから実際に僕がやってきた事例とかも踏まえながら。
-、ワンルームマンション投資を検討されている方はまあこれのこの動画を見て一歩ストップをしてもらうということもそうでしょうし、
-まあリスク取ってでも不動産投資したいんだったらワンルーム買うんだったらこういう感じのものを買えばいいんだなみたいな理解に最後つながればいいかなと思いますんではい、よろしくお願いします。</p></div></div>
-<div class="turn"><time>00:09:55</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>じゃあ早速ですけど、 ワンルームマンション投資とはっていうところから話をしてみたいと思うんですけど。</p></div></div>
-<div class="turn"><time>00:10:01</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ワンルームっていうのはそもそもなんだと思いますか？</p></div></div>
-<div class="turn"><time>00:10:05</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ワンルーム、そうそう、おっしゃる通り。ま、部屋の間取りの話ですね1Kとか1LDKとか。</p></div></div>
-<div class="turn"><time>00:10:12</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ちょっと待ってください、僕をの風邪にしすぎではないですか？</p></div></div>
-<div class="turn"><time>00:10:15</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>いや、分かってない人もいますからね。</p></div></div>
-<div class="turn"><time>00:10:17</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>1R、2ルームいないですか？入るんですね。</p></div></div>
-<div class="turn"><time>00:10:19</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>1Rってやつですね、要は記載で言うとねあれですけど、ま、一番小さいわけです間取りとしてはえーこれ業者側からしたら考えた時にはマンションとかをこうガーッと立てた時にあの同じ敷地内だったら狭い部屋をこういっぱい詰め込んだ。
-得られる収益は大きくなるんですよ。投資効率がいいんですよね、あの作る側として。
-で売るにしても、まぁワンルーム15平米だろうが20平米だろうがあの多くを区分けにして売った方がトータルの売却金額としても上がるんですよっていうのがあるからワンルームマンションを作るっていうのは業者としてはめっちゃコストが抑えられるし効率がいいんですよね。
-はいまあ住む側からしたら狭いんですけどねただまあ20平米なのか15平米なのか人が住むんでまず需要はありますということなんですけど。
-で、ワンルームマンション以外に投資ってどういうものがあると思いますか、不動産って。</p></div></div>
-<div class="turn"><time>00:11:15</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ーーマンションマンションマンションワンルームって一緒なんですけど、そのマンションの中のワンルームだったらもうワンルームになるってことですよね。</p></div></div>
-<div class="turn"><time>00:11:24</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうですね、だからえっと例えば部屋を買うってこれ分譲ですよね区分っていうやつですけど、それでタワマンがあったりですねタワマンの中でワンルームってあるから。
-TheoneLDKなのかちょっと僕タワマンの小さいやつあんま知らないんですけどワンK、ワンLDKぐらいなのかな？
-ワンルームはないかもしれないですけどモノによってあるかもしれないですねとりあえず区分っていうのはマンションがたくさんあるマンションがバッてある中の一部屋の権利を買うっていうこれが区分投資で区分の中にワンルーム1RがあったりワンLDKあとは二LDKとかだったらこれファミリー型の区分を買うっていうこれも投資の一つなんですよね。
-そうそうか今かくしくんが言おうとしたマンション丸ごと買うみたいな。これ一棟ものを買うって言うんですね。</p></div></div>
-<div class="turn"><time>00:12:11</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>一棟が一棟ぐらい。</p></div></div>
-<div class="turn"><time>00:12:12</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>これに木造があったり鉄筋鉄骨があったり躯体によってまた違ったりするんですよね。
-こういう違いがあるんですけど一棟買うか部屋の一つ買うかって話でこの中で投資の中で言うとワンルームは一番最小単位ですね
-1等でもなければ所有権区分の所有権の中でも一番小さいものっていうので投資の中としては一番金額がもちろん低くなる傾向にあるとまあ他にも戸建てとか言ったらあるんですけどうん。
-戸建てよりもちっちゃい場合が多いから最小単位のものですね。
-であとはさっき言った新築かどうかっていうことと中古かっていうことが大別されるんですけど、で新築ワンルームマンションがあまり良くないって良く言うじゃないですか。</p></div></div>
-<div class="turn"><time>00:12:56</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>はいこれは何でだと思いますか？良くないのは、 稼げないからっていうことでしか、な、解像度がないですよ。なんでかせげないのかがわかんないです。</p></div></div>
-<div class="turn"><time>00:13:06</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>なんで稼げないのかまぁここに関して言うとまず購入金額が高いからですね。</p></div></div>
-<div class="turn"><time>00:13:12</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>高いですか？</p></div></div>
-<div class="turn"><time>00:13:13</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>中古と新築同じマンションでまぁ仮だったとして比べた時に新築の方が高い訳ですよこれ何でか分ります？新築分譲地と中古で何で金額がそんなに違うのかっていう。</p></div></div>
-<div class="turn"><time>00:13:28</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>S？S？そらーし？え,どういうこと新品と中古で？ってことですか？</p></div></div>
-<div class="turn"><time>00:13:31</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうですね,まぁ普通に何かまぁ分かんないですけどん車とかでも新品新車と中古で全然値段が変わるものって結構あるじゃないですか。</p></div></div>
-<div class="turn"><time>00:13:42</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>もう全てにおいてそうじゃないですか。</p></div></div>
-<div class="turn"><time>00:13:44</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>大抵そうですね。まあ任天堂スイッチとか最近もう転売の熱がめちゃめちゃ暑いものとかは新品と中古でもそんなに差はなかったりしますけど。</p></div></div>
-<div class="turn"><time>00:13:52</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ぐらいですよねー はいこの普通じゃないですか。</p></div></div>
-<div class="turn"><time>00:13:55</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>この普通はなんで起きてると思いますか普通だからって言われたら違うでしょっていう。</p></div></div>
-<div class="turn"><time>00:14:02</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>こわいこわいなんだろえー誰も触れてない自分が一人目一番風呂みたいな。</p></div></div>
-<div class="turn"><time>00:14:09</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>その感覚結構大事でそれもある使用価値としてまだマックスっていう使用されてないから価値として最大っていうのもあるしあとはあれですね一番業者としてデベロッパーとしては利益乗せてるタイミングだからですね。</p></div></div>
-<div class="turn"><time>00:14:24</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>あーなるほどね。</p></div></div>
-<div class="turn"><time>00:14:25</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそうそこからはもう中古市場に行くと誰でも扱えるんで不動産ってあとはもうそんなに利益乗せられないんですよ価格競争めっちゃ起きるし新築で建てたときはもうその辺の周辺相場とかもあるんだけど
-基本的には利益乗せて業者も売るのでデベロッパーとかが売るので一番利益乗ってるタイミングなんですよ。</p></div></div>
-<div class="turn"><time>00:14:46</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>あーじゃあ一番の敵はデベロッパーだった。</p></div></div>
-<div class="turn"><time>00:14:49</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そんなことはないんですけどね。</p></div></div>
-<div class="turn"><time>00:14:51</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>違いますか。</p></div></div>
-<div class="turn"><time>00:14:51</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そこもそれが商売なんですから売ってから売るとこで利益を得てるんでまずこういう構造があるからそもそも価格が高いんですよね。
-中古で10年とかしたら基本的に不動産って価格が結構一定になるって言われたりするんですけど10年15年したらここまで行くまで行った後から買えばいいんですけど
-そうじゃないからまず数字が合わないっていう感じですね購入金額が高いと返す借金増えるじゃないですか。</p></div></div>
-<div class="turn"><time>00:15:20</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そこで無理やりサラリーマンとかだと信用評価が高く出ちゃうからそのワンルームマンション例えば2000万円するとしても2000万円借金できたりするんですよ借りられたりするんで2000万円の月々の返済金額が高くなるわけですね毎月じゃあ2000万借りたらどんぐらいでしょうかね今の金だった8万とか9万くらい返済しないといけないと思うんですよでその部屋って貸し出すために買ったわけじゃないですか投資としてそこから得られる家賃ってだいたい同じくらいなんですよ7万から8万くらい。</p></div></div>
-<div class="turn"><time>00:15:55</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ってなった時にどうですか月々の収支って考えたら返済が7万8万家賃も7万8万。</p></div></div>
-<div class="turn"><time>00:16:04</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>トントンかむしろ赤字なんですよね。</p></div></div>
-<div class="turn"><time>00:16:06</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なるほどね。そこに時間かけたりもしますしね、 使ったりとかもある。</p></div></div>
-<div class="turn"><time>00:16:10</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>空室リスクもあるし、時間も使うしあと忘れちゃいけないのはワンルームマンションとかこういう区分マンションって修繕積立金っていうのと管理費っていうランニングコストかかるんですよこれが月まあどうでしょうか家賃の10%から15%くらいかかるって感じですね。
-その分まず赤字ですよね。あと不動産取得税と固定資産税っていうのもかかるんで大きな赤字になるわけですよ。
-だから新築と中古の違いっていうのは単純に建てた時か経過してるかって話とこんだけ収支が変わってくるっていう話ですね。
-だから新築ワンルームマンションで毎月黒字を出すっていうのは構造的に結構難しいっていう話なんですよ。</p></div></div>
-<div class="turn"><time>00:16:53</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>難しいですね。</p></div></div>
-<div class="turn"><time>00:16:54</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそう。で、さっきのサブリースって話あったじゃないですか。</p></div></div>
-<div class="turn"><time>00:16:57</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いはいはい。</p></div></div>
-<div class="turn"><time>00:16:57</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>これもよく言われて問題になったんですけど、要はこれ企業が借り上げをしてくれますと一定期間。</p></div></div>
-<div class="turn"><time>00:17:03</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>これってどういうことかっていうと、まあワンルームマンションってその入居者が退居したら一瞬で家賃出なくなるじゃないですか。</p></div></div>
-<div class="turn"><time>00:17:10</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そのリスクを防ぐための仕組みですね。法人が一年間はえー賃貸主があーそのー借主、正確には賃借人ですねいわゆる住む人がいようといなかろうとえー家賃を補填してあげますという契約なんですよ。
-だから区なんか取りっぱぐれることはないんですね。その1年間の契約はただ家賃5万円本当入ってくるあなたにあげるところを8掛けの4万にしますみたいなそういう契約なんですよね。</p></div></div>
-<div class="turn"><time>00:17:53</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>話もう一回戻すんですけど新築マンションが2000万毎月8万返済がありますとサブリースの契約とかもそれに結構乗っかってくるケースが多いんですよなった時家賃じゃあ毎月サブリースで8掛けですとなった時にじゃあ仮に8万で8万4000しか入ってこないですよもっと収支合わないじゃないですかこういうのがめちゃめちゃ減少として起きてるんですよ普通に。</p></div></div>
-<div class="turn"><time>00:18:23</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>共同信頼目立と言われてる、 U。N。みたいな感じですね。</p></div></div>
-<div class="turn"><time>00:18:26</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうですね。
-まずこのいろんな投資手法がある中であなたはこういう手法を選んでるんだよっていうのはちょっと今日理解してほしいのと新築と中古でそういう違いがあるんだよっていうこと
-でなんで新築ワンルームマンションが儲からないかというとさっきの新築プレミアム新築の利益が乗っかってるっていうことであったりとかそれに加えてサブリース契約とかが結構横行しているからということですね。
-これをまさっき言ったら節税になりますよとか毎月赤字で損益通算して所得税が戻るしましょうみたいな話があったりとか、 団体信用生命保険、団信っていうのがあるんですけど
-生命保険みたいなのがあるんですよご自身がもし亡くなった時に残債がゼロになるみたいな奥様とかご家族の方に所有権が映るみたいな話があったりするんですけど、そうなってくるとまあマンションタダで手に入れられるみたいな話になるじゃないですか。
-だから生命保険代わりみたいな話にされたりするんですけど、まあそういう歌い文句でさっきのデメリットがあるのに買っちゃうみたいなそんな感じですね。はい。
-これがまあだまされたあとあと色々記収計算してみたら。
-そうそうそうめちゃ赤字やんとか将来確かに生命保険代わりになるかもしれないし目の前の節税になるのかもしれないけど結局毎月お金が出てくっていうのは人間しんどいんですよっていうのであれ俺これなんかミスったみたいなあれ俺これ騙されてる？
-ってなって、 ああいうYouTubeとか出てきたりとかすんごい色々こう訴えるじゃないですけどお前があかんのにこうなるっていうだから話として結構盛り上がるっていう感じですね。
-まあ要はムチが生んでるってことなんですよね。これ。</p></div></div>
-<div class="turn"><time>00:20:14</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>うんうんうん。</p></div></div>
-<div class="turn"><time>00:20:14</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ちゃんと知っとかないといけないし今日もし見てくれてる人ももしかしたらやっちゃってる人いるかもしれないんでめっちゃ耳痛いかもしれないけどあと事実通りそうですよねそうあとあれですね。
-不動産投資家の方々は僕の知り合い多いですしあの不動産親の会とかも入ってるし自分たちの運営もしてるんですけど結局あの本書いたりファイヤーしたりとか家賃家賃だけで生活してる方々ってみんなワンルームマンションやってないですねやって。</p></div></div>
-<div class="turn"><time>00:20:43</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>やっぱそうですよねなかなかやってる人もそうですよね。</p></div></div>
-<div class="turn"><time>00:20:48</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>うーん、いないと思います。まあこれがざっくり不動産投資の中の全体像とワンルームマンション立ち位置って感じですね。はい、なんとなく理解できました。</p></div></div>
-<div class="turn"><time>00:20:59</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ねぎややだいたい全体ここスタートということですよね。</p></div></div>
-<div class="turn"><time>00:21:03</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ここからは僕の事例とかあのー、一応ワンルームマンション投資はで、その中でもどう利益を出してるのかっていう話をちょっとしたいなと思いますね。はいありがとうございます。
-で僕の場合のまず話をさせてもらうと25歳ぐらいの時からそのワンルームマンションを買ってるんですけど
-結局新築買っちゃうとさっき言ったようにキャッシュが毎月赤字になるってことは普通に収支決算したら分かるんですよねなんでじゃあどうしたらいいかっていうと築年数が経ってるもの経過してるものをまず買いました。
-あのいわゆる中古ですよね。
-中古の中でももう値がそれ以上下がらないであろうって言われるまあ15年から20年くらいですかねもしくは30年くらいまで見てもいいと思うんですけどそういった物件を件を中心に買ってきました。
-はい結構古いですよね。</p></div></div>
-<div class="turn"><time>00:21:59</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>それをさっきの考え方みたいなのが入ってくるんですか。</p></div></div>
-<div class="turn"><time>00:22:02</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうですねさっき言ったからもう値段が利益が乗っかってないレベルまで下がりきってるということがまず重要でまぁ今後はもしかしたら下がるそれ以上下がるかもしれないけど
-もしくはこうフラットな状態になると思うんで借金返していくじゃないですか借金返していって5年後に金額一緒だったらその返した分が普通普通考え含み益なんですよ利益なんですよ。
-だから価格がもう下がりきらないだろうっていうところらへんで拾えるかどうって結構重要ですね。その観点がまず一つですね。それを大事にして買ってったってこととで一つのマンションを買うにしてもですね。
-あの一部屋買うにしても区分マンションのいいところってまあいったそのマンションが32部屋あったら32通りの事例があるわけです
-よ売却とかのでえっとそのマンションの売却地で調べたら普通に見れるんですよ全部が全部でないですけど、
-まあAというマンションがあって1番から32番の部屋がありますとで過去この数ヶ月で5番と7番と8番が成約事例がありましたとそれ見てだいたいじゃあ1部屋あたり1000万で決まってますと。
-っていうのが分かったときにじゃあ15番が売りに出されてました。</p></div></div>
-<div class="turn"><time>00:23:22</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>じゃあこれが900万で売り出されてたとしたらこれどうですかさっきの成約事例全部1000万だとして900万で売り出されてたら。</p></div></div>
-<div class="turn"><time>00:23:32</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ってなるでしょそういうのを見とくってことですね業者から持ってこられたからじゃあこれ中古やし良さそうやな買いますポンじゃなくてちゃんとマンションの中でも成約事例があったり近隣のマンションでもいいんで成約事例とかがあったりするんでその周辺相場と比べてどうかっていうのをちゃんと見て買うか買わないかってジャッジするって感じ。</p></div></div>
-<div class="turn"><time>00:23:54</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>業者は入らないですか？</p></div></div>
-<div class="turn"><time>00:23:56</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>業者は必要ですよ最終的に買うためには必要ですがワンルーム新築ワンルームマンションにも共通していることはとは失敗してる人たちの特徴としては業者の言いなりになってるということですね。
-だからまず自分で考えるっていうめちゃめちゃ当たり前のことなんだけど相場をちゃんと見るって感じですね
-区分マンションでもちゃんと見れますそこはマンションレビューとかっていうサイトとかもあったりしてそこでの成約事例とか結構綺麗にまとまってたりするからそういうのはよく見てましたね。
-あと近隣のを見とくのも意外と大事ですね近くにマンション結構多くあるところだったら余計に見といた方がいい。</p></div></div>
-<div class="turn"><time>00:24:39</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>わかりましたありがとうございます。</p></div></div>
-<div class="turn"><time>00:24:41</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>あとはあれですね。
-あのここまでやるかどうかはちょっとその人次第ですけど、その近くその自分が欲しいエリアのとこ行ってみてどんぐらい競合がいるかとかマンションえーどんぐらいマンション建ってるかとかもそうだし賃貸会社ってあるじゃないですかエイブルとかミニミニとかああいうところ行ってあのこのぐらいの家賃でこの部屋貸そうと思ってるんだけど実際客付きそうですかねとかあるいはこれ賃貸需要を確認するってやつですけど供給が多すぎるエリアだったら家賃競争に巻き込まれてしまうかもしれないからまぁ。
-そういうのも判断しておかないといけない知っておかないといけないだろうしこの辺までやってちゃんと価格も合ってれば買うみたいなまぁそういうことを僕はしてましたねうんでだいたい融資はサラリーマンしてたら普通にさっき言ったように金額は低いから1軒あたりのまぁつくのはつくんで融資がそういう安く買えてなおかつ賃貸需要確認して買えてたら家賃はずっとある程度入り続けるしでキャッシュフロー毎月の手残りでてもプラスになるって感じです。
-で金額もそんなに下がらないから。何年間か持って残債が減った分だけ売った時に売却が出るっていうそういう考えとまあ戦略というか戦術を用いて投資してました。
-だからたぶんワンルームマンション新築のワンルームマンション買ってる人とはやってないことだと思う全部これこれやるだけで逆にちょっと差別感になるんであのもしワンルームマンションをまだやりたいと思ってる人だったらとか不動産投資したい人だったらこういう考えを大事にしておいた方がいいかなと思いますね。
-はい逆にそのさっきはその一般論的に新築のワンルームマンションがダメって話しましたけど。
-僕たちってTEKOっていう不動産のコミュニティとか運営してるんですけどそこって高収入のサラリーマンが多いんですよ僕らの属性って。
-そういう人たちって漏れなくワンルームマンションにはめ込まれていて新築の結構多いんですよ買えちゃうからで忙しいからあんまり勉強とかする時間なくて年収1000万とか1500万ぐらいあると東京の新築ワンルームマンションが3個か4個ぐらい買えちゃうんですよ持ってるんですよね実はそうでも毎月収支どんなもんですかって大抵みんな赤字かトントンって言うんですよでトントンって言ってる人はね赤字です基本強がりでトントンって言ってるだけっていう人を正直見てる。
-収入が高い人ほど本当に気をつけた方がいいと思うし僕らのチャンネルってそういう人ばっか見てると思うから本当に気をつけた方がいいしこれじゃあどうしたらいいかっていうとすぐに見積もりを取ってくださいいろんな会社にで実際に売却した時の相場感仲介会社何社か競わせてもいいと思うんですけど、で売却するとしたら1000万ぐらい売れるんだろうなってまず把握する数字で今残債がいくらあるか残金が1000万になったとしたらいろんな諸経費込めると多分手出しが出ますとで900万で売れますって言ったらもちろん赤字ですし1100万200万で、 売れるんだったらもう少しでも利益出るんだったら早く売った方がいいですね毎月キャッシュフローが赤字なんだったらね損切りではないですけどねそれを損切り100万200万ぐらいだったら損切り手出し出しても売っちゃった方がいいかもしれないですね。
-まあそういう事例も実際たくさん見てるので本当に多いですね特にお医者さんとかなんかいわゆるコンサルティングファーム勤務の人とかうんタワマンとか買ってなんか転売系をと思ってるんだったらまだマシですけど新築ワンルームマンション毎月赤字こういちゃってるから厳しいっすね。</p></div></div>
-<div class="turn"><time>00:28:18</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>それ皆さん今の動画見て改めて見直して。</p></div></div>
-<div class="turn"><time>00:28:22</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうっすね。</p></div></div>
-<div class="turn"><time>00:28:25</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうっすねだから今日の動画で伝えたいこととしてはちゃんと勉強した方がいいのとかなりワンルームマンションの悪いとこってあんま買う時に手元からあんまお金出てかないんで多分実感がないんですよだからナーラーでやっちゃう仕事をあんだけ真剣にやってんのに不動産適当にやっちゃうみたいなとこがあってちゃんと考えてやれよって話あともう一個追加しておくと信用があるから買えてるけどそれワンルームマンション買うことによって積み重なることによって信用毀損してるんですよ銀行は基本的にはこのマンション区分、一戸建てでも建物の塊だから。
-建物ってまあ原価消却とかするから価値減ってくじゃないですか一般的には。ちょっと難しい話かもしれないけど。まあ車とかと一緒ですよ基本的には使えば使うほど劣化していくもの。
-土地は劣化しないものって考えられてるから土地神話っていうのやっぱあってこのワンルームマンションは持てば持つほど自分の信用が汚くなってくって感じがする。</p></div></div>
-<div class="turn"><time>00:29:23</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ということをまー知ってやるのがめちゃ大事ってことですね。</p></div></div>
-<div class="turn"><time>00:29:26</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうそうそうそれを知らずにやってる人が多いからまあこの自分の信用が毀損してってるんだって自覚も持った方がいいかなという感じですね。</p></div></div>
-<div class="turn"><time>00:29:34</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>分かりました。</p></div></div>
-<div class="turn"><time>00:29:37</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>だからちょっとねあのエピソードトークなんかも見させていただきましたけどもまあ新築ワンルームマンションがまあ絶対ダメとは言わないがまあもしやるんだったら僕は中古の空マンションから始めていただ
-いてまあ事例とかも見ながら勉強しながら慎重にことを運んでもらったらいいんじゃないかなと思います。</p></div></div>
-<div class="turn"><time>00:29:57</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>概要欄にあるのでちょっとチェックを。</p></div></div>
-<div class="turn"><time>00:30:00</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>申し込んだらそういうのってただってするんですかね。</p></div></div>
-<div class="turn"><time>00:30:03</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>んーまあそうですねえっと一応不動産のコースとか海外輸出コースとか分けてやってるんですけど、不動産のコース入っていただければあのー区分の知識もそうですしアパートメインでやってるんですけど
-そちらの知識とかも手に入ったりしますし色んな外部講師とかいて勉強会とかもしてるんでまあおそらくそのちゃんとキャッシュフロー出る物件を買うって意味では勉強になると思うんで概要欄の方からホームページに飛んでいただいてメールアドレス登録していただいてメルマガ受け取っていただければなと思います。</p></div></div>
-<div class="turn"><time>00:30:34</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>本日はありがとうございました。</p></div></div>
-<div class="turn"><time>00:30:35</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ありがとうございました大丈夫？</p></div></div>
-        </details>
-      </section>
-      <section class="quality-note">
-        <h2>補正済みキーワード</h2>
-        <p>v4で残っていたASR断片、短い相づち行、既知誤変換、途中で切れた語を、#7全文整形用に再処理。</p>
-        <p>このページは公開URL維持のためのnoindexアーカイブです。外部write/API/runner/launchdは使っていません。</p>
-        <p>残課題: なし</p>
-      </section>
+<li>買うなら中古、賃貸需要、出口、キャッシュフローを確認し、赤字なら売却判断も持つ。</li></ol></section>
+      <section id="flow"><h2>話の流れ</h2><ol class="chapters"><li><time>-</time><div><strong>新築ワンルームの悪評と、条件次第で成立する余地</strong><span></span></div></li>
+<li><time>-</time><div><strong>ワンルーム投資の定義と、不動産投資全体の中での位置づけ</strong><span></span></div></li>
+<li><time>-</time><div><strong>新築価格、サブリース、節税営業、団信営業による赤字構造</strong><span></span></div></li>
+<li><time>-</time><div><strong>八重洲さん自身の中古区分マンション実例</strong><span></span></div></li>
+<li><time>-</time><div><strong>成約事例、周辺相場、賃貸需要を見て買う判断基準</strong><span></span></div></li>
+<li><time>-</time><div><strong>高年収サラリーマンが信用毀損しやすい構造と見直し提案</strong><span></span></div></li>
+<li><time>-</time><div><strong>TEKO不動産講座への案内</strong><span></span></div></li></ol></section>
+      <section id="full"><h2>整形済み文字起こし全文</h2><details open><summary>全文を表示（63発話 / 約8,911字）</summary><div class="turn"><time>00:05:08</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>はい、サラリーマンのキャリア形成支援をしています、プロパー八重洲です。よろしくお願いします。
+今日は、ワンルームマンション投資についてお話ししたいなと思います。
+聞いたことありますかね。悪い意味で。
+僕は一方的に批判するつもりはないんですけど、闇の部分もあるし、うまく活用すれば光の部分もあるんじゃないか、という話をしたいと思います。
+結論から言うと、かくしくんが持っているイメージの通り、9割の物件は営業の押しで買ってしまうとほとんど儲からないと思います。
+そういうものに騙されているというか、はめ込まれてしまっている。正直、勉強不足のサラリーマンもたくさんいらっしゃると思います。
+この後詳しく話しますけど、特に新築のワンルームマンションであったり、サブリースと呼ばれる借り上げ契約であったり。
+たとえば本来は家賃が5万円入るところを、家賃保証の代わりに8割、80%だけ渡しますよ、という契約があったりします。
+そういったものを使っていると収支が合わなくなって、いわゆる毎月赤字、みたいな状態になってしまう。そういう人が大量に生まれているから、評判が良くないんですよね。
+他にも、「節税になります」とか、「将来の生命保険代わりになります」とか、「借金を払い終わった後は丸々自分の資産になります」とか。
+サラリーマンが少し苦しんでいる資産形成や税金の部分に、うまく入り込んでくる営業トークで買わされてしまうことがあるんです。
+致し方ない部分もあるんですけど、まずそもそもワンルームマンションがどういう収益構造になっているのかを理解しておけば、このあたりは買わずに済みます。
+なおかつ、収益の出るワンルームマンションを買うという、そっちの光の部分を手に入れることもできます。今日はそういう話をしていきたいなと思います。</p></div></div><div class="turn"><time>00:07:31</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ぶっちゃけ、光の部分ってあるんですか？</p></div></div><div class="turn"><time>00:07:38</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>光の部分で言うと、さっき言った新築ではないものを買うことです。
+相場よりも少し安いものを、ちゃんと自分で目利きして買う。そうすれば、アパートやマンション1棟を買わなくてもいいわけです。
+1棟ものだと金額が1億円とかになって、なかなか買えないじゃないですか。
+でもワンルームマンションのいいところは、金額のロットが小さいことなんですよ。1,000万円とか2,000万円とかで、不動産投資の入門編として経験値を積める。
+ちゃんと毎月利益が出るのであれば、それは別に悪い投資ではないと思うんですね。</p></div></div><div class="turn"><time>00:08:13</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>実際、八重洲さんは買ったりしたんですか？</p></div></div><div class="turn"><time>00:08:17</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>僕も実際、6部屋ぐらい持っていました。そのうちワンルームは5つです。
+全部収益は出て、売却までしています。今はアパートの方に移行しています。
+あくまでも僕の中では練習だったんですけど、これで大損したとか、毎月赤字だったみたいなことはありませんでした。だから、一定の説得力を持って話せるんじゃないかなと思っています。</p></div></div><div class="turn"><time>00:08:38</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>じゃあ実際は、練習台として一番いいということなんですか。
+今は買っていないわけじゃないですか。
+最初の小ロットで始められて、肌感を養っていくためのものとして一番ベストという感じですか。
+これが費用対効果として一番いい投資だよ、というつもりはないってことですよね。</p></div></div><div class="turn"><time>00:09:01</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうですね。
+ポジションとしては、あくまでも練習ではあります。
+ただ、この練習の時点で、いきなり赤字をこいて修行みたいなことをしなくていいんじゃないか、というスタンスですね。
+これだけでしっかり儲けていらっしゃる方も、世の中を探せばいるかもしれません。あくまで僕のスタンスとしては、そういう位置づけです。
+だから実際に僕がやってきた事例も踏まえながら話します。
+ワンルームマンション投資を検討されている方は、この動画を見て一歩ストップしてもらう。それもそうです。
+リスクを取ってでも不動産投資をしたい、ワンルームを買うならこういう感じのものを買えばいいんだな、という理解につながればいいかなと思います。
+よろしくお願いします。</p></div></div><div class="turn"><time>00:09:54</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>じゃあ早速、ワンルームマンション投資とは何か、というところから話してみたいと思います。
+ワンルームって、そもそも何だと思いますか？</p></div></div><div class="turn"><time>00:10:01</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そもそもワンルーム投資って、どういうものだと思いますか？</p></div></div><div class="turn"><time>00:10:05</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ワンルームというのは間取りの話です。
+1R、1K、1LDKみたいな区分でいうと、部屋の数が一番少ないタイプですね。</p></div></div><div class="turn"><time>00:10:11</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ちょっと待ってください。
+僕をなめすぎじゃないですか。</p></div></div><div class="turn"><time>00:10:15</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>いや、分かっていない人もいますからね。</p></div></div><div class="turn"><time>00:10:17</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>1Rってやつですね。</p></div></div><div class="turn"><time>00:10:18</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうです。
+1Rって書かれている、あのタイプです。
+間取りとしては一番小さいものです。</p></div></div><div class="turn"><time>00:10:24</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>不動産を貸す側から見ると、限られた土地や建物の中に部屋数を多く作れた方が、
+家賃の総額を取りやすくなります。だから狭い部屋をたくさん作って、
+総売上を上げるという考え方が成り立ちます。
+作る側からすると、投資効率がいいんです。
+15平米でも20平米でも、細かく区分けして売った方が、
+トータルの売却金額も上がりやすい。
+だから、ワンルームマンションを作るのは、
+業者側からするとコストを抑えやすくて効率がいいんですよね。
+もちろん、住む側から見ると狭いです。
+ただ、15平米から20平米くらいの部屋でも、立地や家賃によっては需要があります。
+単身者向けの住宅として、そういうマーケットがあるわけです。</p></div></div><div class="turn"><time>00:11:09</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>不動産投資といっても、他にはいろいろありますよね。
+例えば、区分マンションを一部屋買う方法もありますし、
+建物を丸ごと一棟買う方法もあります。</p></div></div><div class="turn"><time>00:11:14</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>マンションの一部屋を買う、みたいなイメージですか？</p></div></div><div class="turn"><time>00:11:23</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうです。
+マンションの一部屋を買うのは、いわゆる区分マンションです。
+タワーマンションの一室を買うのも区分ですし、
+1Rや1Kを買うのも区分です。ファミリータイプの部屋を買う場合もあります。
+マンションが一棟あって、その中の一部屋の権利を買う。
+それが区分投資です。
+一方で、建物そのものを丸ごと買うものは一棟ものです。
+木造、RC、SRCなど構造の違いもありますし、戸建てを買う投資もあります。
+不動産投資といっても、かなり幅があるんです。</p></div></div><div class="turn"><time>00:12:19</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>その中でワンルーム投資は、比較的小さく始められる不動産投資です。
+一棟アパートや一棟マンションに比べると、金額はかなり小さい。
+一棟でもなければ、戸建てでもない。
+区分所有の中でも一番小さいものなので、
+不動産投資の中では最小単位に近いものです。
+だからこそ、サラリーマンでもローンが通りやすくて、
+営業されやすい領域でもあります。</p></div></div><div class="turn"><time>00:12:44</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>では、新築と中古で何が違うと思いますか？
+なぜ新築ワンルームが、よく問題になるのでしょうか。</p></div></div><div class="turn"><time>00:12:54</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>稼げないから、ですかね。
+でも、まだちょっと解像度が低いです。</p></div></div><div class="turn"><time>00:13:05</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>一番大きいのは、購入価格が高いことです。
+同じマンションで比べても、新築の方が中古より高いです。
+これは車でも何でもそうですが、新品と中古では価格が変わりますよね。
+もちろん、まだ誰も使っていない、一番風呂のような価値もあります。
+その感覚も大事です。
+使用されていないから、価値として最大の状態に見える。
+ただ、それだけではありません。
+新築は、販売会社やデベロッパーが一番利益を乗せているタイミングでもあります。
+広告費や営業費も乗るので、新築価格はどうしても高くなります。</p></div></div><div class="turn"><time>00:13:54</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>一方で中古になると、実際の市場で価格が決まっていきます。
+同じマンション内で過去にいくらで売れたのか、
+周辺の似た物件がいくらで売れているのか。
+そういう成約事例で比較されます。
+新築時についていた利益や販売コストが抜けて、
+市場価格に近づいていくわけです。
+中古市場に出ると、誰でも扱えるようになります。
+価格競争も起きるので、新築販売時のように大きく利益を乗せ続けることは
+難しくなります。</p></div></div><div class="turn"><time>00:14:28</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>もちろん、デベロッパーが悪いという話ではありません。
+新築を作って販売するのは、彼らのビジネスです。
+ただ、投資家として買う側は、その構造を理解しておかないといけません。
+新築価格には、最初からかなり大きなプレミアムが乗っている。
+その前提を知らずに買うと、収支が合わなくなりやすいんです。</p></div></div><div class="turn"><time>00:15:00</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>築10年、15年と経っていくと、価格はある程度落ち着いてきます。
+その段階で、価格が下がり切ったものを買えれば、
+投資として成立する可能性はあります。
+でも新築は、最初の購入価格が高い。
+購入価格が高いということは、借入も大きくなるということです。</p></div></div><div class="turn"><time>00:15:20</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>サラリーマンの信用を使えば、2,000万円のワンルームを
+2,000万円のローンで買えることがあります。
+ただ、その場合、毎月の返済が8万円から9万円くらいになる。
+一方で、その部屋から入ってくる家賃が7万円から8万円だったら、
+それだけでほとんど収支が合いません。
+返済が7万円、8万円。
+家賃も7万円、8万円。
+その時点で、トントンか、むしろ赤字です。</p></div></div><div class="turn"><time>00:15:45</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>しかも、家賃が入って終わりではありません。
+管理費、修繕積立金、固定資産税、不動産取得税。
+そういった費用が別にかかります。
+だから、表面上は家賃と返済が近く見えても、
+実際には毎月赤字になっているケースが多いんです。</p></div></div><div class="turn"><time>00:16:05</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>手間や費用が、あとから乗ってくるんですね。
+頭も使いますし、時間も使いますよね。</p></div></div><div class="turn"><time>00:16:10</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうです。
+管理費と修繕積立金だけでも、家賃の10%から15%くらいは見ておいた方がいい。
+そこに税金もかかるので、思った以上に手残りは減ります。
+だから、新築と中古の違いは「古いか新しいか」だけではありません。
+買った瞬間の価格、ローン、毎月のキャッシュフローが全部変わります。
+新築ワンルームで毎月黒字を出すのは、
+構造的にかなり難しいということです。</p></div></div><div class="turn"><time>00:16:53</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>さらに、新築ワンルームではサブリースもよく出てきます。
+サブリースというのは、管理会社が部屋を借り上げてくれて、
+空室リスクを一定程度引き受ける仕組みです。
+一見すると安心に見えます。
+でも、実際には通常の家賃より低い金額で借り上げられます。
+例えば本来の家賃が5万円でも、オーナーに入るのは4万円ということもあります。
+入居者が退去して、一瞬家賃が入らなくなるリスクを防ぐための仕組みです。
+住む人がいようといなかろうと、一定期間は家賃を補填してくれる。
+その代わり、本来5万円入る家賃が8掛けの4万円になる。
+取りっぱぐれは防げるけれど、毎月の収入は下がる契約です。</p></div></div><div class="turn"><time>00:17:53</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>新築で2,000万円の物件を買って、毎月8万円返済する。
+そこにサブリースで受け取る家賃が8割になる。
+例えば8万円の家賃でも、8掛けなら6万4,000円です。
+そうなると、キャッシュフローはさらに悪くなります。
+空室リスクが下がる代わりに、毎月の手残りが小さくなるわけです。</p></div></div><div class="turn"><time>00:18:26</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>今日理解してほしいのは、
+いろいろある投資手法の中で、自分がこういう手法を選んでいるんだ、
+ということです。
+そして、新築と中古ではこれだけ違うんだということです。
+新築ワンルームが儲かりにくい理由は、
+新築プレミアムが乗っていること。
+新築販売時の利益が乗っていること。
+それに加えて、サブリース契約がセットになっているケースが多いことです。
+営業では、ここに税金の話も出てきます。
+損益通算を使えば所得税が戻りますとか、
+団体信用生命保険があるので生命保険代わりになりますとか。
+もし万が一のことがあれば、ローン残債がなくなるという話ですね。
+たしかに制度としては存在します。
+ただ、それで毎月の赤字が消えるわけではありません。
+税金が戻る、保険の役割があると聞くと良さそうに見えますが、
+そもそも投資として毎月お金が出ていく状態は苦しいんです。</p></div></div><div class="turn"><time>00:19:34</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>後から計算してみたら、
+「これ、めちゃくちゃ赤字じゃないか」と気づく人が多い。
+将来、生命保険代わりになるかもしれない。
+目の前の節税にはなるかもしれない。
+でも、結局毎月お金が出ていくのは、人間しんどいんですよ。
+そこで初めて、営業トークで良く見えていた部分と、
+実際の収支のズレに気づくんです。</p></div></div><div class="turn"><time>00:19:58</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>だから、騙されたかどうかという話だけではなくて、
+構造を知らないまま買ってしまうこと自体が危ないんです。</p></div></div><div class="turn"><time>00:20:00</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>YouTubeでも、新築ワンルームで失敗したという話はよく見ます。
+かなり強い言い方で批判されることもあります。
+でも、根本は「構造を知らずに買ってしまうこと」です。
+無知が生んでいる問題なんですよね。
+知らないまま進めると、あとから痛い目を見やすい。</p></div></div><div class="turn"><time>00:20:14</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>もしかしたら、今日見ている人の中にも、
+すでにワンルームを買った方がいるかもしれません。
+耳が痛い話かもしれませんが、まずは事実として見た方がいいです。
+感情的に良い悪いを決めるより、数字と構造を見た方がいい。</p></div></div><div class="turn"><time>00:20:25</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>不動産投資家と呼ばれる人や、大家さんの集まりに行っても、
+本を書いている人や、家賃収入で生活している人たちは、
+一般的には新築ワンルームを中心にはやっていません。
+僕の知り合いにも不動産投資家は多いですし、
+大家の会にも入っています。
+自分たちでもコミュニティを運営しています。
+でも、本を書いている人や、FIREしている人や、
+家賃収入だけで生活している人たちが、
+ワンルームマンションをメインでやっているという印象はありません。</p></div></div><div class="turn"><time>00:20:43</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>たしかに、そういうイメージはあまりないです。</p></div></div><div class="turn"><time>00:20:50</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>だから、不動産投資全体の中で、
+ワンルームがどういう位置づけなのかを知っておく必要があります。
+そのうえで、僕自身の例を話します。
+僕もワンルームを買っていました。</p></div></div><div class="turn"><time>00:21:17</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>25歳くらいの頃から、ワンルームを買っていました。
+ただし、新築ではなく中古です。
+新築を普通に計算すると、毎月のキャッシュフローが赤字になりやすい。
+だから、価格が落ち着いた中古を狙っていました。
+収支計算をすれば、新築で買った時点で毎月赤字になることは分かります。
+ではどうすればいいのか。
+築年数が経って、価格が下がったものを買うということです。</p></div></div><div class="turn"><time>00:21:40</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>築15年、20年、場合によっては30年近い物件です。
+ある程度年数が経っていて、これ以上大きく価格が下がりにくいものを買う。
+大事なのは、価格が落ちていて、
+新築時に乗っていた利益や販売コストがかなり抜けていることです。</p></div></div><div class="turn"><time>00:22:19</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そういう物件を買うと、ローンの元本が毎月減っていきます。
+もし物件価格が大きく下がらなければ、
+返済した元本分が自分の資産になっていくわけです。
+5年後に物件価格が同じだったら、
+その間に返済した元本部分は、普通に考えれば含み益になります。
+だから、価格がもう大きく下がらないだろうというところで拾えるかどうか。
+この観点がまず重要です。
+これが、新築を高値で買う場合との大きな違いです。</p></div></div><div class="turn"><time>00:22:40</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>区分マンションは、一つの建物の中に部屋がたくさんあります。
+例えば32部屋あるマンションなら、
+過去に他の部屋がいくらで売れたかを見られます。
+同じ建物内の成約事例を見れば、
+今出ている部屋が高いのか安いのか、かなり判断しやすい。
+全部の部屋が見られるわけではありませんが、
+同じマンション内で何番の部屋がいくらで売れたかは、
+調べると出てくることがあります。</p></div></div><div class="turn"><time>00:23:07</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>過去に同じマンションの部屋が1,000万円前後で売れている。
+その中で、似た条件の部屋が900万円で出ている。
+そういう時に、相場より安い可能性が見えてきます。
+逆に、相場より高いものを営業担当に勧められて買ってはいけません。</p></div></div><div class="turn"><time>00:23:35</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>中古だから良い、という話でもありません。
+業者が持ってきた中古物件をそのまま買えばいいわけではない。
+同じマンション内の成約事例、周辺の類似物件、
+近いエリアの家賃相場を自分で見ます。
+マンションレビューのようなサイトも使いながら、
+自分で相場を確認するんです。</p></div></div><div class="turn"><time>00:23:53</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>業者さんは入らないんですか？</p></div></div><div class="turn"><time>00:23:58</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>買うときに仲介会社は必要です。
+ただ、業者さんの言うことをそのまま信じるのではなく、
+自分でも数字を見るということです。
+新築ワンルームで失敗している人にも共通していますが、
+業者の言いなりになっていることが多い。
+まず自分で考える。
+相場をちゃんと見る。
+めちゃめちゃ当たり前のことなんですけど、
+そこをやるかどうかで全然変わります。</p></div></div><div class="turn"><time>00:24:30</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>さらに、周辺の物件も見ます。
+そのエリアに競合が多すぎないか、賃貸需要があるか。
+実際に現地に行って、エイブルやミニミニのような賃貸仲介の店舗で、
+この部屋は借り手がつきそうかを聞くこともあります。</p></div></div><div class="turn"><time>00:25:01</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>賃貸需要があるかどうかは、かなり大事です。
+周辺に似た物件が多すぎて、家賃競争になりそうなら避けた方がいい。
+このくらいの家賃でこの部屋を貸そうと思っているけど、
+実際に客が付きそうですか、と賃貸会社に聞いてみる。
+そうやって賃貸需要を確認します。
+逆に、需要があって、相場より安く買えるなら、
+ワンルームでも投資として成立する可能性があります。
+供給が多すぎるエリアなら、家賃競争に巻き込まれるかもしれません。
+そこまで見て、価格も合っていれば買う。
+僕はそういうことをしていました。</p></div></div><div class="turn"><time>00:25:27</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ワンルームは金額が小さいので、サラリーマンでも融資を受けやすい。
+安く買えて、賃貸需要も確認できていれば、
+毎月の家賃が入り、キャッシュフローもプラスにしやすくなります。
+しかも、価格が大きく下がらなければ、
+ローン返済で元本が減った分が資産になります。
+売却したときに、その差額が利益として残ることもあります。</p></div></div><div class="turn"><time>00:25:47</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>僕がやっていたのは、そういう戦略です。
+新築ワンルームを営業トークで買うのではなく、
+相場を見て、需要を見て、価格を見て、数字が合うものを買う。
+何年か持って、残債が減った分だけ、
+売った時に売却益が出る。
+そういう考え方と戦略、戦術を使って投資していました。
+同じワンルームでも、やり方がまったく違います。</p></div></div><div class="turn"><time>00:26:02</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>新築ワンルームを買ってしまう人は、
+こういう確認をほとんどしていないことが多いです。
+だからこそ、ここまで見るだけで大きな差がつきます。
+不動産投資では、こういう考え方がかなり重要です。</p></div></div><div class="turn"><time>00:26:23</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>TEKOのコミュニティにも、高年収のサラリーマンの方は多いです。
+そういう方ほど、新築ワンルームを買ってしまっていることがあります。
+買えてしまうんです。
+年収が1,000万円、1,500万円あると、東京の新築ワンルームを
+3つ、4つ買えてしまうことがある。
+忙しくて、あまり勉強する時間がない。
+でも属性が良いから買えてしまう。
+だから、気づいたら複数持っているという人がいます。</p></div></div><div class="turn"><time>00:26:47</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>でも、毎月のキャッシュフローを聞くと、
+赤字だったり、トントンと言っていたりします。
+トントンと言っていても、実際には固定資産税や修繕積立金まで入れると、
+赤字になっていることも多いです。
+本人も、少し見栄を張って「トントンです」と言っているだけの場合があります。</p></div></div><div class="turn"><time>00:27:08</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>だから、高年収の方ほど一度見直した方がいいです。
+複数の会社に査定を出して、いま売ったらいくらになるのかを確認する。
+ローン残債がいくら残っているのかも見る。
+仲介会社を何社か競わせてもいいと思います。
+売却するとしたら1,000万円くらいで売れるのか。
+一方で、ローン残債がいくらあるのか。
+諸経費を含めると手出しが出るのか。
+900万円でしか売れないなら赤字です。
+でも1,100万円、1,200万円で売れて、少しでも利益が出るなら、
+早めに売る選択肢もあります。
+場合によっては100万円、200万円の手出しがあっても、
+毎月赤字が続くよりは売った方がいいケースもあります。</p></div></div><div class="turn"><time>00:28:03</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>医師やコンサルのような高年収の方でも、
+新築ワンルームで毎月赤字を出し続けるのはかなり厳しいです。
+まだタワーマンションの転売の方が、
+狙い方によっては投資として考えやすい部分もあります。
+新築ワンルームは、月々の赤字が重くなりやすいんです。</p></div></div><div class="turn"><time>00:28:17</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>見ている方にも、ここで一度見直していただきたいですね。
+兜の緒を締めていただけたらなと思います。</p></div></div><div class="turn"><time>00:28:25</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうですね。
+ちゃんと勉強することです。
+ワンルームの怖いところは、最初に出すお金が少なく見えることです。
+だから、現実味が薄いまま買ってしまう。
+みなさん本業ではすごく真剣に働いているのに、
+不動産投資になると意外と気軽に決めてしまうことがあります。
+本業はあれだけ真剣にやっているのに、
+不動産はなんとなくでやってしまう。
+ちゃんと考えてやった方がいいです。</p></div></div><div class="turn"><time>00:28:46</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>しかも、ワンルームを何戸も買うと、信用にも影響します。
+銀行から見ると、ワンルームの建物部分は時間とともに価値が下がります。
+土地の割合も小さいので、資産としての評価が伸びにくい。
+そういう物件を複数持っていると、次に一棟ものを買いたいと思った時に、
+融資の評価で不利になることがあります。
+いわゆる信用毀損です。
+信用があるから買えているのに、
+買えば買うほど、その信用を汚していく可能性がある。
+その自覚を持った方がいいです。</p></div></div><div class="turn"><time>00:29:37</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>もちろん、新築ワンルームが絶対に悪いと言いたいわけではありません。
+ただ、やるなら中古区分マンションから学ぶとか、
+実際の成約事例を見ながら慎重に進めた方がいいです。
+営業トークで勢いのまま買うのではなく、
+数字と相場を見て、自分で判断する。
+そこが大事です。</p></div></div><div class="turn"><time>00:29:56</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>詳細は概要欄から確認していただく形ですかね。</p></div></div><div class="turn"><time>00:30:00</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>概要欄から確認していただく形ですね。</p></div></div><div class="turn"><time>00:30:03</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>TEKOでは、不動産の講座や海外輸出の講座も用意しています。
+不動産講座では、区分マンションの考え方だけではなく、
+アパートや一棟ものの見方も学べます。
+外部講師を招いた勉強会もあり、キャッシュフローが出る物件を
+どう見つけて、どう判断するかを学べる内容になっています。
+興味がある方は、概要欄からホームページを見ていただいて、
+メールアドレスを登録してください。
+メルマガでも情報をお届けしています。
+今日はありがとうございました。</p></div></div></details></section>
     </main>
-    <aside>
-      <h2>ページ情報</h2>
-      <h3>語句</h3>
-      <div class="terms">
-<span class="term">ワンルームマンション</span>
-<span class="term">サブリース</span>
-<span class="term">キャッシュフロー</span>
-<span class="term">賃貸需要</span>
-<span class="term">損切り</span>
-      </div>
-      <h3>生成境界</h3>
-      <p class="small">2026-06-29 v6 fulltext reformat / local-only</p>
-    </aside>
+    <aside><h2>確認用</h2><div class="toc"><a href="#summary">3行要約</a><a href="#flow">話の流れ</a><a href="#full">全文</a></div><p class="small">外部write/API/runner/launchdなし。ローカルv3 replay候補。</p></aside>
   </div>
 </div>
 </body>

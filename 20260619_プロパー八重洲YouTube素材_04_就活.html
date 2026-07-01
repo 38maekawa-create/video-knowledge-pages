@@ -7,263 +7,237 @@
 <title>就活</title>
 <style>
 * { box-sizing: border-box; }
-  body { margin: 0; background: #f5f6f8; color: #202124; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; line-height: 1.85; }
-  .page { max-width: 1040px; margin: 0 auto; padding: 32px 20px 72px; }
-  .topline { display: flex; justify-content: space-between; gap: 16px; align-items: center; flex-wrap: wrap; color: #5f6368; font-size: 13px; }
-  .status { color: #174ea6; background: #e8f0fe; border: 1px solid #c6dafc; border-radius: 999px; padding: 4px 10px; font-weight: 700; }
-  header { padding: 28px 0 22px; border-bottom: 1px solid #dfe3e8; }
-  h1 { margin: 12px 0 14px; font-size: clamp(28px, 4vw, 46px); line-height: 1.28; letter-spacing: 0; }
-  h2 { margin: 0 0 14px; font-size: 21px; line-height: 1.4; }
-  h3 { margin: 18px 0 8px; font-size: 15px; }
-  .lead { max-width: 840px; margin: 0; color: #3c4043; font-size: 17px; }
-  .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
-  .pill { display: inline-flex; align-items: center; min-height: 30px; padding: 5px 11px; border: 1px solid #dfe3e8; border-radius: 999px; background: #fff; color: #3c4043; font-size: 13px; }
-  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; margin-top: 24px; align-items: start; }
-  section, aside { background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; }
-  section { margin-bottom: 18px; padding: 24px; }
-  aside { position: sticky; top: 18px; padding: 18px; }
-  .summary-list { margin: 0; padding-left: 1.2em; }
-  .summary-list li { margin: 8px 0; }
-  .chapters { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-  .chapters li { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 12px; padding: 12px; border: 1px solid #edf0f2; border-radius: 8px; background: #fff; }
-  .chapters time, .turn time, .quote-head time { color: #5f6368; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
-  .chapters strong { display: block; line-height: 1.4; }
-  .chapters span { display: block; color: #3c4043; font-size: 14px; }
-  .quote-grid { display: grid; gap: 12px; }
-  .quote-card { border: 1px solid #e1e4e8; border-radius: 8px; padding: 16px; background: #fcfcfd; }
-  .quote-head { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; flex-wrap: wrap; }
-  .speaker { display: inline-flex; align-items: center; min-height: 26px; padding: 3px 10px; border-radius: 999px; font-weight: 700; font-size: 13px; }
-  .speaker.yaesu { color: #0b57d0; background: #e8f0fe; }
-  .speaker.kakushi { color: #137333; background: #e6f4ea; }
-  .quote-card p, .turn p { margin: 0; }
-  details { border: 1px solid #e1e4e8; border-radius: 8px; overflow: hidden; background: #fff; }
-  summary { cursor: pointer; padding: 16px 18px; color: #0b57d0; font-weight: 800; border-bottom: 1px solid #e1e4e8; }
-  .turn { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 12px; padding: 18px; border-bottom: 1px solid #edf0f2; }
-  .turn:last-child { border-bottom: 0; }
-  .turn .speaker { margin-bottom: 8px; }
-  .turn p { color: #202124; font-size: 16px; white-space: pre-line; overflow-wrap: anywhere; }
-  .quality-note { color: #3c4043; }
-  .quality-note p { margin: 8px 0; }
-  .small { color: #5f6368; font-size: 13px; }
-  @media (max-width: 760px) {
-    .page { padding: 18px 14px 48px; }
-    .layout { grid-template-columns: 1fr; }
-    aside { position: static; }
-    section { padding: 20px 16px; }
-    h1 { font-size: 30px; }
-    .lead { font-size: 15px; }
-    .chapters li, .turn { grid-template-columns: 1fr; gap: 6px; }
-    .turn p { font-size: 18px; line-height: 1.95; }
-    summary { font-size: 16px; }
-  }
-  .term { padding: 4px 9px; border-radius: 999px; background: #f1f3f4; color: #3c4043; font-size: 13px; }
-  .terms { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+body {
+  margin: 0;
+  background: #f5f6f8;
+  color: #202124;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  line-height: 1.9;
+}
+.page { max-width: 1040px; margin: 0 auto; padding: 32px 20px 72px; }
+.topline { display: flex; justify-content: space-between; gap: 16px; align-items: center; flex-wrap: wrap; color: #5f6368; font-size: 13px; }
+.status { color: #174ea6; background: #e8f0fe; border: 1px solid #c6dafc; border-radius: 999px; padding: 4px 10px; font-weight: 700; }
+header { padding: 28px 0 22px; border-bottom: 1px solid #dfe3e8; }
+h1 { margin: 12px 0 14px; font-size: clamp(28px, 4vw, 46px); line-height: 1.28; letter-spacing: 0; }
+h2 { margin: 0 0 14px; font-size: 21px; line-height: 1.4; }
+h3 { margin: 18px 0 8px; font-size: 15px; }
+.lead { max-width: 840px; margin: 0; color: #3c4043; font-size: 17px; }
+.meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
+.pill { display: inline-flex; align-items: center; min-height: 30px; padding: 5px 11px; border: 1px solid #dfe3e8; border-radius: 999px; background: #fff; color: #3c4043; font-size: 13px; }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; margin-top: 24px; align-items: start; }
+section, aside { background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; }
+section { margin-bottom: 18px; padding: 24px; }
+aside { position: sticky; top: 18px; padding: 18px; }
+.summary-list { margin: 0; padding-left: 1.2em; }
+.summary-list li { margin: 8px 0; }
+.chapters { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.chapters li { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 12px; padding: 12px; border: 1px solid #edf0f2; border-radius: 8px; background: #fff; }
+.chapters time, .turn time { color: #5f6368; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
+.chapters strong { display: block; line-height: 1.4; }
+.chapters span { display: block; color: #3c4043; font-size: 14px; }
+.speaker { display: inline-flex; align-items: center; min-height: 26px; padding: 3px 10px; border-radius: 999px; font-weight: 700; font-size: 13px; }
+.speaker.yaesu { color: #0b57d0; background: #e8f0fe; }
+.speaker.kakushi { color: #137333; background: #e6f4ea; }
+.speaker.other { color: #5f6368; background: #f1f3f4; }
+details { border: 1px solid #e1e4e8; border-radius: 8px; overflow: hidden; background: #fff; }
+summary { cursor: pointer; padding: 16px 18px; color: #0b57d0; font-weight: 800; border-bottom: 1px solid #e1e4e8; }
+.turn { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 12px; padding: 18px; border-bottom: 1px solid #edf0f2; }
+.turn:last-child { border-bottom: 0; }
+.turn .speaker { margin-bottom: 8px; }
+.turn p { margin: 0; color: #202124; font-size: 17px; white-space: pre-line; overflow-wrap: anywhere; }
+.small { color: #5f6368; font-size: 13px; }
+.toc { display: grid; gap: 8px; }
+.toc a { color: #174ea6; text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+@media (max-width: 760px) {
+  .page { padding: 18px 14px 48px; }
+  .layout { grid-template-columns: 1fr; }
+  aside { position: static; }
+  section { padding: 20px 16px; }
+  h1 { font-size: 30px; }
+  .lead { font-size: 15px; }
+  .chapters li, .turn { grid-template-columns: 1fr; gap: 6px; }
+  .turn p { font-size: 18px; line-height: 1.95; }
+  summary { font-size: 16px; }
+}
 </style>
 </head>
 <body>
 <div class="page">
-  <div class="topline">
-    <span>proper_yaesu_youtube_material / 20260619 / GitHub Pages archive</span>
-    <span class="status">全文整形v6 / 5月型候補</span>
-  </div>
+  <div class="topline"><span>proper_yaesu_youtube_material / 20260619 / v3 replay archive</span><span class="status">旧v3正規ルート replay候補</span></div>
   <header>
     <h1>就活</h1>
-    <p class="lead">凡人前提で、資産形成に効く就職先の条件、会社員信用、年収、勤続年数を整理した編集確認用ページ。</p>
-    <div class="meta">
-      <span class="pill">話者: 八重洲さん / かくしくん</span>
-      <span class="pill">発話数: 57</span>
-      <span class="pill">本文: 約9,206字</span>
-      <span class="pill">noindex</span>
-    </div>
+    <p class="lead">就活は給与だけでなく、会社員信用を作る入口。</p>
+    <div class="meta"><span class="pill">話者: 八重洲さん / かくしくん</span><span class="pill">発話数: 57</span><span class="pill">本文: 約9,447字</span><span class="pill">noindex</span></div>
   </header>
   <div class="layout">
     <main>
-      <section>
-        <h2>3行要約</h2>
-        <ul class="summary-list">
-<li>就活は給与だけでなく、会社員信用を作る入口。</li>
+      <section id="summary"><h2>3行要約</h2><ol class="summary-list"><li>就活は給与だけでなく、会社員信用を作る入口。</li>
 <li>勤続年数、企業属性、年収は融資や不動産投資の土台になる。</li>
-<li>凡人前提なら、最初から信用を育てられる環境を選ぶ。</li>
-        </ul>
-      </section>
-      <section>
-        <h2>話の流れ</h2>
-        <ol class="chapters">
-<li><time>00:00:47</time><div><strong>凡人前提の就職戦略</strong><span>資産形成に効く会社選びから逆算する</span></div></li>
+<li>凡人前提なら、最初から信用を育てられる環境を選ぶ。</li></ol></section>
+      <section id="flow"><h2>話の流れ</h2><ol class="chapters"><li><time>00:00:47</time><div><strong>凡人前提の就職戦略</strong><span>資産形成に効く会社選びから逆算する</span></div></li>
 <li><time>00:04:02</time><div><strong>会社の看板と信用</strong><span>プライム上場、業界、金融機関評価を考える</span></div></li>
 <li><time>00:11:16</time><div><strong>年収と信用の両輪</strong><span>融資で見られる年収・勤続年数を積み上げる</span></div></li>
-<li><time>00:20:41</time><div><strong>就職後の伸ばし方</strong><span>信用力を育てながら、次の収入源へ進む</span></div></li>
-        </ol>
-      </section>
-      <section>
-        <h2>編集で拾いやすい発話</h2>
-        <div class="quote-grid">
-<article class="quote-card"><div class="quote-head"><time>00:00:47</time><span class="speaker yaesu">八重洲さん</span></div><p>資産を築くための最初の就職先は、給料だけでなく信用力まで含めて選ぶ必要があります。</p></article>
-<article class="quote-card"><div class="quote-head"><time>00:04:02</time><span class="speaker yaesu">八重洲さん</span></div><p>会社の看板や上場企業であることは、融資を受ける時に効いてくる要素です。</p></article>
-<article class="quote-card"><div class="quote-head"><time>00:11:16</time><span class="speaker yaesu">八重洲さん</span></div><p>年収と勤続年数が積み上がると、会社員としての信用が不動産投資にも使えるようになります。</p></article>
-<article class="quote-card"><div class="quote-head"><time>00:20:41</time><span class="speaker yaesu">八重洲さん</span></div><p>凡人が資産形成するなら、最初から信用を育てられる環境に入るのが重要です。</p></article>
-        </div>
-      </section>
-      <section>
-        <h2>整形済み文字起こし全文</h2>
-        <details open>
-          <summary>全文を表示（57発話 / 約9,206字）</summary>
-<div class="turn"><time>00:00:26</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>僕が凡人っていうことを言うその他おおよその人たちと一緒とはいはいサラリーマンのキャリア形成支援をしています、プロパー八重洲です。よろしくお願いします。</p></div></div>
-<div class="turn"><time>00:00:41</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>よろしくお願いします。なんか変わったテーマっていう風にお聞きしましたけど。</p></div></div>
-<div class="turn"><time>00:00:47</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>変わっているのか分からないですけど就職条件ですね。
-まあテーマとしてはちゃんとこうお金資産を築いていくためのこう最初狙うべき就職先というかその条件みたいなのを僕の就職活動を振り返りながらやっていきたいなと思いますけど。</p></div></div>
-<div class="turn"><time>00:01:04</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ね確か今って32歳。</p></div></div>
-<div class="turn"><time>00:01:07</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>32ですね。</p></div></div>
-<div class="turn"><time>00:01:08</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>キャッシュで1億ぐらいあって総資産とかっていうともう結構な。</p></div></div>
-<div class="turn"><time>00:01:14</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>不動産があるんで総資産だと7億ぐらいになりますね。</p></div></div>
-<div class="turn"><time>00:01:18</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ぐらいまあもうこうまあ上位の1%みたいなものだと思うんですよ日本でいうと。</p></div></div>
-<div class="turn"><time>00:01:25</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>30代ってくくりながらそうかもしれないですね。</p></div></div>
-<div class="turn"><time>00:01:28</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そんなね、プロバーさんとか林さんの就職してきた経験からどういう会社に行くとどういう資産を積み上げやすいのかみたいなことをちょっとお聞きできるみたいなことで。</p></div></div>
-<div class="turn"><time>00:01:42</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうっすね。</p></div></div>
-<div class="turn"><time>00:01:42</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>お願いしたいんですけどなんかでもこれ優さんしかできないような感じですね。会社員。</p></div></div>
-<div class="turn"><time>00:01:49</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>あー、まあまあ、でもあの再現性はあると思ってて僕だからできたというよりかで僕もあのまず就職って結構大学大事だったりするじゃないですか。</p></div></div>
-<div class="turn"><time>00:02:00</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ああはいはい。</p></div></div>
-<div class="turn"><time>00:02:00</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>僕キャリアとかも全部公開してますけど普通に愛媛大学って国立の大学なんですけど、まあ。</p></div></div>
-<div class="turn"><time>00:02:05</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まあしっかりした目ね。</p></div></div>
-<div class="turn"><time>00:02:07</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そのもっと上みたらいくらでもあるし偏差値ってだって50代後半60代ぐらいの学校なんですよ。</p></div></div>
-<div class="turn"><time>00:02:14</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いやまあ大学の60はなかなか結構高い。</p></div></div>
-<div class="turn"><time>00:02:17</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>本当ですか。</p></div></div>
-<div class="turn"><time>00:02:18</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いや、国立の視点でだいぶ優秀ですよ。それはやめてください、本当に。</p></div></div>
-<div class="turn"><time>00:02:23</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>いやこれは本当に僕の中では凡人って言ったらもしかしたら尖る角が立つのかもしれないですけど結構こういう人はいますまだ全然世の中にはねまあそういう前提でやってきたって話はちょっと聞いてほしいんですけどちょっとFラン大とか言われたらちょっと僕分かんないそうではなかったから一応。</p></div></div>
-<div class="turn"><time>00:02:41</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>3勤交流とかよりも良いもう全然上だと思う。</p></div></div>
-<div class="turn"><time>00:02:44</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>参勤交流力が上であってほしいね。</p></div></div>
-<div class="turn"><time>00:02:47</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>だから馬鹿にしてるんですよ馬鹿にしてるんですよこの動画見てる人たち全然いますからね参勤交流二トコ魔線の人とかは。</p></div></div>
-<div class="turn"><time>00:02:54</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>いやそうね僕一応学生の時の偏差値69とかだったんで。</p></div></div>
-<div class="turn"><time>00:03:01</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>この人は自分は凡人というのを僕が皆さん一緒に僕叩きたいですおい。</p></div></div>
-<div class="turn"><time>00:03:07</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>けどいやちゃんと勉強はそれなりしてました。</p></div></div>
-<div class="turn"><time>00:03:09</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>チカキューってめちゃくちゃしっかりしてるじゃないですか。</p></div></div>
-<div class="turn"><time>00:03:11</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>神戸大学ぐらいですね阪大はちょっとハードル高京大とか無理みたいな感じだと思いますね。</p></div></div>
-<div class="turn"><time>00:03:19</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>じゃあまあ凡人ではないんですけど、まあちょっと再現性がありそうなものを。</p></div></div>
-<div class="turn"><time>00:03:24</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>結局行ったのは愛媛大学だったんでっていうのはあるんで。</p></div></div>
-<div class="turn"><time>00:03:27</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>皆さん騙されないでよく聞いてください。</p></div></div>
-<div class="turn"><time>00:03:30</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>LLLごめんなさい姫大学行く人は大体みんな県庁とか市役所か伊予銀行に行くっていう大体そういう流れがあるんですけど、僕はそうじゃなかったんでやっぱ工夫はしました。
-こうみんな大体愛媛に残るって選択する人が多いんですけど本当に大企業とかなんだろうそういうところって東京か大阪にあるじゃないですかあの、そっちんちゃんといけたのでそれは意識したことがあったが、
-そういう話をしたいしそもそもなんでこういう企業に入るべきなのかっていうのもちょっと話したいなと思いますね。</p></div></div>
-<div class="turn"><time>00:04:02</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>じゃあまずえっとそのお金を稼いでいくとか資産を作っていくっていうなんで企業選びが大事なのかっていう話なんですけど、これはまあもしかしたらご存知の方もいると思うんですけど
-勤めてる企業の看板これがイコール会社員の信用力につながります、基本的には全然そのヒエラルキーがないとか優劣がないって本当は言いたいんですけど、会社勤める会社では明らかに優劣があります。
-そもそも上場っていうのは3ステージありますよね、グロースとかスタンダードプライムこれでも明らかに格付けが変わるわけですよこれは何かというと金融機関から見たときの格付けですね。
-で基本的にえ会社員は会社の看板でそのまま評価されてしまうというのがあるんでこれを激残酷なんですがこの現実を抑えておかないといけないんでもう入るんだったらえーまずプライム上場の会社に入るのが僕は鉄則だと思ってますねうんまぁこれかなり母数は減るんですけど多分上場企業で勤めてる人ってパーセンテージで言うと多分一桁台だと思うんですよ多分。
+<li><time>00:20:41</time><div><strong>就職後の伸ばし方</strong><span>信用力を育てながら、次の収入源へ進む</span></div></li></ol></section>
+      <section id="full"><h2>整形済み文字起こし全文</h2><details open><summary>全文を表示（57発話 / 約9,447字）</summary><div class="turn"><time>00:00:26</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>僕が凡人というのは、世の中のおおよその人たちと同じという意味です。サラリーマンのキャリア形成支援をしています、プロパー八重洲です。
+よろしくお願いします。</p></div></div><div class="turn"><time>00:00:41</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>よろしくお願いします。
+なんか変わったテーマっていう風にお聞きしました。</p></div></div><div class="turn"><time>00:00:47</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>変わっているのか分からないですけど、就職条件ですね。
+まあテーマとしてはちゃんとこうお金資産を築いていくためのこう最初狙うべき就職先というかその条件みたいなのを僕の就職活動を振り返りながらやっていきたいなと思います。
+。</p></div></div><div class="turn"><time>00:01:04</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ね確か今って32歳。</p></div></div><div class="turn"><time>00:01:07</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>32ですね。</p></div></div><div class="turn"><time>00:01:08</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>キャッシュで1億ぐらいあって総資産とかっていうともう結構な。</p></div></div><div class="turn"><time>00:01:14</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>不動産があるんで総資産だと7億ぐらいになりますね。</p></div></div><div class="turn"><time>00:01:18</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ぐらいまあもうこうまあ上位の1%みたいなものだと思うんです。
+よ日本でいうと。</p></div></div><div class="turn"><time>00:01:25</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>30代ってくくりながらそうかもしれないですね。</p></div></div><div class="turn"><time>00:01:28</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そんなね、八重洲さんの就職してきた経験からどういう会社に行くとどういう資産を積み上げやすいのかみたいなことをちょっとお聞きできるみたいなことで。</p></div></div><div class="turn"><time>00:01:42</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そうっすね。</p></div></div><div class="turn"><time>00:01:42</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>お願いしたいんですけど、なんかでもこれ八重洲さんしかできないような感じですね。
+会社員。</p></div></div><div class="turn"><time>00:01:49</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>、まあまあ、でもあの再現性はあると思ってて僕だから、できたというよりかで僕もあのまず、就職って結構大学大事だったりするじゃないですか。</p></div></div><div class="turn"><time>00:02:00</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ああはいはい。</p></div></div><div class="turn"><time>00:02:00</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>僕キャリアとかも全部公開してますけど普通に愛媛大学って国立の大学なんですけど、まあ。</p></div></div><div class="turn"><time>00:02:05</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>まあしっかりした目ね。</p></div></div><div class="turn"><time>00:02:07</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そのもっと上みたらいくらでもあるし偏差値ってだって50代後半60代ぐらいの学校なんですよ。</p></div></div><div class="turn"><time>00:02:14</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いやまあ大学の60はなかなか結構高い。</p></div></div><div class="turn"><time>00:02:17</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>本当ですか。</p></div></div><div class="turn"><time>00:02:18</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いや、国立の視点でだいぶ優秀ですよ。
+それはやめてください、本当に。</p></div></div><div class="turn"><time>00:02:23</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>いやこれは本当に僕の中では凡人って言ったらもしかしたら尖る角が立つのかもしれないですけど、結構こういう人はいますまだ全然世の中にはねまあそういう前提でやってきたって話。
+はちょっと聞いてほしいんですけど、ちょっとFラン大学とか言われたらちょっと僕分かんないそうではなかったから一応。</p></div></div><div class="turn"><time>00:02:41</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>産近甲龍とかよりも良いもう全然上だと思う。</p></div></div><div class="turn"><time>00:02:44</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>産近甲龍力が上であってほしいね。</p></div></div><div class="turn"><time>00:02:47</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>だから、馬鹿にしてるんですよ馬鹿にしてるんですよこの動画見てる人たち全然いますからね産近甲龍日東駒専の人とかは。</p></div></div><div class="turn"><time>00:02:54</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>いやそうね僕一応学生の時の偏差値69とかだったんで。</p></div></div><div class="turn"><time>00:03:01</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>この人は自分は凡人というのを僕が皆さん一緒に僕叩きたいですおい。</p></div></div><div class="turn"><time>00:03:07</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>けどいやちゃんと勉強はそれなりしてました。</p></div></div><div class="turn"><time>00:03:09</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>地頭ってめちゃくちゃしっかりしてるじゃないですか。</p></div></div><div class="turn"><time>00:03:11</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>神戸大学ぐらいですね阪大はちょっとハードル高京大とか無理みたいな感じだと思いますね。</p></div></div><div class="turn"><time>00:03:19</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>じゃあまあ凡人ではないんですけど、まあちょっと再現性がありそうなものを。</p></div></div><div class="turn"><time>00:03:24</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>結局行ったのは愛媛大学だったんでっていうのはあるんで。</p></div></div><div class="turn"><time>00:03:27</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>皆さん騙されないでよく聞いてください。</p></div></div><div class="turn"><time>00:03:30</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ごめんなさい。
+愛媛大学行く人は大体みんな県庁とか市役所か伊予銀行に行くっていう大体そういう流れがあるんですけど、僕はそうじゃなかったんでやっぱ工夫はしました。
+こうみんな大体愛媛に残るって選択する人が多いんですけど、本当に大企業とかなんだろうそういうところって東京か大阪にあるじゃないですか。
+あの、そっちんちゃんといけたのでそれは意識したことがあったが、
+そういう話をしたいしそもそもなんでこういう企業に入るべきなのかっていうのもちょっと話したいなと思いますね。</p></div></div><div class="turn"><time>00:04:02</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>じゃあまず、そのお金を稼いでいくとか資産を作っていくっていうなんで企業選びが大事なのかっていう話なんですけど、これはまあもしかしたらご存知の方もいると思うんですけど
+勤めてる企業の看板これがイコール会社員の信用力につながります、基本的には全然そのヒエラルキーがないとか優劣がないって本当は言いたいんですけど。
+会社勤める会社では明らかに優劣があります。
+そもそも上場っていうのは3ステージありますよね、グロースとかスタンダードプライムこれでも明らかに格付けが変わるわけですよ。
+これは何かというと金融機関から見たときの格付けですね。
+で基本的にえ会社員は会社の看板。
+でそのまま評価されてしまうというのがあるん。
+でこれを激残酷なんですがこの現実を抑えておかないといけないんでもう入るんだったらまず。
+プライム上場の会社に入るのが僕は鉄則だと思ってますねうんまぁこれかなり母数は減るんですけど、多分上場企業で勤めてる人ってパーセンテージで言うと多分一桁台だと思うんです。
+よ多分。
 そもそも上場企業が少ないからその中でプライムになるともっと少ないんで、これ資産作るための就職先って話じゃないですか。
-だから、資産作っていくってなったら種銭をもちろん貯めるから年収を稼がないといけないっていうのはあるんだけど、不動産買っていくとか、 株式に入れていくとか、まあ特に不動産ですよね。
-さっきの信用力が紐づいてきますけど。不動産買っていくってなった時にはもう会社の看板信用がもう第一なんですよ。
-あとはちょっと自分がちゃんと貯金してるとかっていうその性格面も見られたりはしますけど。
-一番大事なのは会社の看板で変なものを買ってない変なローンとか組んでないっていうことそこにつながってくるわけですね良いとこに勤めるっていうのはそこからいやらしいですけど
+だから、資産作っていくってなったら種銭をもちろん貯めるから年収を稼がないといけないっていうのはあるんだけど、不動産買っていくとか、株式に入れていくとか、まあ、
+特に不動産ですよね。
+さっきの信用力が紐づいてきますけど。
+不動産買っていくってなった時にはもう会社の看板信用がもう第一なんですよ。
+あとは、ちょっと自分がちゃんと貯金してるとかっていうその性格面も見られたりはしますけど。
+一番大事なのは会社の看板で変なものを買ってない変なローンとか組んでないっていうことそこにつながってくるわけですね。
+良いとこに勤めるっていうのはそこからいやらしいですけど、
 逆算していくとそれプライム上場の会社とか入らないといけないっていうなってくるっていう。
-資産作りたい稼ぎたいって多分思っている大学生とかまだ若い人はいっぱいいるだろうからこの事実は押さえておいた方がいいですねなんかやりがいベンチャーみたいな上場目指してますとかいいんですけど、
-それ後々自分が不動産投資したいとか資産こうガッと作ってきてた時にぶっちゃけ足引っ張ると思いますね。</p></div></div>
-<div class="turn"><time>00:06:21</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なんか今まで成長というかビジネス系の発信の人たちとはまたちょっと経路が違いますね。</p></div></div>
-<div class="turn"><time>00:06:27</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ある意味兼ね兼ねしてると思うんですねこの考え方は。</p></div></div>
-<div class="turn"><time>00:06:32</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>んー なんかこの成長とかをベンチャーの方がいいみたいな話とかもなんかよく聞いた話でもあるから今話聞いておーって言っときゃよかったなって思ってきましたもん。</p></div></div>
-<div class="turn"><time>00:06:46</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そう思う人もいるでしょうねでも全く思わない人もいると思うんですよいや俺はずっと成長を生むんだみたいな僕の体験からしても条件話す前にちょっといろいろ話してもらって申し訳ないですけど
-1社目小野薬品という製薬会社に入りましたとこれプライム上場で本当にいい会社だったんですけど入社して2年目とかでまだ年収550万とかですよの僕にUFJ銀行さんが2000数百万の住宅ローン貸してくれたんですよ手出ほぼゼロで、金利0。
-45。ありえないじゃないですか。24歳とかっすよ、まだ。</p></div></div>
-<div class="turn"><time>00:07:23</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>確かに0。45！</p></div></div>
-<div class="turn"><time>00:07:27</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>当時は超低金利だったからで、その翌月かなに中古のワンルームマンションその翌月にも、だから僕その後追加で2部屋ワンルームマンションも買ってるんですよそのそれも中国銀行っていう岡山の銀行さんなんですけどそこがお金貸してくれこれ全部会社の信用があるからなんですね。
+資産作りたい稼ぎたいって多分思っている大学生とかまだ若い人はいっぱいいるだろうからこの事実は押さえておいた方がいいですねなんかやりがいベンチャーみたいな。
+上場目指してますとかいいんですけど
+それ後々自分が不動産投資したいとか資産こうガッと作ってきてた時にぶっちゃけ足引っ張ると思いますね。</p></div></div><div class="turn"><time>00:06:21</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なんか今まで成長というかビジネス系の発信の人たちとはまたちょっと経路が違いますね。</p></div></div><div class="turn"><time>00:06:27</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ある意味兼ね兼ねしてると思うんです。
+ねこの考え方は。</p></div></div><div class="turn"><time>00:06:32</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>んー なんかこの成長とかをベンチャーの方がいいみたいな話とかもなんかよく聞いた話でもあるから、今話聞いておーって言っときゃよかったなって思ってきましたもん。</p></div></div><div class="turn"><time>00:06:46</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>そう思う人もいるでしょうねでも全く思わない人もいると思うんです。
+よいや俺はずっと成長を生むんだみたいな僕の体験からしても条件話す前にちょっといろいろ話してもらって申し訳ないですけど
+1社目小野薬品という製薬会社に入りましたとこれプライム上場で本当にいい会社だったんですけど。
+入社して2年目とかでまだ年収550万とかですよの僕にUFJ銀行さんが2000数百万の住宅ローン貸してくれたんですよ手出ほぼゼロで、金利0.45。
+ありえないじゃないですか。
+24歳とかっすよ、まだ。</p></div></div><div class="turn"><time>00:07:23</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>確かに0.45！</p></div></div><div class="turn"><time>00:07:27</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>当時は超低金利だったからで、その翌月かなに中古のワンルームマンションその翌月にも、だから。
+僕その後追加で2部屋ワンルームマンションも買ってるんですよそのそれも中国銀行っていう岡山の銀行さんなんですけど、そこがお金貸してくれこれ全部会社の信用があるからなんですね。
 僕がすごいからとかじゃなくてっていう経験をしてやっぱすげーな信用力ってなったわけです。
-でその時でも資産ですけど総資産負債もあるけどあと自宅も入れると貯金も入れると4000万とかあったんですよ純資産はもっと少ないですけどね。
-資産を形成するという意味で信用力が抜群なのなと思ったんですけどさっき各種考えたように成長とかやりがいも一応会社にはもちろん求めてて頑張ってたんですけど
-なんか製薬業界だとそこがちょっと僕なんか弱くてまだやれるって思ってその後M&amp;A仲介の会社に転職してここってもうザ・成長、ザ・金稼ぎみたいなとこだったからそれはそれでやってみて思ったんですけど
+でその時でも資産ですけど、総資産負債もあるけどあと自宅も入れると貯金も入れると4000万とかあったんですよ純資産はもっと少ないですけど、ね。
+資産を形成するという意味で信用力が抜群なのなと思ったんですけど、さっき各種考えたように成長とかやりがいも一応会社にはもちろん求めてて頑張ってたんですけど
+なんか製薬業界だとそこがちょっと僕なんか弱くてまだやれるって思ってその後M&amp;A仲介の会社に転職してここってもうザ・成長、ザ・金稼ぎみたいなとこだったからそれはそれで。
+やってみて思ったんですけど
 超楽しいです全く否定しない人間的にも成長するしビジネスパーソンとしても成長します。
-ただそれ以降お金ではないんですよお金がついてくるとは限らないしメチャクチャ時間かかる。
-時間取られるで労働者としてかなり疲弊するっていうのもあって何がいいのか分かんないですけど、資産を作るって意味では僕は前者の方が良いと思ってるって感じ。ですね。
-これは実体験からそう思うん否定してるわけじゃないですどっちも。</p></div></div>
-<div class="turn"><time>00:09:03</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>はいもう結構ちょっと胸が痛いなあっていう。</p></div></div>
-<div class="turn"><time>00:09:07</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>痛くないでしょ。</p></div></div>
-<div class="turn"><time>00:09:08</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>はははちょっと後でその質問させていただきたいんですけどはい。</p></div></div>
-<div class="turn"><time>00:09:11</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まあそういう前提はありつつですね。
-実際の4つの条件というところを話していきたいんですけど、まず1つ目はもうもともこもない話なんですけど、年収が高いですね
-平均年収が高いこれは大事やっぱり見ないといけないですぶっちゃけ業界とか業界とか業種ってビジネスモデルが決まってるわけですよで製薬会社だったら製造業メーカーですね。
-だから原薬とかを海外から仕入れて開発研究開発して薬を作ってねそれをパッケージングとかして医薬品卸さんに売ってB2B取引して儲けているっていう。
-これが製薬会社でこのもう構造って言ったら業界業種でも決まってるじゃないですかコンサルティングファームだったらコンサルしてお金チャージしてもらうみたいなでそういうのは大体利益率って決まってくるんですよ特にコンサルティングファームとかで人件費がかからないから在庫持たないから利益率高いですよねってなると時にその分社員に還元できるから平均年収高いんですよ製薬業界もええ平均年収が高い理由としては薬ってまず原価そんな高くないし。
-あと輸送費とかもそんなかからないのと特許によってお金はあの価格が守られてるんで価格競争になりにくいというのがあって利益を担保しやすいんですよ高利益体質っていうのがあるのでそうなってくると社員に還元されるから平均年収高いんですよね。
-こういうのって何見たらわかるかというと四季報ですね就活する時には大体の就活生が見ると思うんですけど、
+ただ、それ以降お金ではないんですよお金がついてくるとは限らないしメチャクチャ時間かかる。
+時間取られるで労働者としてかなり疲弊するっていうのもあって何がいいのか分かんないですけど、資産を作るって意味では僕は前者の方が良いと思ってるって感じですね。
+これは実体験からそう思うん否定してるわけじゃないですどっちも。</p></div></div><div class="turn"><time>00:09:03</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>はいもう結構ちょっと胸が痛いなあっていう。</p></div></div><div class="turn"><time>00:09:07</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>痛くないでしょ。</p></div></div><div class="turn"><time>00:09:08</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>はははちょっと後。
+でその質問させていただ、きたいんですけど、はい。</p></div></div><div class="turn"><time>00:09:11</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>まあそういう前提はありつつですね。
+実際、の4つの条件というところを話していきたいんですけど、まず、1つ目はもうもともこもない話なんですけど、年収が高いですね
+平均年収が高いこれは大事やっぱり見ないといけないですぶっちゃけ業界とか業界とか業種ってビジネスモデルが決まってるわけですよ。
+で製薬会社だったら製造業メーカーですね。
+だから、原薬とかを海外から仕入れて開発研究開発して薬を作ってねそれをパッケージングとかして医薬品卸さんに売ってB2B取引して儲けているっていう。
+これが製薬会社でこのもう構造って言ったら業界業種でも決まってるじゃないですか。
+コンサルティングファームだったらコンサルしてお金チャージしてもらうみたいな。
+でそういうのは大体利益率って決まってくるんですよ特にコンサルティングファームとかで人件費がかから、ないから在庫持たないから利益率高いですよね。
+ってなると時にその分社員に還元できるから平均年収高いんですよ製薬業界もええ平均年収が高い理由としては薬ってまず、原価そんな高くないし。
+あと輸送費とかもそんなかからないのと特許によってお金はあの価格が守られてるんで価格競争になりにくいというのがあって利益を担保しやすいんですよ高利益体質っていうのがあるので。
+そうなってくると社員に還元されるから平均年収高いんですよね。
+こういうのって何見たらわかるかというと四季報ですね就活する時に、は大体の就活生が見ると思うんですけど、
 まあこういうのをちゃんと業界ごとに見ていってなんかこの業界ってどの会社も年収高いなみたいな電力系だったら四国電力も高いし九州電力も東京電力も全部年収高いなみたいな。
-あんまりこう会社間によって差がないなみたいな業界を一つ業界として捉えてそこに集中して就活するっていうのを僕やってましたね。それが製薬業界だったんですね。</p></div></div>
-<div class="turn"><time>00:11:14</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>めちゃくちゃ具体ですねありがとうございます。</p></div></div>
-<div class="turn"><time>00:11:17</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>やっぱ年収がないとですね。
+あんまりこう会社間によって差がないなみたいな業界を一つ業界として、捉えてそこに集中して就活するっていうのを僕やってましたね。
+それが製薬業界だったんですね。</p></div></div><div class="turn"><time>00:11:14</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>めちゃくちゃ具体ですねありがとうございます。</p></div></div><div class="turn"><time>00:11:17</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>やっぱ年収がないとですね。
 会社の信用力と年収が両方揃ったときに一気に不動産拡大できたりするんですよ年収の何倍とかで自分が借りられる枠って決まったりするんでそれはじゃあ年収高いほうがいいじゃないですか。
-年収高くて悪いことなんてほとんどないわけですよで一方でその僕が勤めてたM&amp;A仲介のストライクさんって会社でしたけど
-そういうところももちろん年収平均年収高いんですよ1500万とか2000万バチバチ高いんですけどあれって成果給なんで意味。</p></div></div>
-<div class="turn"><time>00:11:50</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>あ、成果給は意味ないんだ。</p></div></div>
-<div class="turn"><time>00:11:52</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>なくはないです意味なくはないんですけど変動があるから銀行としても評価しづらいし出した年の次の年も頑張らないといけないから人間として成長はすると思うんですが安定して700万800万稼げる業界の方が性格的に合ってる人もいるんでまあ見極めないといけないですけど最初はそういう制約業界とか僕は狙ってもいいんじゃないかなと思います。
-で次ですね2つ目は参入障壁が高い業界であるかというところで、 これもちょっとあの企業分析業界分析が必要なところで少し難しいんですけど
-先ほどの四季報とかもそうですしなんか業界マップみたいなのが毎年出てくるんですよその就活の対策本としてそういうの読んでいくとなんとなくわかってきます例えば海運とか商船三井とか川崎汽船とかいろいろあるじゃないですかあれを今から中小企業が入り込んで参入できると思いますか。</p></div></div>
-<div class="turn"><time>00:12:51</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いや無理でも。</p></div></div>
-<div class="turn"><time>00:12:53</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ですよねもう資本力で勝てないし。</p></div></div>
-<div class="turn"><time>00:12:57</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>それを売る人はなってですか結構難易度すごいめっちゃビンなんかそれ分かる人自分で会社できるぐらいの能力ですよね。</p></div></div>
-<div class="turn"><time>00:13:05</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>でも、なんとなくでいいんですよ。</p></div></div>
-<div class="turn"><time>00:13:07</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なんとなくでいい。</p></div></div>
-<div class="turn"><time>00:13:07</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>就職活動のレベルでは大学生のレベルだから、本当にざっくりでいいんですけど、 じゃあ医薬品とかも特許とかが必要というのは、それをやっていたら分かるんですよ。勉強していたら。
-それを中小企業がいきなり入って、大企業に勝てるような特許を取って戦えるのかというと難しいんですよね。そもそも薬作るのが結構時間かかる。
-今はAIの発達によって短くなってるかもしれないけど、リードタイムとしては15年から25年とかかかるって言われてるんですよ。リスクありすぎなんですよね。
-そんな中小企業がそのリスク負えるわけないんで、 参入障壁高いんですよ。あと特許で守られてるっていうのもあるから。
-っていうのはこれ何が大事かというと利益が守られ守られやすいんですよその業界企業にとってまぁ既得権益って言ったりもするかもしれないですけど、だから8従業員の収入としても安定しているということです。
-だからさっき年収高いなことリンクしてきます。
-一方でコンサルティングファームとかさっきの僕の言ったM&amp;A仲介とかあとまあ人材系の会社とかですね結構労働集約型になってるビジネスモデルがそれに該当するんですけどあの辺って巨人化とっちゃえばすぐに開業できたりするわけですよね。
-で中小企業もめちゃくちゃいますよねああいうところってそういう会社だと参入障壁低いんでいつか淘汰されてしまう可能性すらあるしあと大体きつい傾向にありますね不動産の影響とかもそうですけど
-うん参入障壁高い会社ってまあ全部が全部じゃないですけど結構緩めの傾向があったりもするので、
+。
+年収高くて悪いことなんてほとんどないわけですよ。
+で一方で、その僕が勤めてたM&amp;A仲介のストライクさんって会社でしたけど
+そういうところももちろん年収平均年収高いんですよ1500万とか2000万バチバチ高いんですけど、あれって成果給なんで意味。</p></div></div><div class="turn"><time>00:11:50</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>あ、成果給は意味ないんだ。</p></div></div><div class="turn"><time>00:11:52</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>なくはないです意味なくはないんですけど、変動があるから銀行としても評価しづらいし出した年の次の年も頑張らないといけないから人間として成長はすると思うんです。
+が安定して700万800万稼げる業界の方が性格的に合ってる人もいるんでまあ見極めないといけないですけど、最初はそういう制約業界とか僕は狙ってもいいんじゃないかなと思います。
+で。
+次ですね2つ目は参入障壁が高い業界であるかというところ。
+で、これもちょっとあの企業分析業界分析が必要なところで少し難しいんですけど
+先ほどの四季報とかもそうですしなんか業界マップみたいなのが毎年出てくるんですよその就活の対策本としてそういうの読んでいくとなんとなくわかってきます例えば。
+海運とか商船三井とか川崎汽船とかいろいろあるじゃないですか。
+あれを今から中小企業が入り込んで参入できると思います。
+か。</p></div></div><div class="turn"><time>00:12:51</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>いや無理でも。</p></div></div><div class="turn"><time>00:12:53</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>ですよね。
+もう資本力で勝てないし。</p></div></div><div class="turn"><time>00:12:57</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>それを売る人はなってですか結構難易度すごいめっちゃビンなんかそれ分かる人自分で会社できるぐらいの能力ですよね。</p></div></div><div class="turn"><time>00:13:05</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>でも、なんとなくでいいんですよ。</p></div></div><div class="turn"><time>00:13:07</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>なんとなくでいい。</p></div></div><div class="turn"><time>00:13:07</time><div class="turn-body"><span class="speaker yaesu">八重洲さん</span><p>就職活動のレベルでは大学生のレベルだから、本当にざっくりでいいんですけど、じゃあ医薬品とかも特許とかが必要というのは、それをやっていたら分かるんですよ。
+勉強していたら。
+それを中小企業がいきなり入って、大企業に勝てるような特許を取って戦えるのかというと難しいんですよね。
+そもそも薬作るのが結構時間かかる。
+今はAIの発達によって短くなってるかもしれないけど、リードタイムとしては15年から25年とかかかるって言われてるんですよ。
+リスクありすぎなんですよね。
+そんな中小企業がそのリスク負えるわけないんで、参入障壁高いんですよ。
+あと特許で守られてるっていうのもあるから。
+っていうのはこれ何が大事かというと利益が守られ守られやすいんですよその業界企業にとってまぁ既得権益って言ったりもするかもしれないですけど、だから。
+8従業員の収入としても安定しているということです。
+だから、さっき年収が高いことリンクしてきます。
+一方で、コンサルティングファームとかさっきの僕の言ったM&amp;A仲介とかあとまあ人材系の会社とかですね結構労働集約型になってるビジネスモデルがそれに該当するんですけど。
+あの辺って巨人化とっちゃえばすぐに開業できたりするわけですよね。
+で中小企業もめちゃくちゃいますよねああいうところってそういう会社だと参入障壁低いんでいつか淘汰されてしまう可能性すらあるしあと。
+大体きつい傾向にありますね不動産の影響とかもそうですけど
+うん参入障壁高い会社ってまあ全部が全部じゃないですけど、結構緩めの傾向があったりもするので、
 なんかちょっとまったりしてる部分があったりするからそういう意味でもおすすめうんその辺をちゃんと業界分析しないといけないですね
-共通して言えるのは本当にちゃんと分析しないといけない勉強しないといけないっていうこととなんとなくこの企業名知ってるから受けようぐらいだと。</p></div></div>
-<div class="turn"><time>00:15:00</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ちょっと危ないよっていう就活そんぐらいガチでやってましたね。
-はい、で3つ目がこれは同じっちゃ同じなんですけど就職人気ランキングって出るじゃないですかよく1年に1回例えばアクセンチュアさんが1位でした今回は伊藤中さんが2位でしたみたいなよう出ると思うんですよあそこに載っている企業たちって本当素晴らしい知名度もあるからあれはあれで受けるべきだしいいと思うんですけど、僕みたいないわゆる凡人？
-あそこって総計とか名だたる大学の人たちが狙うようなとこ。
-選べたところなんでもしそうじゃない場合ちょっと話で行かせてもらうとまあそうじゃなくてもそいつたちでもまあ企業研究してそういうニッチのとこ選べたらいいと思うんですけど
-やっぱさっきの年収をちゃんと調べるとかあと有給昇華の日数調べるとか業界構造調べるとかそういうのにちゃんと調べてみんなが意外と知らないようなところであちゃんと年収高そうだなとか企業へ従業員の待遇良さそうだなとか、 なんか今後の転職にももしかしたら活かせるかもしれないなんかそういういろんな分析を自分なりにしてああいうまあランキングに載ってるから流されるみたいなことにならないでほしいという感じですねここのニュアンスとしてははいまあ受けたくなる気持ちはわかるし受けてみるのも全然いいと思うんですけど自分なりのこう分析をして受けるっていうこと大事なんじゃないかってこの状況を入れさせていただきました最後これも大事な話で産業として安定してそうっていうこれ参入障壁に近いですけどねニュアンスとしては。
+共通して言えるのは本当にちゃんと分析しないといけない勉強しないといけないっていうこととなんとなくこの企業名知ってるから受けようぐらいだと。</p></div></div><div class="turn"><time>00:15:00</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>ちょっと危ないよっていう就活はそれくらいガチでやってましたね。
+はい、で3つ目がこれは同じっちゃ同じなんですけど、就職人気ランキングって出るじゃないですか。
+よく1年に1回例えば、アクセンチュアさんが1位でした今回は伊藤忠さんが2位でしたみたいなよう出ると思うんです。
+よあそこに載っている企業たちって本当素晴らしい知名度もあるから、あれはあれで受けるべきだしいいと思うんですけど、僕みたいないわゆる凡人？
+あそこって早慶とか名だたる大学の人たちが狙うようなとこ。
+選べたところなんでもしそうじゃない場合、ちょっと話で行かせてもらうとまあそうじゃなくてもそいつたちでもまあ企業研究してそういうニッチのとこ選べたらいいと思うんですけど
+やっぱさっきの年収をちゃんと調べるとかあと有給消化の日数調べるとか業界構造調べるとかそういうのにちゃんと調べてみんなが意外と知らないようなところであちゃんと年収高そうだなと。
+か企業で従業員の待遇良さそうだなとか、なんか今後の転職にももしかしたら活かせるかもしれないなんかそういういろんな分析を自分なりにしてああいうまあ、
+ランキングに載ってるから流されるみたいなことにならないでほしいという感じですねここのニュアンスとして、ははいまあ受けたくなる気持ちはわかるし受けてみるのも全然いいと思うんですけ
+ど自分なりのこう分析をして受けるっていうこと大事なんじゃないかってこの条件を入れさせていただきました最後。
+これも大事な話で産業として安定してそうっていうこれ参入障壁に近いですけど、ねニュアンスとしては。
 これってそれのさっきの参入障壁も安定しそうっていうのもなんていうんですかいい会社の選び方っていうこと
-なんですかそれともなんかそれの結果その融資とかを折りやすく見られるんですか結局そういう安定してて本当にいい会社いい消費者企業の見つけ方なんですよね
-本質としてはそういうとこって大体長く起業してたり長く創業してたり創業してから長かったりするんで会社として信用力が抜群なんですよ。
-で前提としてプライム上場のところ狙うって話をしてるからそもそも信用力が担保されているし長年のアセットが積み重なっているから会社としては銀行からバチバチに評価されるされる傾向になるから両取りできますね良い就職先と良い信用を取れるっていうただそっちの方がまあ信用積み重ねやすいっていうことですかそうですね。
-そのそりゃ有名な今のコンサルティングファームとか総合商社行けばそれも間違いないんですけど必ずしもみんながそんなあそこってやっぱ素晴らしい。
-んーでもウォンも狭かったですというから、そうじゃなやり方もあるよねっていう話ですよね。あと信用っていう観点で多分みんな選んでないから、 そこはちゃんと視点として持っといた方がいいMm。
-ねって話ですよ。ありがとうございます。なんで産業として安定して需要がありそうというのはまさしくそれで製薬業界とかまさしくそれに当てはまったんですよね。
+なんですかそれともなんかそれの結果その融資とかを折りやすく見られるんですか結局そういう安定してて本当にいい会社いい消費者企業の見つけ方なんですよ。
+ね
+本質としてはそういうとこって大体長く起業してたり長く創業してたり創業してから、長かったりするんで会社として信用力が抜群なんですよ。
+で前提としてプライム上場のところ狙うって話をしてるからそもそも信用力が担保されているし長年のアセットが積み重なっているから会社としては銀行からバチバチに評価されるされる傾向。
+になるから両取りできますね良い就職先と良い信用を取れるっていうただ、そっちの方がまあ信用積み重ねやすいっていうことですかそうですね。
+そのそりゃ有名な今のコンサルティングファームとか総合商社行けばそれも間違いないんですけど、必ずしもみんながそんなあそこってやっぱ素晴らしい。
+んーでも門も狭かったですというから、そうじゃないやり方もあるよねっていう話ですよね。
+あと信用っていう観点で多分みんな選んでないから、そこはちゃんと視点として持っといた方がいいですね。
+ねって話ですよ。
+ありがとうございます。
+なんで産業として安定して需要がありそうというのはまさしくそれで、製薬業界とかまさしくそれに当てはまったんですよね。
 まあ言ったら薬がなくなることって今後ないでしょう。
-おそらくAIがいくら出てこようがそれは創薬するために生かされるためのツールであって薬がじゃあなくなる代替されるってことはないわけ最近の話で言うと僕が就職したの2016年とかだからその時にAIがもう盛り上がってたことそんなことはないからその切り口はなかったんですけど明らかに薬はなくならないよねとあと今後移民が増えるとしても高齢者は増えていくことは変わらないよねと一定の若返りはあったとしても高齢者が増えることは変わりはないから。
-高齢者が増えるということは薬の需要が増していくから産業としてはシュリンクはするかもしれない縮小はするかもしれないけど
+おそらくAIがいくら出てこようがそれは創薬するために活かされるためのツールであって薬がじゃあなくなる代替されるってことはないわけ最近の話で言うと僕が就職したの2016年とか。
+だから、その時にAIがもう盛り上がってたことそんなことはないからその切り口はなかったんですけど、明らかに薬はなくならないよねとあと。
+今後移民が増えるとしても高齢者は増えていくことは変わらないよねと一定の若返りはあったとしても高齢者が増えることは変わりはないから。
+高齢者が増えるということは薬の需要が増していくから産業としてはシュリンクはするかもしれない縮小はするかもしれないけど、
 なくなりはしないだろうっていうのは学生の無知な僕でもさすがに自分の頭の中で思い浮かべれたから狙おうっていう感じになったそれ考えて就職したいという学生だいぶ優秀ですけど
 ねそんなことないでしょういや世の中の人はみんなわからないですよ僕含めて。
-いやでも最初はどういう企業とかどういう業界があるのかすら僕もわからなかったからしかも愛媛って別に愛媛をばかりするわけじゃないです。
-僕好きなんですけどさっき言ったように愛媛大学の人たちはみんな伊予銀行とか市役所とか愛媛の企業に就職できたらいいやって思ってるんで多分業界研究とか企業研究とかほぼしてないんですよそれがすごい違和感で就活って人生の方向性を決めるめっちゃ大事なイベントじゃないですか。
-ってなったらまず書店に行ってどういうものがあるかって見てこんな企業を知るための本があるんだってことに目から鱗だったしじゃあこれを活かしていくと見ていくとほとんどの企業って東京か大阪じゃんってなるんですよ年収も愛媛の企業よりバチバチに高いんですよ絶対こっちのほうがいいやんってなるでのめり込んでったって感じですねノートで僕1ページ1企業ずつ分析してたんですけど、だから製薬会社の分ほぼ全部分析してやってましたねほぼ製薬業界最後絞って就活してたんでノート3冊分ぐらいは色々書いたんじゃないかな全部埋めるぐらい。</p></div></div>
-<div class="turn"><time>00:20:13</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そんぐらいやってました業界と企業研究はこの辺を満たしていればそんなに悪くない会社にほとんど見つかってくると思うのでそこまで勉強していると熱も入るので面接にだいたい分かっているからもちろん学生が知れる範囲ですよいや、それでもだから内定率も上がると思いますけどね7-7で受けているよりかはで、これ就職したら終わりじゃないんで、 大事なのって僕らが大事にしている僕が大事にしていることですけど就職してからその会社でしっかりとパフォーマンス出して年収も上げていって僕がやってきたこととしては1回M&amp;A仲介業界を挟んでますけど、僕の中では業界内で同じ職種で転職して年収上げていくってことできるんでそういうのもやりつつ信用力どんどん自分の信用力高めていって不動産やったりとか、 本来業務ってどんどん熟練して時間ができてくると思うのでそういうのをしたら自分で事業を作ってみるとかしてどんどん個人としての信用力を高めていく会社の看板だけに依存しないみたいな状態にしていくというのがいいのかなと最初は会社の看板を借りるってことが目的なんですけど、そのうち会社の看板から脱却していくみたいなのが本当に一番大事なところだと思いますねちょっと話がずれますけどはいこの辺を意識して就活してもらえればいいんじゃないかなと思いますね。
-まあ転職でも活かせるのかなこの考えはと思いますがはい。</p></div></div>
-<div class="turn"><time>00:21:49</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>これ聞いてこれ全部聞いてちょっと思ったのが就職し終わってるというか今してる人たちは転職をこう目指してやった方がいいのかそういうことですよねあやっぱそうなんだいやいやまあ今僕もちょろっと言ったけど
-転職にも行かせるとは思うんですよこの考えはじゃあ今からでも例えばちょっとでもこういいところに行った方がその信用力がレバレッジがかかって不動産投資を受けやすいんで例えば僕が今から上場企業とかにちょっと入れるもんなら3ヶ月だけでも就職したろかと思ういや3ヶ月だったらもう入ってないようなもやね。
+いやでも最初はどういう企業とかどういう業界があるのかすら僕もわから、なかったからしかも愛媛って別に愛媛をばかりするわけじゃないです。
+僕好きなんですけど、さっき言ったように愛媛大学の人たちはみんな伊予銀行とか市役所とか愛媛の企業に就職できたらいいやって思ってるんで多分業界研究とか企業研究とかほぼしてないん。
+ですよそれがすごい違和感で就活って人生の方向性を決めるめっちゃ大事なイベントじゃないですか。
+ってなったらまず、書店に行ってどういうものがあるかって見てこんな企業を知るための本があるんだってことに目から鱗だったしじゃあこれを活かしていくと見ていくとほとんどの企業って。
+東京か大阪じゃんってなるんですよ年収も愛媛の企業よりバチバチに高いんですよ絶対こっちのほうがいいやんってなるでのめり込んでったって感じですねノートで僕1ページ1企業ずつ分析。
+してたんですけど、だから、製薬会社の分ほぼ全部分析してやってましたねほぼ製薬業界最後絞って就活してたんでノート3冊分ぐらいは色々書いたんじゃないかな全部埋めるぐらい。</p></div></div><div class="turn"><time>00:20:13</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>そんぐらいやってました業界と企業研究はこの辺を満たしていればそんなに悪くない会社にほとんど見つかってくると思うの。
+でそこまで勉強していると熱も入るので面接にだいたい分かっているからもちろん学生が知れる範囲ですよいや、それでもだから、内定率も上がると思います。
+けどね何となくで受けているよりかはで、これ就職したら終わりじゃないんで、大事なのって僕らが大事にしている僕が大事にしていることですけど。
+就職してからその会社でしっかりとパフォーマンス出して年収も上げていって僕がやってきたこととしては1回M&amp;A仲介業界を挟んでますけど。
+僕の中では業界内で同じ職種で転職して年収上げていくってことできるんでそういうのもやりつつ信用力どんどん自分の信用力高めていって不動産やったりとか。
+本来業務ってどんどん熟練して時間ができてくると思うのでそういうのをしたら自分で事業を作ってみるとかしてどんどん個人としての信用力を高めていく会社の看板だけに依存しないみたいな。
+。
+状態にしていくというのがいいのかなと最初は会社の看板を借りるってことが目的なんですけど、そのうち会社の看板から脱却していくみたいなのが本当に一番大事なところだと思います。
+ねちょっと話がずれますけど、はいこの辺を意識して就活してもらえればいいんじゃないかなと思いますね。
+まあ転職でも活かせるのかなこの考えはと思います。
+がはい。</p></div></div><div class="turn"><time>00:21:49</time><div class="turn-body"><span class="speaker kakushi">かくしくん</span><p>これ聞いてこれ全部聞いてちょっ、と思ったのが就職し終わってるというか今してる人たちは転職をこう目指してやった方がいいのかそういうことですよね。
+あやっぱそうなんだいやいやまあ今僕もちょろっと言ったけど
+転職にも行かせるとは思うんですよこの考えはじゃあ今からでも例えば、ちょっとでもこういいところに行った方がその信用力がレバレッジがかかって不動産投資を受けやすいんで例えば。
+僕が今から上場企業とかにちょっと入れるもんなら3ヶ月だけでも就職したろかと思ういや3ヶ月だったらもう入ってないようなもやね。
 あ入ってないようなところ見られるんですか勤続年数も大事だったりするからただ、おっしゃる通り転職活動にも生きる考えだと思いますね。
-やっぱり業界を知る、会社を知っていく、ビジネスモデルを知っていくとか、 そういうの四季報を見たら書いてるから、 そういうのをいろいろ読んでいくと分かってくるので、
+やっぱり業界を知る、会社を知っていく、ビジネスモデルを知っていくとか、そういうの四季報を見たら書いてるから、そういうのをいろいろ読んでいくと分かってくるので、
 やっぱり会社員のメリットは後ろ盾があるということなので、それがまだ弱いと思うかつ、心力つけて不動産買いたいとかそういうのを思ってるんだったら転職してもいいでしょうね。
-どっちにも生きる新卒だろうと定職活動だろうと生きる考え方なのかなと思いますけど、まあでも年齢によりますけどいきなり業種行くっていうのは結構ハードルもやっぱ高かったりするからその辺は慎重に考えた方がいいですけどねありがとうございます。
-じゃあもうちょっと今から就職活動しようかなっていうええええもうYouTube頑張ってくださいじゃあ今回ははい。
+どっちにも生きる新卒だろうと定職活動だろうと生きる考え方なのかなと思います。
+けど、まあでも年齢によりますけどいきなり業種行くっていうのは結構ハードルもやっぱ高かったりするからその辺は慎重に考えた方がいいですけど、ねありがとうございます。
+じゃあもうちょっと今から、就職活動しようかなっていうええええもうYouTube頑張ってくださいじゃあ今回ははい。
 まぁこんな感じで、今今回はですね、ちょっとキャリアっていう切り口でお話をさせてもらいましたけど、就職活動とかね。
-まぁそういったことも含めて、えーサラリーマンの人たちがどうこうパラレルキャリアを創っていくのかみたいな、そういったことを発信しているプラットフォーム、
-TEKOというのを運営しております概要欄から詳しい情報を受け取れますので、ホームページへ足を運んでくださいメルマガ登録して頂けると情報が不定期ですけど流れていきます。
-はいよろしくお願いいたします。はい、ありがとうございました。はいありがとうございました。はい。</p></div></div>
-        </details>
-      </section>
-      <section class="quality-note">
-        <h2>補正済みキーワード</h2>
-        <p>v4で残っていたASR断片、短い相づち行、既知誤変換、途中で切れた語を、#7全文整形用に再処理。</p>
-        <p>このページは公開URL維持のためのnoindexアーカイブです。外部write/API/runner/launchdは使っていません。</p>
-        <p>残課題: なし</p>
-      </section>
+まぁそういったことも含めて、サラリーマンの人たちがどうこうパラレルキャリアを創っていくのかみたいな、そういったことを発信しているプラットフォーム、
+TEKOというのを運営しております概要欄から詳しい情報を受け取れますので、ホームページへ足を運んでくださいメルマガ登録して頂けると情報が不定期ですけど、流れていきます。
+はいよろしくお願いいたします。
+はい、ありがとうございました。
+はいありがとうございました。
+はい。</p></div></div></details></section>
     </main>
-    <aside>
-      <h2>ページ情報</h2>
-      <h3>語句</h3>
-      <div class="terms">
-<span class="term">就活</span>
-<span class="term">会社員信用</span>
-<span class="term">勤続年数</span>
-<span class="term">年収</span>
-<span class="term">融資</span>
-      </div>
-      <h3>生成境界</h3>
-      <p class="small">2026-06-29 v6 fulltext reformat / local-only</p>
-    </aside>
+    <aside><h2>確認用</h2><div class="toc"><a href="#summary">3行要約</a><a href="#flow">話の流れ</a><a href="#full">全文</a></div><p class="small">外部write/API/runner/launchdなし。ローカルv3 replay候補。</p></aside>
   </div>
 </div>
 </body>
